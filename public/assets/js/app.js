@@ -41,7 +41,7 @@
   })();
 
   /* ---------- 2. cabeçalho ---------- */
-  var header = $(".site-header");
+  var header = $(".topo");
   if (header) {
     var marcaHeader = function () { header.classList.toggle("fixa", window.scrollY > 12); };
     marcaHeader();
