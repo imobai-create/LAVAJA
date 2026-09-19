@@ -15,7 +15,7 @@
     },
     precoFundador: 79,   // Ilimitada travada para os 80 primeiros
     vagasFundador: 80,
-    whatsappPadrao: "5537999999999"
+    whatsappPadrao: "5531987474828" // (31) 98747-4828 — atendimento provisório
   };
 
   var reduzMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

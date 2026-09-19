@@ -108,7 +108,7 @@ segredo dentro do código nem no Git — `.env` está no `.gitignore`.
 | `DATABASE_URL` | sim, em produção | — | Postgres. No Railway, use a referência `${{Postgres.DATABASE_URL}}`. |
 | `ADMIN_TOKEN` | sim, em produção | vazio | Protege o painel e a exportação de leads. Vazio = rotas de admin não liberam nada. |
 | `FOUNDERS_LIMIT` | não | `80` | Número de vagas de fundador (alimenta o contador). |
-| `WHATSAPP_NUMERO` | sim | número de exemplo | Número que recebe as mensagens, só dígitos, com DDI (ex.: `5537999999999`). |
+| `WHATSAPP_NUMERO` | não | `5531987474828` | Número que recebe as mensagens, só dígitos, com DDI. Hoje aponta para o atendimento provisório (31) 98747-4828. |
 | `PGSSL` | não | — | `disable` desliga SSL do Postgres (só para banco local). |
 | `RATE_LIMIT_POST` | não | `10` | Envios de formulário por IP por minuto. |
 | `RATE_LIMIT_GLOBAL` | não | `600` | Teto global de envios por janela. |
@@ -173,7 +173,7 @@ ser divulgado.
 
 ### Site e domínio
 - [ ] **Número de WhatsApp real** do atendimento → variável `WHATSAPP_NUMERO` (hoje há um número
-      de exemplo no código: `5537999999999`).
+      provisório no código: `5531987474828` — (31) 98747-4828).
 - [ ] **Domínio definitivo**. Os arquivos `public/sitemap.xml` e `public/robots.txt` estão com
       `https://lavaja.com.br` e têm aviso no topo: se o domínio for outro, troque nos dois.
 - [ ] **Preços finais** de cada plano e da lavagem avulsa, e por quanto tempo o preço de fundador

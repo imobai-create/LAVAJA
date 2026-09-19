@@ -52,7 +52,7 @@ Crie estas quatro:
 | `DATABASE_URL` | `${{Postgres.DATABASE_URL}}` | Endereço do banco. Digitando `${{` o Railway sugere sozinho — escolha o Postgres na lista, não copie a senha na mão. |
 | `ADMIN_TOKEN` | um segredo longo (veja abaixo) | Senha que protege a lista de reservas. Sem isso, a lista fica inacessível — o que é o comportamento seguro. |
 | `FOUNDERS_LIMIT` | `80` | Quantas vagas de fundador existem. Muda o contador do site. |
-| `WHATSAPP_NUMERO` | `55[DDD][número]` só com dígitos, ex.: `5537999999999` | Número que recebe as mensagens dos botões de WhatsApp. |
+| `WHATSAPP_NUMERO` | `55[DDD][número]` só com dígitos, ex.: `5531987474828` | Número que recebe as mensagens dos botões de WhatsApp. Já vem com o provisório (31) 98747-4828; defina a variável quando trocar para o número do negócio. |
 
 **Não crie a variável `PORT`.** O Railway injeta essa sozinho e o site já respeita.
 

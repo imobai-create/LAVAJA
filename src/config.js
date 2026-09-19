@@ -26,7 +26,7 @@ const config = {
   adminToken: ADMIN_TOKEN,
 
   // Número de WhatsApp da operação (só o número, com DDI). Nunca inventar um real no código.
-  whatsappNumero: String(process.env.WHATSAPP_NUMERO || "5537999999999").replace(/\D/g, ""),
+  whatsappNumero: String(process.env.WHATSAPP_NUMERO || "5531987474828").replace(/\D/g, ""),
 
   // Sal do hash de IP. Usamos o ADMIN_TOKEN como sal (exigência do projeto);
   // sem ele, geramos um sal aleatório por processo — o IP continua irrecuperável.
