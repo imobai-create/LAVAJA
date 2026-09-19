@@ -1,0 +1,22 @@
+# Nada aqui entra na imagem — mantém o build pequeno e sem segredo por acidente.
+node_modules
+npm-debug.log*
+.git
+.github
+.gitignore
+.env
+.env.*
+!.env.example
+docs
+test
+tests
+coverage
+*.md
+!README.md
+Dockerfile
+.dockerignore
+railway.json
+.nvmrc
+.DS_Store
+*.log
+tmp

@@ -1,0 +1,217 @@
+===== PAG 1 =====
+PLANO DE FRANQUIA
+Rede LavaJá — Lavagem automatizada por assinatura
+Expansão regional Centro-Oeste de Minas Gerais · 3 modelos de unidade
+Documento de trabalho — Setembro/2026 · Acompanha modelo econômico em Excel
+
+===== PAG 2 =====
+1. Tese e sequência obrigatória
+A tese: transformar a unidade de Piumhi em unidade modelo de uma rede regional de lavagem automatizada 
+por assinatura, com três formatos de unidade e diferenciais que nenhum lava jato do interior tem — app com 
+assinatura/agendamento/pagamento, padrão visual, poder de compra de rede, ponto EV-ready, energia solar 
+e vending self-service.
+A sequência não é negociável, por razão legal e comercial:
+• Fase 0 (meses 1–12): unidade própria de Piumhi operando, com contabilidade impecável e KPIs 
+auditáveis. A Lei de Franquias (Lei nº 13.966/2019) exige COF com demonstrações e informações reais; 
+vendida sem isso, a franquia é anulável com devolução corrigida de todas as quantias e perdas e danos 
+(art. 2º, §2º). Nenhuma venda antes disso.
+• Fase 1 (meses 10–15): formatação — constituição da franqueadora (holding separada da operação), COF, 
+contrato, manuais de operação e implantação, homologação de fornecedores, programa de treinamento.
+• Fase 2 (a partir do mês 15): segunda unidade própria ou em JV em Capitólio (modelo Prime — valida o 
+segundo formato) e início das vendas de franquia na região.
+2. Diferenciais da rede — com veredito honesto
+Diferencial Veredito Racional
+App da rede (assinatura, agendamento 
+de box, pagamento, LPR, indicação)
+Núcleo da franquia É o que justifica royalties e trava o cliente na 
+rede. Fase 1 em white-label (~R$ 1–3 mil/mês); 
+app próprio no ano 2 (R$ 350 mil), pago pela 
+franqueadora
+Site institucional + landing de pré-venda 
+por praça
+Sim, imediato Custo baixo; captação de fundadores em cada 
+nova cidade
+Ponto EV-ready (dutos, espaço e 
+capacidade elétrica previstos)
+Sim, em todo projeto Custo marginal na obra; opcionalidade futura
+Carregador EV instalado Só no Prime (praça 
+turística)
+Frota EV do interior ainda não paga o capex; em 
+Capitólio o turista de BH paga. AC 22 kW ~R$ 25 
+mil; DC a partir de ~R$ 120 mil
+Energia solar no telhado (30 kWp) Sim, no Prime; 
+opcional nos demais
+Corta o segundo maior custo variável; payback 3–
+4 anos em MG; selo de marca “lavagem com 
+energia solar”
+Bateria estacionária (BESS) Não agora R$ 3–5 mil/kWh sem retorno no porte da 
+unidade; reavaliar quando preço cair ou tarifa 
+branca compensar
+Vending de bebidas/snacks Sim, Express e Prime R$ 15–25 mil (ou comodato); receita marginal, 
+melhora a espera
+3. Tecnologia — escopo do app (MVP)
+• Cliente: cadastro e placa; contratação e gestão da assinatura (cartão recorrente/PIX automático); lavagem 
+liberada por LPR; agendamento de box e horários vazios; carteira e histórico; indicação membro-traz-
+membro com recompensa automática; avisos (“choveu, lave de novo grátis”).
+• Franqueado: dashboard de receita, lavagens/dia, churn e assinantes; controle de insumos; abertura de 
+chamados técnicos; repasse automático de royalties.
+• Franqueadora: visão consolidada da rede, cobrança automática de royalties/fundo, NPS, auditoria remota 
+por câmeras.
+Fase 1: plataforma white-label de assinatura/agendamento embutida na taxa de tecnologia. Fase 2 (ano 2): 
+desenvolvimento próprio — o app vira o principal ativo intangível da franqueadora.
+
+===== PAG 3 =====
+4. Os três modelos de franquia
+LavaJá BOX LavaJá EXPRESS LavaJá PRIME
+Formato 3 boxes self-service de alta 
+pressão + aspirador
+Máquina touchless + 2 boxes, 
+em posto parceiro (padrão 
+Piumhi)
+Express + carregador EV + 
+vending + solar 30 kWp, em 
+rodovia/praça turística
+Praça-alvo Cidades de 15–35 mil hab. 
+ou bairros
+Cidades de 30–120 mil hab. Capitólio, eixos turísticos e 
+rodovias
+Taxa de franquia R$ 35 mil R$ 50 mil R$ 60 mil
+Capex de 
+instalação
+~R$ 155 mil ~R$ 326 mil ~R$ 600 mil
+Receita 
+madura/mês
+~R$ 19 mil ~R$ 48 mil ~R$ 75 mil
+EBITDA 
+franqueado/mês
+~R$ 5 mil ~R$ 15,6 mil ~R$ 24,8 mil
+Payback com 
+ramp-up
+~42 meses ~29 meses ~31 meses
+Leitura honesta: o Express é o produto principal e o único já ancorado em modelo detalhado (Piumhi). O Box é 
+porta de entrada barata, mas tem o payback mais longo e margem sensível — vender Box exige transparência 
+total sobre isso na COF. O Prime só deve ser vendido após validação da unidade de Capitólio.
+5. Estrutura de taxas e economics
+• Royalties: 6% da receita bruta, cobrados via gateway (o app reparte automaticamente — sem 
+inadimplência de royalty).
+• Fundo de marketing: 2% da receita bruta, com prestação de contas anual aos franqueados.
+• Taxa de tecnologia: R$ 700/mês por unidade (app, LPR, gateway, dashboards).
+• Rebate de fornecedores homologados: ~R$ 25 mil por unidade instalada, pago pelo fabricante à 
+franqueadora. Legítimo e comum, desde que declarado na COF — omitir gera passivo com franqueados.
+Fluxo de caixa da franqueadora (modelo Excel, aba própria): ano 1 dedicado à unidade própria e à 
+formatação; vendas a partir do ano 2 (3 unidades), chegando a ~24 unidades operando no ano 5. Consumo de 
+caixa acumulado de pico: ~R$ 720 mil entre os anos 2 e 3 (formatação + app + equipe antes da escala), com o 
+EBITDA da unidade própria amortecendo. Caixa acumulado zera ao final do ano 5 e o EBITDA da franqueadora 
+atinge ~R$ 270 mil/ano com 24 unidades.
+Conclusão franca: franquia é jogo de escala — a franqueadora só remunera de verdade com 40–60+ 
+unidades. A região Centro-Oeste de MG comporta ~25–35 praças; portanto o plano regional é a Fase 1 de 
+uma tese que precisa sair da região a partir do ano 4–5 (Sul de Minas, Triângulo, interior de SP) para valer o 
+esforço. Alternativa a considerar na formatação: microfranquia com master regional ou captação de sócio 
+para a franqueadora.
+6. Território e sequência de expansão regional
+Onda Praças Modelo
+Própria (fase 0) Piumhi Express (unidade modelo)
+Própria/JV (fase 2) Capitólio Prime (valida 
+turismo/EV/solar)
+Onda 1 (ano 2) Formiga, Arcos, Bambuí Express / Box
+
+===== PAG 4 =====
+Onda 2 (ano 3) Passos, Lagoa da Prata, Santo Antônio do Monte, Pains Express / Box
+Onda 3 (anos 4–5) Divinópolis (2 unidades), Itaúna, Oliveira, Campo Belo, 
+São Sebastião do Paraíso
+Express / Prime
+• Território exclusivo por contrato: raio de 15 km ou o município, o que for maior (cidades pequenas 
+exigem exclusividade municipal).
+• Critério de praça: frota SENATRAN > 8 mil veículos para Box, > 15 mil para Express; renda agro/industrial; 
+posto parceiro disponível.
+7. Requisitos legais — Lei nº 13.966/2019 (checklist da COF)
+A COF deve ser entregue ao candidato no mínimo 10 dias antes da assinatura de qualquer contrato ou 
+pagamento de qualquer valor. Conteúdo mínimo a preparar na formatação:
+• Histórico, forma societária e balanços/demonstrações da franqueadora dos 2 últimos exercícios (ou desde 
+a constituição).
+• Pendências judiciais da franqueadora, controladores e titulares da marca que possam impossibilitar o 
+funcionamento da franquia.
+• Descrição detalhada do negócio, perfil do franqueado ideal e requisitos de envolvimento direto.
+• Investimento total, taxa de franquia, custo de instalação e capital de giro — por modelo.
+• Taxas periódicas (royalties, fundo, tecnologia) e todas as remunerações de fornecedores à franqueadora 
+(rebates!).
+• Relação de franqueados e ex-franqueados dos últimos 24 meses, com contatos.
+• Regras de território/exclusividade e de concorrência da franqueadora com franqueados (venda direta, e-
+commerce).
+• Suporte, treinamento, manuais e supervisão oferecidos; situação da marca no INPI; regras de 
+transferência e sucessão; penalidades e quitação na saída.
+Providências societárias: constituir a franqueadora como pessoa jurídica própria (separada da operação de 
+Piumhi e do patrimônio pessoal), com contabilidade limpa desde o dia 1 — os balanços dela vão para a COF.
+
+===== PAG 5 =====
+8. MINUTA — Term sheet do Contrato de Franquia
+MINUTA — estrutura de cláusulas essenciais para o contrato definitivo, a ser redigido e revisado na 
+formatação jurídica. Não usar para assinatura.
+Cláusula Conteúdo essencial
+Objeto Licença de uso da marca LavaJá e do sistema (know-how, manuais, app, fornecedores 
+homologados) para operação de 1 unidade no formato contratado
+Prazo 5 anos, renovável por igual período mediante adimplência e conformidade com o 
+padrão; sem renovação automática
+Território Exclusividade no município ou raio de 15 km (o maior); franqueadora não opera nem 
+vende no território, ressalvado o app da rede
+Taxas Taxa de franquia (não reembolsável após treinamento); royalties 6% e fundo 2% sobre 
+receita bruta, retidos via gateway; taxa de tecnologia R$ 700/mês reajustada por IPCA
+Implantação Cronograma de obra assistida; compra de equipamentos exclusivamente de 
+fornecedores homologados; padrão arquitetônico e visual obrigatório
+Obrigações do franqueado Uso obrigatório do app e do gateway; padrão de preços mínimo/máximo sugerido; 
+insumos homologados; metas mínimas de qualidade (NPS, uptime da máquina); 
+seguro; licenças em dia
+Obrigações da 
+franqueadora
+Treinamento inicial (equipe e franqueado); consultoria de campo periódica; evolução 
+do app; marketing do fundo; homologação e SLA com fabricantes
+Confidencialidade e não 
+concorrência
+Sigilo sobre o sistema; não concorrência no segmento durante o contrato + 2 anos 
+após, no território e municípios limítrofes
+Transferência Cessão da franquia sujeita a aprovação prévia da franqueadora e taxa de transferência; 
+regras de sucessão causa mortis
+Inadimplemento e rescisão Hipóteses de rescisão motivada (fraude no faturamento, quebra de padrão reiterada, 
+inadimplência > 60 dias); multa; obrigações pós-término (descaracterização da 
+unidade, devolução de manuais, cessação de uso da marca e do app)
+Penalidades Advertência, multa e intervenção gradativas; auditoria de faturamento pelo sistema (o 
+gateway elimina a discussão clássica de subfaturamento)
+Solução de conflitos Mediação prévia; eleição de foro [Comarca] ou arbitragem CAMARB — definir na 
+formatação (arbitragem encarece para franqueado pequeno; ponderar)
+9. Roadmap 24 meses
+Período Entregas
+Meses 1–6 Implantação e inauguração da unidade própria de Piumhi (plano v2); site + white-label no ar; 
+registro da marca no INPI (classes 35 e 37)
+Meses 6–12 Operação e ajuste fino; contabilidade auditável; documentação de processos vira manual; 
+negociação de rebate e SLA com fabricante
+Meses 10–15 Constituição da franqueadora; COF, contrato definitivo e manuais; definição do white-label 
+vs início do app próprio; prospecção de Capitólio
+Meses 15–20 Unidade Capitólio (Prime, própria ou JV); início da venda das 3 primeiras franquias (Formiga, 
+Arcos, Bambuí)
+Meses 20–24 Implantação das primeiras franquias com obra assistida; consultor de campo contratado; 
+app próprio em desenvolvimento
+10. Riscos específicos da franqueadora
+Risco Mitigação
+
+===== PAG 6 =====
+Vender franquia antes de números reais (passivo da 
+Lei 13.966)
+Gate absoluto: 12 meses de operação auditável antes da 1ª 
+venda; COF completa e conservadora
+Franqueado quebrar cedo mancha a marca na região 
+inteira
+Seleção rigorosa (capital próprio ≥ 40%, envolvimento direto); 
+gate de pré-venda de fundadores em cada praça antes da obra
+Dependência do fabricante (assistência) multiplicada 
+pela rede
+Contrato-quadro com SLA e estoque nacional de peças como 
+condição de homologação; segundo fornecedor homologado 
+até a 10ª unidade
+Subfaturamento de royalties Pagamento 100% pelo app/gateway com repasse automático 
+— royalty retido na fonte
+Caixa da franqueadora nos anos 2–3 (pico ~R$ 720 
+mil)
+EBITDA da unidade própria + faseamento do app + 
+eventualmente sócio ou master regional
+Canibalização/competição com franqueados Território exclusivo contratual; unidades próprias só fora dos 
+territórios vendidos

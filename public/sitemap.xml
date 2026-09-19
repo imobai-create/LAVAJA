@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ATENÇÃO: o domínio usado aqui é https://lavaja.com.br. Se o site for publicado em outro
+     endereço (ou continuar no domínio gerado pelo Railway), troque TODAS as URLs deste arquivo
+     e também a linha "Sitemap:" de public/robots.txt.
+
+     As URLs são "limpas" (/franquia, /privacidade), sem .html. Para elas responderem 200, o
+     servidor precisa resolver caminhos sem extensão — em server.js, a opção
+     express.static(..., { extensions: ["html"] }) resolve isso. Enquanto não resolver, só
+     /franquia.html e /privacidade.html respondem, e este sitemap aponta para 404. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lavaja.com.br/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lavaja.com.br/franquia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lavaja.com.br/privacidade</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

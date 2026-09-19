@@ -1,0 +1,20 @@
+# dependências
+node_modules/
+
+# ambiente (nunca versionar segredo — .env.example é o modelo)
+.env
+.env.*
+!.env.example
+
+# logs e lixo de ferramenta
+*.log
+npm-debug.log*
+coverage/
+tmp/
+.cache/
+
+# sistema operacional / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

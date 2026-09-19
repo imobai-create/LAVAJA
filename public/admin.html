@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark">
+<title>Painel LavaJá</title>
+<style nonce="__NONCE__">
+  :root{
+    --fundo:#0B0F1A; --superficie:#121826; --texto:#E8EDF7; --secundario:#9AA7BD;
+    --destaque:#00E5A0; --borda:rgba(255,255,255,.10); --raio:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--fundo); color:var(--texto);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.45; -webkit-text-size-adjust:100%;
+    padding:16px 16px calc(32px + env(safe-area-inset-bottom));
+  }
+  h1{font-size:20px;margin:0 0 2px}
+  h2{font-size:15px;margin:0 0 10px;color:var(--secundario);font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+  a{color:var(--destaque)}
+  .topo{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+  .sub{color:var(--secundario);font-size:13px;margin:0}
+  .cartao{background:var(--superficie);border:1px solid var(--borda);border-radius:var(--raio);padding:14px}
+  .secao{margin-bottom:18px}
+  .cartoes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .metrica .rotulo{color:var(--secundario);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .metrica .valor{font-size:26px;font-weight:800;margin-top:4px;line-height:1.1}
+  .metrica .valor.destaque{color:var(--destaque)}
+  button,.botao{
+    background:var(--destaque);color:#04231A;border:0;border-radius:12px;
+    padding:11px 14px;font:inherit;font-weight:700;cursor:pointer;min-height:44px;
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;
+  }
+  button.secundario,.botao.secundario{background:transparent;color:var(--texto);border:1px solid var(--borda)}
+  button:disabled{opacity:.5;cursor:progress}
+  input,select{
+    width:100%;background:#0E1422;color:var(--texto);border:1px solid var(--borda);
+    border-radius:12px;padding:11px 12px;font:inherit;min-height:44px;
+  }
+  input:focus,select:focus,button:focus-visible{outline:2px solid var(--destaque);outline-offset:2px}
+  label{display:block;font-size:13px;color:var(--secundario);margin:0 0 6px}
+  .linha{display:grid;gap:10px}
+  .acoes{display:flex;gap:8px;flex-wrap:wrap}
+  .grafico{display:flex;align-items:flex-end;gap:4px;height:140px;padding-top:8px}
+  .barra{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px;min-width:0}
+  .barra i{display:block;width:100%;background:linear-gradient(180deg,var(--destaque),rgba(0,229,160,.35));border-radius:6px 6px 2px 2px;min-height:3px}
+  .barra span{font-size:9px;color:var(--secundario);white-space:nowrap}
+  .barra b{font-size:10px;color:var(--texto);font-weight:700}
+  .tabela{width:100%;border-collapse:collapse;font-size:13px}
+  .tabela th{text-align:left;color:var(--secundario);font-weight:600;font-size:11px;text-transform:uppercase;padding:8px 6px;border-bottom:1px solid var(--borda)}
+  .tabela td{padding:9px 6px;border-bottom:1px solid var(--borda);vertical-align:top}
+  .rolagem{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .etiqueta{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--borda);color:var(--secundario);white-space:nowrap}
+  .etiqueta.fundador{color:var(--destaque);border-color:rgba(0,229,160,.45)}
+  .zap{color:var(--destaque);text-decoration:none;font-weight:700;white-space:nowrap}
+  .aviso{color:#FFB4A9;font-size:13px;margin:8px 0 0;min-height:18px}
+  .vazio{color:var(--secundario);font-size:14px;padding:18px 0;text-align:center}
+  .abas{display:flex;gap:8px;margin-bottom:12px}
+  .abas button{flex:1;background:transparent;border:1px solid var(--borda);color:var(--secundario);font-weight:600}
+  .abas button[aria-selected="true"]{background:rgba(0,229,160,.12);border-color:rgba(0,229,160,.45);color:var(--destaque)}
+  .oculto{display:none !important}
+  @media (min-width:720px){
+    body{max-width:1040px;margin:0 auto;padding:24px}
+    .cartoes{grid-template-columns:repeat(4,1fr)}
+    .linha.filtros{grid-template-columns:2fr 1fr auto}
+    .barra span{font-size:10px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Tela de acesso -->
+<section id="tela-login" class="secao">
+  <div class="topo"><div><h1>Painel LavaJá</h1><p class="sub">Acompanhamento da pré-venda — Piumhi/MG</p></div></div>
+  <div class="cartao">
+    <label for="token">Token de acesso</label>
+    <input id="token" type="password" autocomplete="current-password" placeholder="ADMIN_TOKEN" enterkeyhint="go">
+    <p class="aviso" id="aviso-login"></p>
+    <div class="acoes" style="margin-top:10px"><button id="btn-entrar" type="button">Entrar</button></div>
+  </div>
+</section>
+
+<!-- Painel -->
+<main id="tela-painel" class="oculto">
+  <div class="topo">
+    <div><h1>Painel LavaJá</h1><p class="sub" id="atualizado">—</p></div>
+    <div class="acoes">
+      <button id="btn-atualizar" class="secundario" type="button">Atualizar</button>
+      <button id="btn-sair" class="secundario" type="button">Sair</button>
+    </div>
+  </div>
+
+  <section class="secao cartoes">
+    <div class="cartao metrica"><div class="rotulo">Reservas</div><div class="valor" id="m-total">—</div></div>
+    <div class="cartao metrica"><div class="rotulo">Vagas restantes</div><div class="valor destaque" id="m-restantes">—</div></div>
+    <div class="cartao metrica"><div class="rotulo">Hoje</div><div class="valor" id="m-hoje">—</div></div>
+    <div class="cartao metrica"><div class="rotulo">Franquia</div><div class="valor" id="m-franquia">—</div></div>
+  </section>
+
+  <section class="secao cartao">
+    <h2>Reservas por dia (14 dias)</h2>
+    <div class="grafico" id="grafico" role="img" aria-label="Reservas por dia nos últimos 14 dias"></div>
+  </section>
+
+  <section class="secao cartao">
+    <h2>Por plano</h2>
+    <div id="por-plano" class="rolagem"></div>
+    <h2 style="margin-top:14px">Por origem (utm_source)</h2>
+    <div id="por-utm" class="rolagem"></div>
+  </section>
+
+  <section class="secao cartao">
+    <h2>Contatos</h2>
+    <div class="abas" role="tablist">
+      <button id="aba-leads" type="button" role="tab" aria-selected="true">Reservas</button>
+      <button id="aba-franquia" type="button" role="tab" aria-selected="false">Franquia</button>
+    </div>
+    <div class="linha filtros">
+      <div><label for="busca">Buscar por nome, WhatsApp ou cidade</label><input id="busca" type="search" placeholder="Ex.: Maria" enterkeyhint="search"></div>
+      <div><label for="filtro-plano">Plano</label><select id="filtro-plano"><option value="">Todos</option></select></div>
+      <div class="acoes" style="align-items:flex-end">
+        <a id="csv-leads" class="botao secundario" href="#" download>CSV reservas</a>
+        <a id="csv-franquia" class="botao secundario" href="#" download>CSV franquia</a>
+      </div>
+    </div>
+    <p class="aviso" id="aviso-painel"></p>
+    <div class="rolagem" style="margin-top:10px"><table class="tabela"><thead id="cabecalho"></thead><tbody id="corpo"></tbody></table></div>
+    <div class="vazio oculto" id="vazio">Nada por aqui ainda.</div>
+  </section>
+</main>
+
+<script nonce="__NONCE__">
+(function () {
+  "use strict";
+
+  var CHAVE = "lavaja-admin-token";
+  var estado = { token: "", aba: "leads", leads: [], franquia: [], resumo: null };
+
+  function $(id) { return document.getElementById(id); }
+  function texto(el, valor) { el.textContent = valor; }
+
+  function pegarToken() {
+    try { return sessionStorage.getItem(CHAVE) || ""; } catch (e) { return ""; }
+  }
+  function guardarToken(valor) {
+    try { valor ? sessionStorage.setItem(CHAVE, valor) : sessionStorage.removeItem(CHAVE); } catch (e) { /* modo anônimo */ }
+  }
+
+  function buscar(caminho) {
+    return fetch(caminho, { headers: { "x-admin-token": estado.token }, cache: "no-store" })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (corpo) {
+          if (!r.ok) throw new Error(corpo.erro || ("Falha " + r.status));
+          return corpo;
+        });
+      });
+  }
+
+  function formatarData(valor) {
+    var d = new Date(valor);
+    if (isNaN(d.getTime())) return String(valor || "");
+    return d.toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  }
+
+  function formatarZap(numero) {
+    var d = String(numero || "").replace(/\D/g, "");
+    if (d.length < 12) return d;
+    return "(" + d.slice(2, 4) + ") " + d.slice(4, d.length - 4) + "-" + d.slice(-4);
+  }
+
+  // ---------- render ----------
+  function desenharGrafico(serie) {
+    var alvo = $("grafico");
+    alvo.innerHTML = "";
+    var maximo = serie.reduce(function (m, p) { return Math.max(m, p.total); }, 0) || 1;
+    serie.forEach(function (ponto) {
+      var col = document.createElement("div");
+      col.className = "barra";
+      col.title = ponto.dia + ": " + ponto.total;
+      var b = document.createElement("b");
+      b.textContent = ponto.total ? String(ponto.total) : "";
+      var barra = document.createElement("i");
+      barra.style.height = Math.round((ponto.total / maximo) * 96) + "px";
+      var rot = document.createElement("span");
+      rot.textContent = ponto.dia.slice(8) + "/" + ponto.dia.slice(5, 7);
+      col.appendChild(b); col.appendChild(barra); col.appendChild(rot);
+      alvo.appendChild(col);
+    });
+  }
+
+  function desenharAgrupamento(alvoId, itens) {
+    var alvo = $(alvoId);
+    alvo.innerHTML = "";
+    if (!itens || !itens.length) { alvo.appendChild(document.createTextNode("—")); return; }
+    var total = itens.reduce(function (s, i) { return s + i.total; }, 0) || 1;
+    itens.forEach(function (item) {
+      var linha = document.createElement("div");
+      linha.style.display = "flex";
+      linha.style.alignItems = "center";
+      linha.style.gap = "8px";
+      linha.style.padding = "5px 0";
+      var nome = document.createElement("span");
+      nome.style.flex = "0 0 42%";
+      nome.style.fontSize = "13px";
+      nome.textContent = item.valor;
+      var trilho = document.createElement("span");
+      trilho.style.flex = "1";
+      trilho.style.height = "8px";
+      trilho.style.borderRadius = "999px";
+      trilho.style.background = "rgba(255,255,255,.08)";
+      var preenchido = document.createElement("span");
+      preenchido.style.display = "block";
+      preenchido.style.height = "8px";
+      preenchido.style.borderRadius = "999px";
+      preenchido.style.background = "var(--destaque)";
+      preenchido.style.width = Math.round((item.total / total) * 100) + "%";
+      trilho.appendChild(preenchido);
+      var n = document.createElement("b");
+      n.style.fontSize = "13px";
+      n.textContent = String(item.total);
+      linha.appendChild(nome); linha.appendChild(trilho); linha.appendChild(n);
+      alvo.appendChild(linha);
+    });
+  }
+
+  function preencherFiltroPlano() {
+    var sel = $("filtro-plano");
+    var atual = sel.value;
+    sel.innerHTML = '<option value="">Todos</option>';
+    var vistos = {};
+    estado.leads.forEach(function (l) {
+      if (l.plano && !vistos[l.plano]) {
+        vistos[l.plano] = true;
+        var o = document.createElement("option");
+        o.value = l.plano; o.textContent = l.plano;
+        sel.appendChild(o);
+      }
+    });
+    sel.value = atual;
+  }
+
+  function celulaZap(numero) {
+    var a = document.createElement("a");
+    a.className = "zap";
+    a.href = "https://wa.me/" + String(numero || "").replace(/\D/g, "");
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = formatarZap(numero);
+    return a;
+  }
+
+  function linhasFiltradas() {
+    var termo = $("busca").value.trim().toLowerCase();
+    var plano = $("filtro-plano").value;
+    var base = estado.aba === "leads" ? estado.leads : estado.franquia;
+    return base.filter(function (l) {
+      if (estado.aba === "leads" && plano && l.plano !== plano) return false;
+      if (!termo) return true;
+      var alvo = [l.nome, l.whatsapp, l.cidade, l.cidade_interesse, l.email, l.utm_source]
+        .filter(Boolean).join(" ").toLowerCase();
+      return alvo.indexOf(termo) >= 0;
+    });
+  }
+
+  function desenharTabela() {
+    var cab = $("cabecalho"), corpo = $("corpo");
+    cab.innerHTML = ""; corpo.innerHTML = "";
+    var colunas = estado.aba === "leads"
+      ? ["#", "Nome", "WhatsApp", "Plano", "Quando", ""]
+      : ["#", "Nome", "WhatsApp", "Cidade", "Capital", ""];
+    var tr = document.createElement("tr");
+    colunas.forEach(function (c) { var th = document.createElement("th"); th.textContent = c; tr.appendChild(th); });
+    cab.appendChild(tr);
+
+    var linhas = linhasFiltradas();
+    $("vazio").classList.toggle("oculto", linhas.length > 0);
+
+    linhas.forEach(function (l) {
+      var tr = document.createElement("tr");
+      function td(conteudo) {
+        var c = document.createElement("td");
+        if (conteudo instanceof Node) c.appendChild(conteudo); else c.textContent = conteudo === null || conteudo === undefined ? "" : String(conteudo);
+        tr.appendChild(c);
+        return c;
+      }
+      td(l.id);
+      td(l.nome);
+      td(celulaZap(l.whatsapp));
+      if (estado.aba === "leads") {
+        var et = document.createElement("span");
+        et.className = "etiqueta" + (l.plano === "ilimitada-fundador" ? " fundador" : "");
+        et.textContent = l.plano || "—";
+        td(et);
+        td(formatarData(l.criado_em));
+      } else {
+        td(l.cidade_interesse || "—");
+        td(l.capital_disponivel || "—");
+      }
+      var acao = document.createElement("a");
+      acao.className = "zap";
+      acao.href = "https://wa.me/" + String(l.whatsapp || "").replace(/\D/g, "") +
+        "?text=" + encodeURIComponent("Oi, " + String(l.nome || "").split(" ")[0] + "! Aqui é da LavaJá de Piumhi.");
+      acao.target = "_blank"; acao.rel = "noopener noreferrer";
+      acao.textContent = "Chamar";
+      td(acao);
+      corpo.appendChild(tr);
+    });
+  }
+
+  function desenharTudo() {
+    var r = estado.resumo || {};
+    texto($("m-total"), String(r.total_leads != null ? r.total_leads : estado.leads.length));
+    texto($("m-restantes"), String(r.restantes != null ? r.restantes : "—"));
+    texto($("m-hoje"), String(r.hoje != null ? r.hoje : "—"));
+    texto($("m-franquia"), String(r.total_franquia != null ? r.total_franquia : estado.franquia.length));
+    desenharGrafico(r.por_dia || []);
+    desenharAgrupamento("por-plano", r.por_plano || []);
+    desenharAgrupamento("por-utm", r.por_utm_source || []);
+    preencherFiltroPlano();
+    desenharTabela();
+    texto($("atualizado"), "Atualizado às " + new Date().toLocaleTimeString("pt-BR"));
+  }
+
+  // ---------- dados ----------
+  function carregar() {
+    $("btn-atualizar").disabled = true;
+    texto($("aviso-painel"), "");
+    return Promise.all([
+      buscar("/api/admin/resumo"),
+      buscar("/api/leads"),
+      buscar("/api/franquia-leads"),
+    ]).then(function (res) {
+      estado.resumo = res[0];
+      estado.leads = res[1].leads || [];
+      estado.franquia = res[2].leads || [];
+      desenharTudo();
+    }).catch(function (e) {
+      texto($("aviso-painel"), e.message || "Falha ao carregar.");
+      if (/401|inválido|ausente/i.test(e.message || "")) sair();
+    }).then(function () {
+      $("btn-atualizar").disabled = false;
+    });
+  }
+
+  function entrar() {
+    var valor = $("token").value.trim();
+    if (!valor) { texto($("aviso-login"), "Informe o token."); return; }
+    estado.token = valor;
+    $("btn-entrar").disabled = true;
+    texto($("aviso-login"), "Verificando...");
+    buscar("/api/admin/resumo").then(function () {
+      guardarToken(valor);
+      texto($("aviso-login"), "");
+      mostrarPainel();
+      return carregar();
+    }).catch(function (e) {
+      estado.token = "";
+      texto($("aviso-login"), e.message || "Token inválido.");
+    }).then(function () {
+      $("btn-entrar").disabled = false;
+    });
+  }
+
+  function mostrarPainel() {
+    $("tela-login").classList.add("oculto");
+    $("tela-painel").classList.remove("oculto");
+  }
+
+  function sair() {
+    estado.token = "";
+    guardarToken("");
+    $("tela-painel").classList.add("oculto");
+    $("tela-login").classList.remove("oculto");
+    $("token").value = "";
+  }
+
+  function baixarCsv(caminho, nome) {
+    return fetch(caminho, { headers: { "x-admin-token": estado.token }, cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("Falha ao exportar (" + r.status + ")."); return r.blob(); })
+      .then(function (blob) {
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url; a.download = nome;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+      })
+      .catch(function (e) { texto($("aviso-painel"), e.message); });
+  }
+
+  function trocarAba(aba) {
+    estado.aba = aba;
+    $("aba-leads").setAttribute("aria-selected", String(aba === "leads"));
+    $("aba-franquia").setAttribute("aria-selected", String(aba === "franquia"));
+    $("filtro-plano").disabled = aba !== "leads";
+    desenharTabela();
+  }
+
+  // ---------- eventos ----------
+  $("btn-entrar").addEventListener("click", entrar);
+  $("token").addEventListener("keydown", function (e) { if (e.key === "Enter") entrar(); });
+  $("btn-atualizar").addEventListener("click", carregar);
+  $("btn-sair").addEventListener("click", sair);
+  $("busca").addEventListener("input", desenharTabela);
+  $("filtro-plano").addEventListener("change", desenharTabela);
+  $("aba-leads").addEventListener("click", function () { trocarAba("leads"); });
+  $("aba-franquia").addEventListener("click", function () { trocarAba("franquia"); });
+  $("csv-leads").addEventListener("click", function (e) { e.preventDefault(); baixarCsv("/api/leads?formato=csv", "leads-lavaja.csv"); });
+  $("csv-franquia").addEventListener("click", function (e) { e.preventDefault(); baixarCsv("/api/franquia-leads?formato=csv", "franquia-lavaja.csv"); });
+
+  // Sessão já autenticada neste navegador?
+  var guardado = pegarToken();
+  if (guardado) {
+    estado.token = guardado;
+    buscar("/api/admin/resumo").then(function () {
+      mostrarPainel();
+      return carregar();
+    }).catch(function () { sair(); });
+  }
+})();
+</script>
+</body>
+</html>
