@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LavaJá — Seu carro sempre limpo · Piumhi/MG</title>
+<meta name="description" content="Lava jato automatizado 24h em Piumhi. Assinatura ilimitada a partir de R$ 79/mês. 80 vagas de fundador com preço travado para sempre." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:#21295C; --blue:#065A82; --teal:#1C7293; --mint:#02C39A;
+    --ink:#1C2430; --grey:#5A6470; --mist:#EAF2F6; --paper:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important;animation:none!important}}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  h1,h2,h3,.display{font-family:"Sora",sans-serif}
+  a{color:var(--blue)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  .btn{display:inline-block;background:var(--mint);color:var(--navy);font-family:"Sora",sans-serif;font-weight:800;
+       font-size:1.05rem;padding:16px 28px;border:none;border-radius:14px;cursor:pointer;text-decoration:none}
+  .btn:hover{filter:brightness(1.06)}
+  .btn:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:56px 0 0}
+  .hero .wrap{position:relative;z-index:1}
+  .brand{font-family:"Sora",sans-serif;font-weight:800;font-size:1.3rem;color:#fff}
+  .brand span{color:var(--mint)}
+  .hero h1{font-size:clamp(2.3rem,7vw,4rem);font-weight:800;line-height:1.08;margin:44px 0 18px;max-width:14ch}
+  .hero p.sub{font-size:1.15rem;color:#CADCFC;max-width:34ch;margin-bottom:30px}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:26px}
+  .hero .price-note{color:#8FA5C9;font-size:.95rem}
+  .counter{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:18px;
+           padding:18px 22px;display:inline-flex;align-items:baseline;gap:10px;margin-bottom:56px}
+  .counter b{font-family:"Sora",sans-serif;font-size:2.4rem;color:var(--mint);font-weight:800;line-height:1}
+  .counter small{color:#CADCFC;font-size:.95rem;max-width:22ch}
+  .wave{display:block;width:100%;height:70px;color:var(--paper)}
+
+  section{padding:64px 0}
+  section h2{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:800;margin-bottom:10px;color:var(--navy)}
+  section p.lead{color:var(--grey);max-width:60ch;margin-bottom:34px}
+
+  /* COMO FUNCIONA */
+  .steps{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .step{border-left:4px solid var(--teal);padding:6px 0 6px 16px}
+  .step .n{font-family:"Sora",sans-serif;font-weight:800;color:var(--teal);font-size:1rem}
+  .step h3{font-size:1.1rem;margin:6px 0 6px;color:var(--navy)}
+  .step p{color:var(--grey);font-size:.95rem}
+
+  /* PLANOS */
+  .planos{background:var(--mist)}
+  .cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}
+  .card{background:#fff;border-radius:18px;padding:26px}
+  .card.destaque{background:var(--blue);color:#fff;box-shadow:0 14px 34px rgba(6,90,130,.28)}
+  .card h3{font-size:1.15rem;margin-bottom:8px}
+  .card.destaque h3{color:var(--mint)}
+  .card .preco{font-family:"Sora",sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:6px}
+  .card .preco small{font-size:1rem;font-weight:400}
+  .card p{font-size:.95rem;color:var(--grey)}
+  .card.destaque p{color:#DCE9F5}
+  .card .tag{display:inline-block;margin-top:14px;background:rgba(2,195,154,.16);color:var(--mint);
+             font-family:"Sora",sans-serif;font-weight:600;font-size:.8rem;padding:5px 10px;border-radius:8px}
+  .avulso{margin-top:22px;color:var(--grey);font-size:.95rem;text-align:center}
+
+  /* HONESTIDADE */
+  .verdade .box{background:var(--navy);color:#fff;border-radius:20px;padding:30px 26px;margin-top:8px}
+  .verdade .box h3{color:var(--mint);font-size:1.15rem;margin-bottom:10px}
+  .verdade .box p{color:#DCE9F5;max-width:70ch}
+  .verdade ul{margin:16px 0 0 18px;color:#DCE9F5}
+  .verdade li{margin-bottom:8px}
+
+  /* FORM */
+  .fundadores{background:var(--mist)}
+  form{background:#fff;border-radius:20px;padding:28px;max-width:520px}
+  label{display:block;font-weight:700;font-size:.95rem;margin:16px 0 6px;color:var(--navy)}
+  input,select{width:100%;padding:14px;border:1.5px solid #C9D6DE;border-radius:12px;font-size:1rem;font-family:inherit;background:#fff}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0}
+  .consent input{width:auto;margin-top:3px}
+  .consent span{font-size:.85rem;color:var(--grey)}
+  form .btn{width:100%;margin-top:6px}
+  .msg{margin-top:14px;padding:14px;border-radius:12px;font-size:.95rem;display:none}
+  .msg.ok{display:block;background:rgba(2,195,154,.14);color:#046A55}
+  .msg.erro{display:block;background:#FDECEA;color:#9B2C2C}
+
+  /* FAQ */
+  details{border-bottom:1px solid #E1E9EF;padding:14px 0}
+  summary{font-weight:700;cursor:pointer;color:var(--navy)}
+  details p{margin-top:8px;color:var(--grey);max-width:70ch}
+
+  footer{background:var(--navy);color:#8FA5C9;padding:34px 0;font-size:.85rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Lava<span>Já</span></div>
+    <h1>Seu carro sempre limpo.</h1>
+    <p class="sub">Lava jato automatizado sem escovas, aberto 24 horas, em Piumhi. Lavou em 5 minutos, quantas vezes quiser.</p>
+    <div class="cta-row">
+      <a class="btn" href="#fundadores">Reservar vaga de fundador</a>
+      <span class="price-note">R$ 79/mês, ilimitado, preço travado para sempre</span>
+    </div>
+    <div class="counter" aria-live="polite">
+      <b id="restantes">–</b>
+      <small>vagas de fundador restantes, de 80. Você só paga na inauguração.</small>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,80 480,0 720,25 C960,50 1200,10 1440,45 L1440,70 L0,70 Z" fill="currentColor"/>
+  </svg>
+</header>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="lead">Sem fila de espera, sem agendar, sem entregar a chave para ninguém.</p>
+    <div class="steps">
+      <div class="step"><div class="n">Passo 1</div><h3>Chegue quando quiser</h3><p>A câmera lê sua placa e libera a lavagem. Sem assinatura, é só pagar no totem com PIX ou cartão.</p></div>
+      <div class="step"><div class="n">Passo 2</div><h3>Barro pesado?</h3><p>Passe antes no box de alta pressão e tire o grosso em poucos minutos.</p></div>
+      <div class="step"><div class="n">Passo 3</div><h3>5 minutos na máquina</h3><p>Espuma, alta pressão, cera e secagem — sem escovas, sem risco de arranhar a pintura.</p></div>
+      <div class="step"><div class="n">Passo 4</div><h3>Finalize e vá</h3><p>Vaga com aspirador liberado para dar o toque final por sua conta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="planos" id="planos">
+  <div class="wrap">
+    <h2>Planos</h2>
+    <p class="lead">Assinatura mensal, sem fidelidade. Cancele quando quiser.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Essencial</h3>
+        <div class="preco">R$ 79<small>/mês</small></div>
+        <p>Até 2 lavagens por semana na máquina. Para quem roda pouco.</p>
+      </div>
+      <div class="card destaque">
+        <h3>Ilimitada</h3>
+        <div class="preco">R$ 99<small>/mês</small></div>
+        <p>Lavagens ilimitadas na máquina. Não ficou como você queria? Passa de novo na hora, de graça.</p>
+        <span class="tag">Fundador paga R$ 79 para sempre</span>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <div class="preco">R$ 139<small>/mês</small></div>
+        <p>Ilimitada + cera protetora + aspirador e boxes de alta pressão liberados.</p>
+      </div>
+    </div>
+    <p class="avulso">Sem assinatura: lavagem avulsa a partir de R$ 35 · box de alta pressão R$ 18 o uso</p>
+  </div>
+</section>
+
+<section class="verdade">
+  <div class="wrap">
+    <h2>Falando a verdade</h2>
+    <div class="box">
+      <h3>Máquina não faz milagre — e a gente não promete milagre.</h3>
+      <p>A lavagem automatizada tira a sujeira do dia a dia em 5 minutos. Barro grosso seco de estrada de fazenda precisa do box de alta pressão antes. E detalhamento fino, com interior completo, continua sendo trabalho de lava jato manual — não é o nosso serviço.</p>
+      <ul>
+        <li>O que entregamos: carro limpo toda semana, sem custar seu sábado.</li>
+        <li>Quem lava sempre nunca deixa o carro chegar ao ponto que a máquina não resolve.</li>
+        <li>Se não ficou bom, o ilimitado lava de novo na hora, de graça. Simples assim.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="fundadores" id="fundadores">
+  <div class="wrap">
+    <h2>Seja fundador</h2>
+    <p class="lead">As 80 primeiras pessoas garantem o plano Ilimitada por R$ 79/mês para sempre — enquanto mantiverem a assinatura. Reservar é grátis: você só paga quando a unidade abrir.</p>
+    <form id="form-lead" novalidate>
+      <label for="nome">Nome completo</label>
+      <input id="nome" name="nome" type="text" autocomplete="name" required />
+      <label for="whatsapp">WhatsApp com DDD</label>
+      <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="(37) 9 9999-9999" autocomplete="tel" required />
+      <label for="plano">Plano de interesse</label>
+      <select id="plano" name="plano">
+        <option value="ilimitada-fundador">Ilimitada — preço de fundador (R$ 79)</option>
+        <option value="essencial">Essencial (R$ 79)</option>
+        <option value="premium">Premium (R$ 139)</option>
+      </select>
+      <div class="consent">
+        <input id="consent" type="checkbox" />
+        <span>Autorizo o contato da LavaJá pelo WhatsApp sobre a minha reserva e a inauguração. Seus dados ficam só com a gente e você pode pedir a exclusão quando quiser (LGPD).</span>
+      </div>
+      <button class="btn" type="submit">Reservar minha vaga</button>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Quando abre?</summary><p>A unidade está em implantação em Piumhi. Quem reservar recebe a data da inauguração em primeira mão pelo WhatsApp — e os fundadores lavam de graça na semana de abertura.</p></details>
+    <details><summary>A máquina risca a pintura?</summary><p>Não usa escovas. A lavagem é feita só com água em alta pressão, espuma e cera — por isso se chama touchless: nada encosta no carro.</p></details>
+    <details><summary>E se eu quiser cancelar?</summary><p>Cancela quando quiser, sem multa. O preço de fundador vale enquanto a assinatura estiver ativa.</p></details>
+    <details><summary>Caminhonete com barro entra?</summary><p>Entra. Passe antes no box de alta pressão para tirar o barro grosso e depois na máquina. No plano Premium os boxes são liberados.</p></details>
+    <details><summary>Gasta muita água?</summary><p>Menos que qualquer lava jato comum: o sistema reaproveita cerca de 80% da água de cada lavagem.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>LavaJá · Piumhi/MG</div>
+    <div>Dúvidas e privacidade: fale no WhatsApp da reserva</div>
+  </div>
+</footer>
+
+<script>
+  async function carregarVagas(){
+    try{
+      const r = await fetch("/api/stats");
+      const d = await r.json();
+      document.getElementById("restantes").textContent = d.restantes;
+    }catch(e){
+      document.getElementById("restantes").textContent = "80";
+    }
+  }
+  carregarVagas();
+
+  const form = document.getElementById("form-lead");
+  const msg = document.getElementById("msg");
+  form.addEventListener("submit", async (ev)=>{
+    ev.preventDefault();
+    msg.className = "msg";
+    const payload = {
+      nome: document.getElementById("nome").value,
+      whatsapp: document.getElementById("whatsapp").value,
+      plano: document.getElementById("plano").value,
+      consentimento: document.getElementById("consent").checked
+    };
+    const btn = form.querySelector("button");
+    btn.disabled = true; btn.textContent = "Enviando…";
+    try{
+      const r = await fetch("/api/leads",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+      const d = await r.json();
+      if(r.ok){
+        msg.textContent = d.mensagem;
+        msg.className = "msg ok";
+        form.reset();
+        carregarVagas();
+      }else{
+        msg.textContent = d.erro || "Não deu certo. Confira os dados e tente de novo.";
+        msg.className = "msg erro";
+      }
+    }catch(e){
+      msg.textContent = "Sem conexão agora. Tente de novo em instantes.";
+      msg.className = "msg erro";
+    }finally{
+      btn.disabled = false; btn.textContent = "Reservar minha vaga";
+    }
+  });
+</script>
+</body>
+</html>
