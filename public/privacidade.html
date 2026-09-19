@@ -7,30 +7,68 @@
 <meta name="description" content="Como a LavaJá trata os dados informados na reserva de vaga de fundador: quais dados, para quê, por quanto tempo e como pedir exclusão, conforme a LGPD." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://lavaja.com.br/privacidade" />
-<meta name="theme-color" content="#0B0F1A" />
+<meta name="theme-color" content="#EFF3F6" />
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="manifest" href="/manifest.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Newsreader:opsz,ital,wght@6..72,0..1,300..600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/css/style.css" />
 <style>
   /* Só o que falta para uma página de texto corrido. Cores e tipografia vêm das
-     variáveis de /assets/css/style.css; os valores depois da vírgula são fallback. */
-  body{background:var(--bg,#0B0F1A);color:var(--text,#E8EDF7);line-height:1.65}
-  .legal{max-width:760px;margin:0 auto;padding:40px 20px 72px}
-  .legal a{color:var(--brand,#00E5A0)}
-  .legal h1{font-family:"Sora",sans-serif;font-size:clamp(1.9rem,5vw,2.4rem);line-height:1.15;margin:0 0 8px}
-  .legal h2{font-family:"Sora",sans-serif;font-size:1.12rem;margin:34px 0 10px;color:var(--brand,#00E5A0)}
-  .legal p,.legal li{color:var(--text,#E8EDF7);opacity:.92}
+     variáveis de /assets/css/style.css; os valores depois da vírgula são fallback,
+     para a página continuar legível se o CSS principal não chegar. */
+  body{
+    background:var(--papel,#EFF3F6);
+    color:var(--tinta,#0E2231);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    line-height:1.7;
+  }
+  .legal{max-width:680px;margin:0 auto;padding:48px 20px 80px}
+  .legal a{color:var(--azul,#0E63A8)}
+  .legal h1{
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-variation-settings:"wdth" 112;
+    font-weight:800;letter-spacing:-.02em;
+    font-size:clamp(1.9rem,5vw,2.5rem);line-height:1.1;
+    margin:0 0 10px;color:var(--tinta,#0E2231);
+  }
+  .legal h2{
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-variation-settings:"wdth" 112;
+    font-weight:700;letter-spacing:-.01em;
+    font-size:1.08rem;margin:38px 0 10px;color:var(--tinta,#0E2231);
+    padding-top:14px;border-top:1px solid var(--linha,#D5DFE6);
+  }
+  .legal p,.legal li{color:var(--tinta,#0E2231);font-size:1.02rem}
+  .legal strong{font-weight:600}
   .legal ul{padding-left:20px;margin:10px 0}
   .legal li{margin-bottom:8px}
-  .legal .meta{font-size:.9rem;color:var(--muted,#9AA7BD);opacity:1;margin-bottom:14px}
-  .legal .voltar{display:inline-block;margin-bottom:26px;font-size:.95rem;text-decoration:none}
-  .legal .aviso{border:1px solid rgba(0,229,160,.35);border-radius:var(--r,16px);padding:16px 18px;margin:30px 0}
-  .legal .aviso p{margin:0}
-  .legal .pendente{font-style:italic;color:var(--muted,#9AA7BD);opacity:1}
-  .legal footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line,rgba(255,255,255,.10));font-size:.88rem;color:var(--muted,#9AA7BD)}
+  .legal .meta{
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--tinta-3,#7C8E9C);margin:0 0 28px;
+  }
+  .legal .voltar{
+    display:inline-block;margin-bottom:30px;text-decoration:none;
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+  }
+  .legal .voltar:hover{text-decoration:underline}
+  .legal .aviso{
+    background:var(--branco,#FFFFFF);
+    border:1px solid var(--linha,#D5DFE6);
+    border-left:3px solid var(--azul,#0E63A8);
+    border-radius:var(--raio,4px);
+    padding:18px 20px;margin:34px 0;
+  }
+  .legal .aviso p{margin:0;font-size:.98rem}
+  .legal .pendente{font-style:italic;color:var(--tinta-2,#4A5F70)}
+  .legal footer{
+    margin-top:52px;padding-top:18px;
+    border-top:1px solid var(--linha,#D5DFE6);
+    font-size:.88rem;color:var(--tinta-2,#4A5F70);
+  }
 </style>
 </head>
 <body>
