@@ -1,0 +1,9 @@
+# LavaJá — regras para robôs de busca
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin.html
+Disallow: /api/
+
+# Troque o domínio abaixo se o site for publicado em outro endereço.
+Sitemap: https://lavaja.com.br/sitemap.xml
