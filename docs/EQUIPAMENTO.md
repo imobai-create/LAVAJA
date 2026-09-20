@@ -160,3 +160,136 @@ modelo maior.
   medição na unidade instalada.
 - "5 minutos" está coerente com o ciclo ajustável de 2 a 8 minutos do equipamento.
 - "Sem escovas", "cera" e "secagem" estão corretos **a partir da JM-65**.
+
+---
+
+# Segundo fornecedor — Cheer Wash (Shenyang)
+
+Fonte: brochura institucional "Touchless Series", Shenyang Cheer Wash Equipment Co., Ltd.
+(Shenyang, Liaoning), recebida em setembro/2026. **É brochura, não cotação: não traz preço,
+Incoterm nem prazo.**
+
+## 1. Por que este fornecedor muda a conversa
+
+Comparando o que cada um coloca no papel:
+
+| | Yugong (YG-JM) | Cheer Wash (CL) |
+|---|---|---|
+| CLP | Xinjie (nacional chinês) | **Siemens (Alemanha)** |
+| Sensores | ultrassônico Rockwell | **P+F (Alemanha)** |
+| Baixa tensão | Ottonix (Coreia) | **ABB / Schneider** |
+| Bomba | pistão, **acionamento por correia** | cerâmica, **acionamento direto** |
+| Inversor | "acionamento por inversor" | **18,5–22 kW na bomba e nos ventiladores** |
+| Tubulação | não especificada | **304 + mangueira 230/340 bar** |
+| Estrutura | pintura eletrostática | **galvanizado a fogo + pintura, 10 anos de garantia no pórtico** |
+| Garantia da máquina | **não informada** | **1 ano (CL300) / 3 anos (CL500 em diante)** |
+| Certificação | não informada | **CE, EAC, ISO 9001/14001/45001** |
+| Histórico | não informado | 2013, 180 funcionários, 7.000+ máquinas, 90+ países |
+
+Dois pontos técnicos que valem dinheiro de verdade:
+
+- **Acionamento direto em vez de correia.** Correia é peça de desgaste: estica, troca, alinha.
+  Em máquina que dá partida 40 vezes por dia, isso vira chamado técnico recorrente.
+- **Inversor na bomba e nos ventiladores.** A brochura argumenta — e o argumento é correto — que
+  motor tem corrente de partida de 6 a 7 vezes a nominal, e que lava jato automático viola a
+  recomendação de intervalo entre partidas. Partir suave pelo inversor é o que separa um motor que
+  dura cinco anos de um que queima no segundo verão. É a melhor página da brochura.
+
+**Ressalva honesta:** brochura mostra o melhor de si, cotação mostra o preço. Enquanto não houver
+proposta formal da Cheer Wash, a comparação está incompleta — pode ser que ela custe 60% mais e a
+conta mude.
+
+## 2. Modelos candidatos
+
+| | CL500 | CL600 |
+|---|---|---|
+| Bomba | 15 kW / 120 kg/cm² | **22 kW / 140 kg/cm²** |
+| Ventiladores | 4 × 5,5 kW | 4 × 5,5 kW |
+| Instalação | L6,8 × L3,8 × A3,1 m | L7,0 × L3,8 × A3,3 m (4,7 m com ventiladores laterais) |
+| Garantia | 3 anos | 3 anos |
+
+Veículo máximo em ambos: 5,6 × 2,6 × **2,0 m de altura**.
+
+## 3. O que já dá para ver de problema
+
+- **Água: 90–140 L por lavagem**, contra 60–100 L da Yugong. No pior caso, a 46 lavagens/dia, são
+  **6,4 m³/dia contra 4,6 m³** — diferença que aparece na conta da Copasa todo mês, para sempre.
+  Precisa entrar na comparação de custo, não só o preço da máquina.
+- **Altura máxima de veículo de 2,0 m.** Confirmar o que acontece com caminhonete com santantônio,
+  rack ou bagageiro — público que existe em Piumhi.
+- **Tensão 380 V.** Confirmar o que a CEMIG entrega no ponto escolhido antes de pedir, e exigir
+  60 Hz por escrito (mesmo risco da outra cotação).
+- **"Mobile phone/Internet operation"** aparece na lista de funções, mas sem explicação. Pode ser
+  desde um app de comando remoto até uma API de verdade. **É a função mais importante da lista
+  para a LavaJá** e está descrita em cinco palavras — precisa ser esclarecida.
+- **Química proporcionada automaticamente (3 líquidos).** Se os produtos forem proprietários, o
+  custo por lavagem fica preso ao fornecedor pela vida inteira do equipamento. Perguntar se
+  aceita similar nacional.
+- Nenhuma menção a reconhecimento de placa nem a totem de pagamento — mesma lacuna da Yugong.
+
+## 4. Perguntas para a Cheer Wash (pode copiar e colar)
+
+> Hello, we are opening an automated touchless car wash in Piumhi, Minas Gerais, Brazil, with a
+> monthly subscription model, and we are comparing suppliers. Your brochure is very complete, but
+> we need the following before we can evaluate a purchase:
+>
+> **Commercial**
+> 1. Formal quotation for the **CL500 and CL600**, with **Incoterm** clearly stated (EXW, FOB or
+>    CIF), port of shipment, estimated ocean freight to Santos or Paranaguá (Brazil), production
+>    lead time and payment terms.
+> 2. What exactly does the **3-year warranty** cover — parts, labour, or both? Who pays for
+>    shipping of warranty parts to Brazil?
+>
+> **Electrical — critical**
+> 3. Brazil runs on **60 Hz**. Your specification lists 380 V motors (GB 4-pole and 6-pole), which
+>    is the Chinese 50 Hz standard. Can the machine be supplied with **60 Hz** motors and
+>    inverters? Please confirm in writing, and tell us the available voltages (220 V or 380 V,
+>    3-phase) and the total installed load and recommended breaker size for each model.
+>
+> **Water**
+> 4. Your brochure states **90–140 L per wash cycle**. Which programme corresponds to 90 L and
+>    which to 140 L? What inlet pressure and flow rate does the machine require?
+> 5. Do you offer a **water recycling / reuse system**? If yes: price, footprint, and the real
+>    percentage of water recovered in operation. Water is expensive in Brazil and this is a
+>    monthly cost for the life of the unit.
+>
+> **Integration — this decides our purchase**
+> 6. The feature list mentions **"Mobile phone / Internet operation"**. Please explain exactly what
+>    this is: a mobile app, remote start, or an API? Is there documentation?
+> 7. Our business model is a **monthly subscription released by licence plate recognition (LPR)**.
+>    Can the machine (a) integrate with an LPR camera, (b) integrate with an unattended payment
+>    terminal, or at minimum (c) **start a wash cycle from a dry contact / relay signal** provided
+>    by a third-party system? Please send the electrical interface documentation for the start
+>    signal and for the "operation permission system" you list.
+>
+> **Chemicals**
+> 8. The automatic proportioning system uses 3 liquids. Are these **proprietary products** that
+>    must be purchased from Cheer Wash, or can we use equivalent products sourced in Brazil? What
+>    is the consumption and cost per wash?
+>
+> **Sizing and use**
+> 9. For about **40 to 60 washes per day**, which model do you recommend, and is there a duty-cycle
+>    limit (maximum washes per hour or per day)?
+> 10. Maximum vehicle height is listed as **2.0 m**. What happens with pickup trucks fitted with
+>     roof racks or roll bars, which are common in our region? Is there any protection or does the
+>     machine simply refuse the vehicle?
+>
+> **Support in Brazil**
+> 11. Do you have a **distributor, technician or spare-parts stock in Brazil or Latin America**?
+>     Can you provide contacts of installed units in Brazil we may speak to?
+> 12. Installation: does a technician travel to Brazil, and who pays for travel and accommodation?
+>     What is the price of a **wear-parts kit** for the first two years (nozzles, seals, sensors)?
+> 13. Please send the **CE certificate**, the electrical schematics and the mechanical drawings.
+>     We need them for the Brazilian machine safety standard (NR-12) assessment, which is a legal
+>     requirement here.
+
+## 5. Como conduzir a comparação
+
+Mande **a mesma lista para os dois fornecedores** e compare pelo custo por lavagem ao longo de
+cinco anos, não pelo preço de etiqueta:
+
+> preço posto em Piumhi ÷ lavagens estimadas + água + energia + química + peças + risco de parada
+
+Máquina parada em cidade de 30 mil habitantes não é só o faturamento do dia: é o assinante que
+cancela e conta para os outros. Por isso garantia, peças e assistência pesam mais que US$ 2 mil de
+diferença no preço — e é exatamente aí que a Cheer Wash aparece melhor no papel.
