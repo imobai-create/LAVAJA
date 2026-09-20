@@ -161,3 +161,38 @@ ser atualizado quando o Node 22 sair do suporte (LTS até 2027).
 
 **O que mudaria a decisão.** Custo do Railway subindo muito com a escala, ou necessidade de rodar
 vários serviços juntos (app, painel, workers) — aí vale reavaliar entre VPS gerenciado e outro PaaS.
+
+---
+
+## ADR-006 — Railway em vez de Vercel
+
+**Status:** aceito · **Data:** set/2026
+
+**Contexto.** O dono já tinha conta na Vercel e importou o repositório para lá, o que levantou a
+pergunta de qual das duas plataformas hospeda o site.
+
+**Decisão.** O site oficial fica no **Railway**. O projeto importado na Vercel deve ser apagado,
+para não existirem dois endereços e alguém divulgar o errado.
+
+**Por quê.**
+- **Arquitetura.** Este projeto é um servidor Express de processo longo com Postgres. A Vercel
+  executa funções serverless: rodar lá exigiria um wrapper em `api/`, `vercel.json` com rewrites e
+  atenção a conexão de banco por invocação. É trabalho para resolver um problema que não existe no
+  Railway, onde o `Dockerfile` já pronto sobe sem tocar em código.
+- **Banco.** O Railway sobe Postgres no mesmo projeto, com a variável injetada por referência. Na
+  Vercel o banco seria de um terceiro (Neon, Supabase), somando mais um fornecedor, mais uma conta
+  e mais um lugar onde os dados de clientes ficam guardados — o que a LGPD obriga a declarar.
+- **Custo e enquadramento.** O plano gratuito da Vercel é destinado a projeto pessoal, não
+  comercial; um site de captação de clientes se enquadra no plano pago (da ordem de US$ 20/mês por
+  usuário). O Railway Hobby custa US$ 5/mês com o banco no mesmo projeto.
+- **Estado em memória.** Rate limit e cache de vagas vivem na memória do processo. Em servidor
+  único isso funciona; em serverless, cada instância teria a sua cópia, enfraquecendo o limite de
+  requisições sem ganho nenhum.
+
+**Consequências.** O site depende de uma plataforma paga desde o primeiro dia — o que já era
+verdade pelo ADR-005. Em compensação, nenhuma linha de código muda para publicar.
+
+**O que mudaria a decisão.** Se o site virasse estático de verdade (sem formulário próprio, com
+captação por serviço externo), a Vercel passaria a ser a escolha óbvia e gratuita. Também mudaria
+se a rede crescesse a ponto de justificar mover a API para funções, com banco gerenciado à parte —
+decisão para o ano 2, junto com o app próprio.
