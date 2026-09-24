@@ -173,15 +173,17 @@ ser divulgado.
       o prazo, mude o texto.
 
 ### Site e domínio
-- [ ] **Número de WhatsApp real** do atendimento → variável `WHATSAPP_NUMERO` (hoje há um número
-      provisório no código: `5531987474828` — (31) 98747-4828).
-- [ ] **Domínio definitivo**. Os arquivos `public/sitemap.xml` e `public/robots.txt` estão com
-      `https://jatoja.com.br` e têm aviso no topo: se o domínio for outro, troque nos dois.
+- [ ] **Número de WhatsApp definitivo** do atendimento. Hoje responde o provisório
+      (31) 98747-4828, já embutido como padrão; trocar é só definir `WHATSAPP_NUMERO` no Railway.
+      Vale um número com DDD 37, de Piumhi: em cidade pequena, DDD de fora gera desconfiança.
+- [x] **Domínio definitivo** — `jatoja.com.br`, registrado em set/2026. Já está em uso no
+      `sitemap.xml`, no `robots.txt` e nas URLs canônicas das três páginas. Falta apontar o CNAME
+      para o Railway quando o site subir (ver [DEPLOY.md](docs/DEPLOY.md)).
 - [ ] **Preços finais** de cada plano e da lavagem avulsa, e por quanto tempo o preço de fundador
       fica travado.
 - [ ] **`ADMIN_TOKEN`** gerado e guardado em gerenciador de senhas (não em WhatsApp, não em planilha).
-- [ ] Ícones `public/assets/img/icon-192.png` e `icon-512.png` — referenciados pelo
-      `manifest.webmanifest`; confirmar que existem antes de publicar.
+- [x] Ícones do `manifest.webmanifest` — gerados e versionados (`icon-192.png`, `icon-512.png`,
+      `icon-512-maskable.png`, `favicon.svg`, `og.png`), já na marca JatoJá.
 
 ### Decisões de campanha (detalhe em [docs/CHECKLIST-PRE-VENDA.md](docs/CHECKLIST-PRE-VENDA.md))
 - [ ] Quem responde o WhatsApp e em quanto tempo.
