@@ -1,7 +1,7 @@
 {
-  "name": "lavaja-site",
+  "name": "jatoja-site",
   "version": "1.0.0",
-  "description": "Site e API da LavaJá — lava jato por assinatura em Piumhi/MG",
+  "description": "Site e API da JatoJá — lava jato por assinatura em Piumhi/MG",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

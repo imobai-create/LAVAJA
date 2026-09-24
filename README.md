@@ -1,6 +1,6 @@
-# LavaJá — site e landing de pré-venda
+# JatoJá — site e landing de pré-venda
 
-Site da **LavaJá**, lava jato automatizado *touchless* por assinatura, unidade modelo em
+Site da **JatoJá**, lava jato automatizado *touchless* por assinatura, unidade modelo em
 **Piumhi/MG**. O site capta as reservas da campanha de fundadores, apresenta os planos e guarda os
 leads em banco próprio.
 
@@ -57,8 +57,8 @@ node .github/scripts/checar-html.mjs
 Subir pelo Docker, igualzinho a produção:
 
 ```bash
-docker build -t lavaja .
-docker run --rm -p 3000:3000 -e ADMIN_TOKEN=teste lavaja
+docker build -t jatoja .
+docker run --rm -p 3000:3000 -e ADMIN_TOKEN=teste jatoja
 ```
 
 ---
@@ -176,7 +176,7 @@ ser divulgado.
 - [ ] **Número de WhatsApp real** do atendimento → variável `WHATSAPP_NUMERO` (hoje há um número
       provisório no código: `5531987474828` — (31) 98747-4828).
 - [ ] **Domínio definitivo**. Os arquivos `public/sitemap.xml` e `public/robots.txt` estão com
-      `https://lavaja.com.br` e têm aviso no topo: se o domínio for outro, troque nos dois.
+      `https://jatoja.com.br` e têm aviso no topo: se o domínio for outro, troque nos dois.
 - [ ] **Preços finais** de cada plano e da lavagem avulsa, e por quanto tempo o preço de fundador
       fica travado.
 - [ ] **`ADMIN_TOKEN`** gerado e guardado em gerenciador de senhas (não em WhatsApp, não em planilha).
@@ -191,6 +191,6 @@ ser divulgado.
 - [ ] Se haverá sinal simbólico na reserva (muda bastante a taxa de conversão).
 
 ### Para depois, mas não muito depois
-- [ ] Pedido de registro da marca **LavaJá no INPI, classes 35 e 37**.
+- [ ] Pedido de registro da marca **JatoJá no INPI, classes 35 e 37**.
 - [ ] Registrar o domínio no CNPJ da empresa, não no CPF de uma pessoa.
 - [ ] Cadastrar o site no Google Search Console e enviar o sitemap.

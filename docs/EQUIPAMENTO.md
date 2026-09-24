@@ -221,7 +221,7 @@ Veículo máximo em ambos: 5,6 × 2,6 × **2,0 m de altura**.
   60 Hz por escrito (mesmo risco da outra cotação).
 - **"Mobile phone/Internet operation"** aparece na lista de funções, mas sem explicação. Pode ser
   desde um app de comando remoto até uma API de verdade. **É a função mais importante da lista
-  para a LavaJá** e está descrita em cinco palavras — precisa ser esclarecida.
+  para a JatoJá** e está descrita em cinco palavras — precisa ser esclarecida.
 - **Química proporcionada automaticamente (3 líquidos).** Se os produtos forem proprietários, o
   custo por lavagem fica preso ao fornecedor pela vida inteira do equipamento. Perguntar se
   aceita similar nacional.
@@ -293,3 +293,195 @@ cinco anos, não pelo preço de etiqueta:
 Máquina parada em cidade de 30 mil habitantes não é só o faturamento do dia: é o assinante que
 cancela e conta para os outros. Por isso garantia, peças e assistência pesam mais que US$ 2 mil de
 diferença no preço — e é exatamente aí que a Cheer Wash aparece melhor no papel.
+
+---
+
+# Respostas da Cheer Wash — set/2026
+
+Interlocutor: Arthur, gerente de vendas. Documento "Answers to All Your Questions", respondendo às
+13 perguntas da seção anterior. **Responderam tudo, inclusive o que não interessava a eles.** Isso
+já é informação: fornecedor que responde "não temos" sobre reúso de água, em detalhe técnico, é
+mais confiável que fornecedor que promete tudo.
+
+## 1. Preço — agora dá para comparar
+
+| | FOB Dalian |
+|---|---|
+| CL500 | **USD 14.950** |
+| CL600 | **USD 16.610** |
+| Interface Modbus (RS485/TCP) | + USD 300 por máquina |
+
+Pagamento: 30% na assinatura, 70% antes do embarque. Frete e prazo só com modelo e quantidade
+confirmados.
+
+Contra a Yugong JM-70, de USD 11.700 (que segue **sem Incoterm declarado**), a CL500 custa
+**cerca de 28% mais**. Aplicando a mesma regra de ~2x para custo posto em Piumhi:
+
+| | FOB | Estimativa posto em Piumhi |
+|---|---|---|
+| Yugong JM-70 | 11.700 | ~23.000 |
+| **Cheer Wash CL500** | 14.950 | **~30.000** |
+| Cheer Wash CL600 | 16.610 | ~33.000 |
+
+## 2. O que esses ~USD 7.000 de diferença compram
+
+1. **Garantia de 3 anos em todas as peças** — CLP, bomba, ventiladores, motores. Peça de reposição
+   sai de graça; só se paga o frete. Mão de obra não incluída. Aceitam colocar isso **na fatura e
+   no contrato**. A Yugong não informou garantia nenhuma.
+2. **Distribuidor com operação real no Brasil.** Lava Carro Brasil, Porto Alegre/RS: mais de 10
+   centros automatizados, mais de 40 máquinas compradas só este ano, engenheiros e estoque de
+   peças no país. Instagram @lavacarrobrasil.
+3. **60 Hz sem custo adicional**, por escrito na fatura e no contrato. Dizem que 380 V / 60 Hz
+   trifásico é o que a maioria dos clientes brasileiros usa.
+4. **Química aberta.** Fornecem a MSDS e a fórmula; pode-se mandar fabricar no Brasil. Zero
+   dependência de consumível importado — era um dos riscos apontados.
+5. **App incluído** (Android, iOS, Windows): liga, desliga, mostra contagem do dia e total, altera
+   programas. Dizem que outros cobram USD 1.500 por isso.
+6. **Kit de peças de desgaste grátis** com a máquina, que segundo eles resolve 65% dos chamados.
+
+**Recomendação: CL500.** A CL600 custa USD 1.660 a mais por 22 kW de bomba contra 15 kW e 140 bar
+contra 120 bar — mas também sobe a carga instalada de 40 kW para 47 kW, o que encarece a entrada de
+energia todo mês. A CL500 já tem 120 bar, acima dos 100 bar da JM-70. Para 40 a 60 lavagens/dia
+(ambas suportam até 100/dia), os USD 1.660 rendem mais aplicados na instalação local e no limitador
+de altura.
+
+## 3. A resposta que decide o texto do site
+
+> "Recognition of Brazilian licence plates is not currently available."
+
+**Não existe leitura de placa.** A promessa atual da landing — "a câmera lê a sua placa e libera a
+lavagem" — não tem lastro em nenhum dos dois fornecedores.
+
+Mas a resposta completa é melhor do que parece. Eles oferecem:
+
+- **RS485 / Modbus RTU** e **Ethernet / Modbus TCP** (+ USD 300)
+- **API de software** (grátis)
+- Operação desassistida com **pagamento por QR code, inclusive Mercado Pago**
+
+Ou seja: a máquina é um atuador com interface aberta. **A inteligência — assinatura, placa,
+cobrança — fica do nosso lado.** Isso é estrategicamente melhor para a tese da franquia do que um
+sistema fechado do fabricante: o Plano de Franquia diz que o app é o principal ativo intangível da
+franqueadora, e com Modbus + API o app pode dar a partida na máquina sem depender de ninguém.
+
+**Consequências práticas:**
+- Pagar os USD 300 da interface de hardware. É barato demais para deixar de fora, mesmo que o uso
+  fique para depois.
+- Na inauguração, o fluxo é **QR code / totem**, não placa. O texto do site precisa mudar antes de
+  divulgar.
+- A leitura de placa entra como projeto nosso na Fase 1, junto com o app — câmera comum + software
+  nosso + comando por Modbus.
+
+## 4. Água: resposta honesta e desconfortável
+
+Não vendem sistema de reúso, e explicaram em detalhe por quê: filtragem física entope a bomba de
+pistão, que exige água limpa; a água reciclada cria odor depois de alguns meses; sistemas que
+funcionam de verdade custam cerca de USD 17.000, mais que a própria máquina.
+
+**Conclusão: o custo de água é permanente e não tem solução barata.** 90 L no programa mais rápido,
+140 L no mais longo — a diferença é escolha de programa, ajustável no painel. Não exige pressão nem
+vazão de entrada: basta **uma caixa d'água de 2.000 litros**.
+
+⚠️ Eles afirmam que clientes e distribuidor no Brasil nunca mencionaram exigência governamental de
+reúso. **Isso é a experiência deles, não a lei.** Licenciamento de lava jato no Brasil é municipal e
+estadual: em Minas envolve a prefeitura e o órgão ambiental estadual, e caixa separadora de água e
+óleo costuma ser obrigatória. **Confirme na Prefeitura de Piumhi antes de comprar** — não com o
+fornecedor chinês.
+
+## 5. Energia: o item que pode atrasar a obra
+
+| | CL500 | CL600 |
+|---|---|---|
+| Potência total | **40 kW** | 47 kW |
+| Disjuntor recomendado | 100 A | 125 A |
+| Cabo de entrada | ≥ 16 mm² | ≥ 35 mm² |
+
+Esses números pressupõem **380 V trifásico**. Em boa parte de Minas a CEMIG entrega 220 V trifásico
+em baixa tensão — e a 220 V a mesma potência puxa quase o dobro de corrente, mudando cabo e
+disjuntor.
+
+Mais importante: **40 kW instalados provavelmente exigem entrada em média tensão com transformador
+próprio (subestação)**, não uma ligação comum de baixa tensão. Isso é projeto elétrico, ART,
+aprovação da concessionária e um capex de dezenas de milhares de reais que **não está no preço da
+máquina**. O prazo da CEMIG costuma ser de 60 a 120 dias.
+
+**Esta é a primeira ligação a fazer, antes de fechar qualquer compra:** levar o ponto escolhido à
+CEMIG e perguntar o que existe disponível e o que custa chegar a 40 kW.
+
+## 6. Altura: risco operacional mal resolvido
+
+Altura máxima 2,0 m. Para veículo maior existe a CL908. Sobre caminhonete com rack ou santantônio,
+a resposta foi: há uma placa de limite de 2 m na entrada, **a máquina não recusa o veículo
+sozinha**, e "na experiência dos clientes brasileiros isso basta".
+
+Não basta. Placa escrita é ignorada; cliente entra, a máquina bate no rack, e o prejuízo é o
+conserto do carro mais o cliente perdido contando o caso na cidade. **Instale um limitador físico de
+altura na entrada** — uma barra suspensa que toca o veículo antes da máquina, igual ao de
+estacionamento. Custa quase nada e resolve.
+
+## 7. Instalação: três caminhos
+
+| Opção | Custo |
+|---|---|
+| Remota (manuais, vídeos, chamadas) | grátis |
+| Engenheiro chinês no local | passagem + hospedagem + USD 80/dia ≈ **USD 3.000–4.000** |
+| Distribuidor brasileiro | **USD 5.000** + passagem nacional, refeições e hospedagem |
+
+Para a **primeira** unidade, sem ninguém na equipe que já montou uma dessas, a instalação remota é
+economia falsa. Entre as outras duas, o distribuidor brasileiro custa mais caro e vale mais: fala
+português, conhece a rede elétrica brasileira, já instalou dezenas e **é quem vai atender o chamado
+às 22h de um sábado**. Pagar a ele é abrir a relação de assistência.
+
+⚠️ Arthur recomenda comprar da fábrica e não do distribuidor, dizendo que o distribuidor cobra mais
+caro, mas que mesmo assim atende. **Confirme isso com o próprio distribuidor**, por escrito:
+distribuidor costuma priorizar máquina que ele vendeu. Se o atendimento pós-venda tiver fila
+diferente para quem comprou direto, os USD 2.000 de economia viram um mês de máquina parada.
+
+## 8. Risco de pagamento
+
+30% + 70% **antes do embarque** significa pagar 100% antes de ver a máquina no Brasil. Se chegar
+errada, não há alavanca. Mitigação barata:
+
+- **Inspeção pré-embarque** por agente independente (SGS, Bureau Veritas ou similar) antes de
+  liberar os 70% — custa algumas centenas de dólares.
+- Ou pedir ao distribuidor brasileiro que inspecione, já que tem gente na China com frequência.
+- **Seguro de carga internacional** — FOB significa que o risco passa a ser seu em Dalian.
+
+## 9. Próximas perguntas
+
+**Para a Cheer Wash:**
+1. Frete e prazo de produção para a CL500 até Santos ou Paranaguá — já com modelo definido.
+2. Documentação da API e do Modbus (mapa de registradores) **antes da compra**, para sabermos que o
+   comando de partida existe de fato.
+3. Certificado CE, esquemas elétricos e desenhos mecânicos para o laudo de NR-12.
+4. Preço e dimensões da CL908, para saber o que se perde ao ficar na CL500.
+5. Aceitam inspeção pré-embarque por agente independente antes dos 70%?
+6. Lista de equipamentos opcionais de pagamento que o Arthur prometeu enviar, e a planilha de
+   consumo de químicos.
+
+**Para a Lava Carro Brasil (distribuidor, Porto Alegre) — a ligação mais valiosa deste projeto:**
+1. Quantas lavagens por dia as unidades de vocês fazem, e qual o faturamento por máquina?
+2. Quanto gastam de água e energia por lavagem, na prática?
+3. Quantos chamados técnicos por ano, e quanto tempo a máquina fica parada?
+4. Que problema vocês não esperavam quando começaram?
+5. O atendimento é o mesmo para quem compra direto da fábrica?
+6. Podemos visitar uma unidade em operação?
+
+Uma visita a uma unidade rodando vale mais que qualquer brochura. É o único jeito de ver a máquina
+lavando um carro sujo de verdade, no Brasil, antes de comprometer o capital.
+
+## 10. Quadro comparativo atualizado
+
+| | Yugong JM-70 | **Cheer Wash CL500** |
+|---|---|---|
+| Preço | USD 11.700 (Incoterm não declarado) | **USD 14.950 FOB Dalian** |
+| Garantia | não informada | **3 anos, todas as peças** |
+| 60 Hz | não respondido | **sim, sem custo, em contrato** |
+| Pressão | 100 bar | **120 bar** |
+| Suporte no Brasil | nenhum informado | **distribuidor com 40+ máquinas/ano** |
+| Química | não respondido | **aberta, com MSDS** |
+| Interface para o nosso app | não respondido | **Modbus RTU/TCP + API** |
+| Leitura de placa | não tem | não tem |
+| Reúso de água | não tem | não tem (e explicaram por quê) |
+
+Enquanto a Yugong não responder a mesma lista com o mesmo nível de detalhe, **a comparação está
+decidida a favor da Cheer Wash** — não pelo preço, que é pior, mas por tudo que vem junto.

@@ -30,7 +30,7 @@ uma tarde. Onde aparecer `[algo a preencher]`, é informação que só você tem
 ### 2. Criar o projeto a partir do repositório
 
 1. Clique em **New Project → Deploy from GitHub repo**.
-2. Escolha o repositório do site (ex.: `lavaja-site`) e confirme.
+2. Escolha o repositório do site (ex.: `jatoja-site`) e confirme.
 3. O Railway lê o `Dockerfile` deste repositório e monta o site sozinho. O primeiro build leva
    de 1 a 3 minutos. Enquanto isso, a aba **Deployments** mostra o andamento.
 
@@ -75,7 +75,7 @@ Depois de salvar as variáveis, o Railway reinicia o site sozinho.
 ### 5. Gerar o endereço público
 
 1. No serviço do site: **Settings → Networking → Public Networking → Generate Domain**.
-2. O Railway devolve um endereço tipo `lavaja-site-production.up.railway.app`. Abra no celular.
+2. O Railway devolve um endereço tipo `jatoja-site-production.up.railway.app`. Abra no celular.
 3. Teste: `SEU-ENDERECO/health` deve responder `{"ok":true}`. Se responder isso, o servidor está
    vivo. Se o site abrir mas o formulário der erro, o problema é o banco (volte ao passo 4).
 
@@ -83,11 +83,11 @@ Guarde esse endereço: ele continua funcionando mesmo depois que o domínio pró
 
 ---
 
-## Parte 2 — Registrar o domínio `lavaja.com.br`
+## Parte 2 — Registrar o domínio `jatoja.com.br`
 
 ### 1. Registrar
 
-1. Acesse <https://registro.br>, pesquise `lavaja.com.br` e veja se está livre.
+1. Acesse <https://registro.br>, pesquise `jatoja.com.br` e veja se está livre.
 2. Crie a conta com CPF ou CNPJ (recomendo CNPJ quando a empresa existir — o domínio é um ativo
    da empresa, não seu).
 3. Pague. Um `.com.br` custa **cerca de R$ 40 por ano**, pago de uma vez, por ano (há desconto
@@ -97,7 +97,7 @@ Guarde esse endereço: ele continua funcionando mesmo depois que o domínio pró
 ### 2. Apontar o domínio para o site
 
 No Railway: serviço do site → **Settings → Networking → Custom Domain** → digite
-`www.lavaja.com.br`. O Railway mostra um valor de **CNAME** (algo como `xyz.up.railway.app`).
+`www.jatoja.com.br`. O Railway mostra um valor de **CNAME** (algo como `xyz.up.railway.app`).
 
 No registro.br: **Painel → seu domínio → DNS → Editar Zona**, e crie:
 
@@ -105,25 +105,25 @@ No registro.br: **Painel → seu domínio → DNS → Editar Zona**, e crie:
 |---|---|---|
 | CNAME | `www` | o valor que o Railway mostrou |
 
-Aguarde de 15 minutos a algumas horas (propagação de DNS). Quando `www.lavaja.com.br` abrir o
+Aguarde de 15 minutos a algumas horas (propagação de DNS). Quando `www.jatoja.com.br` abrir o
 site com cadeado (HTTPS, gerado automaticamente pelo Railway), está pronto.
 
-**Sobre o domínio "sem www"** (`lavaja.com.br`, chamado de raiz ou apex): o padrão de DNS não
+**Sobre o domínio "sem www"** (`jatoja.com.br`, chamado de raiz ou apex): o padrão de DNS não
 permite CNAME na raiz, e o registro.br não tem "ALIAS". Duas saídas honestas:
 
-- **Mais simples:** divulgue só `www.lavaja.com.br`. Funciona, mas quem digitar sem o `www` não
+- **Mais simples:** divulgue só `www.jatoja.com.br`. Funciona, mas quem digitar sem o `www` não
   chega ao site.
 - **Recomendada:** crie uma conta grátis na **Cloudflare**, adicione o domínio lá, troque os
   servidores DNS no registro.br pelos da Cloudflare e configure na Cloudflare um CNAME da raiz
   apontando para o endereço do Railway (a Cloudflare resolve isso com "CNAME flattening") mais um
-  redirecionamento de `lavaja.com.br` para `www.lavaja.com.br`. Continua custando R$ 0.
+  redirecionamento de `jatoja.com.br` para `www.jatoja.com.br`. Continua custando R$ 0.
 
 ### 3. Atualizar o site depois que o domínio existir
 
 Troque o domínio em `public/sitemap.xml` e em `public/robots.txt` (os dois estão com
-`https://lavaja.com.br` como padrão e têm aviso no topo). Depois, cadastre o site no
+`https://jatoja.com.br` como padrão e têm aviso no topo). Depois, cadastre o site no
 **Google Search Console** (<https://search.google.com/search-console>) e envie o sitemap:
-`https://lavaja.com.br/sitemap.xml`.
+`https://jatoja.com.br/sitemap.xml`.
 
 ---
 
@@ -179,7 +179,7 @@ dormindo o site custa mais em leads perdidos do que economiza.
 **Baixar as reservas (leads):**
 
 ```bash
-curl -H "x-admin-token: SEU_TOKEN" "https://www.lavaja.com.br/api/leads?formato=csv" -o leads.csv
+curl -H "x-admin-token: SEU_TOKEN" "https://www.jatoja.com.br/api/leads?formato=csv" -o leads.csv
 ```
 
 O arquivo abre no Excel. Não deixe essa planilha circulando em grupo de WhatsApp: são dados

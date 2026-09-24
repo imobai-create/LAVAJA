@@ -31,7 +31,7 @@ condição do negócio libera cada entrega.
 - Relatório semanal simples: leads, custo por lead, tempo médio de resposta no WhatsApp.
 
 ### Mês 3 — Marca e proteção
-- Pedido de registro da marca **LavaJá no INPI, classes 35 e 37** (37 = lavagem de veículos;
+- Pedido de registro da marca **JatoJá no INPI, classes 35 e 37** (37 = lavagem de veículos;
   35 = franquia/serviços de gestão comercial). Sem a marca pedida, a franquia não se formata:
   a COF precisa informar a situação da marca no INPI.
 - Registro do domínio no CNPJ da empresa, não no CPF de ninguém.

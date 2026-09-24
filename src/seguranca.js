@@ -1,4 +1,4 @@
-// LavaJá — segurança: cabeçalhos, rate limit em memória e autenticação admin.
+// JatoJá — segurança: cabeçalhos, rate limit em memória e autenticação admin.
 // Tudo na mão: o projeto não aceita dependências além de express e pg.
 
 "use strict";

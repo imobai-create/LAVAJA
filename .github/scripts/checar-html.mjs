@@ -1,4 +1,4 @@
-// LavaJá — sanidade dos HTML de public/. Sem dependência externa: roda com o Node puro.
+// JatoJá — sanidade dos HTML de public/. Sem dependência externa: roda com o Node puro.
 // Uso: node .github/scripts/checar-html.mjs
 //
 // Erro (quebra o CI): tag essencial faltando, <title>/meta description ausentes,
