@@ -1,4 +1,4 @@
-// LavaJá — validação e normalização de entrada.
+// JatoJá — validação e normalização de entrada.
 // Toda regra devolve { ok:false, erro, campo } para o front destacar o input certo.
 
 "use strict";

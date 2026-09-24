@@ -1,4 +1,4 @@
-// LavaJá — bootstrap do servidor (Express 4 / Node 22).
+// JatoJá — bootstrap do servidor (Express 4 / Node 22).
 // Só cuida de middlewares, arquivos estáticos, listen e encerramento.
 // Regras de negócio ficam em src/. Sem dependências além de express e pg.
 
@@ -69,7 +69,7 @@ function criarApp() {
 /** Sobe o servidor. porta 0 = efêmera (usado nos testes). */
 async function iniciar(porta = config.porta) {
   await db.iniciar().catch((e) => {
-    console.error("[LavaJá] falha ao iniciar o banco, seguindo em memória:", e.message);
+    console.error("[JatoJá] falha ao iniciar o banco, seguindo em memória:", e.message);
   });
 
   const app = criarApp();
@@ -79,17 +79,17 @@ async function iniciar(porta = config.porta) {
   });
 
   const endereco = servidor.address();
-  console.log(`[LavaJá] no ar na porta ${endereco.port} (banco: ${db.tipo()})`);
+  console.log(`[JatoJá] no ar na porta ${endereco.port} (banco: ${db.tipo()})`);
 
   let encerrando = false;
   async function encerrar(sinal) {
     if (encerrando) return;
     encerrando = true;
-    console.log(`[LavaJá] recebido ${sinal}, encerrando com calma...`);
+    console.log(`[JatoJá] recebido ${sinal}, encerrando com calma...`);
     seguranca.pararLimpeza();
     await new Promise((resolver) => servidor.close(resolver));
     await db.encerrar();
-    console.log("[LavaJá] encerrado.");
+    console.log("[JatoJá] encerrado.");
   }
 
   return { app, servidor, porta: endereco.port, encerrar };
@@ -97,10 +97,10 @@ async function iniciar(porta = config.porta) {
 
 // Nenhuma falha isolada pode derrubar o processo em produção.
 process.on("unhandledRejection", (motivo) => {
-  console.error("[LavaJá] promessa rejeitada sem tratamento:", motivo);
+  console.error("[JatoJá] promessa rejeitada sem tratamento:", motivo);
 });
 process.on("uncaughtException", (erro) => {
-  console.error("[LavaJá] exceção não capturada:", erro && erro.stack ? erro.stack : erro);
+  console.error("[JatoJá] exceção não capturada:", erro && erro.stack ? erro.stack : erro);
 });
 
 if (require.main === module) {
@@ -116,7 +116,7 @@ if (require.main === module) {
       }
     })
     .catch((e) => {
-      console.error("[LavaJá] não foi possível subir o servidor:", e);
+      console.error("[JatoJá] não foi possível subir o servidor:", e);
       process.exit(1);
     });
 }

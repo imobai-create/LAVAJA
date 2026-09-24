@@ -1,4 +1,4 @@
-// LavaJá — regras de negócio da pré-venda e do interesse em franquia.
+// JatoJá — regras de negócio da pré-venda e do interesse em franquia.
 
 "use strict";
 
@@ -92,7 +92,7 @@ async function registrarReserva(corpo, contexto = {}) {
 // auditável e COF entregue antes de qualquer oferta. A mensagem abaixo só
 // confirma registro de interesse — sem promessa, sem oferta, sem pagamento.
 const MENSAGEM_FRANQUIA =
-  "Interesse registrado. A LavaJá ainda não oferta franquia: estamos concluindo a " +
+  "Interesse registrado. A JatoJá ainda não oferta franquia: estamos concluindo a " +
   "formatação e o período de operação própria exigido pela Lei 13.966/2019. " +
   "Quando a formatação estiver concluída, entramos em contato com as informações e a " +
   "Circular de Oferta de Franquia. Nenhum compromisso e nenhum pagamento é solicitado agora.";

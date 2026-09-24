@@ -151,7 +151,7 @@ test("CSV sai com BOM UTF-8, separador ; e aspas escapadas", async () => {
   const resposta = await fetch(base + "/api/leads?formato=csv", { headers: { "x-admin-token": TOKEN } });
   assert.equal(resposta.status, 200);
   assert.match(resposta.headers.get("content-type"), /text\/csv/);
-  assert.match(resposta.headers.get("content-disposition"), /leads-lavaja\.csv/);
+  assert.match(resposta.headers.get("content-disposition"), /leads-jatoja\.csv/);
 
   // Conferimos os bytes crus: fetch().text() descarta o BOM ao decodificar.
   const bytes = Buffer.from(await resposta.arrayBuffer());

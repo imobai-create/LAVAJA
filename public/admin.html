@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#EFF3F6">
-<title>Painel LavaJá</title>
+<title>Painel JatoJá</title>
 <style nonce="__NONCE__">
   /* Ferramenta de trabalho: papel claro, fios de 1px, números tabulares.
      Sem fonte externa de propósito — o painel abre no 3G da rua. */
@@ -146,7 +146,7 @@
 
 <!-- Tela de acesso -->
 <section id="tela-login" class="secao">
-  <div class="topo"><div><p class="chapeu">Acesso restrito</p><h1>Painel LavaJá</h1><p class="sub">Pré-venda — Piumhi/MG</p></div></div>
+  <div class="topo"><div><p class="chapeu">Acesso restrito</p><h1>Painel JatoJá</h1><p class="sub">Pré-venda — Piumhi/MG</p></div></div>
   <div class="cartao">
     <label for="token">Token de acesso</label>
     <input id="token" type="password" autocomplete="current-password" placeholder="ADMIN_TOKEN" enterkeyhint="go">
@@ -158,7 +158,7 @@
 <!-- Painel -->
 <main id="tela-painel" class="oculto">
   <div class="topo">
-    <div><p class="chapeu">Painel interno</p><h1>LavaJá Piumhi</h1><p class="sub" id="atualizado">—</p></div>
+    <div><p class="chapeu">Painel interno</p><h1>JatoJá Piumhi</h1><p class="sub" id="atualizado">—</p></div>
     <div class="acoes">
       <button id="btn-atualizar" class="secundario" type="button">Atualizar</button>
       <button id="btn-sair" class="secundario" type="button">Sair</button>
@@ -208,7 +208,7 @@
 (function () {
   "use strict";
 
-  var CHAVE = "lavaja-admin-token";
+  var CHAVE = "jatoja-admin-token";
   var estado = { token: "", aba: "leads", leads: [], franquia: [], resumo: null };
 
   function $(id) { return document.getElementById(id); }
@@ -364,7 +364,7 @@
       var acao = document.createElement("a");
       acao.className = "zap";
       acao.href = "https://wa.me/" + String(l.whatsapp || "").replace(/\D/g, "") +
-        "?text=" + encodeURIComponent("Oi, " + String(l.nome || "").split(" ")[0] + "! Aqui é da LavaJá de Piumhi.");
+        "?text=" + encodeURIComponent("Oi, " + String(l.nome || "").split(" ")[0] + "! Aqui é da JatoJá de Piumhi.");
       acao.target = "_blank"; acao.rel = "noopener noreferrer";
       acao.textContent = "Chamar";
       td(acao);
@@ -469,8 +469,8 @@
   $("filtro-plano").addEventListener("change", desenharTabela);
   $("aba-leads").addEventListener("click", function () { trocarAba("leads"); });
   $("aba-franquia").addEventListener("click", function () { trocarAba("franquia"); });
-  $("csv-leads").addEventListener("click", function (e) { e.preventDefault(); baixarCsv("/api/leads?formato=csv", "leads-lavaja.csv"); });
-  $("csv-franquia").addEventListener("click", function (e) { e.preventDefault(); baixarCsv("/api/franquia-leads?formato=csv", "franquia-lavaja.csv"); });
+  $("csv-leads").addEventListener("click", function (e) { e.preventDefault(); baixarCsv("/api/leads?formato=csv", "leads-jatoja.csv"); });
+  $("csv-franquia").addEventListener("click", function (e) { e.preventDefault(); baixarCsv("/api/franquia-leads?formato=csv", "franquia-jatoja.csv"); });
 
   // Sessão já autenticada neste navegador?
   var guardado = pegarToken();

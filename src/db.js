@@ -1,4 +1,4 @@
-// LavaJá — acesso a dados.
+// JatoJá — acesso a dados.
 // Usa Postgres quando DATABASE_URL existe; senão, cai num armazenamento em
 // memória com o mesmo contrato (inclusive erro 23505 de duplicidade), para
 // desenvolvimento local e para os testes automatizados.
@@ -83,7 +83,7 @@ async function iniciar() {
   if (!config.databaseUrl) {
     modo = "memoria";
     console.warn(
-      "[LavaJá] DATABASE_URL ausente — rodando em memória (os dados somem ao reiniciar). Configure o Postgres no Railway."
+      "[JatoJá] DATABASE_URL ausente — rodando em memória (os dados somem ao reiniciar). Configure o Postgres no Railway."
     );
     return modo;
   }
@@ -97,13 +97,13 @@ async function iniciar() {
   });
   // O pool emite 'error' em conexões ociosas derrubadas pelo provedor;
   // sem esse listener o processo cairia.
-  pool.on("error", (e) => console.error("[LavaJá] erro no pool do Postgres:", e.message));
+  pool.on("error", (e) => console.error("[JatoJá] erro no pool do Postgres:", e.message));
 
   // Se nem conectar dá, voltamos para a memória em vez de derrubar o site.
   try {
     await pool.query("SELECT 1");
   } catch (e) {
-    console.error("[LavaJá] não foi possível conectar ao Postgres:", e.message, "— seguindo em memória.");
+    console.error("[JatoJá] não foi possível conectar ao Postgres:", e.message, "— seguindo em memória.");
     await pool.end().catch(() => {});
     pool = null;
     modo = "memoria";
@@ -118,10 +118,10 @@ async function iniciar() {
       await pool.query(sql);
     } catch (e) {
       falhas += 1;
-      console.error("[LavaJá] migração falhou:", sql.split("\n")[0].trim(), "->", e.message);
+      console.error("[JatoJá] migração falhou:", sql.split("\n")[0].trim(), "->", e.message);
     }
   }
-  console.log(`[LavaJá] Postgres conectado, migrações aplicadas${falhas ? ` (${falhas} com erro, veja o log)` : ""}.`);
+  console.log(`[JatoJá] Postgres conectado, migrações aplicadas${falhas ? ` (${falhas} com erro, veja o log)` : ""}.`);
   return modo;
 }
 
@@ -282,7 +282,7 @@ async function encerrar() {
   if (pool) {
     const p = pool;
     pool = null;
-    await p.end().catch((e) => console.error("[LavaJá] erro ao fechar o pool:", e.message));
+    await p.end().catch((e) => console.error("[JatoJá] erro ao fechar o pool:", e.message));
   }
 }
 

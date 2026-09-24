@@ -1,4 +1,4 @@
-// LavaJá — definição das rotas da API e do painel.
+// JatoJá — definição das rotas da API e do painel.
 
 "use strict";
 
@@ -118,7 +118,7 @@ function criarRotas() {
     assincrono(async (req, res) => {
       const linhas = await db.listarLeads();
       if (String(req.query.formato || "").toLowerCase() === "csv") {
-        return enviarCsv(res, "leads-lavaja.csv", linhas, COLUNAS_LEADS_CSV);
+        return enviarCsv(res, "leads-jatoja.csv", linhas, COLUNAS_LEADS_CSV);
       }
       res.setHeader("Cache-Control", "no-store");
       res.json({ total: linhas.length, leads: linhas });
@@ -131,7 +131,7 @@ function criarRotas() {
     assincrono(async (req, res) => {
       const linhas = await db.listarFranquiaLeads();
       if (String(req.query.formato || "").toLowerCase() === "csv") {
-        return enviarCsv(res, "franquia-lavaja.csv", linhas, COLUNAS_FRANQUIA_CSV);
+        return enviarCsv(res, "franquia-jatoja.csv", linhas, COLUNAS_FRANQUIA_CSV);
       }
       res.setHeader("Cache-Control", "no-store");
       res.json({ total: linhas.length, leads: linhas });
@@ -190,7 +190,7 @@ function tratadorDeErro(erro, req, res, _proximo) {
   if (erro && erro.type === "entity.too.large") {
     return res.status(413).json({ erro: "Dados enviados grandes demais." });
   }
-  console.error("[LavaJá] erro não tratado em", req.method, req.originalUrl, "-", erro && erro.stack ? erro.stack : erro);
+  console.error("[JatoJá] erro não tratado em", req.method, req.originalUrl, "-", erro && erro.stack ? erro.stack : erro);
   if (res.headersSent) return;
   const ehApi = req.path.startsWith("/api") || req.path === "/health";
   if (ehApi) {

@@ -1,4 +1,4 @@
-// LavaJá — configuração central lida do ambiente.
+// JatoJá — configuração central lida do ambiente.
 // Tudo que vem de env passa por aqui, para não espalhar process.env pelo código.
 
 "use strict";
