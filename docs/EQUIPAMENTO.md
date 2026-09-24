@@ -217,8 +217,9 @@ Veículo máximo em ambos: 5,6 × 2,6 × **2,0 m de altura**.
   Precisa entrar na comparação de custo, não só o preço da máquina.
 - **Altura máxima de veículo de 2,0 m.** Confirmar o que acontece com caminhonete com santantônio,
   rack ou bagageiro — público que existe em Piumhi.
-- **Tensão 380 V.** Confirmar o que a CEMIG entrega no ponto escolhido antes de pedir, e exigir
-  60 Hz por escrito (mesmo risco da outra cotação).
+- **Tensão 380 V.** A CEMIG entrega **127/220 V** trifásico em baixa tensão (ND-5.1). Ou a máquina
+  vem na classe 220 V, ou entra um transformador elevador na unidade. Confirmar por escrito, junto
+  com os 60 Hz.
 - **"Mobile phone/Internet operation"** aparece na lista de funções, mas sem explicação. Pode ser
   desde um app de comando remoto até uma API de verdade. **É a função mais importante da lista
   para a JatoJá** e está descrita em cinco palavras — precisa ser esclarecida.
@@ -387,25 +388,46 @@ estadual: em Minas envolve a prefeitura e o órgão ambiental estadual, e caixa 
 óleo costuma ser obrigatória. **Confirme na Prefeitura de Piumhi antes de comprar** — não com o
 fornecedor chinês.
 
-## 5. Energia: o item que pode atrasar a obra
+## 5. Energia: não é subestação, é tensão
+
+> **Correção — 24/set/2026.** A versão anterior desta seção afirmava que 40 kW "provavelmente
+> exigem entrada em média tensão com subestação própria", com prazo de 60 a 120 dias. **Está
+> errado.** A norma CEMIG ND-5.1 determina fornecimento em **baixa tensão para carga instalada
+> igual ou inferior a 75 kW**; acima disso é que se vai para média tensão pela ND-5.3. Com 40 kW
+> (CL500) ou 47 kW (CL600), a ligação é comum, em baixa tensão. Não há subestação, não há aquele
+> prazo, e o capex de dezenas de milhares de reais que eu projetei não existe.
 
 | | CL500 | CL600 |
 |---|---|---|
 | Potência total | **40 kW** | 47 kW |
-| Disjuntor recomendado | 100 A | 125 A |
+| Disjuntor recomendado pelo fabricante | 100 A | 125 A |
 | Cabo de entrada | ≥ 16 mm² | ≥ 35 mm² |
 
-Esses números pressupõem **380 V trifásico**. Em boa parte de Minas a CEMIG entrega 220 V trifásico
-em baixa tensão — e a 220 V a mesma potência puxa quase o dobro de corrente, mudando cabo e
-disjuntor.
+**Consequências boas:**
 
-Mais importante: **40 kW instalados provavelmente exigem entrada em média tensão com transformador
-próprio (subestação)**, não uma ligação comum de baixa tensão. Isso é projeto elétrico, ART,
-aprovação da concessionária e um capex de dezenas de milhares de reais que **não está no preço da
-máquina**. O prazo da CEMIG costuma ser de 60 a 120 dias.
+- **Ligação em baixa tensão**, padrão de entrada comum, sem subestação e sem transformador da
+  concessionária.
+- Fornecimento em BT significa **Grupo B**: paga-se por kWh, **sem demanda contratada**. Some um
+  custo fixo mensal a menos no modelo econômico.
 
-**Esta é a primeira ligação a fazer, antes de fechar qualquer compra:** levar o ponto escolhido à
-CEMIG e perguntar o que existe disponível e o que custa chegar a 40 kW.
+**O problema real está na tensão, não na potência.** A ND-5.1 define a secundária de distribuição
+da CEMIG como **127/220 V trifásico, estrela com neutro multiaterrado, 60 Hz**. A máquina da Cheer
+Wash é especificada em **380 V**. São duas saídas:
+
+1. **Comprar a máquina em 220 V / 60 Hz**, se a Cheer Wash oferecer nessa classe de tensão. É a
+   saída limpa e de custo zero — mas inversor e motores mudam de classe, então precisa ser
+   confirmado por escrito, não no "sim, dá".
+2. **Transformador elevador 220 → 380 V** dentro da unidade, dimensionado com folga sobre os
+   40 kW. É a solução comum para máquina importada no Brasil, custa na casa de alguns milhares a
+   dezenas de milhares de reais conforme a potência, e precisa de projeto e ART.
+
+Nos dois casos, a corrente que a CEMIG vê é a mesma: 40 kW em 220 V trifásico dão da ordem de
+**120 A**, o que define a categoria de atendimento, o ramal e o padrão de entrada. Os 100 A que o
+fabricante recomenda são para 380 V — **em 220 V o disjuntor e o cabo são maiores**.
+
+**O que perguntar à CEMIG** (ligação continua valendo, só com outra pergunta): qual a tensão
+secundária disponível no ponto escolhido, qual categoria de atendimento comporta cerca de 120 A
+trifásicos, e qual o prazo para aumento de carga. É bem mais simples do que eu havia descrito.
 
 ## 6. Altura: risco operacional mal resolvido
 
@@ -449,13 +471,16 @@ errada, não há alavanca. Mitigação barata:
 ## 9. Próximas perguntas
 
 **Para a Cheer Wash:**
-1. Frete e prazo de produção para a CL500 até Santos ou Paranaguá — já com modelo definido.
-2. Documentação da API e do Modbus (mapa de registradores) **antes da compra**, para sabermos que o
+1. **A CL500 pode ser fornecida na classe 220 V trifásico, 60 Hz?** A CEMIG entrega 127/220 V em
+   baixa tensão (norma ND-5.1) e a máquina está especificada em 380 V. Se só existir em 380 V,
+   confirmar por escrito, porque então entra um transformador elevador por nossa conta.
+2. Frete e prazo de produção para a CL500 até Santos ou Paranaguá — já com modelo definido.
+3. Documentação da API e do Modbus (mapa de registradores) **antes da compra**, para sabermos que o
    comando de partida existe de fato.
-3. Certificado CE, esquemas elétricos e desenhos mecânicos para o laudo de NR-12.
-4. Preço e dimensões da CL908, para saber o que se perde ao ficar na CL500.
-5. Aceitam inspeção pré-embarque por agente independente antes dos 70%?
-6. Lista de equipamentos opcionais de pagamento que o Arthur prometeu enviar, e a planilha de
+4. Certificado CE, esquemas elétricos e desenhos mecânicos para o laudo de NR-12.
+5. Preço e dimensões da CL908, para saber o que se perde ao ficar na CL500.
+6. Aceitam inspeção pré-embarque por agente independente antes dos 70%?
+7. Lista de equipamentos opcionais de pagamento que o Arthur prometeu enviar, e a planilha de
    consumo de químicos.
 
 **Para a Lava Carro Brasil (distribuidor, Porto Alegre) — a ligação mais valiosa deste projeto:**
