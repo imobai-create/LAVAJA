@@ -196,3 +196,46 @@ verdade pelo ADR-005. Em compensação, nenhuma linha de código muda para publi
 captação por serviço externo), a Vercel passaria a ser a escolha óbvia e gratuita. Também mudaria
 se a rede crescesse a ponto de justificar mover a API para funções, com banco gerenciado à parte —
 decisão para o ano 2, junto com o app próprio.
+
+---
+
+## ADR-007 — Nome da marca: FastCarWash
+
+**Status:** aceito, com ressalva registrada · **Data:** out/2026
+
+**Contexto.** A marca mudou três vezes em duas semanas: LavaJá → JatoJá → FastCarWash. O domínio
+`fastcarwash.com.br` foi registrado. A troca no código é barata e já foi feita; o que não é barato
+é o registro da marca, que o Plano de Franquia define como ativo central da franqueadora.
+
+**Decisão.** O site passa a usar **FastCarWash**, grafado em caixa camel no logotipo
+(`Fast` em tinta, `CarWash` em azul), com o domínio `fastcarwash.com.br`.
+
+**Ressalva — risco de registrabilidade no INPI.** "Fast car wash" descreve literalmente o serviço
+prestado. O art. 124, VI da Lei 9.279/96 veda registro de sinal "de caráter genérico, necessário,
+comum, vulgar ou simplesmente descritivo, quando tiver relação com o produto ou serviço a
+distinguir (...) salvo quando revestidos de suficiente forma distintiva". O
+[Manual de Marcas do INPI](https://manualdemarcas.inpi.gov.br/projects/manual/wiki/5%C2%B709_An%C3%A1lise_do_requisito_de_distintividade_do_sinal_marc%C3%A1rio)
+determina que sinal em língua estrangeira seja analisado pelo seu significado, considerando o
+conhecimento do consumidor médio do serviço — e "car wash" é expressão de uso corrente no setor.
+
+Consequências prováveis:
+
+- Pedido **nominativo** (só a palavra) tende à recusa.
+- Pedido **misto** (logotipo + palavra) tende a ser concedido **com apostila**: a proteção recai
+  sobre o conjunto, sem exclusividade sobre os termos isolados.
+- Na prática, **um concorrente em Formiga pode abrir uma "Fast Car Wash" e a rede não terá como
+  impedir**. Para uma franqueadora cujo contrato promete território exclusivo e cuja tese é a
+  marca, isso é estrutural, não cosmético.
+
+**O que fazer antes de gastar com fachada, uniforme e adesivagem:** busca de anterioridade e
+parecer com agente de propriedade industrial, e decisão consciente entre (a) seguir com a marca
+mista aceitando a baixa proteção, ou (b) acrescentar um elemento distintivo que torne o conjunto
+registrável com força.
+
+**O que mudaria a decisão.** Parecer do INPI ou de agente apontando recusa também na forma mista,
+ou a existência de registro anterior de terceiros em classe 37 — aí a troca de nome volta à mesa,
+e é melhor que volte antes da primeira placa impressa do que depois.
+
+**Custo das trocas até aqui.** No código, baixo: a renomeação é um script e roda em minutos. Fora
+do código, cada troca invalida material gráfico, domínio registrado e qualquer peça já divulgada.
+A recomendação é travar o nome agora e só mexer se o INPI obrigar.

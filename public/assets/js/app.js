@@ -1,5 +1,5 @@
 /* ==========================================================================
-   JatoJá — comportamento do site. Sem dependências, sem build.
+   FastCarWash — comportamento do site. Sem dependências, sem build.
    Tudo que é preço/limite fica em CONFIG, para mudar em um lugar só.
    ========================================================================== */
 (function () {
@@ -28,7 +28,7 @@
   /* ---------- 1. origem da visita (UTM) ---------- */
   var ORIGEM = (function () {
     var guardado = {};
-    try { guardado = JSON.parse(sessionStorage.getItem("jatoja_origem") || "{}"); } catch (e) { guardado = {}; }
+    try { guardado = JSON.parse(sessionStorage.getItem("fastcarwash_origem") || "{}"); } catch (e) { guardado = {}; }
     var q = new URLSearchParams(location.search);
     var novo = {
       source: q.get("utm_source") || guardado.source || "",
@@ -36,7 +36,7 @@
       campaign: q.get("utm_campaign") || guardado.campaign || "",
       referrer: guardado.referrer || document.referrer || ""
     };
-    try { sessionStorage.setItem("jatoja_origem", JSON.stringify(novo)); } catch (e) {}
+    try { sessionStorage.setItem("fastcarwash_origem", JSON.stringify(novo)); } catch (e) {}
     return novo;
   })();
 
@@ -99,7 +99,7 @@
   function aplicarWhatsapp(numero) {
     whatsappNumero = numero || whatsappNumero;
     $$("[data-zap]").forEach(function (a) {
-      var texto = a.getAttribute("data-zap") || "Olá! Vim pelo site da JatoJá e quero saber mais.";
+      var texto = a.getAttribute("data-zap") || "Olá! Vim pelo site da FastCarWash e quero saber mais.";
       a.href = "https://wa.me/" + whatsappNumero + "?text=" + encodeURIComponent(texto);
     });
   }

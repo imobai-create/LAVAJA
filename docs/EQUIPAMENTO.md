@@ -222,7 +222,7 @@ Veículo máximo em ambos: 5,6 × 2,6 × **2,0 m de altura**.
   com os 60 Hz.
 - **"Mobile phone/Internet operation"** aparece na lista de funções, mas sem explicação. Pode ser
   desde um app de comando remoto até uma API de verdade. **É a função mais importante da lista
-  para a JatoJá** e está descrita em cinco palavras — precisa ser esclarecida.
+  para a FastCarWash** e está descrita em cinco palavras — precisa ser esclarecida.
 - **Química proporcionada automaticamente (3 líquidos).** Se os produtos forem proprietários, o
   custo por lavagem fica preso ao fornecedor pela vida inteira do equipamento. Perguntar se
   aceita similar nacional.

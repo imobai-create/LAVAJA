@@ -1,4 +1,4 @@
-// JatoJá — geração de CSV para o Excel brasileiro.
+// FastCarWash — geração de CSV para o Excel brasileiro.
 // BOM UTF-8 + separador ";" (o Excel pt-BR usa ponto e vírgula) + aspas escapadas.
 
 "use strict";
