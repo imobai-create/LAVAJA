@@ -1,6 +1,6 @@
-# JatoJá — site e landing de pré-venda
+# FastCarWash — site e landing de pré-venda
 
-Site da **JatoJá**, lava jato automatizado *touchless* por assinatura, unidade modelo em
+Site da **FastCarWash**, lava jato automatizado *touchless* por assinatura, unidade modelo em
 **Piumhi/MG**. O site capta as reservas da campanha de fundadores, apresenta os planos e guarda os
 leads em banco próprio.
 
@@ -57,8 +57,8 @@ node .github/scripts/checar-html.mjs
 Subir pelo Docker, igualzinho a produção:
 
 ```bash
-docker build -t jatoja .
-docker run --rm -p 3000:3000 -e ADMIN_TOKEN=teste jatoja
+docker build -t fastcarwash .
+docker run --rm -p 3000:3000 -e ADMIN_TOKEN=teste fastcarwash
 ```
 
 ---
@@ -176,14 +176,21 @@ ser divulgado.
 - [ ] **Número de WhatsApp definitivo** do atendimento. Hoje responde o provisório
       (31) 98747-4828, já embutido como padrão; trocar é só definir `WHATSAPP_NUMERO` no Railway.
       Vale um número com DDD 37, de Piumhi: em cidade pequena, DDD de fora gera desconfiança.
-- [x] **Domínio definitivo** — `jatoja.com.br`, registrado em set/2026. Já está em uso no
+- [x] **Domínio definitivo** — `fastcarwash.com.br`, registrado em out/2026. Já está em uso no
       `sitemap.xml`, no `robots.txt` e nas URLs canônicas das três páginas. Falta apontar o CNAME
       para o Railway quando o site subir (ver [DEPLOY.md](docs/DEPLOY.md)).
+- [ ] **Registro da marca no INPI (classes 35 e 37) — risco conhecido.** "Fast Car Wash" descreve
+      o próprio serviço, e o art. 124, VI da Lei 9.279/96 veda registro de sinal descritivo,
+      inclusive em língua estrangeira de uso corrente, "salvo quando revestidos de suficiente forma
+      distintiva". Na prática: pedir como **marca mista** (logotipo + palavra), contar com apostila
+      negando exclusividade sobre os termos, e não presumir que a rede terá exclusividade sobre o
+      nome. Consulte um agente de propriedade industrial **antes** de investir em fachada, uniforme
+      e adesivagem. Detalhes em [docs/DECISOES.md](docs/DECISOES.md) (ADR-007).
 - [ ] **Preços finais** de cada plano e da lavagem avulsa, e por quanto tempo o preço de fundador
       fica travado.
 - [ ] **`ADMIN_TOKEN`** gerado e guardado em gerenciador de senhas (não em WhatsApp, não em planilha).
 - [x] Ícones do `manifest.webmanifest` — gerados e versionados (`icon-192.png`, `icon-512.png`,
-      `icon-512-maskable.png`, `favicon.svg`, `og.png`), já na marca JatoJá.
+      `icon-512-maskable.png`, `favicon.svg`, `og.png`), já na marca FastCarWash.
 
 ### Decisões de campanha (detalhe em [docs/CHECKLIST-PRE-VENDA.md](docs/CHECKLIST-PRE-VENDA.md))
 - [ ] Quem responde o WhatsApp e em quanto tempo.
@@ -193,6 +200,6 @@ ser divulgado.
 - [ ] Se haverá sinal simbólico na reserva (muda bastante a taxa de conversão).
 
 ### Para depois, mas não muito depois
-- [ ] Pedido de registro da marca **JatoJá no INPI, classes 35 e 37**.
+- [ ] Pedido de registro da marca **FastCarWash no INPI, classes 35 e 37**.
 - [ ] Registrar o domínio no CNPJ da empresa, não no CPF de uma pessoa.
 - [ ] Cadastrar o site no Google Search Console e enviar o sitemap.
