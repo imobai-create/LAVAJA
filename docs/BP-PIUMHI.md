@@ -561,6 +561,52 @@ pior para o seu negócio: a 45% você perde o controle da sociedade que vai ser 
 padrão da rede, a vitrine da COF e a referência de todos os indicadores. **Fique acima de
 50%**, sempre.
 
+### 11.5b A variante 50/50 — decidida em out/2026
+
+O empreendedor optou por **50% para os dois investidores (25% cada) e 50% para ele**, com
+aporte proporcional. Os números:
+
+| | Por investidor (25%) | Os dois (50%) | Antonio (50%) |
+|---|---|---|---|
+| Compromisso | R$ 69.003 | R$ 138.006 | R$ 138.006 |
+| 1ª tranche, na assinatura | R$ 45.870 | R$ 91.740 | R$ 91.740 |
+| **TIR** | **39,0%** | **39,0%** | **39,0%** |
+| Payback | 33 meses | 33 meses | 33 meses |
+| Distribuição madura | R$ 3.350/mês | R$ 6.701/mês | R$ 6.701/mês |
+| Caixa em 60 meses | R$ 156.720 | R$ 313.441 | R$ 313.441 |
+| Sobre o capital | 2,27x | 2,27x | 2,27x |
+| VPL @ 18% | R$ 39.162 | R$ 78.324 | R$ 78.324 |
+
+**Dinheiro igual, quota igual, retorno igual: 39,0% para os dois lados.** É a estrutura mais
+simples de explicar e de vender — e é mais generosa com os investidores que a recomendação
+anterior (que dava a eles 48% por R$ 150 mil, ou seja, menos quota por mais dinheiro).
+
+O retorno de 39,0% dos dois lados **depende do capital ser chamado em tranches**, proporcional
+à necessidade real. Se o investidor depositar os R$ 69 mil inteiros no dia da assinatura e o
+dinheiro ficar parado até a obra pedir, a TIR dele cai para **24,8%** — ainda boa, mas 14
+pontos jogados fora por desenho ruim de contrato. A cláusula de chamada de capital não é
+burocracia: vale 14 pontos de TIR.
+
+> **Ressalva de governança: 50/50 trava a sociedade, e isso tem de ser resolvido no papel.**
+>
+> Na Limitada as deliberações se contam por capital. A **50% exatos ninguém tem maioria** — e
+> qualquer matéria que exija mais da metade fica parada se os dois lados discordarem. Não é
+> hipótese remota: é a forma mais comum de uma sociedade de dois sócios morrer.
+>
+> Duas saídas, e as duas custam quase nada agora:
+>
+> 1. **Economia 50/50, voto 50,5%/49,5%** — o Antonio fica com meio ponto a mais apenas para
+>    desempate. A diferença no retorno é irrelevante (R$ 1,4 mil de capital); o efeito na
+>    governança é total. **É a recomendação.**
+> 2. **50/50 exato, com cláusula de desempate escrita**: voto de qualidade do administrador
+>    sobre uma lista fechada de matérias operacionais, e cláusula *buy-sell* (quem propõe um
+>    preço aceita vender ou comprar por ele) para impasse em matéria estrutural. Funciona, mas
+>    exige advogado e disciplina de redação.
+>
+> O que **não** se faz é assinar 50/50 sem nenhuma das duas e descobrir o problema na primeira
+> discordância séria. Isso também está no [resumo para investidor](RESUMO-INVESTIDOR.md), item
+> 5 das proteções — dizer isso na entrada é o que faz o investidor confiar na estrutura.
+
 ### 11.6 As seis cláusulas que valem mais que a taxa
 
 **1. A marca fica na PJ 1, 100% sua, e o pedido no INPI é feito no nome dela — antes de os
