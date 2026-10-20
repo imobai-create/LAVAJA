@@ -247,3 +247,65 @@ e é melhor que volte antes da primeira placa impressa do que depois.
 **Custo das trocas até aqui.** No código, baixo: a renomeação é um script e roda em minutos. Fora
 do código, cada troca invalida material gráfico, domínio registrado e qualquer peça já divulgada.
 A recomendação é travar o nome agora e só mexer se o INPI obrigar.
+
+---
+
+## ADR-008 — Retirar o formato BOX da oferta de franquia
+
+**Data:** out/2026. **Status:** recomendado, pendente de decisão do empreendedor.
+
+O Plano de Franquia prevê três formatos: Box (R$ 215 mil), Express (R$ 416 mil) e Prime
+(R$ 720 mil). Modelado o fluxo de caixa de cada um por 60 meses, com rampa de maturação,
+capex de manutenção e valor residual (ver [BUSINESS-PLAN.md](BUSINESS-PLAN.md)):
+
+| Formato | Payback | TIR | VPL @ 18% |
+|---|---|---|---|
+| BOX | 56 meses | 9,4% | −R$ 45.400 |
+| EXPRESS | 37 meses | 29,6% | +R$ 122.738 |
+| PRIME | 39 meses | 26,4% | +R$ 152.868 |
+
+**O BOX destrói valor.** TIR de 9,4% contra TMA de 18%, e payback de 56 meses dentro de
+um contrato de 60. O franqueado do BOX paga R$ 215 mil, trabalha cinco anos e termina com
+menos do que teria na renda fixa.
+
+O payback de 42 meses do plano original considera apenas o capex — ignora a taxa de
+franquia (R$ 35 mil) e o capital de giro (R$ 25 mil). Com o desembolso real, são 56.
+
+**Por que é problema da franqueadora, não só do franqueado.** O BOX é a porta de entrada
+mais barata e, portanto, a que mais vende. É também a que produz franqueado insatisfeito:
+não renova, não indica, atrasa royalty e reclama em público. É passivo de marca com desconto.
+
+**Alternativas avaliadas.** Reprecificar (taxa a R$ 15 mil e royalty a 4%) eleva a TIR para
+a casa dos 15% — ainda abaixo da TMA. Manter o BOX apenas como segundo ponto de franqueado
+já operante, onde a estrutura fixa é compartilhada, fecha — mas é caso particular, não
+formato de catálogo.
+
+**O que mudaria a decisão.** Receita madura do BOX acima de R$ 19 mil/mês comprovada em
+operação, ou capex abaixo de R$ 120 mil com fornecedor nacional.
+
+---
+
+## ADR-009 — Avaliar a franqueadora em 10 anos, não em 5
+
+**Data:** out/2026. **Status:** aceito.
+
+Rodado o plano de expansão num horizonte de 60 meses, a franqueadora tem **TIR negativa**
+(−6,2% com Box, −12,9% sem) e VPL de −R$ 246 mil. No mês 60 o caixa acumulado ainda é
+negativo em R$ 109 mil.
+
+Isso não significa que a franqueadora não funciona — significa que 5 anos é o horizonte
+errado. A estrutura (equipe de campo, app, formatação, marketing) é montada nos anos 1 a 3;
+o royalty recorrente só supera essa estrutura depois. Medir em cinco anos é medir a rede
+exatamente no ano em que ela acabou de pagar o investimento.
+
+Em 120 meses, com 65 unidades no ano 10: **TIR 49,4%**, **VPL R$ 1,265 mi**, caixa positivo
+no mês 61, EBITDA de R$ 1,657 mi no ano 10.
+
+Consequência prática: **toda apresentação a investidor da franqueadora usa 10 anos**, e deixa
+explícito que o capital é paciente e que o vale de caixa dos anos 2 e 3 (pico de −R$ 714 mil)
+é o risco central. Apresentar a franqueadora em 5 anos seria apresentar um projeto de TIR
+negativa.
+
+Validação cruzada relevante: o modelo reproduziu de forma independente o pico de consumo de
+caixa de ≈ R$ 720 mil citado no Plano de Franquia (obtivemos R$ 714 mil). Nesse ponto o plano
+original está internamente consistente.
