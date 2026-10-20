@@ -46,6 +46,29 @@ receita madura de R$ 48 mil/mês:
 Nenhum candidato com R$ 504 mil e um contador decente assina. E se assinar, quebra ou
 reclama — e o problema volta para a marca.
 
+> **Correção de out/2026, e ela é pesada: o modelo do franqueado também não remunerava quem
+> administra a unidade.** Com pró-labore de R$ 3.500/mês para o operador:
+>
+> | | Sem pró-labore | **Com pró-labore de R$ 3.500** |
+> |---|---|---|
+> | A — ele constrói tudo (R$ 504 mil) | TIR 13,3% / VPL −R$ 57 mil | **TIR 1,7% / VPL −R$ 198 mil** |
+> | B1 — nós construímos o ponto (R$ 310 mil) | TIR 27,3% / VPL +R$ 74 mil | **TIR 9,5% / VPL −R$ 68 mil** |
+>
+> **Nem o build-to-suit salva a franquia se o franqueado tiver de pagar um gerente.** Isso
+> segmenta a oferta de forma decisiva:
+>
+> - **Franqueado operador**, que administra a própria unidade: o pró-labore é o salário dele e
+>   o retorno de capital vem em cima. Para esse público, a estrutura B1 com ticket de
+>   R$ 310 mil funciona — ele compra um emprego com retorno, e é um bom negócio.
+> - **Franqueado investidor**, ausente, que contrata um gerente: **não fecha em praça de
+>   R$ 48 mil/mês, em nenhuma estrutura.** Não venda para esse perfil, nem deixe a COF sugerir
+>   que funciona.
+>
+> **Consequência prática para a Fase 2:** o perfil deixa de ser "quem tem R$ 310 mil" e passa a
+> ser "quem tem R$ 310 mil **e vai operar**". É um funil muito mais estreito e muda o plano de
+> captação. A alternativa é a praça entregar bem mais que R$ 48 mil/mês — o que remete ao
+> limiar de R$ 64 mil da seção 4b.
+
 É aqui que a ideia imobiliária entra, e é por isso que ela merece ser levada a sério: ela
 não é um apêndice patrimonial, é **a solução de um problema comercial real**.
 
@@ -183,6 +206,98 @@ o que o banco financia barato.
 
 ---
 
+## 4b. O modelo McDonald's — o que dele serve, e a partir de que receita
+
+O McDonald's é a referência do modelo misto franquia + imobiliário, e vale saber o que ele é
+de fato antes de copiar.
+
+**Como funciona.** Em 1956 Harry Sonneborn criou a *Franchise Realty Corporation*: a empresa
+assinava a locação ou comprava o ponto **com hipoteca**, e sublocava ao franqueado com
+**margem de 20%, depois 40%**, sobre o próprio custo de locação. O aluguel cobrado era o
+**maior entre essa margem e um percentual das vendas**. A trava de controle era o contrato:
+franqueado que não seguisse o padrão rompia a locação e podia ser despejado.
+
+Hoje o imobiliário é a maior parte do negócio. No 10-K de 2024, das receitas de restaurantes
+franqueados de **US$ 15,7 bilhões**, **US$ 10,0 bi são aluguel** e US$ 5,6 bi royalty — ou seja,
+**o aluguel é 64% e o royalty 36%**. 95% dos restaurantes são franqueados, e a empresa
+"geralmente possui ou garante uma locação de longo prazo do terreno e do prédio".
+
+### O teste no nosso modelo: a estrutura não fecha a R$ 48 mil/mês
+
+Modelamos exatamente isso em `docs/bp/mcdonalds.py` — estrutura **B3**: a franqueadora assina
+a locação principal (R$ 3.000/mês), constrói a baia (R$ 220 mil) com **70% de dívida a 14%
+a.a.**, e subloca pelo maior entre uma base e um percentual das vendas.
+
+| Base + % das vendas | Aluguel maduro | Franqueado TIR | Franqueadora TIR | Franqueadora VPL @ 18% |
+|---|---|---|---|---|
+| 3.800 + 8% | R$ 3.840 | 28,2% | −62,1% | −R$ 3.501.344 |
+| 3.800 + 10% | R$ 4.800 | 24,6% | −14,3% | −R$ 2.438.104 |
+| 4.200 + 12% | R$ 5.760 | 20,2% | +5,4% | −R$ 1.229.507 |
+| 4.500 + 13% | R$ 6.240 | 17,9% | +12,4% | −R$ 599.553 |
+
+**Não existe nível de aluguel em que os dois lados fechem**, e a estrutura é **pior que comprar
+o terreno** (B1, 15,6%) e pior que o aluguel fixo (B2, 17,6%). O motivo é direto: a franqueadora
+passa a pagar R$ 3.000 de locação principal **mais** R$ 2.330 de serviço da dívida por ponto —
+R$ 5.330 de saída contra R$ 4.800 de aluguel recebido a 10% das vendas. **Locação principal é
+despesa perpétua; propriedade é ativo que valoriza.** Se for fazer o imobiliário, comprar é
+melhor que alugar-e-construir.
+
+### Mas há um limiar, e ele é um número concreto
+
+Variando a receita madura da unidade, com base de R$ 3.800 + 10% das vendas:
+
+| Receita madura da unidade | Aluguel | Franqueado TIR | Franqueadora TIR | Franqueadora VPL |
+|---|---|---|---|---|
+| R$ 48.000 | R$ 4.800 | 24,6% | −14,3% | −R$ 2.438.104 |
+| R$ 54.000 | R$ 5.400 | 35,4% | +4,7% | −R$ 1.294.691 |
+| R$ 60.000 | R$ 6.000 | 46,1% | +16,8% | −R$ 134.912 |
+| **R$ 64.000** | **R$ 6.400** | **52,9%** | **+23,2%** | **+R$ 638.274** |
+| R$ 70.000 | R$ 7.000 | 63,1% | +31,3% | +R$ 1.802.323 |
+
+**A estrutura McDonald's passa a fechar a partir de ~R$ 64 mil/mês de receita madura por
+unidade.** O cenário base de Piumhi é R$ 54,1 mil; o otimista é R$ 72,3 mil. Então não é um
+"nunca" — é um "não com R$ 48 mil, e talvez sim se a operação provar R$ 64 mil".
+
+### A razão de fundo: aluguel sobre o valor do imóvel
+
+| | Aluguel bruto anual / valor do imóvel |
+|---|---|
+| McDonald's, imobilizado ao custo (US$ 44,2 bi) | **22,7%** |
+| McDonald's, imobilizado líquido (US$ 25,3 bi) | **39,6%** |
+| Ponto de lava jato de R$ 500 mil a R$ 5.000/mês | **12,0%** |
+| Ponto de lava jato de R$ 500 mil a R$ 6.000/mês | 14,4% |
+
+**O McDonald's cobra duas a três vezes mais aluguel por real de imóvel do que um lava jato
+consegue cobrar.** Um restaurante gera venda por metro quadrado muito acima de uma baia de
+lavagem, e é isso — não a engenharia financeira — que sustenta o modelo imobiliário deles.
+Copiar a estrutura sem ter a venda por metro quadrado é copiar o custo sem a receita.
+
+### O que copiar agora, de graça
+
+1. **A locação principal em nome da franqueadora, com o franqueado construindo.** É o
+   Sonneborn de 1956 sem a parte do prédio: capital zero, e se o franqueado sai, o ponto fica
+   na rede. Em contrato de locação brasileiro isso exige **autorização expressa de sublocação**
+   (Lei 8.245/91, art. 13) — sem ela, a sublocação permite despejo.
+2. **Aluguel percentual**: o maior entre uma base e um percentual das vendas. Reajusta sozinho
+   com o crescimento e com a inflação, sem renegociação, e alinha o interesse dos dois lados.
+   Usar como mecanismo de indexação e controle, não como motor de lucro.
+3. **A margem sobre a locação principal.** Sonneborn cobrava 20% a 40%. Em contrato de
+   R$ 3.000, uma margem de 20% é R$ 600/mês por ponto de margem com **capital zero** — em 65
+   pontos, R$ 39 mil/mês. É a parte mais rentável do modelo deles e a mais barata de copiar.
+
+### O que não copiar agora
+
+- **Financiar a construção da baia.** Tabela acima: não fecha a R$ 48 mil/mês.
+- **Comprar o terreno.** 15,6% sobre R$ 32,5 milhões contra 42,6% sobre R$ 653 mil (ADR-011).
+- **A escala.** O McDonald's amortiza um time imobiliário próprio em 40 mil lojas.
+
+**Risco que a locação principal cria e que o McDonald's também carrega:** 65 pontos a R$ 3.000
+são **R$ 195 mil/mês de obrigação fixa**, com ou sem franqueado dentro. Se 10% ficarem vagos,
+são R$ 19,5 mil/mês de sangria. Só assumir a locação principal em praça já provada, e com o
+franqueado como fiador ou garantidor da sublocação.
+
+---
+
 ## 5. O plano recomendado em números
 
 **Fase 1 + Fase 2 asset-light, com build-to-suit de terceiros nos pontos:**
@@ -289,6 +404,7 @@ serem comparáveis desde o primeiro dia e dá histórico limpo à COF.
 | Risco | Impacto | Mitigação |
 |---|---|---|
 | Franquia com TIR de 13,4% não vende | **Crítico** | Build-to-suit baixa o ticket para R$ 310 mil e leva a TIR a 27,3% |
+| Franqueado investidor ausente, que paga gerente | **Crítico** | Não fecha em nenhuma estrutura: vender só para franqueado operador (seção 1) |
 | Vender franquia antes da COF | **Crítico** | Gate absoluto: 12 meses de operação auditável em Piumhi |
 | Caixa da franqueadora nos anos 2 a 4 | Alto | EBITDA de Piumhi; faseamento do app; sócio ou master regional |
 | Capital imobilizado em imóvel a 15,6% de TIR | Alto | Build-to-suit com terceiro; holding separada se houver compra |
@@ -312,6 +428,9 @@ serem comparáveis desde o primeiro dia e dá histórico limpo à COF.
 5. **A valorização de 4,5% a.a. do terreno** é premissa. Em cidade pequena pode ser menos.
 6. **A janela de aluguel de R$ 5.000 a R$ 5.500 depende da receita da unidade.** Se a
    unidade madura for R$ 43 mil em vez de R$ 48 mil, a janela fecha.
+7. **O pró-labore do franqueado de R$ 3.500 é escolha, não cálculo** — e é a premissa que mais
+   move o resultado dele. Medir em Piumhi quantas horas de gente a operação realmente consome
+   é um dos entregáveis da Fase 1.
 
 ---
 
@@ -322,7 +441,7 @@ A Fase 2 tem um gate, e o gate é a Fase 1. A ordem é:
 | Quando | Ação |
 |---|---|
 | Mês 12 de Piumhi | Fechar o ano com número auditável: assinantes, churn, lavagens/dia, uso do Ilimitada, EBITDA real |
-| Mês 12 | Comparar com o cenário base. Abaixo de 345 assinantes, a Fase 2 **não começa** |
+| Mês 12 | Comparar com o cenário base. Abaixo de ~400 assinantes, a Fase 2 **não começa** |
 | Mês 13 | Constituir a franqueadora como PJ própria; unidade passa a pagar royalty |
 | Mês 13–15 | Conversar com 3 investidores imobiliários locais sobre build-to-suit na segunda praça |
 | Mês 15 | COF com advogado especializado, sobre o balanço real da franqueadora |

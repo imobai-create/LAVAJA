@@ -328,7 +328,7 @@ de **R$ 475 mil**. Fase 2 é a franqueadora, e só começa a ser formatada depoi
 meses de número auditável** em Piumhi — assinantes, churn, lavagens/dia, uso real do
 plano Ilimitada, EBITDA.
 
-**Gate explícito:** abaixo de **345 assinantes** no mês 12, a Fase 2 não começa. Esse é o
+**Gate explícito:** abaixo de **~400 assinantes** no mês 12, a Fase 2 não começa. Esse é o
 número em que a unidade empata a 18% a.a.
 
 **Por que isto é melhor, e não só mais simples.** Formatar franquia custa COF, manual,
@@ -403,3 +403,70 @@ a.a. em 60 meses: abaixo da TMA e pouco acima da Selic. Alugar é a decisão cer
 contrato tem de ter prazo de 10 anos, **opção de compra com preço travado hoje**,
 indenização de benfeitoria e direito de preferência. A opção de compra custa zero assinar
 e vale muito se o juro cair.
+
+
+---
+
+## ADR-012 — Estrutura de capital da Fase 1
+
+**Data:** out/2026. **Status:** recomendado, pendente de negociação com os investidores.
+
+**Objetivo declarado pelo empreendedor:** o menor capital possível em risco, com um ou dois
+investidores entrando.
+
+**Duas correções que vieram antes da recomendação.**
+
+A primeira: **o BP não remunerava o operador.** Com pró-labore de R$ 3.500/mês, o cenário base
+de capex cheio e 100% capital próprio sai de **37,5% para 25,6% de TIR** e de R$ 235 mil para
+**R$ 93 mil de VPL**. O número publicado antes estava otimista por omissão, e o número de
+referência para investidor passa a ser o que paga quem trabalha.
+
+A segunda: **o "capital a reservar" é o pico de caixa, não o desembolso inicial.** Com dívida,
+o serviço do empréstimo durante a rampa abre uma diferença de R$ 60 a R$ 90 mil entre a
+primeira tranche e o pico. Prometer só a primeira tranche é como o projeto morre no mês 6.
+
+**Decisão: reduzir a necessidade de capital antes de dividi-la.** Quatro alavancas, em ordem
+de valor:
+
+| Alavanca | Efeito no capital | Efeito na TIR | Efeito no VPL |
+|---|---|---|---|
+| Capex enxuto (R$ 328 mil) | −R$ 81 mil | +8,3 pp | +R$ 72 mil |
+| Dívida de R$ 120 mil a 21% a.a. | −R$ 99 mil | +4,7 pp | **−R$ 8 mil** |
+| Pré-venda anual de 80 fundadores | −R$ 24 mil | +0,4 pp | −R$ 1 mil |
+| Prazo 30/70 do fornecedor | desloca o pico | — | — |
+
+Resultado: **capital a reservar cai de R$ 480 mil para R$ 276 mil (−42%)** e a TIR do equity
+sobe de 25,6% para 39,0%, já pagando o pró-labore.
+
+A dívida **destrói um pouco de valor** (21% contra TMA de 18%) e isso está registrado de
+propósito: é uma troca consciente de R$ 8 mil de VPL por R$ 99 mil de capital liberado.
+
+**Cap table recomendado:** dois investidores de R$ 75 mil por 24% cada, Antonio com R$ 126 mil
+por **52%**. Retornos de 20,7% para eles e 29,2% para ele, mais pró-labore e 100% da
+franqueadora.
+
+**Antonio fica acima de 50%, sempre.** A alternativa de dois investidores a R$ 90 mil por 27,5%
+cada rende mais para ele (33,6%), e foi recusada: a 45% ele perde o controle da sociedade que
+vai ser a unidade padrão da rede, a vitrine da COF e a referência de todos os indicadores.
+
+**A cláusula que vale mais que a taxa:** a marca fica na **PJ 1, 100% do Antonio**, com o
+pedido no INPI em nome dela **antes de os investidores assinarem**, e com contrato de licença
+para a PJ 2 declarado na entrada (0% de royalty nos primeiros 24 meses, 6% depois). A
+franqueadora vale R$ 1,26 milhão de VPL sozinha; com a marca dentro da PJ 2, vender 48% da
+operação é vender 48% da rede por R$ 150 mil.
+
+**Hipótese que foi testada e não se confirmou:** comprar máquina **nacional** credenciada para
+destravar o BNDES Finame (Selic + 0,75% + spread, até 100% do equipamento, até 10 anos). O
+ponto de indiferença é **máquina nacional a R$ 134.400** — praticamente o custo da chinesa
+posta em Piumhi (R$ 132.600 com interface e kit). Acima disso, o Finame não compensa o preço
+maior do equipamento. A rota nacional reserva R$ 10 a R$ 16 mil menos de capital, e custa VPL.
+Vale as duas ligações (Grupo MF, Covre), não vale como tese.
+
+**Também descartado por ora:** BDMG Pronampe investimento, que tem a melhor condição do mercado
+(Selic + 5,50% a.a., 72 meses, 12 de carência) mas exige 30% da receita bruta do ano anterior,
+limitado a R$ 250 mil — **PJ nova não acessa. Entra no ano 2.**
+
+**O que mudaria a decisão.** Proposta de cooperativa acima de 24% a.a. ou com menos de 6 meses
+de carência derruba a alavancagem. Campanha de fundadores abaixo de 50 adesões derruba a
+pré-venda **e a premissa de demanda** — e aí a decisão não é de estrutura de capital, é de
+revisar o plano antes de comprar a máquina.

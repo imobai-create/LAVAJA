@@ -83,6 +83,9 @@ def f_simples(ref):
 
 
 # ============================================================ PLANILHA 1
+TICKET = 87.0      # ticket medio do mix, usado no ajuste da pre-venda
+
+
 def planilha_piumhi(caminho):
     wb = Workbook()
 
@@ -147,6 +150,9 @@ def planilha_piumhi(caminho):
     prim_fixo = ln
     for nome, v in P.FIXOS:
         ln = entrada(ws, ln, nome.replace("  ", " "), v)
+    L["pro_labore"] = ln
+    ln = entrada(ws, ln, "Pro-labore do operador", 3500, MOEDA,
+                 "um negocio que so fecha com o dono de graca nao fechou")
     ult_fixo = ln - 1
     L["fixo"] = ln
     ws.cell(ln, 1, "TOTAL FIXO").font = bold
@@ -166,9 +172,13 @@ def planilha_piumhi(caminho):
     c = ws.cell(ln, 2, f"=SUM(B{prim_cap}:B{ult_cap})"); c.number_format = MOEDA; c.font = bold
     ln += 1
     L["cont"] = ln; ln = entrada(ws, ln, "Contingencia (%)", P.CONTINGENCIA, PCT)
+    L["cortes"] = ln
+    ln = entrada(ws, ln, "Cortes da versao enxuta", 71060, MOEDA,
+                 "boxes e aspiradores no mes 6, patio de 150 m2, fachada simples; "
+                 "zere para o capex cheio")
     L["capex"] = ln
     ws.cell(ln, 1, "CAPEX TOTAL").font = bold
-    c = ws.cell(ln, 2, f"=B{L['sub_cap']}*(1+B{L['cont']})")
+    c = ws.cell(ln, 2, f"=B{L['sub_cap']}*(1+B{L['cont']})-B{L['cortes']}")
     c.number_format = MOEDA; c.font = bold; c.fill = fill_out
     ln += 1
     L["benf"] = ln
@@ -183,10 +193,13 @@ def planilha_piumhi(caminho):
     prim_giro = ln
     for nome, v in P.GIRO:
         ln = entrada(ws, ln, nome, v)
-    ult_giro = ln - 1
+    ult_giro = ln - 1   # antes das linhas de corte e total
+    L["corte_giro"] = ln
+    ln = entrada(ws, ln, "Cortes no giro (versao enxuta)", 10000, MOEDA,
+                 "zere junto com os cortes do capex")
     L["giro"] = ln
     ws.cell(ln, 1, "TOTAL GIRO").font = bold
-    c = ws.cell(ln, 2, f"=SUM(B{prim_giro}:B{ult_giro})")
+    c = ws.cell(ln, 2, f"=SUM(B{prim_giro}:B{ult_giro})-B{L['corte_giro']}")
     c.number_format = MOEDA; c.font = bold; c.fill = fill_out
     ln += 1
     L["invest"] = ln
@@ -326,6 +339,147 @@ def planilha_piumhi(caminho):
     rs.cell(ln, 1, "A aba Fluxo comeca no mes 0, que carrega o investimento. "
                    "IRR, NPV e payback incluem esse desembolso.").font = Font(
         italic=True, size=9, color="6B7F93")
+    # -------------------------------------------------- Capital
+    cp = wb.create_sheet("Capital", 2)
+    ln = titulo(cp, "ESTRUTURA DE CAPITAL  |  divida, pre-venda e divisao entre socios",
+                span=12)
+    cp.column_dimensions["A"].width = 46
+    cp.column_dimensions["B"].width = 16
+    cp.column_dimensions["C"].width = 46
+
+    cp.cell(ln, 1, "Celulas em bege sao de entrada. O resto e formula."
+            ).font = Font(italic=True, color="8A5F16")
+    ln += 2
+    K = {}
+    cp.cell(ln, 1, "DIVIDA").font = bold; ln += 1
+    K["dv"] = ln; ln = entrada(cp, ln, "Valor da divida", 120000, MOEDA,
+                               "cooperativa de credito local e a fonte mais provavel")
+    K["dj"] = ln; ln = entrada(cp, ln, "Juros (a.a.)", 0.21, PCT)
+    K["dp"] = ln; ln = entrada(cp, ln, "Prazo (meses)", 60, NUM)
+    K["dc"] = ln; ln = entrada(cp, ln, "Carencia (meses, so juros)", 6, NUM,
+                               "exija 6 no minimo: os meses 1 a 4 tem EBITDA negativo")
+    K["di"] = ln
+    cp.cell(ln, 1, "Juros mensais")
+    c = cp.cell(ln, 2, f"=(1+B{K['dj']})^(1/12)-1"); c.number_format = PCT2
+    ln += 1
+    K["dparc"] = ln
+    cp.cell(ln, 1, "Parcela apos a carencia").font = bold
+    c = cp.cell(ln, 2, f"=B{K['dv']}*B{K['di']}/(1-(1+B{K['di']})^-B{K['dp']})")
+    c.number_format = MOEDA; c.font = bold; c.fill = fill_out
+    ln += 1
+    K["djcar"] = ln
+    cp.cell(ln, 1, "Juros durante a carencia")
+    c = cp.cell(ln, 2, f"=B{K['dv']}*B{K['di']}"); c.number_format = MOEDA
+    ln += 2
+
+    cp.cell(ln, 1, "PRE-VENDA ANUAL DOS FUNDADORES").font = bold; ln += 1
+    K["nf"] = ln; ln = entrada(cp, ln, "Numero de fundadores", 80, NUM)
+    K["mf"] = ln; ln = entrada(cp, ln, "Mensalidade do fundador", 79, MOEDA2)
+    K["pf"] = ln; ln = entrada(cp, ln, "Meses pagos a vista", 11, NUM,
+                               "12 meses pelo preco de 11")
+    K["cpre"] = ln
+    cp.cell(ln, 1, "Caixa no mes 0").font = bold
+    c = cp.cell(ln, 2, f"=B{K['nf']}*B{K['mf']}*B{K['pf']}")
+    c.number_format = MOEDA; c.font = bold; c.fill = fill_out
+    ln += 2
+
+    cp.cell(ln, 1, "DIVISAO DO EQUITY").font = bold; ln += 1
+    K["ia"] = ln; ln = entrada(cp, ln, "Aporte do investidor A", 75000)
+    K["fa"] = ln; ln = entrada(cp, ln, "Fatia do investidor A", 0.24, PCT)
+    K["ib"] = ln; ln = entrada(cp, ln, "Aporte do investidor B", 75000)
+    K["fb"] = ln; ln = entrada(cp, ln, "Fatia do investidor B", 0.24, PCT)
+    ln += 1
+
+    # bloco mensal: mes 0 a 60
+    lcab = ln
+    cab5 = cabecalho(cp, lcab, ["Mes", "FCL do projeto", "Servico da divida",
+                                "Ajuste da pre-venda", "FCL do equity",
+                                "Caixa acumulado", "Investidor A", "Investidor B",
+                                "Antonio"],
+                     largura=[46, 16, 46, 17, 15, 16, 14, 14, 14])
+    cp.column_dimensions["A"].width = 46
+    cp.column_dimensions["B"].width = 16
+    cp.column_dimensions["C"].width = 17
+    for i, w in enumerate([8, 16, 17, 18, 16, 17, 14, 14, 15], start=1):
+        cp.column_dimensions[get_column_letter(i)].width = w
+    c0 = cab5
+    k = "Capital!$B$"
+    for m in range(0, 61):
+        r = c0 + m
+        cp.cell(r, 1, m)
+        cp.cell(r, 2, f"=Fluxo!$R${r0 + m}").number_format = MOEDA
+        if m == 0:
+            cp.cell(r, 3, f"=-{k}{K['dv']}").number_format = MOEDA
+            cp.cell(r, 4, f"=-{k}{K['cpre']}").number_format = MOEDA
+        else:
+            # parcela do mes; no mes 60 soma o saldo devedor que sobra depois do horizonte
+            f = (f"=IF(A{r}<={k}{K['dc']},{k}{K['djcar']},"
+                 f"IF(A{r}<={k}{K['dc']}+{k}{K['dp']},{k}{K['dparc']},0))")
+            if m == 60:
+                f += (f"+{k}{K['dparc']}*(1-(1+{k}{K['di']})"
+                      f"^-MAX(0,{k}{K['dp']}-(60-{k}{K['dc']})))/{k}{K['di']}")
+            cp.cell(r, 3, f).number_format = MOEDA
+            # nos 12 primeiros meses sai da receita o que os fundadores ja pagaram
+            cp.cell(r, 4,
+                    f"=IF(A{r}<=12,{k}{K['nf']}*{TICKET}*(1-Fluxo!$K${r0 + m}),0)"
+                    ).number_format = MOEDA
+        cp.cell(r, 5, f"=B{r}-C{r}-D{r}").number_format = MOEDA
+        if m == 0:
+            cp.cell(r, 6, f"=E{r}").number_format = MOEDA
+        else:
+            cp.cell(r, 6, f"=F{r-1}+E{r}").number_format = MOEDA
+        if m == 0:
+            cp.cell(r, 7, f"=-{k}{K['ia']}").number_format = MOEDA
+            cp.cell(r, 8, f"=-{k}{K['ib']}").number_format = MOEDA
+            cp.cell(r, 9, f"=-(MIN(F{c0}:F{c0+60})*-1-{k}{K['ia']}-{k}{K['ib']})"
+                    ).number_format = MOEDA
+        else:
+            cp.cell(r, 7, f"=E{r}*{k}{K['fa']}").number_format = MOEDA
+            cp.cell(r, 8, f"=E{r}*{k}{K['fb']}").number_format = MOEDA
+            cp.cell(r, 9, f"=E{r}*(1-{k}{K['fa']}-{k}{K['fb']})").number_format = MOEDA
+    cp.freeze_panes = f"A{cab5}"
+
+    lr = c0 + 63
+    cp.cell(lr, 1, "RESULTADO").font = Font(bold=True, size=12)
+    itens = [
+        ("CAPITAL A RESERVAR (pico de caixa)", f"=-MIN(F{c0}:F{c0+60})", MOEDA,
+         "e isto, nao a 1a tranche, que precisa estar comprometido"),
+        ("  1a tranche, na assinatura", f"=-E{c0}", MOEDA, ""),
+        ("  a chamar durante a rampa", f"=-MIN(F{c0}:F{c0+60})+E{c0}", MOEDA, ""),
+        ("Mes do pico", f"=MATCH(MIN(F{c0}:F{c0+60}),F{c0}:F{c0+60},0)-1", NUM, ""),
+        ("TIR do equity (a.a.)", f'=IFERROR((1+IRR(E{c0}:E{c0+60},0.02))^12-1,"n/d")',
+         PCT, ""),
+        ("VPL do equity na TMA",
+         f"=NPV((1+Premissas!$B${L['tma']})^(1/12)-1,E{c0+1}:E{c0+60})+E{c0}", MOEDA, ""),
+        ("TIR do investidor A", f'=IFERROR((1+IRR(G{c0}:G{c0+60},0.02))^12-1,"n/d")',
+         PCT, "o que ele compara com o CDI"),
+        ("TIR do investidor B", f'=IFERROR((1+IRR(H{c0}:H{c0+60},0.02))^12-1,"n/d")',
+         PCT, ""),
+        ("TIR do Antonio", f'=IFERROR((1+IRR(I{c0}:I{c0+60},0.02))^12-1,"n/d")',
+         PCT, "mais o pro-labore e 100% da franqueadora"),
+        ("Aporte do Antonio", f"=-I{c0}", MOEDA, ""),
+        ("Fatia do Antonio", f"=1-{k}{K['fa']}-{k}{K['fb']}", PCT,
+         "FIQUE ACIMA DE 50%: e a unidade padrao da rede"),
+    ]
+    for i, (rot, f, fmt, nota) in enumerate(itens):
+        rr = lr + 1 + i
+        cp.cell(rr, 1, rot).font = bold
+        c = cp.cell(rr, 2, f)
+        c.number_format = fmt
+        c.font = Font(bold=True)
+        c.fill = fill_out
+        if nota:
+            cp.cell(rr, 3, nota).font = Font(italic=True, size=9, color="6B7F93")
+    for i, nota in enumerate([
+            "O aporte do Antonio e o residual: capital a reservar menos os aportes dos "
+            "investidores.",
+            "As colunas dos socios lancam o compromisso inteiro no mes 0. Na pratica ele e "
+            "chamado em tranches,",
+            "o que melhora a TIR deles - logo as TIRs aqui sao conservadoras.",
+            "A pre-venda e antecipacao de receita: entra no mes 0 e sai da receita dos 12 "
+            "meses seguintes."]):
+        cp.cell(lr + 14 + i, 1, nota).font = Font(italic=True, size=9, color="6B7F93")
+
     wb.save(caminho)
     return caminho
 
