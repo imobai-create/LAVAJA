@@ -236,6 +236,14 @@ registrável com força.
 ou a existência de registro anterior de terceiros em classe 37 — aí a troca de nome volta à mesa,
 e é melhor que volte antes da primeira placa impressa do que depois.
 
+> **Atualização — out/2026: a decisão mudou.** Apareceu um anúncio patrocinado de licenciamento de
+> uma **Fast Wash / Fast Car Wash** operando e se expandindo no Brasil, no mesmo segmento
+> (touchless, 24h, leitura de placa). Deixa de ser só o problema de marca descritiva descrito acima
+> e passa a ser **risco de conflito com marca anterior de terceiro**. A recomendação agora é
+> **trocar o nome**, não apenas registrá-lo como marca mista. Levantamento em
+> [CONCORRENTES.md](CONCORRENTES.md). O código segue em FastCarWash até que o nome novo seja
+> definido — a renomeação é um script e roda em minutos.
+
 **Custo das trocas até aqui.** No código, baixo: a renomeação é um script e roda em minutos. Fora
 do código, cada troca invalida material gráfico, domínio registrado e qualquer peça já divulgada.
 A recomendação é travar o nome agora e só mexer se o INPI obrigar.

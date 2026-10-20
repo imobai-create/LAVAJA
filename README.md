@@ -154,6 +154,7 @@ promete ao visitante.
 | [docs/CHECKLIST-PRE-VENDA.md](docs/CHECKLIST-PRE-VENDA.md) | O que precisa estar decidido **antes** de divulgar, e o que medir depois |
 | [docs/DECISOES.md](docs/DECISOES.md) | Registro das decisões técnicas e o que faria cada uma mudar |
 | [docs/EQUIPAMENTO.md](docs/EQUIPAMENTO.md) | Análise da cotação da máquina, lacunas e perguntas pendentes ao fabricante |
+| [docs/CONCORRENTES.md](docs/CONCORRENTES.md) | Quem já opera lava jato automatizado por assinatura no Brasil, e o que isso muda na marca e no diferencial |
 | `docs/plano-franquia-extraido.txt` | Texto integral do Plano de Franquia (set/2026) — referência, não editar |
 
 ---
