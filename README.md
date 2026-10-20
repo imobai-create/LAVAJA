@@ -21,7 +21,7 @@ leads em banco próprio.
 | Servidor | Express 4 |
 | Banco | PostgreSQL (via `DATABASE_URL`); sem ela, roda em memória para teste local |
 | Front | HTML + CSS + JS estáticos em `public/`, sem build |
-| Deploy | Docker (`Dockerfile`) no Railway (`railway.json`) |
+| Deploy | Vercel: `public/` pela CDN + função serverless em `api/index.js` (`vercel.json`). `Dockerfile` fica como saída de emergência |
 | CI | GitHub Actions: `npm ci`, `npm test` e sanidade dos HTML |
 
 Dependências de produção: só `express` e `pg`. O porquê de cada escolha está em
@@ -40,7 +40,7 @@ npm start
 
 Sem `DATABASE_URL` o servidor usa armazenamento em memória: serve para ver o site funcionando,
 mas **os dados somem ao reiniciar**. Para testar com banco de verdade, exporte a variável
-apontando para um Postgres local ou para o banco do Railway.
+apontando para um Postgres local ou para o banco do Neon.
 
 Rodar os testes:
 
@@ -91,7 +91,10 @@ docker run --rm -p 3000:3000 -e ADMIN_TOKEN=teste fastcarwash
 │   ├── workflows/ci.yml         # CI do GitHub Actions
 │   └── scripts/checar-html.mjs  # verificador de sanidade dos HTML
 ├── Dockerfile / .dockerignore   # imagem de produção
-├── railway.json                 # configuração de deploy (healthcheck, restart)
+├── vercel.json                  # roteamento, cabeçalhos e cache na Vercel (gerado a partir do código)
+├── api/index.js                 # entrada da função serverless: embrulha o mesmo app Express
+├── views/admin.html             # painel; fora de public/ de propósito, para a CDN não servir sem nonce
+├── scripts/migrar.js            # aplica as migrações (npm run migrar)
 └── .nvmrc                       # Node 22
 ```
 
@@ -99,13 +102,13 @@ docker run --rm -p 3000:3000 -e ADMIN_TOKEN=teste fastcarwash
 
 ## Variáveis de ambiente
 
-Configuradas no Railway em **Variables** (ver [docs/DEPLOY.md](docs/DEPLOY.md)). Nunca coloque
+Configuradas na Vercel em **Settings → Environment Variables** (ver [docs/DEPLOY.md](docs/DEPLOY.md)). Nunca coloque
 segredo dentro do código nem no Git — `.env` está no `.gitignore`.
 
 | Variável | Obrigatória | Padrão | Para que serve |
 |---|---|---|---|
-| `PORT` | não | `3000` | Injetada pelo Railway. **Não crie essa variável à mão.** |
-| `DATABASE_URL` | sim, em produção | — | Postgres. No Railway, use a referência `${{Postgres.DATABASE_URL}}`. |
+| `PORT` | não | `3000` | Só no modo servidor (local/Docker). Na Vercel não existe. |
+| `DATABASE_URL` | sim, em produção | — | Postgres. Na Vercel use a string **pooled** do Neon (tem `-pooler` no endereço) — a direta estoura o limite de conexões. |
 | `ADMIN_TOKEN` | sim, em produção | vazio | Protege o painel e a exportação de leads. Vazio = rotas de admin não liberam nada. |
 | `FOUNDERS_LIMIT` | não | `80` | Número de vagas de fundador (alimenta o contador). |
 | `WHATSAPP_NUMERO` | não | `5531987474828` | Número que recebe as mensagens, só dígitos, com DDI. Hoje aponta para o atendimento provisório (31) 98747-4828. |
@@ -149,7 +152,7 @@ promete ao visitante.
 
 | Documento | Para quê |
 |---|---|
-| [docs/DEPLOY.md](docs/DEPLOY.md) | Passo a passo para colocar o site no ar (Railway, Postgres, domínio), custos reais e alternativas mais baratas |
+| [docs/DEPLOY.md](docs/DEPLOY.md) | Passo a passo para colocar o site no ar (Neon, Vercel, domínio), custos reais e o que a Vercel faz pior |
 | [docs/ROADMAP-12-MESES.md](docs/ROADMAP-12-MESES.md) | O que construir em software, mês a mês, amarrado aos gates do Plano de Franquia |
 | [docs/CHECKLIST-PRE-VENDA.md](docs/CHECKLIST-PRE-VENDA.md) | O que precisa estar decidido **antes** de divulgar, e o que medir depois |
 | [docs/DECISOES.md](docs/DECISOES.md) | Registro das decisões técnicas e o que faria cada uma mudar |
@@ -175,11 +178,11 @@ ser divulgado.
 
 ### Site e domínio
 - [ ] **Número de WhatsApp definitivo** do atendimento. Hoje responde o provisório
-      (31) 98747-4828, já embutido como padrão; trocar é só definir `WHATSAPP_NUMERO` no Railway.
+      (31) 98747-4828, já embutido como padrão; trocar é só definir `WHATSAPP_NUMERO` na Vercel.
       Vale um número com DDD 37, de Piumhi: em cidade pequena, DDD de fora gera desconfiança.
 - [x] **Domínio definitivo** — `fastcarwash.com.br`, registrado em out/2026. Já está em uso no
       `sitemap.xml`, no `robots.txt` e nas URLs canônicas das três páginas. Falta apontar o CNAME
-      para o Railway quando o site subir (ver [DEPLOY.md](docs/DEPLOY.md)).
+      para a Vercel quando o site subir (ver [DEPLOY.md](docs/DEPLOY.md)).
 - [ ] **Registro da marca no INPI (classes 35 e 37) — risco conhecido.** "Fast Car Wash" descreve
       o próprio serviço, e o art. 124, VI da Lei 9.279/96 veda registro de sinal descritivo,
       inclusive em língua estrangeira de uso corrente, "salvo quando revestidos de suficiente forma

@@ -1,197 +1,175 @@
 # Como colocar o site no ar (passo a passo)
 
-Guia escrito para quem **não é de TI**. Leia até o fim antes de começar: dá para fazer tudo em
-uma tarde. Onde aparecer `[algo a preencher]`, é informação que só você tem.
+Guia escrito para quem **não é de TI**. Dá para fazer tudo em uma tarde. Onde aparecer
+`[algo a preencher]`, é informação que só você tem.
 
-> Resumo do caminho recomendado: código no **GitHub** → hospedagem no **Railway** (site + banco de
-> dados) → domínio no **registro.br**. Custo realista: **US$ 5 a US$ 10 por mês** de hospedagem
-> (cobrado no cartão em dólar) + **R$ 40 por ano** de domínio.
+> **Caminho:** código no **GitHub** → site na **Vercel** (grátis no começo) → banco de dados no
+> **Neon** (grátis no começo) → domínio no **registro.br** (R$ 40/ano).
+>
+> Custo realista para começar: **R$ 40 por ano**, só o domínio. Quando o movimento crescer,
+> Vercel Pro custa US$ 20/mês e o Neon pago começa em US$ 19/mês — mas isso é problema de
+> quando houver movimento.
+
+Decisão e trade-offs em [DECISOES.md](DECISOES.md), ADR-013.
 
 ---
 
 ## Antes de começar, tenha em mãos
 
-- Um cartão de crédito internacional (o Railway cobra em dólar; entra IOF na fatura).
+- Uma conta no **GitHub** com este repositório.
 - CPF ou CNPJ, para registrar o domínio no registro.br.
-- Uma conta no GitHub com este repositório já enviado.
 - O número de WhatsApp que vai atender os clientes, já funcionando.
+- Um cartão de crédito — **não é cobrado agora**, mas a Vercel pede para liberar o domínio
+  próprio em alguns casos. O registro.br cobra em real, no boleto ou PIX.
 
 ---
 
-## Parte 1 — Subir o site no Railway
+## Parte 1 — Banco de dados no Neon (10 minutos, faça primeiro)
 
-### 1. Criar a conta
+O banco guarda os cadastros dos fundadores. **Faça antes do site**, porque o site precisa do
+endereço do banco.
 
-1. Acesse <https://railway.com> e clique em **Login** → **Login with GitHub**.
-2. Autorize o Railway a ver seus repositórios.
-3. Vá em **Account → Plans** e assine o plano **Hobby (US$ 5/mês)**. O plano de teste (Trial)
-   não serve para um site que precisa ficar no ar 24h — ele pausa sozinho.
+1. Entre em **neon.com** e crie a conta com o GitHub.
+2. Crie um projeto: nome `fastcarwash`, região **AWS sa-east-1 (São Paulo)**.
+   A região importa: banco em São Paulo responde em milissegundos para quem está em Piumhi.
+3. Terminada a criação, o Neon mostra a **connection string**. Copie a versão
+   **"Pooled connection"** — o endereço dela tem `-pooler` no meio, assim:
 
-### 2. Criar o projeto a partir do repositório
+   ```
+   postgresql://usuario:senha@ep-algo-123456-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require
+   ```
 
-1. Clique em **New Project → Deploy from GitHub repo**.
-2. Escolha o repositório do site (ex.: `fastcarwash-site`) e confirme.
-3. O Railway lê o `Dockerfile` deste repositório e monta o site sozinho. O primeiro build leva
-   de 1 a 3 minutos. Enquanto isso, a aba **Deployments** mostra o andamento.
+   > **Isto é obrigatório, não é detalhe.** A Vercel roda o site em funções que sobem e descem
+   > a toda hora, e cada uma abre conexão com o banco. Sem a versão *pooled*, o Postgres atinge
+   > o limite de conexões e o formulário começa a dar erro justamente quando houver movimento.
+   > Se a string que você copiou **não** tem `-pooler`, volte e pegue a outra.
 
-> Se o build falhar dizendo algo sobre `package-lock.json`, é porque esse arquivo não foi enviado
-> ao GitHub. Ele **precisa** estar versionado — veja a seção "Erros comuns".
-
-### 3. Adicionar o banco de dados Postgres
-
-1. Dentro do mesmo projeto, clique em **New → Database → Add PostgreSQL**.
-2. Espere o serviço ficar verde. Pronto, o banco existe — falta ligar o site nele.
-
-### 4. Ligar o site ao banco e configurar as variáveis
-
-No projeto, clique no serviço **do site** (não no do banco) → aba **Variables** → **New Variable**.
-Crie estas quatro:
-
-| Nome | Valor | Para que serve |
-|---|---|---|
-| `DATABASE_URL` | `${{Postgres.DATABASE_URL}}` | Endereço do banco. Digitando `${{` o Railway sugere sozinho — escolha o Postgres na lista, não copie a senha na mão. |
-| `ADMIN_TOKEN` | um segredo longo (veja abaixo) | Senha que protege a lista de reservas. Sem isso, a lista fica inacessível — o que é o comportamento seguro. |
-| `FOUNDERS_LIMIT` | `80` | Quantas vagas de fundador existem. Muda o contador do site. |
-| `WHATSAPP_NUMERO` | `55[DDD][número]` só com dígitos, ex.: `5531987474828` | Número que recebe as mensagens dos botões de WhatsApp. Já vem com o provisório (31) 98747-4828; defina a variável quando trocar para o número do negócio. |
-
-**Não crie a variável `PORT`.** O Railway injeta essa sozinho e o site já respeita.
-
-**Como gerar o `ADMIN_TOKEN`:** no terminal do seu computador (no Mac/Linux, o app Terminal;
-no Windows, o PowerShell), rode um destes:
-
-```bash
-openssl rand -base64 32
-```
-
-```bash
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
-```
-
-Copie o resultado, cole no Railway e **guarde em um gerenciador de senhas**. Não mande por
-WhatsApp, não coloque em planilha, não coloque dentro do código.
-
-Depois de salvar as variáveis, o Railway reinicia o site sozinho.
-
-### 5. Gerar o endereço público
-
-1. No serviço do site: **Settings → Networking → Public Networking → Generate Domain**.
-2. O Railway devolve um endereço tipo `fastcarwash-site-production.up.railway.app`. Abra no celular.
-3. Teste: `SEU-ENDERECO/health` deve responder `{"ok":true}`. Se responder isso, o servidor está
-   vivo. Se o site abrir mas o formulário der erro, o problema é o banco (volte ao passo 4).
-
-Guarde esse endereço: ele continua funcionando mesmo depois que o domínio próprio entrar no ar.
+4. Guarde essa string. Ela é senha: não mande por WhatsApp nem cole em grupo.
 
 ---
 
-## Parte 2 — Registrar o domínio `fastcarwash.com.br`
+## Parte 2 — Subir o site na Vercel (15 minutos)
 
-### 1. Registrar
+1. Entre em **vercel.com** e crie a conta com o GitHub.
+2. **Add New… → Project** e escolha o repositório `LAVAJA`.
+3. Na tela de configuração, **não mude nada** em Framework Preset (fica "Other"), Build Command
+   (vazio) nem Output Directory. O arquivo `vercel.json` do repositório já diz tudo.
+4. Abra **Environment Variables** e cadastre, uma por uma, marcando os três ambientes
+   (Production, Preview, Development):
 
-1. Acesse <https://registro.br>, pesquise `fastcarwash.com.br` e veja se está livre.
-2. Crie a conta com CPF ou CNPJ (recomendo CNPJ quando a empresa existir — o domínio é um ativo
-   da empresa, não seu).
-3. Pague. Um `.com.br` custa **cerca de R$ 40 por ano**, pago de uma vez, por ano (há desconto
-   contratando 3 ou 5 anos de uma vez). Ative a renovação automática ou anote a data: domínio
-   vencido sai do ar e pode ser pego por outra pessoa.
+   | Nome | Valor |
+   |---|---|
+   | `DATABASE_URL` | a connection string *pooled* do Neon (Parte 1) |
+   | `ADMIN_TOKEN` | `[invente uma senha longa, 30+ caracteres aleatórios]` |
+   | `WHATSAPP_NUMERO` | `5531987474828` |
+   | `FOUNDERS_LIMIT` | `80` |
 
-### 2. Apontar o domínio para o site
+   **`ADMIN_TOKEN` é o que protege o painel e a exportação dos cadastros.** Sem ele, o painel
+   responde 503 — de propósito, para nunca ficar aberto por descuido. Guarde num gerenciador de
+   senhas, não num papel.
 
-No Railway: serviço do site → **Settings → Networking → Custom Domain** → digite
-`www.fastcarwash.com.br`. O Railway mostra um valor de **CNAME** (algo como `xyz.up.railway.app`).
+5. Clique em **Deploy** e espere. Ao fim, a Vercel dá um endereço tipo
+   `lavaja-abc123.vercel.app`.
 
-No registro.br: **Painel → seu domínio → DNS → Editar Zona**, e crie:
+---
 
-| Tipo | Nome | Valor |
+## Parte 3 — Criar as tabelas do banco (5 minutos, só uma vez)
+
+O site já está no ar, mas o banco está vazio — sem tabelas, o formulário dá erro. Rode as
+migrações uma vez:
+
+**Pelo seu computador** (precisa do Node 22 instalado):
+
+```bash
+git clone https://github.com/imobai-create/LAVAJA.git
+cd LAVAJA
+npm ci
+DATABASE_URL='cole-aqui-a-string-do-neon' npm run migrar
+```
+
+Deve terminar com `[migrar] pronto.`
+
+**Pelo painel do Neon**, se preferir não instalar nada: abra o **SQL Editor** do projeto e cole
+o conteúdo do arquivo `docs/migracoes.sql` (gere com `npm run migrar -- --imprimir` ou peça para
+mim). É o mesmo resultado.
+
+> **Por que isso não é automático.** Em servidor comum as tabelas são criadas quando o site
+> sobe. Na Vercel o site sobe muitas vezes por dia, e rodar dezenas de comandos de banco a cada
+> vez é desperdício e dá corrida de concorrência. Então só roda quando você manda. **Repita este
+> passo quando um deploy mexer no banco** — eu aviso quando for o caso.
+
+---
+
+## Parte 4 — Conferir se ficou tudo certo (5 minutos)
+
+Abra o endereço `.vercel.app` e faça os seis testes. **Faça todos** — é mais rápido que
+descobrir um problema depois de divulgar o site.
+
+| # | O que fazer | O que tem que acontecer |
 |---|---|---|
-| CNAME | `www` | o valor que o Railway mostrou |
+| 1 | Abrir `/health` | JSON com `"banco":"postgres"`. Se vier `"memoria"`, a `DATABASE_URL` está errada e **os cadastros não estão sendo salvos** |
+| 2 | Abrir a página inicial | Carrega com as fontes e o CSS certos |
+| 3 | Abrir `/privacidade` e `/franquia` | Abrem sem o `.html` no fim |
+| 4 | Preencher o formulário com um número de teste | Mensagem de sucesso, e o contador de vagas baixa |
+| 5 | Abrir `/admin` | Pede o token; com o token, mostra o cadastro de teste |
+| 6 | Abrir o site e apertar **F12 → Console** | **Nenhum erro em vermelho.** Se aparecer algo com "Content Security Policy", me avise com o texto do erro |
 
-Aguarde de 15 minutos a algumas horas (propagação de DNS). Quando `www.fastcarwash.com.br` abrir o
-site com cadeado (HTTPS, gerado automaticamente pelo Railway), está pronto.
+O teste 6 existe porque a Vercel entrega as páginas pela CDN, sem passar pelo código do site —
+os cabeçalhos de segurança vêm do `vercel.json`. Há um teste automatizado que impede os dois
+de divergirem (`test/vercel.test.js`), mas o console do navegador é a confirmação final.
 
-**Sobre o domínio "sem www"** (`fastcarwash.com.br`, chamado de raiz ou apex): o padrão de DNS não
-permite CNAME na raiz, e o registro.br não tem "ALIAS". Duas saídas honestas:
+---
 
-- **Mais simples:** divulgue só `www.fastcarwash.com.br`. Funciona, mas quem digitar sem o `www` não
-  chega ao site.
-- **Recomendada:** crie uma conta grátis na **Cloudflare**, adicione o domínio lá, troque os
-  servidores DNS no registro.br pelos da Cloudflare e configure na Cloudflare um CNAME da raiz
-  apontando para o endereço do Railway (a Cloudflare resolve isso com "CNAME flattening") mais um
-  redirecionamento de `fastcarwash.com.br` para `www.fastcarwash.com.br`. Continua custando R$ 0.
+## Parte 5 — Registrar e ligar o domínio (30 minutos + espera)
 
-### 3. Atualizar o site depois que o domínio existir
-
-Troque o domínio em `public/sitemap.xml` e em `public/robots.txt` (os dois estão com
-`https://fastcarwash.com.br` como padrão e têm aviso no topo). Depois, cadastre o site no
-**Google Search Console** (<https://search.google.com/search-console>) e envie o sitemap:
-`https://fastcarwash.com.br/sitemap.xml`.
+1. Em **registro.br**, pesquise `fastcarwash.com.br`. (Você já registrou — confirme que está
+   ativo e no seu CPF/CNPJ.)
+2. Na Vercel: **Project → Settings → Domains → Add**, digite `fastcarwash.com.br` e também
+   `www.fastcarwash.com.br`.
+3. A Vercel mostra os registros de DNS. No painel do registro.br, em **DNS → Editar zona**,
+   cadastre o que ela pediu:
+   - `fastcarwash.com.br` → registro **A** apontando para o IP que a Vercel informar
+   - `www` → registro **CNAME** apontando para `cname.vercel-dns.com`
+4. Salve e espere. Costuma levar de 15 minutos a algumas horas (pode chegar a 24h).
+5. Quando a Vercel marcar o domínio como **Valid**, o HTTPS é criado automaticamente, de graça.
+6. Repita os seis testes da Parte 4, agora em `https://fastcarwash.com.br`.
 
 ---
 
 ## Quanto custa por mês, de verdade
 
-| Item | Custo | Observação |
+| Item | Começo | Quando crescer |
 |---|---|---|
-| Railway Hobby | **US$ 5/mês** | Já inclui US$ 5 de uso. Site pequeno + Postgres pequeno normalmente cabem nesse valor. |
-| Uso acima do incluso | US$ 0 a ~US$ 5/mês | Só se o tráfego crescer muito. Dá para pôr limite de gasto em **Settings → Usage Limits**. |
-| Domínio `.com.br` | **~R$ 40/ano** | Pagamento anual no registro.br. |
-| **Total esperado** | **~R$ 30 a R$ 60/mês + R$ 40/ano** | Depende do dólar e do IOF do cartão. |
+| Vercel (site) | **R$ 0** — plano Hobby | US$ 20/mês (Pro) |
+| Neon (banco) | **R$ 0** — 0,5 GB | US$ 19/mês |
+| Domínio | R$ 40/ano | R$ 40/ano |
+| **Total** | **~R$ 3,30/mês** | **~R$ 210/mês** |
 
-Configure o **Usage Limit** no Railway logo no primeiro dia. É o que impede uma surpresa na
-fatura se algo sair do controle.
-
----
-
-## Alternativas mais baratas (e o que você perde em cada uma)
-
-### Render (plano gratuito)
-
-- **Ganha:** custo zero, mesmo jeito de publicar (conecta no GitHub).
-- **Perde:** o site **dorme** depois de ~15 minutos sem visita. A primeira pessoa que entrar
-  depois disso espera de 30 a 60 segundos numa tela branca — em campanha paga, isso derruba
-  conversão. O Postgres gratuito do Render também **expira** (hoje, 30 dias) e depois precisa ser
-  recriado, perdendo os dados se não houver backup.
-- **Quando usar:** só para testar antes de divulgar, nunca durante a campanha dos 80 fundadores.
-
-### Vercel / Netlify / GitHub Pages (grátis)
-
-- **Ganha:** hospedagem de graça, rápida, sem manutenção.
-- **Perde:** essas plataformas servem arquivos estáticos. O formulário de reserva, o contador de
-  vagas e a lista de leads **param de funcionar** do jeito que estão — teria que reescrever o
-  servidor como funções serverless e contratar um banco separado (ex.: Neon, que tem plano grátis
-  limitado). Dá trabalho de programação e não economiza tanto assim.
-- **Quando usar:** se você decidir que a reserva vai ser feita só por WhatsApp, sem formulário.
-  Aí o site vira um cartão de visita estático e a hospedagem é realmente de graça.
-
-### Um servidor VPS (Hetzner, DigitalOcean, Contabo)
-
-- **Ganha:** ~US$ 5/mês com muito mais capacidade.
-- **Perde:** você vira o administrador do servidor — atualização de segurança, backup, certificado
-  HTTPS, reinício quando cair. **Não recomendo** sem alguém de TI por perto.
-
-**Veredito:** para uma campanha que vai receber tráfego pago e precisa estar no ar quando o
-cliente clicar no anúncio, o Railway com plano Hobby é a escolha certa. Economizar US$ 5/mês
-dormindo o site custa mais em leads perdidos do que economiza.
+> **Uma ressalva importante sobre o plano grátis da Vercel.** Os Termos de Uso dizem que o plano
+> **Hobby é para projetos não comerciais**. Um site que vende assinatura é uso comercial. Na
+> prática a Vercel raramente derruba site pequeno por isso, mas **o risco existe e é seu**: se
+> vier aviso, o caminho é migrar para o Pro (US$ 20/mês) na hora. Para um negócio que vai pedir
+> R$ 276 mil de investimento, US$ 20/mês não é o problema — considere já começar no Pro quando
+> a campanha de fundadores for ao ar.
 
 ---
 
-## Depois que estiver no ar
+## O que a Vercel faz pior que um servidor comum
 
-**Baixar as reservas (leads):**
+Transparência, porque estas três coisas pioraram na mudança e você precisa saber:
 
-```bash
-curl -H "x-admin-token: SEU_TOKEN" "https://www.fastcarwash.com.br/api/leads?formato=csv" -o leads.csv
-```
+1. **O limite de tentativas por IP (rate limit) perde força.** Ele é contado na memória do
+   processo, e na Vercel existem vários processos ao mesmo tempo. Com o movimento de uma cidade
+   de 38 mil habitantes, quase sempre haverá só um processo ativo e o limite funciona; sob
+   ataque, não. Se virar problema, a correção é contar no banco — algumas horas de trabalho.
+2. **As tabelas não são criadas sozinhas** (Parte 3).
+3. **Se a `DATABASE_URL` estiver errada, o site continua de pé e aceita cadastro**, mas guarda
+   na memória do processo — e **o dado some**. O `/health` denuncia (`"banco":"memoria"`) e o
+   log do deploy mostra o aviso em letras grandes. **Por isso o teste 1 da Parte 4 é o mais
+   importante de todos.**
 
-O arquivo abre no Excel. Não deixe essa planilha circulando em grupo de WhatsApp: são dados
-pessoais, e a Política de Privacidade do site promete o contrário.
-
-**Backup do banco:** no Railway, serviço Postgres → aba **Data** permite exportar. Faça isso ao
-menos uma vez por semana durante a campanha. O Railway tem backup próprio, mas backup que você
-nunca testou não é backup.
-
-**Publicar uma alteração:** qualquer mudança enviada ao GitHub (branch principal) é publicada
-automaticamente pelo Railway em 1 a 3 minutos. Se algo quebrar, em **Deployments** dá para clicar
-em uma versão antiga e fazer **Rollback**.
+O Docker (`Dockerfile`) continua no repositório. Se um dia a Vercel não servir, o mesmo código
+roda em qualquer host com Docker sem mudança nenhuma — é a saída de emergência.
 
 ---
 
@@ -199,17 +177,18 @@ em uma versão antiga e fazer **Rollback**.
 
 | Sintoma | Causa provável | O que fazer |
 |---|---|---|
-| Build falha citando `npm ci` ou `package-lock.json` | O `package-lock.json` não foi enviado ao GitHub | Confirme que o arquivo está no repositório (ele **não** pode estar no `.gitignore`). |
-| Site abre, mas o formulário dá erro ao enviar | `DATABASE_URL` ausente ou errada | Refaça o passo 4 usando a referência `${{Postgres.DATABASE_URL}}`, não a senha copiada. |
-| As reservas somem quando o site reinicia | Está rodando sem banco (modo memória) | Mesma causa acima: o site avisa isso no log (aba **Logs**). |
-| `/api/leads` responde "Não autorizado" | `ADMIN_TOKEN` não configurado ou token errado no comando | Confira a variável no Railway e o cabeçalho `x-admin-token`. |
-| Healthcheck falha no deploy | O site não subiu | Abra **Logs** e leia a última linha em vermelho. |
-| Domínio não abre depois de horas | CNAME errado ou ainda propagando | Confira o valor no registro.br; teste em <https://dnschecker.org>. |
+| `/health` diz `"banco":"memoria"` | `DATABASE_URL` ausente ou errada | Confira a variável na Vercel; **tem que ser a string com `-pooler`** |
+| Formulário dá erro 500 | Tabelas não criadas | Rode a Parte 3 |
+| "too many connections" no log | String sem `-pooler` | Troque pela *pooled* e faça um novo deploy |
+| `/admin` responde 503 | `ADMIN_TOKEN` não cadastrado | Cadastre na Vercel e faça um novo deploy |
+| `/privacidade` dá 404 | `vercel.json` não subiu | Confirme que o arquivo está no repositório |
+| Domínio não valida | DNS ainda propagando | Espere até 24h; depois disso, confira os registros |
+| Página sem CSS | Deploy incompleto | Veja o log do deploy na Vercel |
 
 ---
 
 ## Documentos relacionados
 
-- [Decisões técnicas](DECISOES.md) — por que a stack é essa.
-- [Roadmap de 12 meses do produto digital](ROADMAP-12-MESES.md).
-- [Checklist de pré-venda](CHECKLIST-PRE-VENDA.md) — o que decidir **antes** de divulgar o site.
+- [DECISOES.md](DECISOES.md) — ADR-013 (por que Vercel), ADR-005 (Docker), ADR-006 (histórico)
+- [CHECKLIST-PRE-VENDA.md](CHECKLIST-PRE-VENDA.md) — o que conferir antes de divulgar
+- [BP-PIUMHI.md](BP-PIUMHI.md) — a campanha de fundadores que este site existe para servir

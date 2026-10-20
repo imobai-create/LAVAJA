@@ -13,12 +13,15 @@ const seguranca = require("./src/seguranca");
 const rotas = require("./src/rotas");
 
 const DIRETORIO_PUBLICO = path.join(__dirname, "public");
+// admin.html vive fora de public/ de propósito: em host que serve public/ pela
+// CDN (Vercel), um arquivo lá seria entregue sem o nonce do CSP.
+const DIRETORIO_VIEWS = path.join(__dirname, "views");
 const UM_ANO_MS = 365 * 24 * 60 * 60 * 1000;
 
 function criarApp() {
   const app = express();
 
-  // Roda atrás do proxy do Railway: confia em 1 salto para ler o IP real.
+  // Roda atrás do proxy do host: confia em 1 salto para ler o IP real.
   app.set("trust proxy", 1);
   app.disable("x-powered-by");
   app.set("etag", "strong");
@@ -27,7 +30,7 @@ function criarApp() {
   app.use(express.json({ limit: "32kb" }));
 
   // Painel: servido antes do estático para injetar o nonce do CSP.
-  app.get(["/admin", "/admin.html"], rotas.rotaPainel(DIRETORIO_PUBLICO));
+  app.get(["/admin", "/admin.html"], rotas.rotaPainel(DIRETORIO_VIEWS));
 
   // /assets é versionável: cache longo e imutável.
   app.use(
@@ -68,6 +71,8 @@ function criarApp() {
 
 /** Sobe o servidor. porta 0 = efêmera (usado nos testes). */
 async function iniciar(porta = config.porta) {
+  for (const aviso of config.avisoDeAmbiente()) console.warn("[FastCarWash] ATENÇÃO:", aviso);
+
   await db.iniciar().catch((e) => {
     console.error("[FastCarWash] falha ao iniciar o banco, seguindo em memória:", e.message);
   });
@@ -106,7 +111,7 @@ process.on("uncaughtException", (erro) => {
 if (require.main === module) {
   iniciar()
     .then(({ encerrar }) => {
-      // Railway envia SIGTERM em todo deploy.
+      // O host envia SIGTERM em todo deploy.
       for (const sinal of ["SIGTERM", "SIGINT"]) {
         process.on(sinal, () => {
           encerrar(sinal)
@@ -121,4 +126,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { criarApp, iniciar };
+module.exports = { criarApp, iniciar, DIRETORIO_PUBLICO, DIRETORIO_VIEWS };
