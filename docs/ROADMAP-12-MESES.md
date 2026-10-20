@@ -18,7 +18,7 @@ condição do negócio libera cada entrega.
 
 ### Mês 1 — Landing de pré-venda no ar
 - Landing de Piumhi publicada, mobile-first, com formulário de reserva e consentimento LGPD.
-- Deploy no Railway com Postgres, domínio próprio e HTTPS (ver [DEPLOY.md](DEPLOY.md)).
+- Deploy na Vercel com Postgres no Neon, domínio próprio e HTTPS (ver [DEPLOY.md](DEPLOY.md)).
 - Política de Privacidade publicada com os dados reais da empresa preenchidos.
 - Painel de leads protegido por token; exportação em CSV funcionando.
 - **Gate para divulgar:** [CHECKLIST-PRE-VENDA.md](CHECKLIST-PRE-VENDA.md) com todos os itens

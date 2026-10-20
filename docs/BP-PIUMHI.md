@@ -561,10 +561,36 @@ pior para o seu negócio: a 45% você perde o controle da sociedade que vai ser 
 padrão da rede, a vitrine da COF e a referência de todos os indicadores. **Fique acima de
 50%**, sempre.
 
+### 11.5a 100% equity — sem dívida nenhuma
+
+Se o aporte for todo dos sócios, sem empréstimo:
+
+| | 100% equity | Com dívida de R$ 120 mil |
+|---|---|---|
+| 1ª tranche | R$ 303.480 | R$ 183.480 |
+| **Capital a reservar** | **R$ 374.953** | R$ 276.011 |
+| TIR do equity | 34,3% | **39,0%** |
+| **VPL @ 18%** | **R$ 164.250** | R$ 156.648 |
+
+**R$ 99 mil mais de capital e 4,7 pontos menos de TIR — mas R$ 7,6 mil MAIS de valor.** A
+dívida a 21% a.a. custa mais que a TMA de 18%: ela compra eficiência de capital e vende valor.
+
+**Se o dinheiro está disponível e não tem uso melhor, 100% equity é a escolha certa** — e não
+pelo VPL, que é quase empate. É pelo que não aparece na tabela: sem parcela no mês 3, sem aval
+pessoal, sem covenant, e sem três semanas de negociação com a cooperativa que pode voltar com
+taxa pior. Num negócio que nunca operou, **não ter parcela a pagar durante a rampa vale mais
+que 4,7 pontos de TIR no papel.**
+
+A dívida continua sendo a escolha certa no caso oposto: capital escasso, ou capital com uso
+melhor em outro lugar. Aí ela libera R$ 99 mil por R$ 7,6 mil de valor, o que é barato.
+
+Todas as divisões de equity, nos dois arranjos, estão em [CENARIOS.md](CENARIOS.md) §2.
+
 ### 11.5b A variante 50/50 — decidida em out/2026
 
 O empreendedor optou por **50% para os dois investidores (25% cada) e 50% para ele**, com
-aporte proporcional. Os números:
+aporte proporcional. Os números abaixo são do arranjo com dívida; para 100% equity e para as
+divisões 50/50 e 33,33 × 3, ver [CENARIOS.md](CENARIOS.md) §2.
 
 | | Por investidor (25%) | Os dois (50%) | Antonio (50%) |
 |---|---|---|---|

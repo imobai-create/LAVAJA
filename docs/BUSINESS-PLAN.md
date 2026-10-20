@@ -6,7 +6,10 @@ distintos. **A Fase 2 não começa antes de a Fase 1 ter doze meses de número a
 | | |
 |---|---|
 | **[BP-PIUMHI.md](BP-PIUMHI.md)** | **Fase 1 — loja modelo de Piumhi/MG.** Área alugada a R$ 3.000/mês, capex só de implantação, sem terreno. Unidade própria: sem taxa de franquia, royalty, fundo nem taxa de tecnologia. Horizonte de 60 meses. |
-| **[BP-REDE.md](BP-REDE.md)** | **Fase 2 — plano macro da rede**, com a análise das três estruturas de ponto comercial (asset-light, imóvel próprio, locação longa + sublocação). Horizonte de 120 meses. |
+| **[BP-REDE.md](BP-REDE.md)** | **Fase 2 — plano macro da rede**, com a análise das estruturas de ponto comercial (asset-light, imóvel próprio, locação longa + sublocação, over no aluguel). Horizonte de 120 meses. |
+| **[CENARIOS.md](CENARIOS.md)** | **Tabela mestra:** todos os cenários simulados num lugar só — arranjos de capital da loja (100% equity até dívida de R$ 180 mil), as divisões de equity (50/50, 33,33 × 3, 25/25/50, 50,5/24,75/24,75), as quatro estruturas de ponto da rede e o consolidado. |
+| **[PLANO-IMPLANTACAO.md](PLANO-IMPLANTACAO.md)** | **Quem faz o quê, em que ordem:** Fase 0 (90 dias), Fase 1 (loja, mês a mês até o mês 12) e Fase 2 (rede), com os gates verificáveis entre elas. |
+| **[RESUMO-INVESTIDOR.md](RESUMO-INVESTIDOR.md)** | Uma página para conversa com investidor. |
 
 ## Os números, em uma tela
 
@@ -59,6 +62,7 @@ docs/bp/rede.py        Fase 2 - franqueadora e franqueado nas 3 estruturas, 120 
 docs/bp/imovel.py      janela de aluguel e comprar-ou-alugar o terreno de Piumhi
 docs/bp/mcdonalds.py   estrutura McDonald's: locacao principal + aluguel percentual
 docs/bp/capital.py     estrutura de capital da Fase 1: divida, pre-venda, cap table
+docs/bp/cenarios.py    roda TODOS os cenarios de uma vez (tabela mestra)
 docs/bp/planilha.py    gera as planilhas com formulas vivas
 ```
 

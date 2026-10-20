@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loja modelo de Piumhi e o plano da rede — Business Plan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#2A3540;font-family:'Archivo',Arial,sans-serif}
+#capa-doc{max-width:1100px;margin:0 auto;padding:56px 32px 8px;color:#EFF3F6}
+#capa-doc h1{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:0 0 8px}
+#capa-doc p{font-size:16px;line-height:1.5;color:#B6C2CE;margin:0 0 6px}
+#capa-doc ol{font-size:15px;line-height:1.7;color:#B6C2CE;margin:16px 0 0;padding-left:22px}
+#palco{display:flex;flex-direction:column;align-items:center;gap:28px;padding:28px 16px 64px}
+/* .moldura recorta no tamanho reduzido; .folha mantem 1920x1080 e e escalada dentro dela */
+.moldura{position:relative;flex:none;overflow:hidden;border-radius:4px;
+  box-shadow:0 10px 36px rgba(0,0,0,.45);background:#FFF}
+.folha{width:1920px;height:1080px;transform-origin:top left}
+.folha > section{width:1920px;height:1080px;position:relative;overflow:hidden;margin:0;
+  display:flex}
+.folha aside{display:none}
+.numero{position:absolute;right:12px;top:9px;font-size:13px;color:#8FA3B3;z-index:9;
+  font-family:'Archivo',Arial,sans-serif}
+/* elementos do visualizador de Slides */
+x-shape{display:block}
+x-shape[kind="arrow-right"]{clip-path:polygon(0 30%,62% 30%,62% 0,100% 50%,62% 100%,62% 70%,0 70%)}
+x-shape[kind="arrow-left"]{clip-path:polygon(100% 30%,38% 30%,38% 0,0 50%,38% 100%,38% 70%,100% 70%)}
+x-shape[kind="arrow-down"]{clip-path:polygon(30% 0,70% 0,70% 62%,100% 62%,50% 100%,0 62%,30% 62%)}
+x-shape[kind="arrow-up"]{clip-path:polygon(30% 100%,70% 100%,70% 38%,100% 38%,50% 0,0 38%,30% 38%)}
+x-shape[kind="ellipse"]{border-radius:50%}
+x-shape[kind="rounded"]{border-radius:12px}
+x-shape[kind="diamond"]{clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+x-shape[kind="line"]{min-height:2px}
+x-icon,x-connector{display:none}
+table{border-collapse:collapse;width:100%}
+td,th{padding:14px 18px;text-align:left;vertical-align:top}
+@media print{
+  html,body{background:#FFF}
+  #capa-doc{display:none}
+  #palco{gap:0;padding:0;display:block}
+  .moldura{box-shadow:none;border-radius:0;width:1920px!important;height:1080px!important;
+    page-break-after:always;break-after:page}
+  .folha{transform:none!important}
+  .numero{display:none}
+  @page{size:1920px 1080px;margin:0}
+}
+</style>
+</head>
+<body>
+<div id="capa-doc">
+<h1>Loja modelo de Piumhi e o plano da rede — Business Plan</h1>
+<p>23 slides. Arquivo único e offline: pode ser aberto por duplo clique, sem
+internet (as fontes vêm da web; sem elas o texto aparece em fonte padrão).</p>
+<p><b>Para gerar PDF:</b> Ctrl+P (ou Cmd+P), escolha "Salvar como PDF", marque
+<i>Gráficos de fundo</i> e deixe margens em zero. Cada slide sai numa página.</p>
+<p>As notas do apresentador estão nos arquivos <code>slides/&lt;id&gt;.html</code>, dentro da
+tag <code>&lt;aside&gt;</code> no fim de cada um — ficam ocultas aqui.</p>
+<ol>
+<li>capa</li>
+<li>tese</li>
+<li>piumhi</li>
+<li>demanda</li>
+<li>capex</li>
+<li>motor</li>
+<li>resultado</li>
+<li>equilibrio</li>
+<li>ilimitada</li>
+<li>sensibilidade</li>
+<li>aluguel</li>
+<li>capital</li>
+<li>fase2</li>
+<li>franqueado</li>
+<li>imobiliario</li>
+<li>veredicto</li>
+<li>buildtosuit</li>
+<li>rede</li>
+<li>pedido</li>
+<li>societaria</li>
+<li>riscos</li>
+<li>premissas</li>
+<li>proximos</li>
+</ol>
+</div>
+<div id="palco">
+<div class="moldura" id="s-capa"><span class="numero">1 / 23</span><div class="folha"><section id="capa" style="background:#0E2231;color:#EFF3F6;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:15px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6FB9DE">Piumhi · Minas Gerais · Business plan</p>
+<h1 style="font-size:87px;font-weight:800;line-height:1.02;letter-spacing:-3px;width:1700px">Uma loja. Doze meses de número real. Depois a rede.</h1>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Newsreader', Georgia, serif;font-size:33px;line-height:1.35;color:#C3CFE4;width:1300px">Lava jato automático sem contato, por assinatura. A Fase 1 é uma unidade própria em área alugada em Piumhi. A franquia só é formatada depois que esta unidade provar o número.</p>
+<div style="display:flex;gap:35px;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-size:20px;color:#8FA3B3">Capital da Fase 1</p><p style="font-size:53px;font-weight:800;color:#EFF3F6">R$ 276 mil</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-size:20px;color:#8FA3B3">TIR do equity</p><p style="font-size:53px;font-weight:800;color:#6FB9DE">39,0% a.a.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-size:20px;color:#8FA3B3">Payback</p><p style="font-size:53px;font-weight:800;color:#EFF3F6">33 meses</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-size:20px;color:#8FA3B3">VPL a 18% a.a.</p><p style="font-size:53px;font-weight:800;color:#EFF3F6">R$ 157 mil</p></div>
+</div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#6B7F93;width:1700px">Documento de trabalho · outubro de 2026 · marca em definição · cenário base, 500 assinantes · já com pró-labore do operador</p>
+<aside>Abertura. O recado é a sequência: uma loja primeiro, a rede depois. Sequenciar as fases baixou o pedido de R$ 815 mil para R$ 480 mil; a estrutura de capital (slide 12) baixou de novo para R$ 276 mil. Os números do rodapé sao o cenario base com 500 assinantes, 3,7% dos automoveis de Piumhi, e ja pagam o pro-labore do operador. Se alguém perguntar pelo R$ 815 mil da versão anterior: aquele era o pico de caixa das duas fases rodando ao mesmo tempo por dez anos, não capex.</aside>
+</section></div></div>
+<div class="moldura" id="s-tese"><span class="numero">2 / 23</span><div class="folha"><section id="tese" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:30px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">A tese</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Transformar lavagem de carro em mensalidade.</h2>
+</div>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:31px;line-height:1.38;color:#2E4457;width:1700px">Lavagem avulsa é receita imprevisível, mão de obra intensiva e margem apertada. Assinatura com máquina automática inverte os três: receita recorrente, operação quase sem gente, e custo marginal de R$ 5,26 por lavagem.</p>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#EFF3F6;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:47px;font-weight:800;color:#0E63A8">R$ 5,26</p>
+<h3 style="font-size:23px;font-weight:700">Custo de uma lavagem</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Água, energia e química. Sem escova e sem operador. O resto da mensalidade é contribuição.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:47px;font-weight:800;color:#0E63A8">24 h</p>
+<h3 style="font-size:23px;font-weight:700">Sem depender de gente</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Totem com PIX, liberação automática. Uma pessoa de meio período atende, converte e mantém o pátio.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:47px;font-weight:800;color:#0E63A8">232</p>
+<h3 style="font-size:23px;font-weight:700">Assinantes para pagar as contas</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">O equilíbrio operacional é 1,7% dos automóveis da cidade — já pagando quem administra a loja.</p></div>
+<div style="flex:1;background:#0E2231;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:47px;font-weight:800;color:#6FB9DE">12 meses</p>
+<h3 style="font-size:23px;font-weight:700;color:#FFFFFF">Antes de vender franquia</h3>
+<p style="font-size:20px;line-height:1.42;color:#C3CFE4">Gate absoluto. Sem número auditável, não há COF, não há rede e não se gasta um real na Fase 2.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">02 · A tese</p>
+<aside>A tese em uma frase: o custo marginal de R$ 5,26 contra mensalidade de R$ 59 a R$ 139 é o que cria a margem. O quarto cartão é de propósito o mais escuro: o compromisso de governança vale tanto quanto a economia. A rede não é vendida com projeção.</aside>
+</section></div></div>
+<div class="moldura" id="s-piumhi"><span class="numero">3 / 23</span><div class="folha"><section id="piumhi" style="background:#EFF3F6;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">O mercado</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Piumhi tem 13.652 automóveis e nenhum lava jato automático.</h2>
+</div>
+<div style="display:flex;gap:15px">
+<div style="flex:1;background:#FFFFFF;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:50px;font-weight:800;color:#0E2231">38.257</p><p style="font-size:21px;font-weight:700">habitantes</p><p style="font-size:20px;color:#7C8E9C">estimativa IBGE · censo 2022: 36.062</p></div>
+<div style="flex:1;background:#0E63A8;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:50px;font-weight:800;color:#FFFFFF">13.652</p><p style="font-size:21px;font-weight:700;color:#FFFFFF">automóveis</p><p style="font-size:20px;color:#CCE3F1">de uma frota total de 27.599 · 2024</p></div>
+<div style="flex:1;background:#FFFFFF;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:50px;font-weight:800;color:#0E2231">+3,47%</p><p style="font-size:21px;font-weight:700">crescimento da frota</p><p style="font-size:20px;color:#7C8E9C">2024 contra 2023 · 84º de MG</p></div>
+<div style="flex:1;background:#FFFFFF;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:50px;font-weight:800;color:#0E2231">R$ 43,5 mil</p><p style="font-size:21px;font-weight:700">PIB per capita</p><p style="font-size:20px;color:#7C8E9C">IBGE 2023 · média de MG: R$ 47,3 mil</p></div>
+</div>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#FFFFFF;padding:24px 26px;border-radius:8px;border-left:6px solid #0E63A8;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700">Sede da região, na beira da MG-050</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Piumhi é a sede da região imediata e fica na principal via da área. <b>Capitólio está a 20 km</b> e é destino turístico de peso — cânions e Lago de Furnas, com fluxo de carro de fora e muita estrada de terra. Isso não entra na base de assinantes, mas sustenta a receita avulsa: R$ 8.400/mês no cenário base, 16% do faturamento.</p></div>
+<div style="flex:1;background:#F6EDDC;padding:24px 26px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#8A5F16">Ressalva: a frota vem de uma fonte só</h3>
+<p style="font-size:20px;line-height:1.42;color:#5B4A2A">Os 13.652 automóveis vêm de <b>uma reportagem regional</b> citando Senatran e IBGE, não da tabela original. É a premissa de demanda mais importante do plano inteiro. Baixar a planilha "Frota por Município e Tipo" no portal do Ministério dos Transportes custa quinze minutos e está na Fase 0.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">03 · Piumhi · fontes: IBGE Cidades e Senatran via imprensa regional</p>
+<aside>Slide de mercado. O número que importa é 13.652 automóveis, porque é o denominador de tudo o que vem depois. A ressalva em ocre é deliberada: dizer antes que a fonte é secundária vale mais do que ser pego nela. Capitólio é o diferencial que uma cidade de 38 mil normalmente não tem — turismo de estrada de terra a vinte quilômetros.</aside>
+</section></div></div>
+<div class="moldura" id="s-demanda"><span class="numero">4 / 23</span><div class="folha"><section id="demanda" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">A pergunta</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Precisamos de 2,9% dos carros da cidade.</h2>
+</div>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:30px;line-height:1.38;color:#2E4457;width:1700px">É assim que a premissa de demanda deve ser julgada — não em "46 lavagens por dia", que não diz nada a ninguém. Em percentual da frota local, o investidor consegue formar opinião própria.</p>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:23px;color:#0E2231;padding:13px">
+<tr style="background:#0E2231"><th style="width:34%;color:#EFF3F6;font-size:20px;text-align:left">Cenário</th><th style="width:16%;color:#EFF3F6;font-size:20px;text-align:left">Assinantes</th><th style="width:20%;color:#EFF3F6;font-size:20px;text-align:left">% dos automóveis</th><th style="width:30%;color:#EFF3F6;font-size:20px;text-align:left">Leitura</th></tr>
+<tr style="background:#EFF3F6"><td><b>Equilíbrio operacional</b></td><td><b>232</b></td><td><b>1,7%</b></td><td>paga as contas, o aluguel e o operador</td></tr>
+<tr style="background:#F6EDDC"><td><b>Mínimo para TIR de 18%</b></td><td><b>~400</b></td><td><b>2,9%</b></td><td>abaixo disso não valeu o risco</td></tr>
+<tr><td>Conservador</td><td>380</td><td>2,8%</td><td>TIR de 3,7% — muito abaixo da TMA</td></tr>
+<tr style="background:#CCE3F1"><td><b>Base</b></td><td><b>500</b></td><td><b>3,7%</b></td><td><b>TIR de 25,6%, ou 39,0% com a estrutura de capital</b></td></tr>
+<tr><td>Otimista</td><td>650</td><td>4,8%</td><td>TIR de 54,2% — mas a máquina enche</td></tr>
+</table>
+<div style="background:#EFF3F6;padding:22px 29px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Newsreader', Georgia, serif;font-size:28px;line-height:1.38;color:#2E4457;width:1700px">A faixa entre 400 e 500 assinantes é onde está toda a conversa: <b>100 carros de diferença separam um negócio que não valeu o risco de um que paga 39% ao ano.</b></p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">04 · Penetração necessária · base de 13.652 automóveis</p>
+<aside>Slide de enquadramento. As duas linhas destacadas em ocre e azul são o par que decide: 2,9% para empatar, 3,7% para o cenário base. Todos os números já pagam o pró-labore do operador, e foi essa correção que estreitou a margem de erro de 155 para 100 assinantes. É por isso que a campanha de fundadores vem antes da obra.</aside>
+</section></div></div>
+<div class="moldura" id="s-capex"><span class="numero">5 / 23</span><div class="folha"><section id="capex" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">Onde o dinheiro entra</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">R$ 399 mil de capex, linha por linha, sem terreno.</h2>
+</div>
+<div style="display:flex;gap:22px">
+<table style="flex:1;font-family:'Archivo', Arial, sans-serif;font-size:20px;color:#0E2231;padding:9px">
+<tr style="background:#0E2231"><th style="width:72%;color:#EFF3F6;font-size:20px;text-align:left">Item</th><th style="width:28%;color:#EFF3F6;font-size:20px;text-align:left">R$</th></tr>
+<tr style="background:#EFF3F6"><td>Máquina JM-70 posta em Piumhi (USD 23 mil)</td><td>121.900</td></tr>
+<tr><td>Interface Modbus/API + kit de peças 2 anos</td><td>10.600</td></tr>
+<tr style="background:#EFF3F6"><td>Obra civil: pórtico, baia, piso, pátio 300 m²</td><td>92.000</td></tr>
+<tr><td>Caixa separadora + hidráulica + reservatório</td><td>26.000</td></tr>
+<tr style="background:#EFF3F6"><td>Entrada de energia, quadro, projeto e ART</td><td>24.000</td></tr>
+<tr><td>Laudo NR-12 com ART</td><td>6.000</td></tr>
+<tr style="background:#EFF3F6"><td>Totem PIX/cartão + câmera + CFTV + rede</td><td>26.000</td></tr>
+<tr><td>1 box de alta pressão + 2 aspiradores</td><td>18.000</td></tr>
+<tr style="background:#EFF3F6"><td>Fachada, comunicação visual, iluminação</td><td>19.000</td></tr>
+<tr><td>Software da unidade e implantação</td><td>12.000</td></tr>
+<tr style="background:#EFF3F6"><td>Projeto, licenças, alvarás, bombeiros, taxas</td><td>14.000</td></tr>
+<tr><td>Contingência 8%</td><td>29.560</td></tr>
+<tr style="background:#0E63A8"><td style="color:#FFFFFF"><b>CAPEX TOTAL</b></td><td style="color:#FFFFFF"><b>399.060</b></td></tr>
+</table>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<div style="background:#F6EDDC;padding:21px 24px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#8A5F16">R$ 73 mil acima do plano original</h3>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A">O Plano de Franquia usa R$ 326 mil de capex para este formato. A diferença não é inflação de orçamento: é o que aparece quando se lista item por item, com NR-12, caixa separadora, totem e contingência. <b>Cada linha é discutível e precisa de três cotações em Piumhi</b> — mas o número do plano está otimista.</p></div>
+<div style="background:#EFF3F6;padding:21px 24px;border-radius:8px;border-left:6px solid #0E63A8;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700">Mais R$ 55 mil de giro</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Caução de 3 aluguéis, campanha de pré-venda, estoque de químicos e colchão de 3 meses de custo fixo. Não é conservadorismo decorativo: <b>os meses 1 a 4 fecham com EBITDA negativo</b>, porque a base de assinantes está em formação e o custo fixo já é integral.</p></div>
+<div style="background:#EFF3F6;padding:21px 24px;border-radius:8px;border-left:6px solid #0E63A8;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700">Versão enxuta: R$ 373 mil</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Adiar os boxes e os aspiradores para o mês 6, pátio de 150 m², fachada simples, contingência de 5%. <b>A TIR sobe para 48,1%.</b> O custo é um lançamento menos impressionante — o que em assinatura pesa mais do que parece.</p></div>
+</div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">05 · Capex de implantação · câmbio de planejamento R$ 5,30/USD</p>
+<aside>O slide das contas. O argumento central é a honestidade do orçamento: estamos apresentando um capex 22% maior que o do plano original porque o do plano original não listava NR-12, separadora nem contingência. Investidor experiente desconfia de capex redondo. Se perguntarem onde cortar, a resposta está no terceiro cartão — e ela custa TIR de curto prazo, não qualidade.</aside>
+</section></div></div>
+<div class="moldura" id="s-motor"><span class="numero">6 / 23</span><div class="folha"><section id="motor" data-section="A economia da loja modelo: resultado, equilíbrio, capacidade e os riscos reais." data-transition="fade" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">A economia da unidade</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">De cada R$ 100 que entram, R$ 32,10 ficam.</h2>
+</div>
+<div style="display:flex;gap:15px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#EFF3F6;padding:21px 18px;border-radius:8px">
+<p style="font-size:20px;color:#4A5F70">Receita</p><p style="font-size:42px;font-weight:800">R$ 54,1 mil</p><p style="font-size:20px;color:#7C8E9C">500 assinantes a R$ 87 de ticket médio, mais avulsas e complementos</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#EFF3F6;padding:21px 18px;border-radius:8px">
+<p style="font-size:20px;color:#4A5F70">Impostos</p><p style="font-size:42px;font-weight:800">10,8%</p><p style="font-size:20px;color:#7C8E9C">Simples Nacional, Anexo III, alíquota efetiva no RBT12</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#EFF3F6;padding:21px 18px;border-radius:8px">
+<p style="font-size:20px;color:#4A5F70">Variáveis</p><p style="font-size:42px;font-weight:800">29,3%</p><p style="font-size:20px;color:#7C8E9C">R$ 5,26 por lavagem mais 1,5% de meios de pagamento</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#EFF3F6;padding:21px 18px;border-radius:8px">
+<p style="font-size:20px;color:#4A5F70">Fixos</p><p style="font-size:42px;font-weight:800">27,8%</p><p style="font-size:20px;color:#7C8E9C">R$ 15.050: aluguel, uma pessoa, pró-labore, manutenção, marketing</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#0E63A8;padding:21px 18px;border-radius:8px">
+<p style="font-size:20px;color:#CCE3F1">EBITDA</p><p style="font-size:42px;font-weight:800;color:#FFFFFF">32,1%</p><p style="font-size:20px;color:#CCE3F1">R$ 17.341 por mês no estado maduro</p></div>
+</div>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#EFF3F6;padding:22px 26px;border-radius:8px;border-left:6px solid #0E63A8;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700">R$ 3.500 aqui são o pró-labore do operador</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Versões anteriores deste plano não remuneravam quem administra a loja, e por isso mostravam 38,5% de margem. <b>Um negócio que só fecha com o dono trabalhando de graça não fechou.</b> O número honesto é 32,1%, e é com ele que se fala com investidor.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:22px 26px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700">O custo variável é maior do que o plano supunha</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">29,3% contra 22%. O motivo é o plano Ilimitada: <b>quem assina lavagem ilimitada lava mais</b>, e cada lavagem custa R$ 5,26 de água, energia e química. O plano original tratava o variável como percentual fixo da receita. Não é — é função do número de lavagens.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">06 · Economia da unidade · cenário base, estado maduro</p>
+<aside>Slide que o investidor financeiro vai querer discutir. Dois pontos para dizer em voz alta: a margem caiu de 38,5% para 32,1% porque passamos a pagar o pró-labore do operador, correção feita em outubro; e o custo variável é 29,3% e não 22%, porque acompanha lavagens e não receita. O segundo ponto é a porta para o slide do Ilimitada.</aside>
+</section></div></div>
+<div class="moldura" id="s-resultado"><span class="numero">7 / 23</span><div class="folha"><section id="resultado" style="background:#0E63A8;color:#FFFFFF;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#CCE3F1">O resultado</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#FFFFFF;width:1700px">Três cenários, um investimento.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:23px;color:#FFFFFF;padding:13px">
+<tr style="background:#0A4E85"><th style="width:28%;color:#CCE3F1;font-size:20px;text-align:left">&nbsp;</th><th style="width:24%;color:#CCE3F1;font-size:20px;text-align:left">Conservador · 380</th><th style="width:24%;color:#CCE3F1;font-size:20px;text-align:left">Base · 500</th><th style="width:24%;color:#CCE3F1;font-size:20px;text-align:left">Otimista · 650</th></tr>
+<tr><td>Receita madura/mês</td><td>R$ 40.760</td><td><b>R$ 54.100</b></td><td>R$ 72.350</td></tr>
+<tr style="background:#0A4E85"><td>EBITDA maduro/mês</td><td>R$ 9.630</td><td><b>R$ 17.341</b></td><td>R$ 27.773</td></tr>
+<tr><td>Margem EBITDA</td><td>23,6%</td><td><b>32,1%</b></td><td>38,4%</td></tr>
+<tr style="background:#0A4E85"><td>Capital a reservar</td><td>R$ 496.157</td><td><b>R$ 480.111</b></td><td>R$ 465.601</td></tr>
+<tr><td>Payback</td><td>60 meses</td><td><b>39 meses</b></td><td>27 meses</td></tr>
+<tr style="background:#0A4E85"><td><b>TIR (60 meses)</b></td><td><b>3,7%</b></td><td><b>25,6%</b></td><td><b>54,2%</b></td></tr>
+<tr><td>VPL a 18% a.a.</td><td>−R$ 167.659</td><td><b>+R$ 93.429</b></td><td>+R$ 453.211</td></tr>
+<tr style="background:#0A4E85"><td>VPL a 22% a.a.</td><td>−R$ 199.251</td><td><b>+R$ 41.238</b></td><td>+R$ 373.001</td></tr>
+<tr><td>ROI 5 anos</td><td>114%</td><td><b>203%</b></td><td>325%</td></tr>
+</table>
+<div style="display:flex;gap:20px">
+<div style="flex:1;background:#FFFFFF;padding:22px 26px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#0E2231">Isto é o arranjo cru</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Capex cheio, 100% capital próprio e <b>já pagando o pró-labore do operador</b>. O conservador faz 3,7% e o VPL é negativo em R$ 168 mil. <b>Está dito de propósito</b> — o slide 12 mostra o que a estrutura de capital faz com estes números.</p></div>
+<div style="flex:1;background:#FFFFFF;padding:22px 26px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#0E2231">E a TMA de 18% é discutível</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Com a <b>Selic a 14%</b> em agosto de 2026, 18% embute só 4 pontos de prêmio para um produto que ninguém na cidade comprou ainda. A coluna de 22% está na tabela por isso.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#CCE3F1">07 · Resultado da Fase 1 · capex cheio, 100% equity, com pró-labore · 60 meses</p>
+<aside>O slide do número. Apresentar os três cenários juntos e não esconder que o conservador é negativo — isso compra credibilidade para o base. Dizer que estes números já pagam o operador, porque é a pergunta que um investidor experiente faz. E deixar claro que este é o arranjo cru: a conversa de verdade é o slide 12.</aside>
+</section></div></div>
+<div class="moldura" id="s-equilibrio"><span class="numero">8 / 23</span><div class="folha"><section id="equilibrio" style="background:#EFF3F6;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">Equilíbrio e capacidade</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Paga as contas com 232 assinantes. Enche a máquina com 650.</h2>
+</div>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#FFFFFF;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:9px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0E63A8">Piso</p>
+<p style="font-size:59px;font-weight:800;color:#0E2231">R$ 25.137</p>
+<p style="font-size:21px;line-height:1.4;color:#4A5F70">de receita por mês para o EBITDA zerar, <b>já pagando o operador</b>. São <b>46,5% da receita madura</b>, 44 lavagens por dia, cerca de <b>232 assinantes</b> — 1,7% dos automóveis da cidade.</p></div>
+<div style="flex:1;background:#FFFFFF;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:9px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0E63A8">Teto</p>
+<p style="font-size:59px;font-weight:800;color:#0E2231">144/dia</p>
+<p style="font-size:21px;line-height:1.4;color:#4A5F70">Ciclo de 6,5 min com manobra, 90% de disponibilidade, 13 horas de janela. Teto de receita com <b>uma máquina: R$ 81,5 mil/mês</b>.</p></div>
+<div style="flex:1;background:#0E2231;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:9px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6FB9DE">Uso</p>
+<p style="font-size:59px;font-weight:800;color:#FFFFFF">66%</p>
+<p style="font-size:21px;line-height:1.4;color:#C3CFE4">do teto no cenário base, com 95 lavagens por dia. No otimista são 126/dia — <b>87% do teto, com fila no horário de pico</b>.</p></div>
+</div>
+<div style="background:#F6EDDC;padding:24px 29px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:25px;font-weight:700;color:#8A5F16">Boa notícia disfarçada de problema — e uma decisão de projeto que custa pouco agora</h3>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:27px;line-height:1.4;color:#5B4A2A;width:1700px">Se Piumhi for para o cenário otimista, o limite passa a ser a máquina, não a cidade. Aí a decisão é a segunda baia — e aí já se sabe que a demanda existe. O que não dá é descobrir isso com a obra pronta e sem espaço: <b>reserve o terreno e a entrada de energia para duas máquinas desde o projeto.</b></p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">08 · Ponto de equilíbrio e capacidade</p>
+<aside>Slide de conforto e de alerta no mesmo lugar. O conforto: 232 assinantes pagam as contas, e isso ainda é pouco. O alerta: a máquina satura antes de o mercado saturar, então o teto de receita de uma unidade é R$ 81,5 mil. A frase final é uma decisão de engenharia que custa quase nada no projeto e muito depois — dimensionar a entrada de energia e o pátio para duas máquinas.</aside>
+</section></div></div>
+<div class="moldura" id="s-ilimitada"><span class="numero">9 / 23</span><div class="folha"><section id="ilimitada" style="background:#1C1710;color:#E6D9BE;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F0C46A">O risco número 1</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#FFFFFF;width:1700px">Não é a demanda. É o uso do plano Ilimitada.</h2>
+</div>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:28px;line-height:1.38;color:#D6C8A8;width:1700px">A receita não muda em nenhuma linha da tabela abaixo. Só o custo. Este é o único jeito de o projeto quebrar sem a demanda cair um real.</p>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:22px;color:#E6D9BE;padding:12px">
+<tr style="background:#2A2113"><th style="width:26%;color:#F0C46A;font-size:20px;text-align:left">Lavagens/mês por assinante Ilimitada</th><th style="width:18%;color:#F0C46A;font-size:20px;text-align:left">Lavagens/dia</th><th style="width:18%;color:#F0C46A;font-size:20px;text-align:left">Custo variável/mês</th><th style="width:19%;color:#F0C46A;font-size:20px;text-align:left">EBITDA/mês</th><th style="width:19%;color:#F0C46A;font-size:20px;text-align:left">TIR</th></tr>
+<tr><td>4</td><td>77</td><td>R$ 12.984</td><td>R$ 20.233</td><td>33,3%</td></tr>
+<tr style="background:#2A2113"><td>5</td><td>86</td><td>R$ 14.430</td><td>R$ 18.787</td><td>29,5%</td></tr>
+<tr style="background:#3A2E18"><td><b>6 — premissa do modelo</b></td><td><b>95</b></td><td><b>R$ 15.876</b></td><td><b>R$ 17.341</b></td><td><b>25,6%</b></td></tr>
+<tr><td>8</td><td>114</td><td>R$ 18.768</td><td>R$ 14.449</td><td style="color:#FFCF8A">17,7%</td></tr>
+<tr style="background:#2A2113"><td>10</td><td>132</td><td>R$ 21.659</td><td>R$ 11.557</td><td style="color:#FF9B6A">9,5%</td></tr>
+<tr><td>12</td><td>150</td><td>R$ 24.551</td><td>R$ 8.665</td><td style="color:#FF9B6A"><b>0,9%</b></td></tr>
+</table>
+<div style="display:flex;gap:15px">
+<div style="flex:1;background:#2A2113;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">1 · Uso justo em contrato</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">Uma lavagem por veículo por dia e teto de 12 por mês. Não é pegadinha — é o que torna o preço sustentável, e deve ser dito assim na venda.</p></div>
+<div style="flex:1;background:#2A2113;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">2 · Uma placa, um plano</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">O vazamento clássico é lavar o carro do vizinho. Código de plano é frágil; a câmera de placa resolve. É o principal motivo para <b>não</b> cortar a câmera na versão enxuta.</p></div>
+<div style="flex:1;background:#2A2113;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">3 · A trava de preço precisa de prazo</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">R$ 79 "travado enquanto a assinatura estiver ativa" é passivo perpétuo num plano cujo custo sobe com o uso. Limite a trava a 24 ou 36 meses — <b>antes</b> de vender.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#A08B5E">09 · O risco do plano ilimitado · as três travas entram antes da inauguração</p>
+<aside>O slide mais importante da apresentação, e o que não existia na versão anterior do plano. O assinante de R$ 79 que lava doze vezes por mês consome R$ 63 de água, energia e química: sobram R$ 16 antes de imposto e custo fixo. A oito lavagens por mês o projeto já encosta na TMA; a dez, está abaixo dela. As três travas custam quase nada e precisam estar no contrato antes da primeira venda — mudar depois é quebra de promessa. Se o investidor só lembrar de um slide, que seja este.</aside>
+</section></div></div>
+<div class="moldura" id="s-sensibilidade"><span class="numero">10 / 23</span><div class="folha"><section id="sensibilidade" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">Sensibilidade</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">A tolerância de receita é −6%. Com capex enxuto, −10,6%.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:23px;color:#0E2231;padding:13px">
+<tr style="background:#0E2231"><th style="width:46%;color:#EFF3F6;font-size:20px;text-align:left">Cenário</th><th style="width:18%;color:#EFF3F6;font-size:20px;text-align:left">EBITDA/mês</th><th style="width:18%;color:#EFF3F6;font-size:20px;text-align:left">TIR</th><th style="width:18%;color:#EFF3F6;font-size:20px;text-align:left">VPL a 18%</th></tr>
+<tr style="background:#CCE3F1"><td><b>BASE</b></td><td><b>R$ 17.341</b></td><td><b>25,6%</b></td><td><b>R$ 93.429</b></td></tr>
+<tr style="background:#F6EDDC"><td>Receita −15%</td><td>R$ 10.443</td><td>6,1%</td><td>−R$ 140.932</td></tr>
+<tr style="background:#F6EDDC"><td>Receita −25%</td><td>R$ 5.845</td><td>−8,1%</td><td>−R$ 297.548</td></tr>
+<tr><td>Aluguel a R$ 5.000 em vez de R$ 3.000</td><td>R$ 15.341</td><td>19,0%</td><td>R$ 12.370</td></tr>
+<tr style="background:#F6EDDC"><td>Simples no Anexo V em vez do III</td><td>R$ 13.450</td><td>14,1%</td><td>−R$ 46.764</td></tr>
+<tr><td>Capex +20% (câmbio ou obra estourando)</td><td>R$ 17.341</td><td>19,7%</td><td>R$ 24.083</td></tr>
+<tr style="background:#DCEBD8"><td><b>Versão enxuta, capex de R$ 328 mil</b></td><td><b>R$ 17.341</b></td><td><b>33,9%</b></td><td><b>R$ 165.171</b></td></tr>
+<tr style="background:#F6EDDC"><td>Já pagando royalty, fundo e tecnologia</td><td>R$ 12.313</td><td>11,0%</td><td>−R$ 83.452</td></tr>
+</table>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#F6EDDC;padding:22px 26px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#8A5F16">Risco fiscal de R$ 47 mil por ano</h3>
+<p style="font-size:20px;line-height:1.42;color:#5B4A2A">Se a atividade cair no <b>Anexo V</b> em vez do III — o que depende da classificação do CNAE e de incidir ou não o Fator R, com folha de só 5% da receita — a alíquota vai de 10,8% para 17,9% e a TIR cai 11 pontos. <b>Parecer de contador antes de abrir.</b> É o item mais barato da Fase 0 com o maior efeito.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:22px 26px;border-radius:8px;border-left:6px solid #0E63A8;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700">A versão enxuta devolve margem de erro</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Cortar o capex para R$ 328 mil não é só gastar menos: leva a TIR de 25,6% para 33,9% e <b>a tolerância de receita de −6% para −10,6%</b>. É a linha verde da tabela, e é por isso que ela entra na recomendação. <b>Mas não corte a câmera de placa</b> — ela é a trava do Ilimitada.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">10 · Sensibilidade de uma variável por vez · cenário base, já com pró-labore</p>
+<aside>Slide de robustez. Com o pró-labore pago, a margem de erro encolheu de 15% para 6% — e é a versão enxuta que a devolve. Duas linhas em ocre merecem comentário: o Anexo V, que a esta altura já derruba o projeto abaixo da TMA e custa uma consulta a contador para eliminar; e a última, que mostra a unidade rendendo 11% se já pagasse royalty — a prova aritmética de que a franqueadora não pode nascer antes da praça estar provada.</aside>
+</section></div></div>
+<div class="moldura" id="s-aluguel"><span class="numero">11 / 23</span><div class="folha"><section id="aluguel" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">Área alugada</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">36% do capex fica no terreno de outra pessoa.</h2>
+</div>
+<div style="display:flex;gap:17px;align-items:stretch">
+<div style="flex:1;background:#EFF3F6;padding:24px 22px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:51px;font-weight:800;color:#0E2231">R$ 142 mil</p>
+<h3 style="font-size:23px;font-weight:700">de benfeitoria</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Obra civil, caixa separadora e entrada de energia. Não sai no caminhão se o contrato não for renovado.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:24px 22px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:51px;font-weight:800;color:#0E2231">R$ 180 mil</p>
+<h3 style="font-size:23px;font-weight:700">de aluguel em 5 anos</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">A R$ 3.000 por mês. Pagamos isso e ainda deixamos a benfeitoria construída na propriedade dele.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:24px 22px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:51px;font-weight:800;color:#0E2231">17,3%</p>
+<h3 style="font-size:23px;font-weight:700">a.a. renderia comprar</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">O terreno a R$ 280 mil, em 60 meses. <b>Abaixo da TMA de 18% e pouco acima da Selic de 14%.</b></p></div>
+<div style="flex:1;background:#0E63A8;padding:24px 22px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:41px;font-weight:800;color:#FFFFFF">Alugar</p>
+<h3 style="font-size:23px;font-weight:700;color:#FFFFFF">é a decisão certa</h3>
+<p style="font-size:20px;line-height:1.4;color:#CCE3F1">Mas só com contrato que proteja a benfeitoria. Os seis itens ao lado custam zero para negociar agora.</p></div>
+</div>
+<div style="background:#F6EDDC;padding:24px 29px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:9px">
+<h3 style="font-size:25px;font-weight:700;color:#8A5F16">O que precisa estar no contrato de locação</h3>
+<div style="display:flex;gap:25px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;line-height:1.38;color:#5B4A2A"><b>1. Prazo de 10 anos</b>, com renovação por mais 5 a critério do locatário.</p>
+<p style="font-size:20px;line-height:1.38;color:#5B4A2A"><b>2. Opção de compra com preço travado hoje</b>, corrigido por IPCA. Custa zero assinar e vale muito se o juro cair: comprar vira positivo com a Selic abaixo de 12%.</p>
+<p style="font-size:20px;line-height:1.38;color:#5B4A2A"><b>3. Indenização de benfeitoria</b> ou abatimento no aluguel em caso de rescisão pelo locador.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;line-height:1.38;color:#5B4A2A"><b>4. Direito de preferência</b> na venda do imóvel.</p>
+<p style="font-size:20px;line-height:1.38;color:#5B4A2A"><b>5. Anuência expressa para a obra</b>, com o projeto anexado ao contrato.</p>
+<p style="font-size:20px;line-height:1.38;color:#5B4A2A"><b>6. Registro em cartório</b>, para valer contra futuro comprador do imóvel.</p></div>
+</div></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">11 · Área alugada · o item 2 é o mais importante e o mais barato</p>
+<aside>Slide que responde à pergunta que todo investidor faz: por que não comprar o terreno. A resposta é que comprar rende 17,3%, abaixo da TMA — mas isso só vale se o contrato proteger os R$ 142 mil de benfeitoria. O item 2 é o que transforma uma decisão irreversível numa opção: alugar hoje e manter o direito de comprar ao preço de hoje. Se a Selic cair para 10%, exerce-se a opção.</aside>
+</section></div></div>
+<div class="moldura" id="s-capital"><span class="numero">12 / 23</span><div class="folha"><section id="capital" style="background:#0E63A8;color:#FFFFFF;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#CCE3F1">Estrutura de capital</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.05;letter-spacing:-2px;color:#FFFFFF;width:1700px">De R$ 480 mil para R$ 276 mil, antes de dividir com ninguém.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:21px;color:#FFFFFF;padding:11px">
+<tr style="background:#0A4E85"><th style="width:40%;color:#CCE3F1;font-size:20px;text-align:left">Arranjo</th><th style="width:16%;color:#CCE3F1;font-size:20px;text-align:left">1ª tranche</th><th style="width:16%;color:#CCE3F1;font-size:20px;text-align:left">A reservar</th><th style="width:14%;color:#CCE3F1;font-size:20px;text-align:left">TIR</th><th style="width:14%;color:#CCE3F1;font-size:20px;text-align:left">VPL @ 18%</th></tr>
+<tr><td>Capex cheio, 100% equity</td><td>R$ 454.060</td><td>R$ 480.111</td><td>25,6%</td><td>R$ 93.429</td></tr>
+<tr style="background:#0A4E85"><td>+ capex enxuto</td><td>R$ 373.000</td><td>R$ 399.051</td><td>33,9%</td><td>R$ 165.171</td></tr>
+<tr><td>+ pré-venda anual dos fundadores</td><td>R$ 303.480</td><td>R$ 374.953</td><td>34,3%</td><td>R$ 164.250</td></tr>
+<tr style="background:#1A6FB5"><td><b>+ dívida de R$ 120 mil a 21% a.a.</b></td><td><b>R$ 183.480</b></td><td><b>R$ 276.011</b></td><td><b>39,0%</b></td><td><b>R$ 156.648</b></td></tr>
+</table>
+<div style="display:flex;gap:15px">
+<div style="flex:1;background:#FFFFFF;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:34px;font-weight:800;color:#0E63A8">−R$ 81 mil</p>
+<h3 style="font-size:21px;font-weight:700;color:#0E2231">Capex enxuto</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Boxes e aspiradores no mês 6, pátio de 150 m², fachada simples. <b>+8,3 pontos de TIR e devolve margem de erro.</b></p></div>
+<div style="flex:1;background:#FFFFFF;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:34px;font-weight:800;color:#0E63A8">−R$ 99 mil</p>
+<h3 style="font-size:21px;font-weight:700;color:#0E2231">Dívida de R$ 120 mil</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Cooperativa local, 60 meses, 6 de carência. Alavanca porque o projeto rende 34% contra 21% de juro. <b>Custa R$ 8 mil de VPL.</b></p></div>
+<div style="flex:1;background:#FFFFFF;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:34px;font-weight:800;color:#0E63A8">−R$ 24 mil</p>
+<h3 style="font-size:21px;font-weight:700;color:#0E2231">Pré-venda dos fundadores</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">12 meses pelo preço de 11: R$ 69.520 no mês 0. <b>Vale mais por provar a demanda e travar a rotatividade.</b></p></div>
+<div style="flex:1;background:#0A4E85;padding:20px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:34px;font-weight:800;color:#FFFFFF">−42%</p>
+<h3 style="font-size:21px;font-weight:700;color:#FFFFFF">de capital em risco</h3>
+<p style="font-size:20px;line-height:1.4;color:#CCE3F1">E a TIR do equity sobe de 25,6% para 39,0%, <b>já pagando o pró-labore do operador</b>.</p></div>
+</div>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#FFFFFF;padding:20px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#0E2231">O cap table</h3>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:20px;color:#0E2231;padding:7px">
+<tr style="background:#EFF3F6"><th style="width:40%;font-size:20px;text-align:left">&nbsp;</th><th style="width:22%;font-size:20px;text-align:left">Aporte</th><th style="width:18%;font-size:20px;text-align:left">PJ 2</th><th style="width:20%;font-size:20px;text-align:left">TIR</th></tr>
+<tr><td>Investidor A</td><td>R$ 75.000</td><td>24%</td><td>20,7%</td></tr>
+<tr style="background:#EFF3F6"><td>Investidor B</td><td>R$ 75.000</td><td>24%</td><td>20,7%</td></tr>
+<tr style="background:#CCE3F1"><td><b>Antonio</b></td><td><b>R$ 126.011</b></td><td><b>52%</b></td><td><b>29,2%</b></td></tr>
+</table>
+<p style="font-size:20px;line-height:1.38;color:#4A5F70">Capital chamado em tranches: R$ 183 mil na assinatura, o resto durante a rampa.</p></div>
+<div style="flex:1;background:#F6EDDC;padding:20px 24px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#8A5F16">As duas cláusulas que valem mais que a taxa</h3>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A"><b>1. A marca fica na PJ 1, 100% do Antonio</b>, com o pedido no INPI em nome dela <b>antes de os investidores assinarem</b>. Com a marca na PJ 2, vender 48% da operação é vender 48% de uma franqueadora que vale R$ 1,26 milhão de VPL. Eles compram a loja de Piumhi, não a rede.</p>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A"><b>2. Antonio acima de 50%, sempre.</b> A 45% ele perde o controle da unidade que vai ser o padrão da rede e a vitrine da COF.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#CCE3F1">12 · Estrutura de capital · cenário base, com pró-labore de R$ 3.500/mês</p>
+<aside>Com a Selic a 14%, 20,7% em ativo real com contrato é proposta que se defende. E a alternativa recusada: dois investidores a R$ 90 mil por 27,5% cada renderia mais para o Antonio, 33,6%. O slide da conversa com investidor. A sequência importa: primeiro reduzir a necessidade de capital, depois dividi-la. Os 42% de redução vêm de três alavancas que não dependem de ninguém dizer sim. Dizer em voz alta que a dívida custa R$ 8 mil de VPL — é uma troca consciente de valor por capital liberado, não mágica. E o quadro em ocre é o que protege o negócio no longo prazo: a marca fora da sociedade dos investidores e o controle preservado.</aside>
+</section></div></div>
+<div class="moldura" id="s-fase2"><span class="numero">13 / 23</span><div class="folha"><section id="fase2" data-section="A Fase 2: por que a franquia não vende hoje e o que fazer com o imóvel." data-transition="fade" style="background:#0E2231;color:#EFF3F6;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6FB9DE">Fase 2</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#EFF3F6;width:1700px">A rede tem um gate, e o gate é Piumhi.</h2>
+</div>
+<div style="display:flex;gap:12px;align-items:stretch">
+<div style="flex:1;background:#15293A;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6FB9DE">Mês 1 a 12</p>
+<h3 style="font-size:27px;font-weight:800;color:#FFFFFF">Operar Piumhi</h3>
+<p style="font-size:20px;line-height:1.4;color:#C3CFE4">Assinantes, churn, lavagens por dia, uso real do Ilimitada, EBITDA. Nenhum real gasto na franqueadora.</p></div>
+<div style="width:80px;display:flex;flex-direction:column;justify-content:center;align-items:center">
+<x-shape kind="arrow-right" style="width:80px;height:39px;background:#0E63A8"></x-shape></div>
+<div style="flex:1;background:#B8801F;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#FFF3DC">Mês 12 · gate</p>
+<h3 style="font-size:27px;font-weight:800;color:#FFFFFF">345 assinantes</h3>
+<p style="font-size:20px;line-height:1.4;color:#FFF3DC">É o número em que a unidade empata a 18% a.a. <b>Abaixo disso a Fase 2 não começa.</b></p></div>
+<div style="width:80px;display:flex;flex-direction:column;justify-content:center;align-items:center">
+<x-shape kind="arrow-right" style="width:80px;height:39px;background:#0E63A8"></x-shape></div>
+<div style="flex:1;background:#15293A;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6FB9DE">Mês 13 a 17</p>
+<h3 style="font-size:27px;font-weight:800;color:#FFFFFF">Formatar</h3>
+<p style="font-size:20px;line-height:1.4;color:#C3CFE4">Franqueadora como PJ própria, COF sobre balanço real, manual escrito a partir do que Piumhi aprendeu.</p></div>
+<div style="width:80px;display:flex;flex-direction:column;justify-content:center;align-items:center">
+<x-shape kind="arrow-right" style="width:80px;height:39px;background:#0E63A8"></x-shape></div>
+<div style="flex:1;background:#0E63A8;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#CCE3F1">Mês 18</p>
+<h3 style="font-size:27px;font-weight:800;color:#FFFFFF">Primeira franquia</h3>
+<p style="font-size:20px;line-height:1.4;color:#CCE3F1">Nunca antes. Vender franquia sem COF não é arriscado — é ilegal (Lei 13.966/2019).</p></div>
+</div>
+<div style="background:#15293A;padding:24px 29px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:25px;font-weight:700;color:#6FB9DE">Por que isto não é só prudência: é o que fez o pedido cair de R$ 815 mil para R$ 540 mil</h3>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:27px;line-height:1.4;color:#C3CFE4;width:1700px">Rodando as duas fases ao mesmo tempo, o pico de caixa era R$ 815 mil. Sequenciadas, o EBITDA de Piumhi cobre o vale da franqueadora e o pico cai para <b>R$ 540 mil, no mês 9</b> — ainda dentro da Fase 1. Formatar franquia custa COF, manual, software e equipe de campo: centenas de milhares que não voltam se a premissa de demanda estiver errada.</p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#6B7F93">13 · A sequência e o gate</p>
+<aside>Slide de método. O gate de 345 assinantes é um compromisso verificável, não uma intenção. E o argumento financeiro ajuda: sequenciar não é só mais seguro, é mais barato, porque o caixa da unidade financia o vale da rede. Se perguntarem pelo R$ 815 mil da versão anterior, este é o slide da resposta.</aside>
+</section></div></div>
+<div class="moldura" id="s-franqueado"><span class="numero">14 / 23</span><div class="folha"><section id="franqueado" style="background:#1C1710;color:#E6D9BE;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F0C46A">O problema da Fase 2</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#FFFFFF;width:1700px">Como está, esta franquia não é vendável.</h2>
+</div>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#2A2113;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#D6C8A8">O franqueado entra com</p><p style="font-size:56px;font-weight:800;color:#FFFFFF">R$ 504 mil</p><p style="font-size:20px;color:#A08B5E">taxa de R$ 50 mil + capex de R$ 399 mil + giro</p></div>
+<div style="flex:1;background:#2A2113;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#D6C8A8">EBITDA maduro</p><p style="font-size:56px;font-weight:800;color:#FFFFFF">R$ 12.836</p><p style="font-size:20px;color:#A08B5E">26,7% sobre receita de R$ 48 mil/mês</p></div>
+<div style="flex:1;background:#2A2113;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#D6C8A8">TIR dele</p><p style="font-size:56px;font-weight:800;color:#FF9B6A">13,4%</p><p style="font-size:20px;color:#A08B5E">payback de 51 meses num contrato de 60</p></div>
+<div style="flex:1;background:#2A2113;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#D6C8A8">VPL a 18%</p><p style="font-size:56px;font-weight:800;color:#FF9B6A">−R$ 57 mil</p><p style="font-size:20px;color:#A08B5E">menos que o CDI com a Selic a 14%</p></div>
+</div>
+<div style="background:#2A2113;padding:24px 29px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Newsreader', Georgia, serif;font-size:30px;line-height:1.38;color:#E6D9BE;width:1700px">Nenhum candidato com R$ 504 mil e um contador decente assina isso. E se assinar, quebra ou reclama — e o problema volta para a marca.</p>
+</div>
+<div style="background:#3A2E18;padding:20px 29px;border-radius:8px;border-left:6px solid #F0C46A;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:22px;line-height:1.38;color:#FFFFFF;width:1700px"><b>E com pró-labore de R$ 3.500 para quem administra, piora muito:</b> a estrutura atual cai para <b>1,7%</b> de TIR e, mesmo com o ponto construído pela rede, para <b>9,5%</b>. Nem o build-to-suit salva a franquia se o franqueado tiver de pagar um gerente.</p>
+<p style="font-size:22px;line-height:1.38;color:#FFCF8A;width:1700px"><b>Consequência:</b> venda só para <b>franqueado operador</b> — o pró-labore é o salário dele e o retorno de capital vem em cima. Franqueado investidor ausente não fecha em nenhuma estrutura, a R$ 48 mil/mês.</p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#A08B5E">14 · O franqueado na estrutura atual · sem pró-labore; com ele, 1,7%</p>
+<aside>A conta do franqueado é pior que a nossa em Piumhi por dois motivos somados: ele paga royalty de 6%, fundo de 2% e taxa de tecnologia, R$ 4.580 por mês que a unidade própria não paga, e opera numa praça com receita madura de R$ 48 mil em vez de R$ 54 mil. Slide duro e necessário. Apresentar o problema antes da solução é o que faz a solução valer. O ponto a dizer em voz alta: a economia do franqueado é pior que a nossa por dois motivos somados — ele paga royalty e opera numa praça menor. Isso prepara o terreno para a análise do imóvel, que é o que o empreendedor pediu.</aside>
+</section></div></div>
+<div class="moldura" id="s-imobiliario"><span class="numero">15 / 23</span><div class="folha"><section id="imobiliario" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">A ideia imobiliária</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Se a rede constrói o ponto, a TIR do franqueado dobra.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:22px;color:#0E2231;padding:12px">
+<tr style="background:#0E2231"><th style="width:34%;color:#EFF3F6;font-size:20px;text-align:left">O franqueado</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">A · ele aluga de terceiro</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">B1 · nós compramos o ponto</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">B2 · alugamos longo e sublocamos</th></tr>
+<tr><td>Investimento dele</td><td>R$ 504.060</td><td><b>R$ 310.100</b></td><td>R$ 310.100</td></tr>
+<tr style="background:#EFF3F6"><td>Aluguel que ele paga</td><td>R$ 3.000</td><td>R$ 4.000</td><td>R$ 6.500</td></tr>
+<tr><td>EBITDA maduro/mês</td><td>R$ 12.836</td><td>R$ 11.836</td><td>R$ 9.336</td></tr>
+<tr style="background:#EFF3F6"><td>Payback</td><td>51 meses</td><td><b>38 meses</b></td><td>48 meses</td></tr>
+<tr style="background:#CCE3F1"><td><b>TIR dele</b></td><td><b>13,4%</b></td><td><b>27,3%</b></td><td><b>14,6%</b></td></tr>
+</table>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:22px;color:#0E2231;padding:12px">
+<tr style="background:#0E2231"><th style="width:34%;color:#EFF3F6;font-size:20px;text-align:left">A franqueadora · 65 unidades, 120 meses</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">Capital no imóvel</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">TIR</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">VPL a 18%</th></tr>
+<tr style="background:#DCEBD8"><td><b>A · asset-light</b></td><td><b>R$ 0</b></td><td><b>42,6%</b></td><td><b>+R$ 1.263.923</b></td></tr>
+<tr style="background:#F6EDDC"><td>B1 · compra, sem dívida</td><td>R$ 32.500.000</td><td>15,6%</td><td>−R$ 1.196.797</td></tr>
+<tr style="background:#F6EDDC"><td>B1 · compra, 50% financiado a 14%</td><td>R$ 32.500.000</td><td>16,1%</td><td>−R$ 645.262</td></tr>
+<tr style="background:#F6EDDC"><td>B2 · locação longa + sublocação</td><td>R$ 14.300.000</td><td>17,6%</td><td>−R$ 83.027</td></tr>
+</table>
+<div style="background:#EFF3F6;padding:21px 29px;border-radius:8px;border-left:6px solid #0E63A8;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:23px;line-height:1.4;color:#0E2231;width:1700px">A ideia ataca o problema certo: tirando R$ 194 mil do investimento do franqueado e cobrando R$ 1.000 a mais de aluguel, <b>a TIR dele vai de 13,4% para 27,3%</b>. A coluna B2 mostra o outro lado — a R$ 6.500 de aluguel ele volta a 14,6%. <b>O desconto no investimento não pode ser cobrado de volta no aluguel.</b></p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">15 · As três estruturas de ponto comercial</p>
+<aside>Slide central da pergunta do empreendedor. As duas tabelas têm de ser lidas juntas: a de cima diz que a ideia funciona para o franqueado; a de baixo diz quanto ela custa para nós. Em verde, a linha asset-light; em ocre, as três variantes imobiliárias, todas com VPL negativo. O próximo slide fecha o veredicto.</aside>
+</section></div></div>
+<div class="moldura" id="s-veredicto"><span class="numero">16 / 23</span><div class="folha"><section id="veredicto" style="background:#1C1710;color:#E6D9BE;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F0C46A">O veredicto</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#FFFFFF;width:1700px">Comprar o imóvel com capital da franquia destrói valor.</h2>
+</div>
+<div style="display:flex;gap:17px;align-items:center">
+<div style="flex:1;background:#2A2113;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#D6C8A8">Asset-light</p><p style="font-size:51px;font-weight:800;color:#8FD48F">42,6%</p><p style="font-size:20px;color:#A08B5E">de TIR sobre R$ 653 mil de capital</p></div>
+<div style="width:90px;display:flex;justify-content:center"><x-shape kind="arrow-right" style="width:90px;height:42px;background:#F0C46A"></x-shape></div>
+<div style="flex:1;background:#2A2113;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#D6C8A8">Com imóvel próprio</p><p style="font-size:51px;font-weight:800;color:#FF9B6A">15,6%</p><p style="font-size:20px;color:#A08B5E">de TIR sobre R$ 32,5 milhões de capital</p></div>
+<div style="flex:1;background:#3A2E18;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#F0C46A">Sem valor residual</p><p style="font-size:51px;font-weight:800;color:#FF9B6A">−62%</p><p style="font-size:20px;color:#D6C8A8">a TIR do B1 depende inteiramente de vender terreno valorizado no fim</p></div>
+</div>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:30px;line-height:1.38;color:#E6D9BE;width:1700px">Cinquenta vezes mais capital para menos da metade do retorno. E a razão é aritmética, não opinião: <b>com a Selic a 14%, imóvel comercial no Brasil não se paga.</b></p>
+<div style="display:flex;gap:17px">
+<table style="flex:1;font-family:'Archivo', Arial, sans-serif;font-size:20px;color:#E6D9BE;padding:9px">
+<tr style="background:#2A2113"><th style="width:34%;color:#F0C46A;font-size:20px;text-align:left">Aluguel do ponto</th><th style="width:22%;color:#F0C46A;font-size:20px;text-align:left">Caixa a.a.</th><th style="width:22%;color:#F0C46A;font-size:20px;text-align:left">+ valorização</th><th style="width:22%;color:#F0C46A;font-size:20px;text-align:left">Total</th></tr>
+<tr><td>R$ 4.000</td><td>6,9%</td><td>+2,5 pp</td><td>9,5%</td></tr>
+<tr style="background:#2A2113"><td>R$ 5.000</td><td>9,1%</td><td>+2,5 pp</td><td>11,6%</td></tr>
+<tr><td>R$ 6.000</td><td>11,2%</td><td>+2,5 pp</td><td>13,7%</td></tr>
+<tr style="background:#2A2113"><td>R$ 7.000</td><td>13,3%</td><td>+2,5 pp</td><td>15,8%</td></tr>
+</table>
+<div style="flex:1;background:#2A2113;padding:21px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#F0C46A">A janela onde os dois lados fecham é estreita — mas existe</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">A franqueadora precisa de <b>R$ 5.000/mês</b> para fazer 18%. O franqueado suporta até <b>R$ 5.500</b> fazendo 18%. A R$ 5.250 os dois passam: nós a 19,4%, ele a 21%.</p>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">É frágil: <b>um erro de 10% na receita da unidade fecha a janela dos dois lados ao mesmo tempo.</b> E dívida não salva — a 14% de juro contra 14,6% de yield, o spread é de 0,6 ponto.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#A08B5E">16 · Por que o imóvel próprio não fecha · 65 unidades, 120 meses</p>
+<aside>O slide que diz não, com conta. Três coisas para falar: o salto de capital (R$ 653 mil para R$ 32,5 milhões), a dependência do residual (sem ele a TIR é −62%, ou seja, é aposta em terra e não em lava jato), e a tabela de yield que mostra que o problema é a Selic, não o projeto. A janela de R$ 5.000 a R$ 5.500 é honesta: existe, mas é fina. O próximo slide dá a saída.</aside>
+</section></div></div>
+<div class="moldura" id="s-buildtosuit"><span class="numero">17 / 23</span><div class="folha"><section id="buildtosuit" style="background:#0E63A8;color:#FFFFFF;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#CCE3F1">A recomendação</p>
+<h2 style="font-size:59px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#FFFFFF;width:1700px">Controle do ponto, não propriedade do ponto.</h2>
+</div>
+<p style="font-family:'Newsreader', Georgia, serif;font-size:30px;line-height:1.38;color:#E3EFF8;width:1700px">Em cada praça, um investidor imobiliário local compra o terreno e constrói a baia no nosso projeto padrão, em <b>build-to-suit de 10 a 15 anos, com a locação em nome da franqueadora</b> e sublocação ao franqueado.</p>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#FFFFFF;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:27px;font-weight:800;color:#0E2231">Investidor local</h3>
+<p style="font-size:34px;font-weight:800;color:#0E63A8">11,6% a.a.</p>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">R$ 5.000/mês sobre R$ 500 mil, mais valorização, em contrato longo com garantia. <b>Acima do yield comercial típico no interior</b> e dentro do hurdle de um investidor imobiliário — IPCA + 6 a 7% real.</p></div>
+<div style="flex:1;background:#FFFFFF;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:27px;font-weight:800;color:#0E2231">Franqueadora</h3>
+<p style="font-size:34px;font-weight:800;color:#0E63A8">R$ 0 e 42,6%</p>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Capital zero no imóvel e a TIR preservada. E o ponto sob contrato: <b>se o franqueado sair ou quebrar, a locação é nossa</b> — entra outro operador em semanas, sem perder a praça.</p></div>
+<div style="flex:1;background:#FFFFFF;padding:26px 24px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:27px;font-weight:800;color:#0E2231">Franqueado</h3>
+<p style="font-size:34px;font-weight:800;color:#0E63A8">R$ 310 mil</p>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Ticket 39% menor e <b>TIR de 27,3%</b> em vez de 13,4%. É o que transforma uma franquia que não vende numa franquia que vende.</p></div>
+</div>
+<div style="background:#0A4E85;padding:22px 29px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#CCE3F1">E se você quiser o imóvel de todo jeito</h3>
+<p style="font-size:22px;line-height:1.42;color:#E3EFF8;width:1700px">É decisão legítima — mas é <b>outro investimento, com outro hurdle</b>. Como uso de capital da franquia a 18%, destrói valor. Como investimento imobiliário em <b>holding patrimonial separada</b>, com hurdle de IPCA + 6 a 7% real, a R$ 5.000/mês é um bom negócio. Mesmo ativo, dois vereditos opostos, porque o custo de oportunidade é diferente. O que não se pode é somar o resultado das duas PJs — foi essa soma que produziu o R$ 815 mil que não fazia sentido para ninguém.</p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#CCE3F1">17 · Build-to-suit · primeiras 5 a 8 praças; comprar volta à mesa com a Selic abaixo de 11%</p>
+<aside>O slide da solução, e ele preserva o que o empreendedor queria. O prêmio estratégico que ele buscava é o controle do ponto, e o build-to-suit entrega isso por R$ 0. É como a maioria das redes brasileiras resolve, e é por isso que elas abrem trinta unidades com o capital de três. O quadro de baixo é importante: não é um "não", é um "sim, em outra PJ, com outro hurdle".</aside>
+</section></div></div>
+<div class="moldura" id="s-rede"><span class="numero">18 / 23</span><div class="folha"><section id="rede" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">A franqueadora asset-light</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Seis anos de EBITDA negativo. Depois, R$ 865 mil por ano.</h2>
+</div>
+<div style="display:flex;gap:22px">
+<table style="flex:1;font-family:'Archivo', Arial, sans-serif;font-size:20px;color:#0E2231;padding:9px">
+<tr style="background:#0E2231"><th style="width:14%;color:#EFF3F6;font-size:20px;text-align:left">Ano</th><th style="width:22%;color:#EFF3F6;font-size:20px;text-align:left">Unidades</th><th style="width:32%;color:#EFF3F6;font-size:20px;text-align:left">Receita</th><th style="width:32%;color:#EFF3F6;font-size:20px;text-align:left">EBITDA</th></tr>
+<tr><td>1</td><td>0</td><td>—</td><td style="color:#C04A24">−135.000</td></tr>
+<tr style="background:#EFF3F6"><td>2</td><td>2</td><td>42.235</td><td style="color:#C04A24">−300.522</td></tr>
+<tr><td>3</td><td>7</td><td>169.285</td><td style="color:#C04A24">−361.801</td></tr>
+<tr style="background:#EFF3F6"><td>4</td><td>12</td><td>373.256</td><td style="color:#C04A24">−310.465</td></tr>
+<tr><td>5</td><td>19</td><td>616.970</td><td style="color:#C04A24">−201.745</td></tr>
+<tr style="background:#EFF3F6"><td>6</td><td>27</td><td>920.182</td><td style="color:#C04A24">−43.047</td></tr>
+<tr><td>7</td><td>35</td><td>1.258.794</td><td>+145.387</td></tr>
+<tr style="background:#EFF3F6"><td>8</td><td>45</td><td>1.633.672</td><td>+340.284</td></tr>
+<tr><td>9</td><td>55</td><td>2.056.792</td><td>+599.705</td></tr>
+<tr style="background:#CCE3F1"><td><b>10</b></td><td><b>65</b></td><td><b>2.486.392</b></td><td><b>+864.569</b></td></tr>
+</table>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:12px">
+<div style="flex:1;background:#EFF3F6;padding:18px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#4A5F70">Pico de caixa</p><p style="font-size:37px;font-weight:800">R$ 653 mil</p><p style="font-size:20px;color:#7C8E9C">no mês 50</p></div>
+<div style="flex:1;background:#EFF3F6;padding:18px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#4A5F70">Caixa zera</p><p style="font-size:37px;font-weight:800">mês 83</p><p style="font-size:20px;color:#7C8E9C">sete anos</p></div>
+</div>
+<div style="display:flex;gap:12px">
+<div style="flex:1;background:#0E63A8;padding:18px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#CCE3F1">TIR</p><p style="font-size:37px;font-weight:800;color:#FFFFFF">42,6%</p><p style="font-size:20px;color:#CCE3F1">31,8% sem residual</p></div>
+<div style="flex:1;background:#0E63A8;padding:18px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;color:#CCE3F1">VPL a 18%</p><p style="font-size:37px;font-weight:800;color:#FFFFFF">R$ 1,26 mi</p><p style="font-size:20px;color:#CCE3F1">R$ 438 mil sem residual</p></div>
+</div>
+<div style="background:#F6EDDC;padding:18px 21px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:21px;font-weight:700;color:#8A5F16">A franqueadora se financia vendendo franquia</h3>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A">O EBITDA acumulado negativo passa de R$ 1,5 milhão, mas o pico de caixa é R$ 653 mil: a <b>taxa de franquia de R$ 40 mil</b> entra três meses antes de cada inauguração e financia o vale. A consequência desconfortável: <b>se a expansão travar no ano 4, o caixa trava com ela.</b> É mais um motivo para o gate de doze meses.</p></div>
+
+</div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">18 · A franqueadora asset-light · 120 meses, sem BOX</p>
+<aside>Os números caíram em relação à versão anterior (R$ 1,657 mi de EBITDA no ano 10 e TIR de 49,4%) por duas correções: o fundo de 2% deixou de ser margem, porque é vinculado a marketing, e a franqueadora passou a ser tributada em Lucro Presumido. O número menor é o certo. A curva J da rede. Dois pontos de honestidade que valem crédito: a franqueadora depende de vender franquia para financiar o próprio vale — risco real de modelo de negócio, não só de execução; e os números caíram em relação à versão anterior por duas correções metodológicas que precisamos admitir antes de alguém encontrar.</aside>
+</section></div></div>
+<div class="moldura" id="s-pedido"><span class="numero">19 / 23</span><div class="folha"><section id="pedido" data-section="O pedido, a estrutura societária, os riscos e o que falta provar." data-transition="fade" style="background:#0E63A8;color:#FFFFFF;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:27px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#CCE3F1">O pedido</p>
+<h2 style="font-size:66px;font-weight:800;line-height:1.05;letter-spacing:-2px;color:#FFFFFF;width:1700px">R$ 276 mil para a loja. R$ 150 mil deles de investidor.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:23px;color:#FFFFFF;padding:13px">
+<tr style="background:#0A4E85"><th style="width:40%;color:#CCE3F1;font-size:20px;text-align:left">&nbsp;</th><th style="width:20%;color:#CCE3F1;font-size:20px;text-align:left">Capital</th><th style="width:20%;color:#CCE3F1;font-size:20px;text-align:left">TIR</th><th style="width:20%;color:#CCE3F1;font-size:20px;text-align:left">VPL a 18%</th></tr>
+<tr style="background:#1A6FB5"><td><b>Fase 1 — loja de Piumhi, arranjo recomendado</b></td><td><b>R$ 276 mil</b></td><td><b>39,0%</b></td><td><b>R$ 157 mil</b></td></tr>
+<tr><td>Fase 1 — arranjo cru: capex cheio, 100% equity</td><td>R$ 480 mil</td><td>25,6%</td><td>R$ 93 mil</td></tr>
+<tr style="background:#0A4E85"><td><b>Fase 1 + Fase 2 asset-light (120 meses)</b></td><td><b>R$ 540 mil</b></td><td><b>42,6%</b></td><td><b>R$ 1,74 mi</b></td></tr>
+<tr><td>Idem, com Piumhi no cenário conservador</td><td>R$ 720 mil</td><td>35,8%</td><td>R$ 1,37 mi</td></tr>
+<tr style="background:#1A5E96"><td>Versão anterior: as duas fases juntas, com BOX</td><td>R$ 815 mil</td><td>45,1%</td><td>R$ 1,62 mi</td></tr>
+<tr style="background:#8A4A2A"><td>Com imóvel próprio em todas as praças</td><td>R$ 21,8 mi</td><td>16,6%</td><td>−R$ 716 mil</td></tr>
+</table>
+<div style="display:flex;gap:17px">
+<div style="flex:1;background:#FFFFFF;padding:22px 25px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#0E2231">O que era o R$ 815 mil</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Não era capex. Era o <b>pico de caixa consolidado</b> das duas fases rodando ao mesmo tempo por dez anos, incluindo o vale da formatação da rede. Correto para o que media, inútil como pedido.</p></div>
+<div style="flex:1;background:#FFFFFF;padding:22px 25px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#0E2231">Por que o número caiu</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70">Três coisas: <b>tirar o BOX</b>, <b>sequenciar as fases</b> em vez de rodar as duas de uma vez, e <b>não comprar imóvel</b>. R$ 275 mil menos de capital e R$ 480 mil mais de VPL.</p></div>
+<div style="flex:1;background:#FFFFFF;padding:22px 25px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#0E2231">O que se pede hoje</h3>
+<p style="font-size:20px;line-height:1.42;color:#4A5F70"><b>R$ 150 mil de um ou dois investidores</b>, por 48% da operação de Piumhi — não da rede. O resto é capital próprio, dívida de cooperativa e a pré-venda dos fundadores. A Fase 2 é decidida no mês 12, com dados.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#CCE3F1">19 · O pedido · R$ 150 mil de investidor agora; a Fase 2 é decidida no mês 12</p>
+<aside>O slide da conversa. A tabela serve para mostrar que o plano melhorou: menos capital e mais valor que a versão anterior. As duas últimas linhas estão ali de propósito — a versão antiga para dar contexto, e a do imóvel próprio para registrar que a alternativa foi avaliada e recusada com conta. O pedido concreto de hoje é R$ 150 mil de investidor dentro de um capital total de R$ 276 mil; o resto é decidido com informação que ainda não existe.</aside>
+</section></div></div>
+<div class="moldura" id="s-societaria"><span class="numero">20 / 23</span><div class="folha"><section id="societaria" style="background:#FFFFFF;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">Estrutura</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Duas empresas desde o início. Três se houver imóvel.</h2>
+</div>
+<div style="display:flex;gap:15px;align-items:stretch">
+<div style="flex:1;background:#0E2231;padding:24px 21px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6FB9DE">PJ 1</p>
+<h3 style="font-size:28px;font-weight:800;color:#FFFFFF">Franqueadora</h3>
+<p style="font-size:20px;line-height:1.4;color:#C3CFE4">Dona das marcas e do software. Licencia, cobra royalty e taxa de tecnologia. <b>É o balanço dela que vai para a COF.</b></p></div>
+<div style="flex:1;background:#EFF3F6;padding:24px 21px;border-radius:8px;border:1px solid #D5DFE6;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0E63A8">PJ 2</p>
+<h3 style="font-size:28px;font-weight:800">Operação Piumhi</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">A unidade que lava carro. <b>Do mês 13 em diante paga royalty</b> como qualquer franqueado, para a métrica da rede ser comparável desde o primeiro dia.</p></div>
+<div style="flex:1;background:#F6EDDC;padding:24px 21px;border-radius:8px;border:1px solid #E3D3B0;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8A5F16">PJ 3 · opcional</p>
+<h3 style="font-size:28px;font-weight:800;color:#8A5F16">Holding patrimonial</h3>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A">Só se você decidir comprar imóvel. Dona dos pontos, aluga a mercado, <b>resultado separado da franqueadora</b> e com hurdle de investidor imobiliário.</p></div>
+<div style="flex:1;background:#EFF3F6;padding:24px 21px;border-radius:8px;border:1px solid #D5DFE6;display:flex;flex-direction:column;gap:8px">
+<p style="font-size:20px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#0E63A8">PJ 4 em diante</p>
+<h3 style="font-size:28px;font-weight:800">Franqueados</h3>
+<p style="font-size:20px;line-height:1.4;color:#4A5F70">Empresas de terceiros, território exclusivo por contrato de 5 anos, renovável mediante adimplência e padrão.</p></div>
+</div>
+<div style="display:flex;gap:20px">
+<div style="flex:1;background:#F6EDDC;padding:22px 26px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#8A5F16">Por que não pode ser um CNPJ só</h3>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A">A COF exige o balanço da franqueadora, dez dias antes da assinatura (Lei 13.966/2019). Com tudo junto, <b>cada candidato — inclusive os que vão desistir — recebe o faturamento e as despesas da operação de Piumhi.</b></p></div>
+<div style="flex:1;background:#F6EDDC;padding:22px 26px;border-radius:8px;border-left:6px solid #B8801F;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:23px;font-weight:700;color:#8A5F16">E o risco cruzado</h3>
+<p style="font-size:20px;line-height:1.4;color:#5B4A2A">Franqueado que processa a franqueadora alcançaria o caixa e os equipamentos da operação, e vice-versa. <b>Com imóvel na mesma PJ, alcançaria os terrenos.</b> Separar é barato agora e caro depois.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">20 · Estrutura societária · validar com advogado societário e contador antes de constituir</p>
+<aside>Ponto jurídico que o Plano de Franquia já exigia. O detalhe de desenho que acrescentamos é a unidade própria pagar royalty a partir do mês 13 — isso dá histórico limpo à COF e torna os indicadores comparáveis. A PJ 3 em ocre existe para acomodar a vontade de ter imóvel sem contaminar o resultado da franqueadora. Estrutura e enquadramento precisam de advogado e contador.</aside>
+</section></div></div>
+<div class="moldura" id="s-riscos"><span class="numero">21 / 23</span><div class="folha"><section id="riscos" style="background:#EFF3F6;color:#0E2231;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0E63A8">Riscos</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;width:1700px">Cada risco com o que já se faz a respeito.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:20px;color:#0E2231;padding:10px">
+<tr style="background:#0E2231"><th style="width:34%;color:#EFF3F6;font-size:20px;text-align:left">Risco</th><th style="width:12%;color:#EFF3F6;font-size:20px;text-align:left">Impacto</th><th style="width:54%;color:#EFF3F6;font-size:20px;text-align:left">Mitigação</th></tr>
+<tr style="background:#FFFFFF"><td>Uso abusivo do plano Ilimitada</td><td><b>Alto</b></td><td>Uso justo em contrato, teto de 12/mês e câmera de placa — antes da inauguração</td></tr>
+<tr><td>Demanda abaixo de 345 assinantes</td><td>Alto</td><td>Pré-venda de 80 fundadores <b>antes</b> da obra; equilíbrio operacional a 178</td></tr>
+<tr style="background:#FFFFFF"><td>Simples no Anexo V em vez do III</td><td>Alto</td><td>Parecer de contador antes de abrir: vale R$ 47 mil por ano</td></tr>
+<tr><td>Frota de Piumhi diferente da fonte</td><td>Alto</td><td>Baixar a planilha do Senatran — quinze minutos, está na Fase 0</td></tr>
+<tr style="background:#FFFFFF"><td>Benfeitoria perdida no fim do aluguel</td><td>Alto</td><td>Contrato de 10 anos, opção de compra travada, indenização e preferência</td></tr>
+<tr><td>Máquina 50 Hz ou 380 V incompatível</td><td><b>Crítico</b></td><td>60 Hz e a tensão que a CEMIG entrega, por escrito no pedido</td></tr>
+<tr style="background:#FFFFFF"><td>Câmbio entre pedido e pagamento</td><td>Médio</td><td>Travar câmbio ou orçar a R$ 5,60 em vez de R$ 5,30</td></tr>
+<tr><td>Tarifa de água e energia acima do estimado</td><td>Médio</td><td>Confirmar com SAAE e CEMIG antes de fechar o capex</td></tr>
+<tr style="background:#FFFFFF"><td>Máquina parada por falta de peça</td><td>Alto</td><td>Kit de peças de 2 anos no pedido e distribuidor com estoque no Brasil</td></tr>
+<tr><td>Franquia com TIR de 13,4% não vende</td><td><b>Crítico</b></td><td>Build-to-suit baixa o ticket para R$ 310 mil e leva a TIR dele a 27,3%</td></tr>
+<tr style="background:#FFFFFF"><td>Marca em conflito com "Fast Wash"</td><td>Alto</td><td>Busca de anterioridade no INPI antes de qualquer fachada ou adesivagem</td></tr>
+<tr><td>Vender franquia antes da COF</td><td><b>Crítico</b></td><td>Gate absoluto de 12 meses de operação auditável — sem exceção</td></tr>
+</table>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#7C8E9C">21 · Riscos e mitigações · Fase 1 e Fase 2</p>
+<aside>Nenhum risco aparece sem o que se faz a respeito. Os três críticos merecem comentário em voz alta: a frequência e a tensão da máquina, porque é o erro que transforma importado em sucata; a franquia que não vende, porque é o problema que o build-to-suit resolve; e a venda antes da COF, que é o compromisso de governança do projeto inteiro.</aside>
+</section></div></div>
+<div class="moldura" id="s-premissas"><span class="numero">22 / 23</span><div class="folha"><section id="premissas" style="background:#1C1710;color:#E6D9BE;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:25px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F0C46A">Honestidade metodológica</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#FFFFFF;width:1700px">O que ainda não está provado.</h2>
+</div>
+<div style="display:flex;gap:15px">
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">A frota vem de uma fonte só</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">Os 13.652 automóveis vêm de reportagem regional citando Senatran e IBGE, não da tabela original. É o denominador de todo o plano.</p></div>
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">A receita madura nunca foi medida</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">500 assinantes são 3,7% dos automóveis da cidade. Nenhuma unidade operou ainda — é o que a Fase 1 existe para provar ou derrubar.</p></div>
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">O uso do Ilimitada é estimativa</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">Seis lavagens por mês por assinante, sem base local. É a premissa mais frágil do modelo e a que mais move o resultado.</p></div>
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">O capex não tem orçamento local</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">R$ 399 mil montados linha por linha, mas sem três cotações em Piumhi. Obra civil e elétrica são as linhas que mais podem mexer.</p></div>
+</div>
+<div style="display:flex;gap:15px">
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">Tarifas de água e energia</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">R$ 14/m³ e R$ 0,98/kWh são estimativas. Confirmar com SAAE Piumhi e CEMIG: é custo variável, todo mês, para sempre.</p></div>
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">O enquadramento tributário</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">Anexo III ou V muda a TIR em 11 pontos. E o Lucro Presumido da franqueadora a ~16% também é estimativa.</p></div>
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">O consumo de 1,6 kWh é nosso cálculo</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">Feito pelos componentes da máquina. O fornecedor declara 0,6 a 1,2 kWh. Pedimos a condição de medição e ainda não veio.</p></div>
+<div style="flex:1;background:#2A2113;padding:21px 20px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:22px;font-weight:700;color:#F0C46A">A dívida de R$ 120 mil é premissa</h3>
+<p style="font-size:20px;line-height:1.4;color:#D6C8A8">Nenhuma cooperativa foi consultada. PJ nova pode receber taxa pior ou menos carência — e isso muda o slide 12. O BDMG Pronampe, que teria a melhor condição, só entra no ano 2.</p></div>
+</div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#A08B5E">22 · Premissas a validar · quase metade se resolve em 30 dias, por telefone</p>
+<aside>Slide que a maioria das apresentações não tem, e por isso a maioria perde credibilidade na diligência. Listar as fraquezas antes do investidor encontrá-las muda a conversa de "vocês estão vendendo" para "vocês sabem onde estão". A TMA de 18% também é premissa: com a Selic a 14% são só 4 pontos de prêmio de risco, e por isso a coluna de 22% aparece no slide do resultado. Quase metade dos itens se resolve na Fase 0, por telefone e com um contador. O resto só a operação resolve.</aside>
+</section></div></div>
+<div class="moldura" id="s-proximos"><span class="numero">23 / 23</span><div class="folha"><section id="proximos" style="background:#0E2231;color:#EFF3F6;font-family:'Archivo', Arial, sans-serif;padding:50px 58px 69px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6FB9DE">Fase 0</p>
+<h2 style="font-size:56px;font-weight:800;line-height:1.08;letter-spacing:-2px;color:#EFF3F6;width:1700px">Noventa dias antes de comprar a máquina.</h2>
+</div>
+<table style="font-family:'Archivo', Arial, sans-serif;font-size:20px;color:#EFF3F6;padding:10px">
+<tr style="background:#15293A"><th style="width:10%;color:#6FB9DE;font-size:20px;text-align:left">Prazo</th><th style="width:46%;color:#6FB9DE;font-size:20px;text-align:left">Ação</th><th style="width:44%;color:#6FB9DE;font-size:20px;text-align:left">Por que decide</th></tr>
+<tr><td>7 dias</td><td>Baixar a planilha do Senatran e confirmar a frota</td><td>É a premissa de demanda do plano inteiro</td></tr>
+<tr style="background:#15293A"><td>7 dias</td><td>Busca de anterioridade no INPI e definição do nome</td><td>Trava o gasto com fachada, uniforme e adesivagem</td></tr>
+<tr><td>7 dias</td><td>Parecer de contador: Anexo III ou V, CNAE e pró-labore</td><td>Vale R$ 47 mil/ano; no Anexo V o projeto cai abaixo da TMA</td></tr>
+<tr style="background:#1A3550"><td><b>7 dias</b></td><td><b>Registrar a marca no INPI em nome da PJ 1</b></td><td><b>Antes de qualquer conversa com investidor</b></td></tr>
+<tr><td>15 dias</td><td>Cooperativa de crédito: R$ 120 mil com 6 a 12 meses de carência</td><td>Libera R$ 99 mil de capital próprio</td></tr>
+<tr style="background:#15293A"><td>15 dias</td><td>CEMIG, SAAE e Prefeitura: tensão, tarifas, licença ambiental</td><td>Definem o pedido da máquina, o custo variável e a obra civil</td></tr>
+<tr><td>30 dias</td><td>Três orçamentos locais de obra, elétrica e separadora</td><td>Valida ou derruba os R$ 399 mil de capex</td></tr>
+<tr style="background:#15293A"><td>30 dias</td><td>Negociar o aluguel <b>com opção de compra</b> e prazo de 10 anos</td><td>Protege R$ 142 mil de benfeitoria</td></tr>
+
+<tr style="background:#1A3550"><td><b>30 dias</b></td><td><b>Site no ar e campanha dos 80 fundadores</b></td><td><b>Transforma a premissa de demanda em evidência</b></td></tr>
+<tr><td>60 dias</td><td>Fechar o fornecedor: 60 Hz, tensão, Modbus, peças, garantia</td><td>Destrava a obra e o cronograma de inauguração</td></tr>
+<tr style="background:#15293A"><td>90 dias</td><td>Constituir a PJ da operação</td><td>Para contratar, faturar e emitir nota</td></tr>
+</table>
+<div style="background:#15293A;padding:21px 29px;border-radius:8px;display:flex;flex-direction:column;gap:8px">
+<p style="font-family:'Newsreader', Georgia, serif;font-size:28px;line-height:1.38;color:#C3CFE4;width:1700px">A campanha de fundadores é o teste mais barato desta apresentação inteira: custa cerca de <b>R$ 22 mil</b> e responde à pergunta de <b>R$ 276 mil</b>. Se as 80 reservas não saírem em Piumhi — cidade onde você nasceu e tem rede — o problema não é a campanha.</p></div>
+<p style="position:absolute;left:88px;bottom:40px;font-size:20px;color:#6B7F93">23 · Fase 0 · a franqueadora não entra em nenhuma linha desta tabela</p>
+<aside>Em 30 dias também: ligar para o distribuidor brasileiro do fabricante, para ter números reais de operação no Brasil com a mesma máquina. Fechar com ação, não com agradecimento. A tabela toda cabe em noventa dias e quase tudo é telefone, e-mail e três cotações. A frase final é a mais importante da apresentação: antes de comprometer R$ 276 mil, gastam-se R$ 22 mil para descobrir se existem 500 pessoas em Piumhi dispostas a assinar. Se as 80 reservas de fundador não saírem, o plano não morre — ele é revisto antes de a máquina ser comprada.</aside>
+</section></div></div>
+</div>
+<script>
+// Duas escalas, aplicadas em cadeia:
+//
+//  1. ENCAIXE NO SLIDE. Alguns slides tem mais conteudo do que 1080px comportam.
+//     Em vez de cortar texto, a secao e reduzida ate caber e centralizada; a
+//     moldura herda a cor de fundo da secao para a sobra nao aparecer.
+//  2. ENCAIXE NA JANELA. Depois disso a folha de 1920x1080 e reduzida para a
+//     largura disponivel.
+function encaixarNoSlide(){
+  document.querySelectorAll('.folha').forEach(function(f){
+    var s = f.firstElementChild;
+    if (!s) return;
+    s.style.transform = 'none';
+    s.style.height = 'auto';
+    var alt = s.scrollHeight;
+    if (alt > 1080){
+      // A secao FICA com a altura natural — senao o layout continua de 1080px e
+      // o conteudo e cortado antes de encolher — e e a escala que a traz de volta.
+      var k = 1080 / alt;
+      s.style.height = alt + 'px';
+      s.style.transformOrigin = 'top left';
+      s.style.transform = 'translateX(' + Math.round(1920 * (1 - k) / 2) + 'px) scale(' + k + ')';
+      var m = f.parentElement;
+      m.style.background = getComputedStyle(s).backgroundColor;
+      m.dataset.encaixe = Math.round(k * 100);
+    } else {
+      s.style.height = '1080px';
+    }
+  });
+}
+function encaixarNaJanela(){
+  var w = Math.min(document.documentElement.clientWidth - 32, 1920);
+  var k = w / 1920;
+  document.querySelectorAll('.moldura').forEach(function(m){
+    m.style.width  = Math.round(1920 * k) + 'px';
+    m.style.height = Math.round(1080 * k) + 'px';
+    var f = m.querySelector('.folha');
+    if (f) f.style.transform = 'scale(' + k + ')';
+  });
+}
+function encaixar(){ encaixarNoSlide(); encaixarNaJanela(); }
+window.addEventListener('resize', encaixarNaJanela);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(encaixar);
+encaixar();
+</script>
+</body>
+</html>
