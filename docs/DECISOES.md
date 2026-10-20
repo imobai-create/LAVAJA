@@ -247,3 +247,159 @@ e é melhor que volte antes da primeira placa impressa do que depois.
 **Custo das trocas até aqui.** No código, baixo: a renomeação é um script e roda em minutos. Fora
 do código, cada troca invalida material gráfico, domínio registrado e qualquer peça já divulgada.
 A recomendação é travar o nome agora e só mexer se o INPI obrigar.
+
+---
+
+## ADR-008 — Retirar o formato BOX da oferta de franquia
+
+**Data:** out/2026. **Status:** **aceito** — o empreendedor decidiu retirar o Box em
+out/2026. O formato não aparece mais em nenhum documento, modelo ou planilha do projeto.
+
+O Plano de Franquia previa três formatos: Box (R$ 215 mil), Express (R$ 416 mil) e Prime
+(R$ 720 mil). Modelado o fluxo de caixa de cada um por 60 meses, com rampa de maturação,
+capex de manutenção e valor residual (ver [BUSINESS-PLAN.md](BUSINESS-PLAN.md)):
+
+| Formato | Payback | TIR | VPL @ 18% |
+|---|---|---|---|
+| BOX | 56 meses | 9,4% | −R$ 45.400 |
+| EXPRESS | 37 meses | 29,6% | +R$ 122.738 |
+| PRIME | 39 meses | 26,4% | +R$ 152.868 |
+
+**O BOX destrói valor.** TIR de 9,4% contra TMA de 18%, e payback de 56 meses dentro de
+um contrato de 60. O franqueado do BOX paga R$ 215 mil, trabalha cinco anos e termina com
+menos do que teria na renda fixa.
+
+O payback de 42 meses do plano original considera apenas o capex — ignora a taxa de
+franquia (R$ 35 mil) e o capital de giro (R$ 25 mil). Com o desembolso real, são 56.
+
+**Por que é problema da franqueadora, não só do franqueado.** O BOX é a porta de entrada
+mais barata e, portanto, a que mais vende. É também a que produz franqueado insatisfeito:
+não renova, não indica, atrasa royalty e reclama em público. É passivo de marca com desconto.
+
+**Alternativas avaliadas.** Reprecificar (taxa a R$ 15 mil e royalty a 4%) eleva a TIR para
+a casa dos 15% — ainda abaixo da TMA. Manter o BOX apenas como segundo ponto de franqueado
+já operante, onde a estrutura fixa é compartilhada, fecha — mas é caso particular, não
+formato de catálogo.
+
+**O que mudaria a decisão.** Receita madura do BOX acima de R$ 19 mil/mês comprovada em
+operação, ou capex abaixo de R$ 120 mil com fornecedor nacional.
+
+---
+
+## ADR-009 — Avaliar a franqueadora em 10 anos, não em 5
+
+**Data:** out/2026. **Status:** aceito.
+
+Rodado o plano de expansão num horizonte de 60 meses, a franqueadora tem **TIR negativa**
+(−6,2% com Box, −12,9% sem) e VPL de −R$ 246 mil. No mês 60 o caixa acumulado ainda é
+negativo em R$ 109 mil.
+
+Isso não significa que a franqueadora não funciona — significa que 5 anos é o horizonte
+errado. A estrutura (equipe de campo, app, formatação, marketing) é montada nos anos 1 a 3;
+o royalty recorrente só supera essa estrutura depois. Medir em cinco anos é medir a rede
+exatamente no ano em que ela acabou de pagar o investimento.
+
+Em 120 meses, com 65 unidades no ano 10: **TIR 49,4%**, **VPL R$ 1,265 mi**, caixa positivo
+no mês 61, EBITDA de R$ 1,657 mi no ano 10.
+
+Consequência prática: **toda apresentação a investidor da franqueadora usa 10 anos**, e deixa
+explícito que o capital é paciente e que o vale de caixa dos anos 2 e 3 (pico de −R$ 714 mil)
+é o risco central. Apresentar a franqueadora em 5 anos seria apresentar um projeto de TIR
+negativa.
+
+Validação cruzada relevante: o modelo reproduziu de forma independente o pico de consumo de
+caixa de ≈ R$ 720 mil citado no Plano de Franquia (obtivemos R$ 714 mil). Nesse ponto o plano
+original está internamente consistente.
+
+---
+
+## ADR-010 — Piumhi primeiro, franquia depois
+
+**Data:** out/2026. **Status:** aceito.
+
+A versão anterior do plano pedia **R$ 815 mil**: o pico de caixa consolidado da unidade
+própria **mais** a franqueadora rodando ao mesmo tempo por dez anos. O número era
+correto para o que media, e inútil como pedido — misturava dois projetos com riscos,
+prazos e decisões diferentes, e ninguém conseguia separar o que era capex de implantação
+do que era vale de caixa da formatação da rede.
+
+**Decisão:** sequenciar. Fase 1 é a loja modelo de Piumhi, isolada, com capital próprio
+de **R$ 475 mil**. Fase 2 é a franqueadora, e só começa a ser formatada depois de **doze
+meses de número auditável** em Piumhi — assinantes, churn, lavagens/dia, uso real do
+plano Ilimitada, EBITDA.
+
+**Gate explícito:** abaixo de **345 assinantes** no mês 12, a Fase 2 não começa. Esse é o
+número em que a unidade empata a 18% a.a.
+
+**Por que isto é melhor, e não só mais simples.** Formatar franquia custa COF, manual,
+software e equipe de campo — centenas de milhares de reais que não voltam se a premissa
+de demanda estiver errada. A Fase 1 testa a premissa por R$ 22 mil de campanha de
+fundadores. Gastar na ordem inversa é o erro que mais mata rede iniciante.
+
+Efeito colateral bom: sequenciado e sem o BOX, o consolidado fica **mais barato e vale
+mais** que a versão anterior — R$ 540 mil de pico contra R$ 815 mil, e VPL de R$ 1,74 mi
+contra R$ 1,62 mi. O pico cai para o **mês 9**, ainda dentro da Fase 1.
+
+**O que mudaria a decisão.** Nada que se saiba hoje. Um master franqueado regional
+disposto a comprar território com a unidade modelo ainda em obra adiantaria caixa, mas
+seria vender franquia sem COF — e isso é ilegal, não arriscado (Lei nº 13.966/2019).
+
+---
+
+## ADR-011 — Não comprar o imóvel das praças com capital da franquia
+
+**Data:** out/2026. **Status:** recomendado, pendente de decisão do empreendedor.
+
+**A ideia avaliada:** a franqueadora compra o terreno de cada praça, constrói a baia, e o
+franqueado aluga tudo pronto. Tornaria a rede um negócio misto de franquia e imobiliário.
+
+**O que ela resolve de verdade — e é um problema real.** Com o capex de implantação de
+R$ 399 mil, o franqueado entra com R$ 504 mil e faz **TIR de 13,4%** numa praça de
+R$ 48 mil/mês de receita madura. Isso é menos que o CDI: **a franquia, como está, não é
+vendável.** Com o ponto construído pela rede, o ticket do franqueado cai para R$ 310 mil
+e a TIR dele vai a **27,3%**. A ideia ataca o problema certo.
+
+**Por que ainda assim não se deve fazer com capital próprio.** A franqueadora sai de
+**42,6% de TIR sobre R$ 653 mil** de capital para **15,6% sobre R$ 32,5 milhões** — 50
+vezes mais capital para menos da metade do retorno. O VPL fica negativo nas três
+variantes, inclusive com 50% de dívida. E a TIR de 15,6% depende inteiramente de um
+valor residual de R$ 47,5 milhões em terrenos valorizados: **sem residual, a TIR é
+−62%.** Não é um negócio de lava jato com imóvel, é uma aposta em terra.
+
+A razão é aritmética. Um ponto de R$ 500 mil alugado a R$ 4.000/mês rende 6,9% a.a. de
+caixa líquido mais ~2,5 pp de valorização: **9,5% total, com a Selic a 14%**. Dívida não
+salva: a 14% de juro contra 14,6% de yield desalavancado, o spread é de 0,6 ponto.
+
+**A janela onde os dois lados fecham é estreita mas existe:** aluguel entre **R$ 5.000**
+(mínimo para a franqueadora fazer 18%) e **R$ 5.500** (máximo que o franqueado suporta
+fazendo 18%). A R$ 6.000 o franqueado cai para 17,1%.
+
+**Recomendação: build-to-suit com investidor local.** Em cada praça, um investidor
+imobiliário da região compra o terreno e constrói no nosso projeto padrão, em contrato de
+10 a 15 anos, **com a locação em nome da franqueadora** e sublocação ao franqueado. A
+R$ 5.000/mês ele faz 11,6% nominal com inquilino de prazo longo — acima do yield
+comercial típico no interior, e dentro do hurdle de um investidor imobiliário (IPCA + 6 a
+7% real). A franqueadora fica com **capital zero no imóvel e o ponto sob contrato**: se o
+franqueado sair, entra outro operador em semanas sem perder a praça.
+
+**O prêmio estratégico que a ideia buscava é o controle do ponto, não a propriedade
+dele** — e o build-to-suit entrega o controle por R$ 0.
+
+**Se o empreendedor quiser o imóvel de todo jeito:** é decisão legítima, mas é outro
+investimento, com outro hurdle. Como uso de capital da franquia a 18% de TMA, destrói
+valor. Como investimento imobiliário em **holding patrimonial separada**, com hurdle de
+IPCA + 6 a 7% real, a R$ 5.000/mês de aluguel é um bom negócio. Mesmo ativo, dois
+vereditos opostos — porque o custo de oportunidade é diferente. O que não se pode é
+misturar o resultado das duas PJs: foi essa mistura que produziu o R$ 815 mil que não
+fazia sentido para ninguém.
+
+**O que mudaria a decisão.** Selic abaixo de 11% a.a., ou terreno abaixo de R$ 180 mil
+em praça com aluguel de R$ 5.000. Nesse ponto comprar passa a competir com asset-light —
+e aí já se compra com histórico de aluguel pago, que é o que o banco financia barato.
+
+**Também vale para Piumhi.** Comprar o terreno em vez de alugar a R$ 3.000 rende 17,3%
+a.a. em 60 meses: abaixo da TMA e pouco acima da Selic. Alugar é a decisão certa — mas
+**36% do capex (R$ 142 mil) é benfeitoria que fica no terreno de terceiro**, então o
+contrato tem de ter prazo de 10 anos, **opção de compra com preço travado hoje**,
+indenização de benfeitoria e direito de preferência. A opção de compra custa zero assinar
+e vale muito se o juro cair.
