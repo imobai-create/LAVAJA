@@ -439,15 +439,28 @@ de valor:
 | Pré-venda anual de 80 fundadores | −R$ 24 mil | +0,4 pp | −R$ 1 mil |
 | Prazo 30/70 do fornecedor | desloca o pico | — | — |
 
-Resultado: **capital a reservar cai de R$ 480 mil para R$ 276 mil (−42%)** e a TIR do equity
-sobe de 25,6% para 39,0%, já pagando o pró-labore.
+Resultado: **capital a reservar cai de R$ 480 mil para R$ 375 mil sem dívida, ou R$ 276 mil
+com ela**, e a TIR do equity sobe de 25,6% para 34,3% ou 39,0%, já pagando o pró-labore.
 
 A dívida **destrói um pouco de valor** (21% contra TMA de 18%) e isso está registrado de
 propósito: é uma troca consciente de R$ 8 mil de VPL por R$ 99 mil de capital liberado.
 
-**Cap table recomendado:** dois investidores de R$ 75 mil por 24% cada, Antonio com R$ 126 mil
-por **52%**. Retornos de 20,7% para eles e 29,2% para ele, mais pró-labore e 100% da
-franqueadora.
+> **Atualização — out/2026: os dois arranjos ficam em aberto.** Por decisão do empreendedor,
+> o 100% equity e o equity + dívida passam a ser tratados como **duas opções vivas**, não como
+> um recomendado e uma variante. A razão é que o VPL é quase empate (R$ 164.250 sem dívida
+> contra R$ 156.648 com ela) — então a escolha não sai da planilha. O que decide é caixa, aval
+> pessoal, velocidade de fechamento e tolerância a ter parcela durante a rampa. Os dois estão
+> lado a lado em [BP-PIUMHI](BP-PIUMHI.md) §11.5, em [CENARIOS.md](CENARIOS.md) §1 e §2, na
+> apresentação e no resumo para investidor.
+>
+> **O desempate prático vem da Fase 0:** enquanto a proposta da cooperativa não chegar, "≈21%
+> a.a." é premissa. Se vier pior que 24% a.a. ou com menos de 6 meses de carência, o 100%
+> equity passa a ser a escolha por eliminação.
+
+**Cap table:** divisão 25 / 25 / 50 (ver ADR-012 atualizada e BP-PIUMHI §11.6). Com aporte
+proporcional e capital chamado em tranches, a TIR é a mesma para todos — 34,3% sem dívida,
+39,0% com ela. Cada investidor põe R$ 93.738 ou R$ 69.003, conforme o arranjo; Antonio põe o
+dobro e fica com 50%, mais pró-labore e 100% da franqueadora.
 
 **Antonio fica acima de 50%, sempre.** A alternativa de dois investidores a R$ 90 mil por 27,5%
 cada rende mais para ele (33,6%), e foi recusada: a 45% ele perde o controle da sociedade que

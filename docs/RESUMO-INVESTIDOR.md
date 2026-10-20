@@ -3,8 +3,9 @@
 Versão de 2026-10-20. Documento vivo para conversa com investidor:
 <https://claude.ai/artifact/RsodTopSt1VBiXncRKPKvo>
 
-> R$ 69 mil por 25% de um lava jato automático por assinatura em Piumhi/MG, com TIR projetada
-> de 39% ao ano e payback de 33 meses — contra 14% da Selic hoje.
+> R$ 69 mil ou R$ 94 mil por 25% de um lava jato automático por assinatura em Piumhi/MG, com
+> TIR projetada de 39% ou 34% ao ano e payback de 33 meses — contra 14% da Selic hoje. São
+> dois arranjos de capital, com e sem dívida, e os dois estão abertos.
 
 ## O negócio
 
@@ -17,20 +18,27 @@ Piumhi hoje.
 
 ## Os números do seu lado
 
-| | Por investidor (25%) | Os dois juntos (50%) |
-|---|---|---|
-| Compromisso de capital | R$ 69.003 | R$ 138.006 |
-| Entra na assinatura | R$ 45.870 | R$ 91.740 |
-| O resto, em chamadas durante a rampa | R$ 23.133 | R$ 46.266 |
-| **TIR** | **39,0% a.a.** | **39,0% a.a.** |
-| Payback | 33 meses | 33 meses |
-| Distribuição no estado maduro | R$ 3.350/mês | R$ 6.701/mês |
-| Caixa recebido em 60 meses | R$ 156.720 | R$ 313.441 |
-| Sobre o capital comprometido | 2,27x | 2,27x |
-| VPL a 18% a.a. | R$ 39.162 | R$ 78.324 |
-| VPL a 22% a.a. | R$ 29.266 | R$ 58.531 |
+Por investidor com 25% da operação, nos dois arranjos de capital:
 
-Dos R$ 156.720 recebidos, R$ 24.600 são valor residual do equipamento no mês 60 — o resto é
+| | **Com dívida** | **Sem dívida** |
+|---|---|---|
+| Compromisso de capital | R$ 69.003 | R$ 93.738 |
+| Entra na assinatura | R$ 45.870 | R$ 75.870 |
+| O resto, em chamadas durante a rampa | R$ 23.133 | R$ 17.868 |
+| **TIR** | **39,0% a.a.** | **34,3% a.a.** |
+| Payback | 33 meses | 33 meses |
+| Distribuição no estado maduro | R$ 3.351/mês | R$ 4.132/mês |
+| Caixa recebido em 60 meses | R$ 156.720 | R$ 206.256 |
+| Sobre o capital comprometido | 2,27x | 2,20x |
+| VPL a 18% a.a. | R$ 39.162 | R$ 41.063 |
+
+**A diferença entre as colunas é só quem financia a espera.** Com dívida, a cooperativa entra
+com R$ 120 mil a ~21% a.a.: o seu cheque é menor e a TIR maior, mas parte da distribuição
+mensal vai para a parcela. Sem dívida, o cheque é maior e **a distribuição mensal é 23% maior**
+(R$ 4.132 contra R$ 3.351), porque não há parcela. **A operação é idêntica nos dois** — mesmo
+payback, mesmo EBITDA, mesmo ponto de equilíbrio.
+
+Do caixa recebido, cerca de R$ 24,6 mil são valor residual do equipamento no mês 60 — o resto é
 caixa da operação. No fim dos cinco anos a unidade continua rodando e a quota continua sua.
 
 ## Por que Piumhi
@@ -47,17 +55,18 @@ R$ 43,5 mil. Na MG-050, com Capitólio a 20 km.
 
 ## A estrutura
 
-O projeto custa R$ 373 mil. Três fontes entram antes dos sócios:
+O projeto custa R$ 373 mil — R$ 328 mil de máquina, obra e instalação, mais R$ 45 mil de
+capital de giro.
 
-| Fonte | R$ | Custo |
+| Fonte | **Com dívida** | **Sem dívida** |
 |---|---|---|
-| Empréstimo em cooperativa de crédito | 120.000 | ~21% a.a., 60 meses, 6 de carência |
-| Pré-venda anual dos 80 fundadores | 69.520 | antecipação de receita |
-| **Capital dos sócios** | **276.011** | equity |
+| Empréstimo em cooperativa (~21% a.a., 6 meses de carência) | R$ 120.000 | — |
+| Pré-venda anual dos 80 fundadores | R$ 69.520 | R$ 69.520 |
+| **Capital dos sócios** | **R$ 276.011** | **R$ 374.953** |
 
-50% dos dois investidores (25% cada) e 50% do Antonio, com aporte proporcional. Marca e
-software ficam numa segunda empresa, 100% do Antonio, licenciada à operação sem royalty nos
-primeiros 24 meses.
+Em qualquer dos dois: 50% dos dois investidores (25% cada) e 50% do Antonio, com aporte
+proporcional. Marca e software ficam numa segunda empresa, 100% do Antonio, licenciada à
+operação sem royalty nos primeiros 24 meses.
 
 ## O que protege o dinheiro do investidor
 
@@ -72,6 +81,8 @@ primeiros 24 meses.
 
 - **A demanda nunca foi medida.** A 380 assinantes a TIR cai para a casa de 15%; abaixo de
   ~400 não paga 18% ao ano. Margem de erro de cerca de 100 assinantes.
+- **A taxa da cooperativa ainda é premissa.** Os ~21% a.a. não vieram de proposta. Acima de 24%
+  a.a., o arranjo sem dívida passa a ser melhor para todos.
 - **O plano ilimitado pode quebrar sem a demanda cair.** Três travas entram em contrato: uso
   justo, câmera que liga a lavagem à placa, e prazo na trava de preço do fundador.
 - **Três números a confirmar em 30 dias:** frota no Senatran, tarifas de água e energia,

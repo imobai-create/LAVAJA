@@ -22,7 +22,7 @@ R$ 3.500/mês em todos os números, horizonte de 60 meses na unidade e 120 meses
 "Capital a reservar" é o **pico de caixa**, não o desembolso inicial: a diferença é chamada
 durante a rampa, quando os meses 1 a 4 fecham com EBITDA negativo.
 
-### 1.1 O que 100% equity custa e o que ele ganha
+### 1.1 Os dois arranjos que ficam em aberto
 
 Comparando o arranjo **C** (100% equity) com o **D** (com dívida):
 
@@ -33,6 +33,11 @@ Comparando o arranjo **C** (100% equity) com o **D** (com dívida):
 | VPL @ 18% | **R$ 164.250** | R$ 156.648 |
 
 **São R$ 99 mil mais de capital e 4,7 pontos menos de TIR — mas R$ 7,6 mil MAIS de valor.**
+
+**Os dois seguem abertos, por decisão de out/2026.** Como o VPL é quase empate, a escolha não
+sai da planilha: ela é de caixa, de aval pessoal e de velocidade de fechamento. O desempate
+prático vem da Fase 0 — enquanto a proposta da cooperativa não chegar, "≈21% a.a." é premissa,
+e acima de 24% a.a. o 100% equity vence por eliminação.
 
 A dívida a 21% a.a. custa mais que a TMA de 18%: ela compra eficiência de capital e vende
 valor. As duas escolhas são defensáveis, e a decisão não é financeira, é de caixa:
@@ -191,8 +196,9 @@ Vender só para **franqueado operador**, nunca para investidor ausente.
 
 ## 6. A leitura de tudo isso, em cinco linhas
 
-1. **A loja de Piumhi fecha.** Entre 34,3% (100% equity) e 42,9% (com dívida alta), dependendo
-   de quanto capital você quer parado.
+1. **A loja de Piumhi fecha nos dois arranjos.** 34,3% com R$ 375 mil de capital próprio, ou
+   39,0% com R$ 276 mil mais dívida de R$ 120 mil. O VPL é quase empate: R$ 164 mil contra
+   R$ 157 mil. A escolha é de caixa, não de retorno.
 2. **A divisão do equity não muda retorno nenhum.** Com aporte proporcional, todos ganham a TIR
    do projeto. Ela só muda quanto cada um põe e **quem decide** — e aí o 50,5% resolve.
 3. **A rede fecha, mas só asset-light.** 42,6% com capital zero no imóvel, contra 15,6% com

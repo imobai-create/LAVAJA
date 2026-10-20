@@ -19,19 +19,21 @@ de três a quatro anos — não um cheque na largada.
 Com a decisão de **fazer Piumhi primeiro e a franquia depois**, aquele número sai de
 cena. O que a Fase 1 precisa é:
 
-| | Arranjo cru | **Arranjo recomendado** |
-|---|---|---|
-| Capex de implantação | R$ 399.060 | **R$ 328.000** (enxuto) |
-| Capital de giro | R$ 55.000 | **R$ 45.000** |
-| Dívida | — | **R$ 120.000** a ~21% a.a. |
-| Pré-venda de 80 fundadores | — | **R$ 69.520** no mês 0 |
-| **Capital a reservar** | **R$ 480.111** | **R$ 276.011** |
-| TIR do equity | 25,6% | **39,0%** |
+| | Arranjo cru | **Sem dívida** | **Com dívida** |
+|---|---|---|---|
+| Capex de implantação | R$ 399.060 | **R$ 328.000** (enxuto) | **R$ 328.000** (enxuto) |
+| Capital de giro | R$ 55.000 | **R$ 45.000** | **R$ 45.000** |
+| Dívida | — | — | **R$ 120.000** a ~21% a.a. |
+| Pré-venda de 80 fundadores | — | **R$ 69.520** | **R$ 69.520** |
+| **Capital a reservar** | **R$ 480.111** | **R$ 374.953** | **R$ 276.011** |
+| TIR do equity | 25,6% | **34,3%** | **39,0%** |
+| VPL @ 18% | R$ 93.429 | **R$ 164.250** | R$ 156.648 |
 
-**Capital a reservar no arranjo cru: R$ 480 mil** (R$ 496 mil no conservador). Isso é capex cheio e 100%
-capital próprio. A [seção 11](#11-estrutura-de-capital) mostra como esse número cai para
-**R$ 276 mil** com capex enxuto, pré-venda de fundadores e dívida — e é esse o arranjo
-recomendado. A franqueadora só volta à mesa depois
+**Capital a reservar no arranjo cru: R$ 480 mil** (R$ 496 mil no conservador). Isso é capex
+cheio e 100% capital próprio, sem nenhuma alavanca. A [seção 11](#11-estrutura-de-capital)
+mostra como esse número cai para **R$ 375 mil sem dívida nenhuma** ou **R$ 276 mil com dívida
+de R$ 120 mil** — e os dois arranjos seguem em aberto, porque a escolha entre eles não é
+financeira (o VPL é quase empate) e sim de caixa. A franqueadora só volta à mesa depois
 de doze meses de número real em Piumhi — e com um plano próprio, decidido com dados que
 hoje não existem ([BP-REDE.md](BP-REDE.md)).
 
@@ -532,65 +534,88 @@ e o preço. Se vier abaixo de R$ 134 mil, troca a decisão. E há um ganho que n
 tabela: assistência técnica e peças no Brasil valem muito para a unidade que vai virar padrão
 da rede.
 
-### 11.5 Arranjo recomendado
+### 11.5 Os dois arranjos em aberto
 
-| Fonte | R$ | % | Custo |
-|---|---|---|---|
-| Dívida — cooperativa de crédito local | 120.000 | — | ~21% a.a., 60 meses, 6 de carência |
-| **Investidor A** | 75.000 | 24% da PJ 2 | equity |
-| **Investidor B** | 75.000 | 24% da PJ 2 | equity |
-| **Antonio** | 126.011 | **52% da PJ 2** | equity + pró-labore de R$ 3.500 |
-| *Pré-venda de 80 fundadores* | *69.520* | — | *antecipação de receita, 1 mês de brinde* |
-| **Capital a reservar (equity)** | **276.011** | **100%** | |
+Os dois ficam na mesa. Não são "o recomendado e uma variante": são duas decisões de caixa
+igualmente defensáveis, e a escolha entre elas não é financeira.
 
-**Retornos:** investidor **20,7% a.a.**, Antonio **29,2% a.a.** mais o pró-labore mais 100% da
-franqueadora. Com a Selic a 14% e o CDI como alternativa, 20,7% em ativo real com contrato é
-uma proposta que se defende.
-
-Alternativas, se o seu bolso ou o apetite deles mudar:
-
-| Arranjo | Investidor(es) | Antonio | TIR investidor | TIR Antonio |
-|---|---|---|---|---|
-| 1 investidor | R$ 120.000 por 40% | R$ 156.011 por 60% | 22,1% | 26,8% |
-| 1 investidor | R$ 140.000 por 45% | R$ 136.011 por 55% | 20,9% | 28,5% |
-| **2 investidores** | **R$ 75.000 por 24% cada** | **R$ 126.011 por 52%** | **20,7%** | **29,2%** |
-| 2 investidores | R$ 90.000 por 27,5% cada | R$ 96.011 por 45% | 19,2% | 33,6% |
-
-**A última linha está na tabela para ser recusada.** Ela é a melhor para o seu retorno e a
-pior para o seu negócio: a 45% você perde o controle da sociedade que vai ser a unidade
-padrão da rede, a vitrine da COF e a referência de todos os indicadores. **Fique acima de
-50%**, sempre.
-
-### 11.5a 100% equity — sem dívida nenhuma
-
-Se o aporte for todo dos sócios, sem empréstimo:
-
-| | 100% equity | Com dívida de R$ 120 mil |
+| | **Sem dívida — 100% equity** | **Com dívida de R$ 120 mil** |
 |---|---|---|
-| 1ª tranche | R$ 303.480 | R$ 183.480 |
-| **Capital a reservar** | **R$ 374.953** | R$ 276.011 |
-| TIR do equity | 34,3% | **39,0%** |
-| **VPL @ 18%** | **R$ 164.250** | R$ 156.648 |
+| Capex | R$ 328.000 (enxuto) | R$ 328.000 (enxuto) |
+| Capital de giro | R$ 45.000 | R$ 45.000 |
+| Dívida — cooperativa local | — | R$ 120.000 a ~21% a.a., 60 meses, 6 de carência |
+| Pré-venda de 80 fundadores | R$ 69.520 | R$ 69.520 |
+| **Capital a reservar (equity)** | **R$ 374.953** | **R$ 276.011** |
+| 1ª tranche, na assinatura | R$ 303.480 | R$ 183.480 |
+| A chamar durante a rampa | R$ 71.473 | R$ 92.531 |
+| **TIR do equity** | **34,3%** | **39,0%** |
+| **VPL @ 18% a.a.** | **R$ 164.250** | R$ 156.648 |
+| Payback | 33 meses | 33 meses |
+| EBITDA maduro | R$ 17.341/mês (32,1%) | R$ 17.341/mês (32,1%) |
 
 **R$ 99 mil mais de capital e 4,7 pontos menos de TIR — mas R$ 7,6 mil MAIS de valor.** A
 dívida a 21% a.a. custa mais que a TMA de 18%: ela compra eficiência de capital e vende valor.
+Em VPL é quase empate, e é por isso que a decisão não sai da planilha.
 
-**Se o dinheiro está disponível e não tem uso melhor, 100% equity é a escolha certa** — e não
-pelo VPL, que é quase empate. É pelo que não aparece na tabela: sem parcela no mês 3, sem aval
-pessoal, sem covenant, e sem três semanas de negociação com a cooperativa que pode voltar com
-taxa pior. Num negócio que nunca operou, **não ter parcela a pagar durante a rampa vale mais
-que 4,7 pontos de TIR no papel.**
+#### O que decide, já que o VPL não decide
 
-A dívida continua sendo a escolha certa no caso oposto: capital escasso, ou capital com uso
-melhor em outro lugar. Aí ela libera R$ 99 mil por R$ 7,6 mil de valor, o que é barato.
+**Escolha 100% equity se:**
 
-Todas as divisões de equity, nos dois arranjos, estão em [CENARIOS.md](CENARIOS.md) §2.
+- o dinheiro está disponível e não tem uso melhor nos próximos 5 anos;
+- você prefere não dar **aval pessoal** — em PJ nova, a cooperativa quase sempre exige;
+- a rampa pode atrasar dois meses sem que nada quebre. Com dívida, há parcela no mês 7 (depois
+  da carência de 6) venha ou não venha assinante;
+- você quer fechar o negócio em semanas, não meses. Negociar R$ 120 mil com cooperativa leva
+  de 3 a 6 semanas e pode voltar com taxa pior, prazo menor ou carência de 3 meses em vez de 6.
 
-### 11.5b A variante 50/50 — decidida em out/2026
+**Escolha equity + dívida se:**
+
+- o capital é escasso, ou tem uso melhor em outro lugar (inclusive segurar caixa para a Fase 2);
+- você quer entrar com menos e preservar reserva pessoal durante a rampa;
+- a cooperativa oferecer **pelo menos 6 meses de carência** e taxa até 24% a.a. Acima disso, a
+  conta piora rápido: a 26% o VPL cai para R$ 143.985.
+
+**O que não muda entre os dois:** o payback de 33 meses, o EBITDA maduro, o ponto de
+equilíbrio de 232 assinantes e o mínimo de ~400 para pagar a TMA. A estrutura de capital não
+muda a operação — muda só quem financia a espera.
+
+#### O cap table em cada um
+
+Na divisão escolhida (25 / 25 / 50 — ver 11.5b), com aporte proporcional e capital chamado em
+tranches:
+
+| | Sem dívida | Com dívida |
+|---|---|---|
+| Investidor A (25%) | R$ 93.738 | R$ 69.003 |
+| Investidor B (25%) | R$ 93.738 | R$ 69.003 |
+| **Antonio (50%)** | **R$ 187.476** | **R$ 138.006** |
+| **Total** | **R$ 374.953** | **R$ 276.011** |
+| TIR de todos | **34,3%** | **39,0%** |
+
+Todas as outras divisões (50/50, 33,33 × 3 e a de desempate), nos dois arranjos, estão em
+[CENARIOS.md](CENARIOS.md) §2.
+
+#### Uma recomendação, já que você vai ter de escolher
+
+**Leve os dois para a conversa com o investidor e deixe que o apetite dele desempate.** É
+informação que ele vai pedir de qualquer forma, e mostrar as duas contas prontas vale mais do
+que defender uma. Na prática:
+
+- Investidor que quer **colocar menos e entrar rápido** prefere o arranjo com dívida — e aceita
+  que o negócio tenha uma parcela mensal.
+- Investidor mais conservador, ou que estranha dívida em negócio novo, prefere 100% equity — e
+  aceita pôr R$ 24,7 mil a mais por 25%.
+
+Enquanto a proposta da cooperativa não chegar, **os dois seguem abertos**: o item de 15 dias da
+Fase 0 existe para transformar "≈21% a.a." em número real. Se a proposta vier pior que 24% a.a.
+ou com menos de 6 meses de carência, o 100% equity passa a ser a escolha por eliminação.
+
+### 11.6 A divisão do equity — decidida em out/2026
 
 O empreendedor optou por **50% para os dois investidores (25% cada) e 50% para ele**, com
-aporte proporcional. Os números abaixo são do arranjo com dívida; para 100% equity e para as
-divisões 50/50 e 33,33 × 3, ver [CENARIOS.md](CENARIOS.md) §2.
+aporte proporcional. A tabela abaixo é do arranjo **com dívida**; a mesma divisão sem dívida
+está em 11.5, e as divisões 50/50 e 33,33 × 3 nos dois arranjos estão em
+[CENARIOS.md](CENARIOS.md) §2.
 
 | | Por investidor (25%) | Os dois (50%) | Antonio (50%) |
 |---|---|---|---|
@@ -633,7 +658,7 @@ burocracia: vale 14 pontos de TIR.
 > discordância séria. Isso também está no [resumo para investidor](RESUMO-INVESTIDOR.md), item
 > 5 das proteções — dizer isso na entrada é o que faz o investidor confiar na estrutura.
 
-### 11.6 As seis cláusulas que valem mais que a taxa
+### 11.7 As seis cláusulas que valem mais que a taxa
 
 **1. A marca fica na PJ 1, 100% sua, e o pedido no INPI é feito no nome dela — antes de os
 investidores assinarem.** Esta é a cláusula mais valiosa deste documento. Se a marca estiver
@@ -665,7 +690,7 @@ qualificado: venda de ativo relevante, novo endividamento acima de R$ 50 mil, mu
 objeto social, distribuição abaixo do mínimo, entrada de novo sócio. Relatório mensal com
 assinantes, lavagens/dia, churn e EBITDA — o mesmo painel que a rede vai usar depois.
 
-### 11.7 Veículo e pendências para o contador e o advogado
+### 11.8 Veículo e pendências para o contador e o advogado
 
 **Sociedade Limitada** para a PJ 2, com acordo de quotistas separado do contrato social. É o
 que um investidor do interior entende e o que o banco aceita como garantia.
