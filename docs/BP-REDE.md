@@ -46,6 +46,29 @@ receita madura de R$ 48 mil/mês:
 Nenhum candidato com R$ 504 mil e um contador decente assina. E se assinar, quebra ou
 reclama — e o problema volta para a marca.
 
+> **Correção de out/2026, e ela é pesada: o modelo do franqueado também não remunerava quem
+> administra a unidade.** Com pró-labore de R$ 3.500/mês para o operador:
+>
+> | | Sem pró-labore | **Com pró-labore de R$ 3.500** |
+> |---|---|---|
+> | A — ele constrói tudo (R$ 504 mil) | TIR 13,3% / VPL −R$ 57 mil | **TIR 1,7% / VPL −R$ 198 mil** |
+> | B1 — nós construímos o ponto (R$ 310 mil) | TIR 27,3% / VPL +R$ 74 mil | **TIR 9,5% / VPL −R$ 68 mil** |
+>
+> **Nem o build-to-suit salva a franquia se o franqueado tiver de pagar um gerente.** Isso
+> segmenta a oferta de forma decisiva:
+>
+> - **Franqueado operador**, que administra a própria unidade: o pró-labore é o salário dele e
+>   o retorno de capital vem em cima. Para esse público, a estrutura B1 com ticket de
+>   R$ 310 mil funciona — ele compra um emprego com retorno, e é um bom negócio.
+> - **Franqueado investidor**, ausente, que contrata um gerente: **não fecha em praça de
+>   R$ 48 mil/mês, em nenhuma estrutura.** Não venda para esse perfil, nem deixe a COF sugerir
+>   que funciona.
+>
+> **Consequência prática para a Fase 2:** o perfil deixa de ser "quem tem R$ 310 mil" e passa a
+> ser "quem tem R$ 310 mil **e vai operar**". É um funil muito mais estreito e muda o plano de
+> captação. A alternativa é a praça entregar bem mais que R$ 48 mil/mês — o que remete ao
+> limiar de R$ 64 mil da seção 4b.
+
 É aqui que a ideia imobiliária entra, e é por isso que ela merece ser levada a sério: ela
 não é um apêndice patrimonial, é **a solução de um problema comercial real**.
 
@@ -381,6 +404,7 @@ serem comparáveis desde o primeiro dia e dá histórico limpo à COF.
 | Risco | Impacto | Mitigação |
 |---|---|---|
 | Franquia com TIR de 13,4% não vende | **Crítico** | Build-to-suit baixa o ticket para R$ 310 mil e leva a TIR a 27,3% |
+| Franqueado investidor ausente, que paga gerente | **Crítico** | Não fecha em nenhuma estrutura: vender só para franqueado operador (seção 1) |
 | Vender franquia antes da COF | **Crítico** | Gate absoluto: 12 meses de operação auditável em Piumhi |
 | Caixa da franqueadora nos anos 2 a 4 | Alto | EBITDA de Piumhi; faseamento do app; sócio ou master regional |
 | Capital imobilizado em imóvel a 15,6% de TIR | Alto | Build-to-suit com terceiro; holding separada se houver compra |
@@ -404,6 +428,9 @@ serem comparáveis desde o primeiro dia e dá histórico limpo à COF.
 5. **A valorização de 4,5% a.a. do terreno** é premissa. Em cidade pequena pode ser menos.
 6. **A janela de aluguel de R$ 5.000 a R$ 5.500 depende da receita da unidade.** Se a
    unidade madura for R$ 43 mil em vez de R$ 48 mil, a janela fecha.
+7. **O pró-labore do franqueado de R$ 3.500 é escolha, não cálculo** — e é a premissa que mais
+   move o resultado dele. Medir em Piumhi quantas horas de gente a operação realmente consome
+   é um dos entregáveis da Fase 1.
 
 ---
 
@@ -414,7 +441,7 @@ A Fase 2 tem um gate, e o gate é a Fase 1. A ordem é:
 | Quando | Ação |
 |---|---|
 | Mês 12 de Piumhi | Fechar o ano com número auditável: assinantes, churn, lavagens/dia, uso do Ilimitada, EBITDA real |
-| Mês 12 | Comparar com o cenário base. Abaixo de 345 assinantes, a Fase 2 **não começa** |
+| Mês 12 | Comparar com o cenário base. Abaixo de ~400 assinantes, a Fase 2 **não começa** |
 | Mês 13 | Constituir a franqueadora como PJ própria; unidade passa a pagar royalty |
 | Mês 13–15 | Conversar com 3 investidores imobiliários locais sobre build-to-suit na segunda praça |
 | Mês 15 | COF com advogado especializado, sobre o balanço real da franqueadora |
