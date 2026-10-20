@@ -166,6 +166,10 @@ vários serviços juntos (app, painel, workers) — aí vale reavaliar entre VPS
 
 ## ADR-006 — Railway em vez de Vercel
 
+> **REVOGADA em out/2026 pela [ADR-013](#adr-013--vercel-em-vez-de-railway-revoga-a-adr-006).**
+> O empreendedor decidiu ir de Vercel. O texto abaixo fica como histórico do raciocínio
+> original, não como recomendação vigente.
+
 **Status:** aceito · **Data:** set/2026
 
 **Contexto.** O dono já tinha conta na Vercel e importou o repositório para lá, o que levantou a
@@ -470,3 +474,58 @@ limitado a R$ 250 mil — **PJ nova não acessa. Entra no ano 2.**
 de carência derruba a alavancagem. Campanha de fundadores abaixo de 50 adesões derruba a
 pré-venda **e a premissa de demanda** — e aí a decisão não é de estrutura de capital, é de
 revisar o plano antes de comprar a máquina.
+
+---
+
+## ADR-013 — Vercel em vez de Railway (revoga a ADR-006)
+
+**Data:** out/2026. **Status:** aceito — decisão do empreendedor, out/2026.
+
+A [ADR-006](#adr-006--railway-em-vez-de-vercel) recomendava Railway e descartava a Vercel. O
+empreendedor decidiu ir de Vercel. **Esta ADR revoga a 006**; ela fica no documento como
+histórico, não como recomendação vigente.
+
+**O que mudou no código.** A aplicação é Express 4 com `pg`, feita para um processo que fica de
+pé. Na Vercel ela roda em função serverless, que sobe e desce. Quatro adaptações:
+
+1. **`api/index.js`** embrulha o mesmo `criarApp()` de `server.js`. O app é construído uma vez
+   por instância e `db.iniciar()` roda no máximo uma vez, numa promessa única.
+2. **`public/` é servido pela CDN**, não pelo Express. Mais rápido para a landing — que é a
+   página que converte fundador — mas os cabeçalhos de segurança passam a existir em dois
+   lugares. `test/vercel.test.js` compara `vercel.json` com `seguranca.cabecalhos` e falha se
+   divergirem.
+3. **`admin.html` saiu de `public/` para `views/`.** Em `public/` a CDN o entregaria direto,
+   **sem o nonce do CSP** — e arquivo estático vence rewrite na Vercel. Fora de `public/`, o
+   `/admin` só existe pela função.
+4. **As migrações não rodam no boot** (`config.migrarNoBoot` é falso em serverless). Rodar
+   dezenas de DDLs a cada processo novo é desperdício e dá corrida de concorrência.
+   `npm run migrar` faz o trabalho, e `npm run migrar -- --imprimir` gera
+   [migracoes.sql](migracoes.sql) para colar no SQL Editor do Neon.
+
+**Banco: Neon, com a connection string *pooled*.** A Vercel não hospeda Postgres. Em serverless
+cada instância abre conexão, então o pool do `pg` vai a `max: 1` com `allowExitOnIdle`, e a
+string tem de ser a do pooler (`-pooler` no endereço). Com a string direta, o Postgres bate o
+limite de conexões exatamente quando houver movimento.
+
+**O que piorou, e está registrado porque o empreendedor precisa saber:**
+
+| | Efeito |
+|---|---|
+| **Rate limit por IP** | É contado em memória de processo. Em serverless há vários processos, então o limite perde força proporcionalmente. No volume de uma cidade de 38 mil habitantes quase sempre há um processo só e ele funciona; sob ataque, não. Correção, se virar problema: contar no Postgres. |
+| **Sal do hash de IP** | Sem `IP_SALT` nem `ADMIN_TOKEN`, o sal é aleatório **por processo**, e o mesmo IP gera hashes diferentes. Virou aviso explícito em `config.avisoDeAmbiente()`. |
+| **Fallback em memória** | Com `DATABASE_URL` errada, o site fica de pé e aceita cadastro, mas o dado some. O `/health` denuncia e o log avisa; o guia de deploy põe essa conferência como teste nº 1. |
+| **Termos de Uso** | O plano Hobby da Vercel é para projeto **não comercial**. Site que vende assinatura é uso comercial. O risco é real e é do empreendedor; a saída é o Pro a US$ 20/mês. Recomendação: entrar no Pro quando a campanha de fundadores for ao ar. |
+
+**O que melhorou:** CDN global para a landing (a página que converte), HTTPS e preview por
+branch de graça, deploy em segundos, e **custo inicial de R$ 0** contra US$ 5 a 10/mês do
+Railway — o que, numa fase em que cada real conta ([ADR-012](#adr-012--estrutura-de-capital-da-fase-1)),
+não é irrelevante.
+
+**A saída de emergência continua montada.** O `Dockerfile` da [ADR-005](#adr-005--deploy-por-docker-no-railway)
+fica no repositório e o mesmo código roda em qualquer host com Docker, sem alteração. Se a
+Vercel incomodar — por Termos de Uso, por rate limit ou por qualquer outra razão — a volta
+custa um deploy.
+
+**O que mudaria a decisão.** Aviso da Vercel sobre uso comercial no plano Hobby (aí sobe para
+Pro, não sai da plataforma). Ou necessidade de processo de longa duração — fila, worker, cron
+pesado — que a função serverless não serve; nada no roadmap de 12 meses pede isso.

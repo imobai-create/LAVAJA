@@ -1,0 +1,9 @@
+# A função só precisa de server.js, src/, views/ e node_modules.
+.git
+.github
+docs
+test
+Dockerfile
+.dockerignore
+railway.json
+README.md

@@ -79,21 +79,29 @@ const MIGRACOES = [
   `CREATE UNIQUE INDEX IF NOT EXISTS franquia_leads_whatsapp_uidx ON franquia_leads (whatsapp)`,
 ];
 
-async function iniciar() {
+/**
+ * Conecta e (opcionalmente) aplica as migrações.
+ * @param {{migrar?: boolean}} [opcoes] migrar: força ou impede as migrações.
+ */
+async function iniciar(opcoes = {}) {
   if (!config.databaseUrl) {
     modo = "memoria";
     console.warn(
-      "[FastCarWash] DATABASE_URL ausente — rodando em memória (os dados somem ao reiniciar). Configure o Postgres no Railway."
+      "[FastCarWash] DATABASE_URL ausente — rodando em memória (os dados somem ao reiniciar)."
     );
     return modo;
   }
   const { Pool } = require("pg");
+  // Em serverless cada instância abre o próprio pool e o Postgres tem limite
+  // rígido de conexões: pool pequeno e ocioso curto. A string de conexão deve
+  // ser a POOLED (pgbouncer do Neon/Supabase) — ver docs/DEPLOY.md.
   pool = new Pool({
     connectionString: config.databaseUrl,
     ssl: config.pgSslDesativado ? false : { rejectUnauthorized: false },
-    max: 5,
-    idleTimeoutMillis: 30_000,
+    max: config.serverless ? 1 : 5,
+    idleTimeoutMillis: config.serverless ? 5_000 : 30_000,
     connectionTimeoutMillis: 10_000,
+    allowExitOnIdle: config.serverless,
   });
   // O pool emite 'error' em conexões ociosas derrubadas pelo provedor;
   // sem esse listener o processo cairia.
@@ -110,6 +118,12 @@ async function iniciar() {
     return modo;
   }
   modo = "postgres";
+
+  const deveMigrar = opcoes.migrar === undefined ? config.migrarNoBoot : opcoes.migrar;
+  if (!deveMigrar) {
+    console.log("[FastCarWash] Postgres conectado (migrações não rodam neste boot).");
+    return modo;
+  }
 
   // Cada migração é independente: uma falha é registrada, mas não impede o boot.
   let falhas = 0;
