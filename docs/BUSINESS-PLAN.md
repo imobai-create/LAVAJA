@@ -35,6 +35,7 @@ docs/bp/piumhi.py      Fase 1 - loja modelo, 3 cenarios, 60 meses
 docs/bp/sens_piumhi.py capacidade, ponto de equilibrio e sensibilidades da Fase 1
 docs/bp/rede.py        Fase 2 - franqueadora e franqueado nas 3 estruturas, 120 meses
 docs/bp/imovel.py      janela de aluguel e comprar-ou-alugar o terreno de Piumhi
+docs/bp/mcdonalds.py   estrutura McDonald's: locacao principal + aluguel percentual
 docs/bp/planilha.py    gera as planilhas com formulas vivas
 ```
 

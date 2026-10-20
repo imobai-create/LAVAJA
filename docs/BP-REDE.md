@@ -183,6 +183,98 @@ o que o banco financia barato.
 
 ---
 
+## 4b. O modelo McDonald's — o que dele serve, e a partir de que receita
+
+O McDonald's é a referência do modelo misto franquia + imobiliário, e vale saber o que ele é
+de fato antes de copiar.
+
+**Como funciona.** Em 1956 Harry Sonneborn criou a *Franchise Realty Corporation*: a empresa
+assinava a locação ou comprava o ponto **com hipoteca**, e sublocava ao franqueado com
+**margem de 20%, depois 40%**, sobre o próprio custo de locação. O aluguel cobrado era o
+**maior entre essa margem e um percentual das vendas**. A trava de controle era o contrato:
+franqueado que não seguisse o padrão rompia a locação e podia ser despejado.
+
+Hoje o imobiliário é a maior parte do negócio. No 10-K de 2024, das receitas de restaurantes
+franqueados de **US$ 15,7 bilhões**, **US$ 10,0 bi são aluguel** e US$ 5,6 bi royalty — ou seja,
+**o aluguel é 64% e o royalty 36%**. 95% dos restaurantes são franqueados, e a empresa
+"geralmente possui ou garante uma locação de longo prazo do terreno e do prédio".
+
+### O teste no nosso modelo: a estrutura não fecha a R$ 48 mil/mês
+
+Modelamos exatamente isso em `docs/bp/mcdonalds.py` — estrutura **B3**: a franqueadora assina
+a locação principal (R$ 3.000/mês), constrói a baia (R$ 220 mil) com **70% de dívida a 14%
+a.a.**, e subloca pelo maior entre uma base e um percentual das vendas.
+
+| Base + % das vendas | Aluguel maduro | Franqueado TIR | Franqueadora TIR | Franqueadora VPL @ 18% |
+|---|---|---|---|---|
+| 3.800 + 8% | R$ 3.840 | 28,2% | −62,1% | −R$ 3.501.344 |
+| 3.800 + 10% | R$ 4.800 | 24,6% | −14,3% | −R$ 2.438.104 |
+| 4.200 + 12% | R$ 5.760 | 20,2% | +5,4% | −R$ 1.229.507 |
+| 4.500 + 13% | R$ 6.240 | 17,9% | +12,4% | −R$ 599.553 |
+
+**Não existe nível de aluguel em que os dois lados fechem**, e a estrutura é **pior que comprar
+o terreno** (B1, 15,6%) e pior que o aluguel fixo (B2, 17,6%). O motivo é direto: a franqueadora
+passa a pagar R$ 3.000 de locação principal **mais** R$ 2.330 de serviço da dívida por ponto —
+R$ 5.330 de saída contra R$ 4.800 de aluguel recebido a 10% das vendas. **Locação principal é
+despesa perpétua; propriedade é ativo que valoriza.** Se for fazer o imobiliário, comprar é
+melhor que alugar-e-construir.
+
+### Mas há um limiar, e ele é um número concreto
+
+Variando a receita madura da unidade, com base de R$ 3.800 + 10% das vendas:
+
+| Receita madura da unidade | Aluguel | Franqueado TIR | Franqueadora TIR | Franqueadora VPL |
+|---|---|---|---|---|
+| R$ 48.000 | R$ 4.800 | 24,6% | −14,3% | −R$ 2.438.104 |
+| R$ 54.000 | R$ 5.400 | 35,4% | +4,7% | −R$ 1.294.691 |
+| R$ 60.000 | R$ 6.000 | 46,1% | +16,8% | −R$ 134.912 |
+| **R$ 64.000** | **R$ 6.400** | **52,9%** | **+23,2%** | **+R$ 638.274** |
+| R$ 70.000 | R$ 7.000 | 63,1% | +31,3% | +R$ 1.802.323 |
+
+**A estrutura McDonald's passa a fechar a partir de ~R$ 64 mil/mês de receita madura por
+unidade.** O cenário base de Piumhi é R$ 54,1 mil; o otimista é R$ 72,3 mil. Então não é um
+"nunca" — é um "não com R$ 48 mil, e talvez sim se a operação provar R$ 64 mil".
+
+### A razão de fundo: aluguel sobre o valor do imóvel
+
+| | Aluguel bruto anual / valor do imóvel |
+|---|---|
+| McDonald's, imobilizado ao custo (US$ 44,2 bi) | **22,7%** |
+| McDonald's, imobilizado líquido (US$ 25,3 bi) | **39,6%** |
+| Ponto de lava jato de R$ 500 mil a R$ 5.000/mês | **12,0%** |
+| Ponto de lava jato de R$ 500 mil a R$ 6.000/mês | 14,4% |
+
+**O McDonald's cobra duas a três vezes mais aluguel por real de imóvel do que um lava jato
+consegue cobrar.** Um restaurante gera venda por metro quadrado muito acima de uma baia de
+lavagem, e é isso — não a engenharia financeira — que sustenta o modelo imobiliário deles.
+Copiar a estrutura sem ter a venda por metro quadrado é copiar o custo sem a receita.
+
+### O que copiar agora, de graça
+
+1. **A locação principal em nome da franqueadora, com o franqueado construindo.** É o
+   Sonneborn de 1956 sem a parte do prédio: capital zero, e se o franqueado sai, o ponto fica
+   na rede. Em contrato de locação brasileiro isso exige **autorização expressa de sublocação**
+   (Lei 8.245/91, art. 13) — sem ela, a sublocação permite despejo.
+2. **Aluguel percentual**: o maior entre uma base e um percentual das vendas. Reajusta sozinho
+   com o crescimento e com a inflação, sem renegociação, e alinha o interesse dos dois lados.
+   Usar como mecanismo de indexação e controle, não como motor de lucro.
+3. **A margem sobre a locação principal.** Sonneborn cobrava 20% a 40%. Em contrato de
+   R$ 3.000, uma margem de 20% é R$ 600/mês por ponto de margem com **capital zero** — em 65
+   pontos, R$ 39 mil/mês. É a parte mais rentável do modelo deles e a mais barata de copiar.
+
+### O que não copiar agora
+
+- **Financiar a construção da baia.** Tabela acima: não fecha a R$ 48 mil/mês.
+- **Comprar o terreno.** 15,6% sobre R$ 32,5 milhões contra 42,6% sobre R$ 653 mil (ADR-011).
+- **A escala.** O McDonald's amortiza um time imobiliário próprio em 40 mil lojas.
+
+**Risco que a locação principal cria e que o McDonald's também carrega:** 65 pontos a R$ 3.000
+são **R$ 195 mil/mês de obrigação fixa**, com ou sem franqueado dentro. Se 10% ficarem vagos,
+são R$ 19,5 mil/mês de sangria. Só assumir a locação principal em praça já provada, e com o
+franqueado como fiador ou garantidor da sublocação.
+
+---
+
 ## 5. O plano recomendado em números
 
 **Fase 1 + Fase 2 asset-light, com build-to-suit de terceiros nos pontos:**
