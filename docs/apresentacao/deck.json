@@ -1,0 +1,29 @@
+{
+  "v": 4,
+  "createdOnFiles": { "v": 1, "at": "2026-10-20T12:00:00Z" },
+  "lists": "css",
+  "title": "Loja modelo de Piumhi e o plano da rede — Business Plan",
+  "order": [
+    "capa", "tese", "piumhi", "demanda", "capex", "motor", "resultado",
+    "equilibrio", "ilimitada", "sensibilidade", "aluguel",
+    "fase2", "franqueado", "imobiliario", "veredicto", "buildtosuit",
+    "rede", "pedido", "societaria", "riscos", "premissas", "proximos"
+  ],
+  "sections": {
+    "s1": { "description": "A tese e o mercado de Piumhi: a frota, a penetração necessária, o capex.", "start": "capa" },
+    "s2": { "description": "A economia da loja modelo: resultado, equilíbrio, capacidade e os riscos reais.", "start": "motor" },
+    "s3": { "description": "A Fase 2: por que a franquia não vende hoje e o que fazer com o imóvel.", "start": "fase2" },
+    "s4": { "description": "O pedido, a estrutura societária, os riscos e o que falta provar.", "start": "pedido" }
+  },
+  "faces": {
+    "archivo": {
+      "family": "Archivo",
+      "href": "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap"
+    },
+    "newsreader": {
+      "family": "Newsreader",
+      "href": "https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap"
+    }
+  },
+  "designSystems": []
+}
