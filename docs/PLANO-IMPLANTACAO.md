@@ -21,7 +21,7 @@ Custo desta fase: cerca de **R$ 30 mil** (campanha de fundadores, honorários, d
 | 7 dias | Busca de anterioridade no INPI (há uma "Fast Wash" operando) | Agente de PI | Pode obrigar troca de nome antes da primeira fachada |
 | 7 dias | Parecer do contador: Anexo III ou V do Simples, CNAE e tratamento do pró-labore | Contador | Vale R$ 47 mil/ano; no Anexo V o projeto cai abaixo da TMA |
 | 15 dias | CEMIG: tensão entregue no ponto e prazo de aumento de carga | Antonio | Define 220 V ou 380 V no pedido da máquina |
-| 15 dias | SAAE Piumhi: tarifa comercial de água e esgoto | Antonio | Linha de custo variável, todo mês, para sempre |
+| 15 dias | SAAE (37) 3371-1332: tarifa do m³ **acima dos 30**, regra do **esgoto**, e se existe categoria industrial. O mínimo de 30 m³ por R$ 93,59 já está confirmado — a loja usa 244 m³/mês | Antonio | Linha de custo variável, todo mês, para sempre |
 | 15 dias | Prefeitura: licença ambiental e exigência de caixa separadora | Antonio | Pode mudar a obra civil inteira |
 | 15 dias | Grupo MF e Covre: têm modelo sem escova? É credenciado no BNDES? Preço? | Antonio | Abaixo de R$ 134 mil muda a decisão da máquina |
 | 15 dias | Cooperativa de crédito: proposta de R$ 120 mil, 60 meses, 6–12 de carência | Antonio | Só se a opção for o arranjo com dívida ([CENARIOS.md](CENARIOS.md) §1.1) |

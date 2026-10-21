@@ -64,8 +64,11 @@ não começa.
 ## O que ainda não está confirmado
 
 1. **A frota de Piumhi** (13.652 automóveis) vem de fonte secundária. Confirmar no Senatran.
-2. **A tarifa de água** segue estimada em R$ 14,00/m³. A tarifa de energia **já está
-   confirmada** em R$ 1,11/kWh (CEMIG, baixa tensão) e o plano inteiro foi recalculado com ela.
+2. **A tarifa de água.** O mínimo do SAAE está confirmado — 30 m³ por R$ 93,59 — mas a
+   loja usa 244 m³/mês, oito vezes isso. Faltam a tarifa do m³ excedente e a regra do
+   esgoto. A premissa de R$ 14,00/m³ fica: entre o melhor e o pior caso são 8 pontos de TIR
+   e o projeto fecha nos dois. A tarifa de energia **já está confirmada** em R$ 1,11/kWh
+   (CEMIG, baixa tensão) e o plano inteiro foi recalculado com ela.
 3. **O enquadramento no Simples:** Anexo III ou V muda a TIR em 11 pontos.
 4. **O capex de R$ 328 mil** não tem três cotações locais.
 5. **A demanda nunca foi medida.** 500 assinantes são 3,7% dos automóveis da cidade.

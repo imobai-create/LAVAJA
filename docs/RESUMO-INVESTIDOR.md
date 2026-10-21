@@ -12,7 +12,7 @@ Versão de 2026-10-20. Documento vivo para conversa com investidor:
 Uma máquina importada lava o carro sem escova, em 5 minutos, 24 horas por dia, sem operador. O
 cliente paga mensalidade: R$ 59 por 4 lavagens, R$ 99 ilimitado, R$ 139 com cera.
 
-Cada lavagem custa R$ 5,26 de água, energia e química. É essa diferença — entre R$ 5,26 de
+Cada lavagem custa R$ 5,47 de água, energia e química. É essa diferença — entre R$ 5,47 de
 custo e R$ 87 de mensalidade média — que faz o negócio. Não existe lava jato automático em
 Piumhi hoje.
 

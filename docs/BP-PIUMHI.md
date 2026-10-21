@@ -181,15 +181,79 @@ ventiladores de 22 kW, auxiliares), não o 0,6–1,2 kWh declarado pelo forneced
 > variável sobe de R$ 5,26 para R$ 5,47 por lavagem, o EBITDA maduro cai de R$ 17.341 para
 > **R$ 16.745/mês** e a TIR do arranjo recomendado cai de 39,0% para **36,3%**. Toda a
 > seção 5 em diante já está recalculada com R$ 1,11.
->
-> A tarifa de água segue **estimada em R$ 14,00/m³**. A resolução da ARISB que fixa as
-> tarifas do SAAE Piumhi não foi acessível para conferência; o indício que aparece em fonte
-> secundária é de **R$ 93,59 para 30 m³ (≈ R$ 3,12/m³)**, sem clareza se é residencial ou
-> comercial e sem o esgoto. Se a tarifa real for mesmo dessa ordem, o custo da água cai de
-> R$ 1,19 para algo próximo de R$ 0,53 por lavagem — uma melhora de ~R$ 1.900/mês no
-> cenário base. **Está mantida a estimativa conservadora de R$ 14,00 até a confirmação.**
 
-### 4.1 Baixa tensão ou média tensão? Baixa tensão.
+### 4.1 A conta de água: o mínimo de 30 m³ não é o que importa
+
+O empreendedor confirmou a tarifa do SAAE: **mínimo de 30 m³ por R$ 93,59**. É informação
+boa de ter, e é **irrelevante para esta loja** — vale entender por quê antes de usar os
+R$ 3,12/m³ que essa divisão sugere.
+
+| Cenário | Lavagens/mês | Água | Por dia |
+|---|---|---|---|
+| Conservador | 2.175 | 185 m³ | 6,2 m³ |
+| **Base** | **2.865** | **244 m³** | **8,1 m³** |
+| Otimista | 3.772 | 321 m³ | 10,7 m³ |
+
+**A loja consome oito vezes o mínimo.** Os 30 m³ cobrem 12% do consumo; os outros 214 m³
+são cobrados pela tarifa do **excedente**, que é progressiva e que ninguém informou ainda.
+Dividir R$ 93,59 por 30 dá a tarifa da *primeira faixa*, não a da faixa em que a loja cai.
+
+E falta a segunda metade da conta: **o esgoto**. No Brasil costuma ser cobrado como
+percentual da água — frequentemente 80% a 100%. Uma loja que lança na rede pública depois
+da caixa separadora paga esgoto sobre tudo que consome.
+
+Com as duas incógnitas, a conta mensal no cenário base fica assim:
+
+| Tarifa do excedente | Só água | Com esgoto a 50% | Com esgoto a 100% | R$/m³ efetivo |
+|---|---|---|---|---|
+| R$ 3,12 | R$ 760 | R$ 1.140 | R$ 1.520 | 6,24 |
+| R$ 5,00 | R$ 1.161 | R$ 1.742 | R$ 2.322 | 9,54 |
+| R$ 7,00 | R$ 1.588 | R$ 2.382 | R$ 3.177 | 13,04 |
+| R$ 9,00 | R$ 2.015 | R$ 3.023 | R$ 4.031 | 16,55 |
+| R$ 12,00 | R$ 2.656 | R$ 3.984 | R$ 5.312 | 21,81 |
+
+**É por isso que os R$ 14,00/m³ do modelo continuam.** Não eram um chute pessimista: caem
+no meio da faixa plausível — excedente de R$ 7,00 com esgoto a 100% dá R$ 13,04. Baixar a
+premissa para R$ 3,12 porque o mínimo divide nesse valor seria o tipo de otimismo que
+estoura no primeiro boleto.
+
+**O que a tarifa faz com o projeto** (base, capex enxuto, com pró-labore):
+
+| R$/m³ efetivo | Água/mês | CV/lavagem | EBITDA | TIR | VPL @ 18% |
+|---|---|---|---|---|---|
+| R$ 3,12 | R$ 760 | R$ 4,54 | R$ 19.394 | **40,3%** | R$ 234.675 |
+| R$ 6,50 | R$ 1.583 | R$ 4,83 | R$ 18.571 | 37,7% | R$ 206.817 |
+| R$ 10,00 | R$ 2.435 | R$ 5,13 | R$ 17.719 | 35,1% | R$ 177.970 |
+| **R$ 14,00 (premissa)** | **R$ 3.409** | **R$ 5,47** | **R$ 16.745** | **32,0%** | **R$ 145.002** |
+
+**A boa notícia é a forma da tabela:** entre o melhor e o pior caso de água há 8 pontos de
+TIR, e **o projeto fecha em todos eles**. A água não é variável de vida ou morte, ao
+contrário do uso do plano Ilimitada ou do número de assinantes. Se a tarifa vier baixa, é
+upside de até R$ 90 mil de VPL — não é o que sustenta a tese.
+
+**As duas perguntas para o SAAE — (37) 3371-1332, dez minutos:**
+
+1. Na categoria comercial, **quanto custa o m³ acima dos 30 m³**? Peça a tabela de faixas
+   inteira, porque 244 m³/mês provavelmente cai na última.
+2. **Como o esgoto é cobrado** — percentual da água ou tabela própria? E um lava jato com
+   caixa separadora licenciada paga a mesma coisa?
+
+Pergunte também se existe **categoria industrial** e em qual delas um lava jato automático
+é enquadrado: a diferença entre comercial e industrial costuma ser grande.
+
+**Duas coisas que podem mudar a conta inteira, e que valem a pergunta agora:**
+
+- **Reúso.** A cotação fala em 60–100 L por carro e o equipamento tem sistema de
+  reaproveitamento. **Não está claro se os 85 L do modelo são água nova ou consumo bruto.**
+  Se o reúso recupera metade, a conta cai pela metade. É pergunta para o fornecedor, junto
+  das outras da Fase 0, e muda mais a conta do que a tarifa.
+- **Poço artesiano.** 8 m³/dia é volume pequeno. Em Minas a captação subterrânea precisa de
+  outorga do IGAM, e abaixo de certo volume há dispensa por uso insignificante — **não sei
+  de cabeça qual é o limite e não vou chutar**. Se couber na dispensa, a água vira custo de
+  energia de bomba. Vale uma ligação a um hidrogeólogo local antes de assinar o contrato do
+  terreno, porque isso também influencia *qual* terreno.
+
+### 4.2 Baixa tensão ou média tensão? Baixa tensão.
 
 A CEMIG cobra R$ 1,11/kWh na baixa tensão e R$ 0,70/kWh na média, esta com **demanda
 contratada de ~R$ 1.900/mês**. A demanda é fixa: paga-se cheia, com ou sem movimento.
@@ -443,7 +507,7 @@ Item 2 é o mais importante e o mais barato. Não feche o aluguel sem ele.
 | Benfeitoria perdida no fim do aluguel | Alto | Contrato de 10 anos + opção de compra + indenização |
 | Máquina 50 Hz / 380 V incompatível | **Crítico** | 60 Hz e tensão CEMIG por escrito no pedido |
 | Câmbio entre pedido e pagamento | Médio | Travar câmbio ou orçar a R$ 5,60 |
-| Tarifa de água/energia acima do estimado | Médio | Confirmar com SAAE e CEMIG antes de fechar o capex |
+| Tarifa de água acima do estimado | Baixo | Entre o melhor e o pior caso há 8 pontos de TIR e o projeto fecha nos dois (seção 4.1). Energia já confirmada |
 | Licença ambiental e caixa separadora | Médio | Consulta à Prefeitura antes de comprar o equipamento |
 | Máquina parada por falta de peça | Alto | Kit de peças de 2 anos no pedido + distribuidor no Brasil |
 
@@ -454,10 +518,12 @@ Item 2 é o mais importante e o mais barato. Não feche o aluguel sem ele.
 1. **A frota de Piumhi vem de fonte secundária única.** Confirmar no Senatran.
 2. **A receita madura nunca foi medida.** 500 assinantes = 3,7% dos automóveis da cidade.
    Nenhuma unidade da rede operou.
-3. **A tarifa de água é estimativa.** R$ 14,00/m³. A resolução da ARISB do SAAE Piumhi
-   não foi acessível; o indício de fonte secundária aponta tarifa bem menor, o que seria
-   melhora e não risco. **A tarifa de energia já está confirmada** em R$ 1,11/kWh (CEMIG,
-   baixa tensão) e o modelo foi recalculado.
+3. **A tarifa de água ainda não fecha.** O mínimo do SAAE está confirmado — 30 m³ por
+   R$ 93,59 — mas a loja consome 244 m³/mês, oito vezes isso. **Faltam a tarifa do
+   excedente e a regra do esgoto** (seção 4.1). A premissa de R$ 14,00/m³ fica porque cai
+   no meio da faixa plausível; entre o melhor e o pior caso há 8 pontos de TIR e o projeto
+   fecha nos dois. **A tarifa de energia já está confirmada** em R$ 1,11/kWh (CEMIG, baixa
+   tensão) e o modelo foi recalculado.
 4. **O enquadramento tributário é estimativa.** Anexo III ou V muda a TIR em 11 pontos.
 5. **O consumo de 1,6 kWh é cálculo próprio**, não medição. O fornecedor declara 0,6–1,2.
 6. **O uso médio do plano Ilimitada é a premissa mais frágil do modelo.** 6 lavagens/mês
@@ -872,7 +938,7 @@ modelo.**
 | 7 dias | Busca de anterioridade no INPI e definição do nome | Trava o gasto com fachada e adesivagem |
 | 7 dias | Parecer do contador: Anexo III ou V, CNAE e tratamento do pró-labore | Vale R$ 47 mil por ano |
 | 15 dias | CEMIG: tensão no ponto e prazo de aumento de carga | Define 220 V ou 380 V no pedido da máquina |
-| 15 dias | SAAE Piumhi: tarifa comercial de água e esgoto | Linha de custo variável, para sempre |
+| 15 dias | SAAE: **tarifa do m³ acima dos 30** e **como o esgoto é cobrado** (o mínimo de 30 m³ por R$ 93,59 já está confirmado e não manda na conta — seção 4.1) | Linha de custo variável, para sempre |
 | 15 dias | Prefeitura: licença ambiental e exigência de caixa separadora | Pode mudar a obra civil inteira |
 | 30 dias | Três orçamentos locais de obra civil, elétrica e separadora | Valida ou derruba os R$ 399 mil |
 | 30 dias | Negociar o aluguel **com opção de compra** e prazo de 10 anos | Protege R$ 142 mil de benfeitoria |
