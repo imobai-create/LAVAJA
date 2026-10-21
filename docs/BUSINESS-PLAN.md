@@ -14,21 +14,21 @@ distintos. **A Fase 2 não começa antes de a Fase 1 ter doze meses de número a
 ## Os números, em uma tela
 
 Todos já pagam o **pró-labore de R$ 3.500/mês** do operador — correção feita em out/2026, que
-derrubou a TIR publicada antes (37,5% sem pró-labore). Ver [BP-PIUMHI seção 4](BP-PIUMHI.md).
+derrubou a TIR publicada antes (35,9% sem pró-labore). Ver [BP-PIUMHI seção 4](BP-PIUMHI.md).
 
 **Dois arranjos de capital seguem em aberto para a Fase 1.** A escolha entre eles não é
 financeira — o VPL é quase empate — e sim de caixa. Ver [BP-PIUMHI seção 11.5](BP-PIUMHI.md).
 
 | Fase 1 (Piumhi) | **Sem dívida** | **Com dívida de R$ 120 mil** |
 |---|---|---|
-| **Capital a reservar** | **R$ 374.953** | **R$ 276.011** |
+| **Capital a reservar** | **R$ 376.428** | **R$ 278.253** |
 | 1ª tranche | R$ 303.480 | R$ 183.480 |
-| **TIR do equity** (60 meses) | **34,3%** | **39,0%** |
-| **VPL @ 18% a.a.** | **+R$ 164.250** | +R$ 156.648 |
+| **TIR do equity** (60 meses) | **32,4%** | **36,3%** |
+| **VPL @ 18% a.a.** | **+R$ 144.082** | +R$ 136.479 |
 | Payback | 33 meses | 33 meses |
 
 Comum aos dois: capex enxuto de R$ 328.000 + giro de R$ 45.000, pré-venda de 80 fundadores de
-R$ 69.520 no mês 0, EBITDA maduro de R$ 17.341/mês (32,1%), equilíbrio em 232 assinantes
+R$ 69.520 no mês 0, EBITDA maduro de R$ 16.745/mês (31,0%), equilíbrio em 134 assinantes
 (1,7% da frota) e mínimo de ~400 (2,9%) para pagar a TMA.
 
 | Fase 1 + Fase 2 | |
@@ -38,7 +38,7 @@ R$ 69.520 no mês 0, EBITDA maduro de R$ 17.341/mês (32,1%), equilíbrio em 232
 | VPL @ 18% a.a. | +R$ 1.744.248 |
 
 Sem nenhuma alavanca — capex cheio, sem pré-venda, sem dívida — o mesmo projeto exige
-**R$ 480 mil** e rende **25,6%**. A diferença é toda estrutura de capital:
+**R$ 481 mil** e rende **24,0%**. A diferença é toda estrutura de capital:
 [BP-PIUMHI seção 11](BP-PIUMHI.md).
 
 ### Cap table da Fase 1 — divisão 25 / 25 / 50
@@ -51,7 +51,7 @@ do projeto. A divisão decide quanto cada um põe e quem manda, não quanto cada
 | Investidor A | R$ 93.738 | R$ 69.003 | 25% |
 | Investidor B | R$ 93.738 | R$ 69.003 | 25% |
 | **Antonio** | **R$ 187.476** | **R$ 138.006** | **50%** + pró-labore + 100% da franqueadora |
-| **TIR de todos** | **34,3%** | **39,0%** | |
+| **TIR de todos** | **32,4%** | **36,3%** | |
 
 **A marca fica na PJ 1, 100% do Antonio, com registro no INPI em nome dela antes de qualquer
 assinatura.** Os investidores compram a loja de Piumhi, não a rede.

@@ -135,8 +135,8 @@ def planilha_piumhi(caminho):
                                      "ESTIMATIVA - confirmar com SAAE Piumhi")
     L["kwh"] = ln; ln = entrada(ws, ln, "Energia por lavagem (kWh)", 1.6, '0.00',
                                 "calculo proprio; fornecedor declara 0,6-1,2")
-    L["tar_kwh"] = ln; ln = entrada(ws, ln, "Tarifa de energia (R$/kWh)", 0.98, MOEDA2,
-                                    "ESTIMATIVA - confirmar com CEMIG")
+    L["tar_kwh"] = ln; ln = entrada(ws, ln, "Tarifa de energia (R$/kWh)", 1.11, MOEDA2,
+                                    "CONFIRMADO out/2026 - CEMIG baixa tensao")
     L["quim"] = ln; ln = entrada(ws, ln, "Quimicos por lavagem", 2.50, MOEDA2)
     L["meios"] = ln; ln = entrada(ws, ln, "Meios de pagamento (% da receita)", 0.015, PCT2)
     L["cv"] = ln

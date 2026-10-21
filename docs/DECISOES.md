@@ -421,7 +421,7 @@ investidores entrando.
 **Duas correções que vieram antes da recomendação.**
 
 A primeira: **o BP não remunerava o operador.** Com pró-labore de R$ 3.500/mês, o cenário base
-de capex cheio e 100% capital próprio sai de **37,5% para 25,6% de TIR** e de R$ 235 mil para
+de capex cheio e 100% capital próprio sai de **35,9% para 24,0% de TIR** e de R$ 235 mil para
 **R$ 93 mil de VPL**. O número publicado antes estava otimista por omissão, e o número de
 referência para investidor passa a ser o que paga quem trabalha.
 
@@ -439,16 +439,16 @@ de valor:
 | Pré-venda anual de 80 fundadores | −R$ 24 mil | +0,4 pp | −R$ 1 mil |
 | Prazo 30/70 do fornecedor | desloca o pico | — | — |
 
-Resultado: **capital a reservar cai de R$ 480 mil para R$ 375 mil sem dívida, ou R$ 276 mil
-com ela**, e a TIR do equity sobe de 25,6% para 34,3% ou 39,0%, já pagando o pró-labore.
+Resultado: **capital a reservar cai de R$ 481 mil para R$ 376 mil sem dívida, ou R$ 278 mil
+com ela**, e a TIR do equity sobe de 24,0% para 32,4% ou 36,3%, já pagando o pró-labore.
 
 A dívida **destrói um pouco de valor** (21% contra TMA de 18%) e isso está registrado de
 propósito: é uma troca consciente de R$ 8 mil de VPL por R$ 99 mil de capital liberado.
 
 > **Atualização — out/2026: os dois arranjos ficam em aberto.** Por decisão do empreendedor,
 > o 100% equity e o equity + dívida passam a ser tratados como **duas opções vivas**, não como
-> um recomendado e uma variante. A razão é que o VPL é quase empate (R$ 164.250 sem dívida
-> contra R$ 156.648 com ela) — então a escolha não sai da planilha. O que decide é caixa, aval
+> um recomendado e uma variante. A razão é que o VPL é quase empate (R$ 144.082 sem dívida
+> contra R$ 136.479 com ela) — então a escolha não sai da planilha. O que decide é caixa, aval
 > pessoal, velocidade de fechamento e tolerância a ter parcela durante a rampa. Os dois estão
 > lado a lado em [BP-PIUMHI](BP-PIUMHI.md) §11.5, em [CENARIOS.md](CENARIOS.md) §1 e §2, na
 > apresentação e no resumo para investidor.
@@ -458,8 +458,8 @@ propósito: é uma troca consciente de R$ 8 mil de VPL por R$ 99 mil de capital 
 > equity passa a ser a escolha por eliminação.
 
 **Cap table:** divisão 25 / 25 / 50 (ver ADR-012 atualizada e BP-PIUMHI §11.6). Com aporte
-proporcional e capital chamado em tranches, a TIR é a mesma para todos — 34,3% sem dívida,
-39,0% com ela. Cada investidor põe R$ 93.738 ou R$ 69.003, conforme o arranjo; Antonio põe o
+proporcional e capital chamado em tranches, a TIR é a mesma para todos — 32,4% sem dívida,
+36,3% com ela. Cada investidor põe R$ 93.738 ou R$ 69.003, conforme o arranjo; Antonio põe o
 dobro e fica com 50%, mais pró-labore e 100% da franqueadora.
 
 **Antonio fica acima de 50%, sempre.** A alternativa de dois investidores a R$ 90 mil por 27,5%
@@ -542,3 +542,58 @@ custa um deploy.
 **O que mudaria a decisão.** Aviso da Vercel sobre uso comercial no plano Hobby (aí sobe para
 Pro, não sai da plataforma). Ou necessidade de processo de longa duração — fila, worker, cron
 pesado — que a função serverless não serve; nada no roadmap de 12 meses pede isso.
+
+---
+
+## ADR-014 — Preço de fundador: R$ 79/mês, travado por 24 meses, com uso justo escrito
+
+**Data:** out/2026. **Status:** aceito.
+
+**Contexto.** O site foi ao ar com o plano Ilimitada a R$ 79/mês para os 80 fundadores (tabela
+R$ 99), prometido *"enquanto a assinatura estiver ativa"* e sem nenhum limite de uso escrito.
+O empreendedor pediu uma recomendação de preço antes de divulgar.
+
+**Decisão.** Mantém-se **R$ 79/mês**, com três mudanças nas condições:
+
+1. **Travado por 24 meses**, não indefinidamente. Depois, reajuste anual pelo IPCA, mantendo a
+   condição de fundador como desconto permanente sobre a tabela da época.
+2. **Três limites de uso justo**, escritos no site: uma lavagem por dia, uma placa cadastrada,
+   uso pessoal e não comercial.
+3. **A cobrança do plano anual só é oferecida depois da máquina instalada**, com data de
+   inauguração firmada. A reserva continua grátis e sem cartão.
+
+**Por quê o preço.** R$ 79 é 20% abaixo da tabela — desconto que lê como oferta de verdade e
+custa R$ 19.200 em 12 meses. R$ 69 custaria R$ 28.800 e estreitaria a faixa de segurança (margem
+zera em 11,1 lavagens/mês em vez de 12,7) para comprar uma decisão que os R$ 79 já compravam.
+R$ 89 é só 10% de desconto: não se sustenta como condição de fundador para quem paga por uma
+loja que ainda não existe. A tabela completa de margem por preço e por uso está na
+[seção 12 do BP-PIUMHI](BP-PIUMHI.md).
+
+**Por quê os limites.** A R$ 79, com custo variável de R$ 5,47 por lavagem, a margem de
+contribuição zera em **12,7 lavagens/mês**. Um carro de aplicativo lavando todo dia são 30
+lavagens: R$ 164 de custo variável sobre R$ 79 de receita, **prejuízo de R$ 85/mês naquele
+assinante**. Sem os limites, "ilimitada" é uma exposição aberta num preço travado — e a
+sensibilidade do BP mostra que, se o uso médio do plano subir de 6 para 12 lavagens/mês, a TIR
+do projeto cai de 24,0% para 5,4%. Com os limites, o pior caso realista fica em ~8 lavagens/mês,
+onde a margem ainda é de R$ 25,55.
+
+**Por quê 24 meses e não "para sempre".** A R$ 79 de hoje, a 5% de inflação ao ano, vale R$ 48
+em dez anos. Água e energia — os dois maiores custos variáveis — sobem historicamente acima do
+IPCA, e esta mesma revisão corrigiu a tarifa da CEMIG de R$ 0,98 para R$ 1,11, 13% de uma vez.
+Uma coorte de 80 assinantes congelada num preço que o custo deixou para trás é um problema que
+não se desfaz: baixar preço é fácil, subir preço prometido como eterno não é.
+
+**Consequência comercial assumida.** Trocar "para sempre" por "24 meses" enfraquece um pouco a
+oferta. Vale a pena: 24 meses é tempo suficiente para a promessa parecer séria, é o prazo em que
+a Fase 2 começa, e a condição de fundador continua existindo depois como desconto permanente.
+
+**Consequência de caixa assumida.** Adiar a cobrança anual para depois da instalação tira do mês
+0 os R$ 69.520 que a alavanca de pré-venda traz (seção 11.3 do BP-PIUMHI) e empurra esse caixa
+para o fim da obra. É o preço de não receber de 80 pessoas por uma loja que ainda não existe —
+numa cidade de 36 mil habitantes, uma obra atrasada com dinheiro recebido não é problema de
+fluxo de caixa, é problema de reputação.
+
+**O que mudaria a decisão.** Conversão muito abaixo de 10% da lista na campanha (aí o problema é
+a oferta, e o caminho é o mês grátis ou o brinde, não derrubar o preço travado). Ou medição real
+de uso acima de 8 lavagens/mês por assinante depois de aberto — nesse caso o preço de tabela
+sobe para os novos, e os fundadores seguem nos R$ 79 até o fim dos 24 meses.

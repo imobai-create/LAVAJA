@@ -50,7 +50,7 @@ grande ainda não saiu, e é exatamente para isso que a Fase 0 existe.
 
 ## Fase 1 — A loja própria de Piumhi
 
-Capital: **R$ 375 mil** (100% equity) ou **R$ 276 mil** (com dívida de R$ 120 mil). Divisão do
+Capital: **R$ 376 mil** (100% equity) ou **R$ 278 mil** (com dívida de R$ 120 mil). Divisão do
 equity em [CENARIOS.md](CENARIOS.md) §2.
 
 | Mês | Marco | Responsável | Depende de |

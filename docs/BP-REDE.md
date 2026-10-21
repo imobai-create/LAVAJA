@@ -332,7 +332,7 @@ Compare com o que foi apresentado antes:
 | Com imóvel próprio em todas as praças (B1) | R$ 21,8 mi | 16,6% | −R$ 716 mil |
 | Com locação longa + sublocação (B2) | R$ 5,59 mi | 19,9% | +R$ 397 mil |
 
-**R$ 275 mil menos de capital e R$ 480 mil mais de VPL** que a versão anterior. A melhora
+**R$ 275 mil menos de capital e R$ 481 mil mais de VPL** que a versão anterior. A melhora
 vem de três lugares: tirar o BOX, sequenciar as fases em vez de rodar as duas de uma vez,
 e não comprar imóvel.
 

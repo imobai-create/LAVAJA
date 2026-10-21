@@ -111,7 +111,7 @@ segredo dentro do código nem no Git — `.env` está no `.gitignore`.
 | `DATABASE_URL` | sim, em produção | — | Postgres. Na Vercel use a string **pooled** do Neon (tem `-pooler` no endereço) — a direta estoura o limite de conexões. |
 | `ADMIN_TOKEN` | sim, em produção | vazio | Protege o painel e a exportação de leads. Vazio = rotas de admin não liberam nada. |
 | `FOUNDERS_LIMIT` | não | `80` | Número de vagas de fundador (alimenta o contador). |
-| `WHATSAPP_NUMERO` | não | `5531987474828` | Número que recebe as mensagens, só dígitos, com DDI. Hoje aponta para o atendimento provisório (31) 98747-4828. |
+| `WHATSAPP_NUMERO` | não | `5531992941888` | Número que recebe as mensagens, só dígitos, com DDI. Hoje aponta para o atendimento provisório (31) 99294-1888. |
 | `PGSSL` | não | — | `disable` desliga SSL do Postgres (só para banco local). |
 | `RATE_LIMIT_POST` | não | `10` | Envios de formulário por IP por minuto. |
 | `RATE_LIMIT_GLOBAL` | não | `600` | Teto global de envios por janela. |
@@ -178,7 +178,7 @@ ser divulgado.
 
 ### Site e domínio
 - [ ] **Número de WhatsApp definitivo** do atendimento. Hoje responde o provisório
-      (31) 98747-4828, já embutido como padrão; trocar é só definir `WHATSAPP_NUMERO` na Vercel.
+      (31) 99294-1888, já embutido como padrão; trocar é só definir `WHATSAPP_NUMERO` na Vercel.
       Vale um número com DDD 37, de Piumhi: em cidade pequena, DDD de fora gera desconfiança.
 - [x] **Domínio definitivo** — `fastcarwash.com.br`, registrado em out/2026. Já está em uso no
       `sitemap.xml`, no `robots.txt` e nas URLs canônicas das três páginas. Falta apontar o CNAME

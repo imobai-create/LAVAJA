@@ -12,12 +12,30 @@ Divulgar sem estes sete itens fechados é o jeito mais rápido de queimar a list
 cidade. Você só divulga uma primeira vez.
 
 ### 1. Preço final, com data de validade
-- [ ] Preço do plano de fundador definido e **travado por escrito** (por quanto tempo vale o preço
-      travado: para sempre? 12 meses? 24 meses?). Se o site diz "para sempre", é para sempre.
-- [ ] Preços dos demais planos e da lavagem avulsa definidos.
+
+**DECIDIDO (out/2026): R$ 79/mês no plano Ilimitada, travado por 24 meses, 80 vagas.** A conta
+está na [seção 12 do BP-PIUMHI](BP-PIUMHI.md). O site já está com esse preço e com os três
+limites de uso. O que falta é o que está marcado abaixo.
+
+- [x] Preço do plano de fundador: **R$ 79/mês**, 20% abaixo da tabela de R$ 99.
+- [x] Prazo do preço travado: **24 meses**, e depois reajuste anual pelo IPCA mantendo a condição
+      de fundador como desconto permanente sobre a tabela. *Não* é "para sempre": a R$ 79 de hoje
+      vale R$ 48 em dez anos, e água e energia sobem acima do IPCA.
+- [x] Os três limites de uso, escritos no site: **uma lavagem por dia**, **uma placa cadastrada**,
+      **uso pessoal e não comercial**. A R$ 79 a margem zera em 12,7 lavagens/mês; um carro de
+      aplicativo lavando todo dia dá prejuízo de R$ 85/mês naquele assinante.
+- [ ] Preços dos demais planos e da lavagem avulsa confirmados na véspera da divulgação
+      (hoje: Essencial R$ 59, Ilimitada R$ 99, Premium R$ 139, avulsa R$ 35).
 - [ ] Decidido o que acontece com o preço quando as 80 vagas acabarem.
-- [ ] Conferido se o preço fecha a conta: com 80 assinantes no plano de fundador, qual é a receita
-      mensal e ela cobre o custo fixo da unidade?
+- [ ] Conferido com o contador se o reajuste por IPCA depois de 24 meses precisa estar no termo
+      de adesão desde o primeiro dia (precisa: reajuste não escrito não se cobra depois).
+- [ ] Plano para frota/aplicativo definido, ainda que só de preço, para ter o que responder quando
+      perguntarem — e vão perguntar.
+
+**A conta dos 80 fundadores:** 80 × R$ 79 = **R$ 6.320/mês** de receita recorrente garantida no
+dia da abertura. O custo fixo da unidade é R$ 11.550/mês (R$ 15.050 com o pró-labore). Os
+fundadores cobrem **42% do custo fixo** — não a loja inteira. O resto vem da rampa dos outros
+assinantes e das avulsas.
 
 ### 2. Número de WhatsApp de atendimento
 - [ ] Número **exclusivo do negócio**, não o celular pessoal. Trocar depois significa perder
