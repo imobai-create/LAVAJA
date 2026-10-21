@@ -21,15 +21,16 @@ financeira — o VPL é quase empate — e sim de caixa. Ver [BP-PIUMHI seção 
 
 | Fase 1 (Piumhi) | **Sem dívida** | **Com dívida de R$ 120 mil** |
 |---|---|---|
-| **Capital a reservar** | **R$ 376.428** | **R$ 278.253** |
-| 1ª tranche | R$ 303.480 | R$ 183.480 |
-| **TIR do equity** (60 meses) | **32,4%** | **36,3%** |
-| **VPL @ 18% a.a.** | **+R$ 144.082** | +R$ 136.479 |
-| Payback | 33 meses | 33 meses |
+| **Capital a reservar** | **R$ 372.353** | **R$ 274.178** |
+| 1ª tranche | R$ 299.405 | R$ 179.405 |
+| **TIR do equity** (60 meses) | **32,9%** | **37,1%** |
+| **VPL @ 18% a.a.** | **+R$ 147.622** | +R$ 140.020 |
+| Payback | 36 meses | 35 meses |
 
-Comum aos dois: capex enxuto de R$ 328.000 + giro de R$ 45.000, pré-venda de 80 fundadores de
-R$ 69.520 no mês 0, EBITDA maduro de R$ 16.745/mês (31,0%), equilíbrio em 134 assinantes
-(1,7% da frota) e mínimo de ~400 (2,9%) para pagar a TMA.
+Comum aos dois: **capex de R$ 323.925 — dentro do teto de R$ 325 mil** — mais giro de
+R$ 45.000, pré-venda de 80 fundadores de R$ 69.520, EBITDA maduro de R$ 16.745/mês (31,0%),
+equilíbrio operacional em 134 assinantes (1,0% da frota) e **mínimo de 399 assinantes
+(2,9%) para pagar a TMA de 18%** — este último é o gate que manda em tudo.
 
 | Fase 1 + Fase 2 | |
 |---|---|
@@ -37,9 +38,11 @@ R$ 69.520 no mês 0, EBITDA maduro de R$ 16.745/mês (31,0%), equilíbrio em 134
 | TIR (120 meses) | 42,6% a.a. |
 | VPL @ 18% a.a. | +R$ 1.744.248 |
 
-Sem nenhuma alavanca — capex cheio, sem pré-venda, sem dívida — o mesmo projeto exige
-**R$ 481 mil** e rende **24,0%**. A diferença é toda estrutura de capital:
-[BP-PIUMHI seção 11](BP-PIUMHI.md).
+Sem nenhuma alavanca — capex no teto, sem pré-venda, sem dívida — o projeto exige
+**R$ 395.871** e rende **32,4%**. Com a lista de capex completa de R$ 399.060, exigiria
+**R$ 481 mil** para render **24,0%**: R$ 75 mil a mais de capital para 8 pontos a menos de
+retorno. Por isso o teto de R$ 325 mil não é só restrição de caixa — é a decisão de
+investimento melhor ([BP-PIUMHI seção 2](BP-PIUMHI.md)).
 
 ### Cap table da Fase 1 — divisão 25 / 25 / 50
 
@@ -48,10 +51,10 @@ do projeto. A divisão decide quanto cada um põe e quem manda, não quanto cada
 
 | | Sem dívida | Com dívida | % da PJ 2 |
 |---|---|---|---|
-| Investidor A | R$ 93.738 | R$ 69.003 | 25% |
-| Investidor B | R$ 93.738 | R$ 69.003 | 25% |
-| **Antonio** | **R$ 187.476** | **R$ 138.006** | **50%** + pró-labore + 100% da franqueadora |
-| **TIR de todos** | **32,4%** | **36,3%** | |
+| Investidor A | R$ 93.088 | R$ 68.544 | 25% |
+| Investidor B | R$ 93.088 | R$ 68.544 | 25% |
+| **Antonio** | **R$ 186.177** | **R$ 137.089** | **50%** + pró-labore + 100% da franqueadora |
+| **TIR de todos** | **32,9%** | **37,1%** | |
 
 **A marca fica na PJ 1, 100% do Antonio, com registro no INPI em nome dela antes de qualquer
 assinatura.** Os investidores compram a loja de Piumhi, não a rede.

@@ -19,8 +19,12 @@ PRO_LABORE = 3_500.0      # o modelo base NAO remunerava o operador. Agora remun
 TMA_INVESTIDOR = 0.22     # investidor local pede mais que o dono: menos controle, menos informacao
 
 # ---- capex cheio e capex enxuto (BP-PIUMHI secao 2)
-CAPEX_CHEIO, GIRO_CHEIO = 399_060.0, 55_000.0
-CAPEX_ENXUTO, GIRO_ENXUTO = 328_000.0, 45_000.0
+# Teto de capex do empreendedor (out/2026): R$ 325.000.
+CAPEX_TETO, GIRO_TETO = 323_925.0, 45_000.0        # o plano: cabe no teto
+CAPEX_COMPLETO, GIRO_COMPLETO = 399_060.0, 55_000.0  # a versao completa, para comparar
+# nomes antigos, mantidos para nao quebrar quem importa
+CAPEX_CHEIO, GIRO_CHEIO = CAPEX_COMPLETO, GIRO_COMPLETO
+CAPEX_ENXUTO, GIRO_ENXUTO = CAPEX_TETO, GIRO_TETO
 
 # ---- dividas candidatas
 #   BDMG Pronampe investimento: Selic + 5,50% a.a., 72 meses, 12 de carencia.

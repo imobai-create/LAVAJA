@@ -263,7 +263,7 @@ unidade.** O cenário base de Piumhi é R$ 54,1 mil; o otimista é R$ 72,3 mil. 
 | | Aluguel bruto anual / valor do imóvel |
 |---|---|
 | McDonald's, imobilizado ao custo (US$ 44,2 bi) | **22,7%** |
-| McDonald's, imobilizado líquido (US$ 25,3 bi) | **39,6%** |
+| McDonald's, imobilizado líquido (US$ 25,3 bi) | **40,6%** |
 | Ponto de lava jato de R$ 500 mil a R$ 5.000/mês | **12,0%** |
 | Ponto de lava jato de R$ 500 mil a R$ 6.000/mês | 14,4% |
 

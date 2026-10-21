@@ -21,17 +21,17 @@ cena. O que a Fase 1 precisa é:
 
 | | Arranjo cru | **Sem dívida** | **Com dívida** |
 |---|---|---|---|
-| Capex de implantação | R$ 399.060 | **R$ 328.000** (enxuto) | **R$ 328.000** (enxuto) |
+| Capex de implantação | R$ 399.060 | **R$ 323.925** (no teto) | **R$ 323.925** (no teto) |
 | Capital de giro | R$ 55.000 | **R$ 45.000** | **R$ 45.000** |
 | Dívida | — | — | **R$ 120.000** a ~21% a.a. |
 | Pré-venda de 80 fundadores | — | **R$ 69.520** | **R$ 69.520** |
-| **Capital a reservar** | **R$ 481.006** | **R$ 376.428** | **R$ 278.253** |
-| TIR do equity | 24,0% | **32,4%** | **36,3%** |
-| VPL @ 18% | R$ 73.260 | **R$ 144.082** | R$ 136.479 |
+| **Capital a reservar** | **R$ 481.006** | **R$ 372.353** | **R$ 274.178** |
+| TIR do equity | 24,0% | **32,9%** | **37,1%** |
+| VPL @ 18% | R$ 73.260 | **R$ 147.622** | R$ 140.020 |
 
 **Capital a reservar no arranjo cru: R$ 481 mil** (R$ 496 mil no conservador). Isso é capex
 cheio e 100% capital próprio, sem nenhuma alavanca. A [seção 11](#11-estrutura-de-capital)
-mostra como esse número cai para **R$ 376 mil sem dívida nenhuma** ou **R$ 278 mil com dívida
+mostra como esse número cai para **R$ 372 mil sem dívida nenhuma** ou **R$ 274 mil com dívida
 de R$ 120 mil** — e os dois arranjos seguem em aberto, porque a escolha entre eles não é
 financeira (o VPL é quase empate) e sim de caixa. A franqueadora só volta à mesa depois
 de doze meses de número real em Piumhi — e com um plano próprio, decidido com dados que
@@ -88,54 +88,95 @@ seção 4. Sem ele seriam 1,3% e 2,5%, que é o que versões anteriores deste do
 
 ## 2. Capex de implantação — linha por linha
 
-Câmbio de planejamento **R$ 5,30/USD** (Focus para o fim de 2026: R$ 5,20; entre o
-pedido e o pagamento final passam 60 a 120 dias).
+**O teto é R$ 325.000**, definido pelo empreendedor em outubro de 2026. A lista abaixo é a
+que cabe nesse teto. Câmbio de planejamento **R$ 5,30/USD** (Focus para o fim de 2026:
+R$ 5,20; entre o pedido e o pagamento final passam 60 a 120 dias).
 
 | Item | R$ |
 |---|---|
 | Máquina JM-70 posta em Piumhi (USD 23.000) | 121.900 |
 | Interface Modbus/API + kit de peças de desgaste 2 anos (USD 2.000) | 10.600 |
-| Obra civil: pórtico, baia coberta, piso com caimento, pátio 300 m² | 92.000 |
+| Obra civil: pórtico, baia coberta, piso com caimento, pátio 150 m² | 62.000 |
 | Caixa separadora água/óleo + hidráulica + reservatório | 26.000 |
 | Entrada de energia, quadro, cabeamento, projeto e ART | 24.000 |
 | Laudo NR-12 com ART | 6.000 |
-| Totem de pagamento PIX/cartão + câmera + CFTV + rede | 26.000 |
-| 1 box de alta pressão + 2 aspiradores | 18.000 |
-| Fachada, comunicação visual, iluminação | 19.000 |
-| Software da unidade, integração e implantação | 12.000 |
+| Totem de pagamento PIX/cartão + **câmera de placa** + CFTV | 26.000 |
+| Fachada e comunicação visual, versão simples | 10.000 |
+| Software da unidade e implantação | 8.000 |
 | Projeto, licenças, alvarás, bombeiros, taxas | 14.000 |
-| **Subtotal** | **369.500** |
-| Contingência 8% | 29.560 |
-| **CAPEX TOTAL** | **399.060** |
+| **Subtotal** | **308.500** |
+| Contingência 5% | 15.425 |
+| **CAPEX TOTAL** | **323.925** |
 
-**Isto é R$ 73 mil acima dos R$ 326 mil que o Plano de Franquia usa para o formato
-Express.** A diferença não é inflação de orçamento: é o que aparece quando se monta a
-lista item por item, com NR-12, caixa separadora, totem e contingência. Cada linha acima
-é discutível e deve ser desafiada com orçamento local — mas o número do plano original
-está otimista.
+**Cabe no teto por R$ 1.075.** É pouca folga, e a seção 2.2 diz exatamente onde ela pode
+sumir.
+
+### 2.1 O que saiu, e o que não saiu
+
+Em relação à lista completa de R$ 399.060, foram quatro cortes e um adiamento:
+
+| Linha | Completa | No teto | O que muda de verdade |
+|---|---|---|---|
+| Obra civil | 92.000 | **62.000** | Pátio de 150 m² em vez de 300 m². Cabem 6 carros em espera em vez de 12. Vira problema só se a fila passar disso — e aí o pátio se amplia com caixa da operação |
+| Box de alta pressão + 2 aspiradores | 18.000 | **adiado** | Entram no mês 6, pagos pelo caixa. Custam os R$ 2.200/mês de receita complementar até lá |
+| Fachada e comunicação visual | 19.000 | **10.000** | Lançamento menos impressionante. Em negócio de assinatura isso pesa mais do que parece — é o corte que eu menos gosto |
+| Software e implantação | 12.000 | **8.000** | Sem integrações extras no dia 1. O essencial (assinatura, cobrança, liberação) fica |
+| Contingência | 8% | **5%** | Menos colchão para surpresa de obra |
+
+**O que não saiu, e por quê:**
+
+- **A câmera de placa fica.** Ela é o que faz valer "uma placa, um plano" — a trava que
+  protege o preço de R$ 79 (seção 12). Cortá-la para economizar R$ 6 mil e depois perder
+  R$ 85/mês por assinante que compartilha é troca ruim.
+- **A caixa separadora, a entrada de energia e o laudo NR-12 ficam inteiros.** Não são
+  escolha: são licenciamento. Cortar aqui é não abrir.
+- **O kit de peças de 2 anos fica.** Máquina importada parada por falta de peça custa mais
+  do que o kit inteiro.
+
+### 2.2 A folga é de R$ 1.075. O câmbio come ela sozinho.
+
+A máquina e a interface somam **USD 25.000**. A R$ 5,30 isso é R$ 132.500. Cada centavo de
+alta no dólar custa R$ 250 no capex — mais a contingência:
+
+| Câmbio | Capex | Teto de R$ 325 mil |
+|---|---|---|
+| **R$ 5,30** (planejamento) | **R$ 323.925** | cabe por R$ 1.075 |
+| R$ 5,60 | R$ 331.800 | **estoura por R$ 6.800** |
+| R$ 6,00 | R$ 342.300 | **estoura por R$ 17.300** |
+
+**É a maior ameaça ao teto, e tem solução operacional:** fechar o câmbio junto com o
+pedido, em vez de deixá-lo correr até o embarque. A condição usual do fornecedor é 30% na
+assinatura e 70% contra cópia do BL — então são 60 a 120 dias de exposição em 70% do
+valor. Peça ao banco uma trava de câmbio para essa parcela no dia do pedido. Custa um
+spread pequeno e transforma uma variável aberta em número fixo.
+
+A segunda ameaça é a obra: 5% de contingência sobre R$ 308 mil são R$ 15.425, e reforma
+pequena estoura isso com facilidade. **Mitigação: três orçamentos fechados com escopo
+escrito antes de assinar**, não orçamento por estimativa.
+
+### 2.3 Se o capital permitir, a versão completa
+
+A lista original soma **R$ 399.060** (contingência de 8%) e entrega pátio de 300 m², box e
+aspiradores no dia 1, fachada completa e software com integrações. Ela **rende menos**:
+TIR de 24,0% contra 32,4%, porque R$ 75 mil a mais de capital não trazem receita
+proporcional. **Não é a versão recomendada nem com dinheiro sobrando** — se sobrar capital,
+ele vale mais como reserva para a segunda unidade do que como pátio maior na primeira.
 
 ### Capital de giro
 
 | Item | R$ |
 |---|---|
 | Caução de 3 aluguéis | 9.000 |
-| Campanha de pré-venda e inauguração | 22.000 |
-| Estoque inicial de químicos | 6.000 |
-| Colchão de 3 meses de custo fixo | 18.000 |
-| **TOTAL** | **55.000** |
+| Campanha de pré-venda e inauguração | 18.000 |
+| Estoque inicial de químicos | 5.000 |
+| Colchão de 3 meses de custo fixo | 13.000 |
+| **TOTAL** | **45.000** |
 
 O colchão não é conservadorismo decorativo: **os meses 1 a 4 fecham com EBITDA
 negativo** (−R$ 3.084 no mês 1), porque a base de assinantes ainda está em formação e o
 custo fixo já é integral.
 
-### Versão enxuta, se o capital apertar
-
-Dá para entrar com **R$ 328 mil de capex + R$ 45 mil de giro = R$ 373 mil**: adiar a
-câmera de placa (liberação por código do plano), adiar o box de alta pressão e os
-aspiradores para o mês 6 pagos pelo caixa, pátio de 150 m² em vez de 300 m², fachada
-mais simples e contingência de 5%. **A TIR sobe de 24,0% para 32,0%** e a tolerância de
-receita de −6% para −10,6% — menos capital parado na largada e mais margem de erro. O custo é um lançamento menos impressionante, o que em negócio de
-assinatura pesa mais do que parece.
+**Investimento total: R$ 323.925 + R$ 45.000 = R$ 368.925.**
 
 ---
 
@@ -179,7 +220,7 @@ ventiladores de 22 kW, auxiliares), não o 0,6–1,2 kWh declarado pelo forneced
 > tensão, contra os R$ 0,98 que o modelo estimava. São 13% a mais, e a energia passa a ser
 > **33% do custo variável** da lavagem. O efeito no projeto não é desprezível: o custo
 > variável sobe de R$ 5,26 para R$ 5,47 por lavagem, o EBITDA maduro cai de R$ 17.341 para
-> **R$ 16.745/mês** e a TIR do arranjo recomendado cai de 39,0% para **36,3%**. Toda a
+> **R$ 16.745/mês** e a TIR do arranjo recomendado cai de 39,0% para **37,1%**. Toda a
 > seção 5 em diante já está recalculada com R$ 1,11.
 
 ### 4.1 A conta de água: o mínimo de 30 m³ não é o que importa
@@ -224,7 +265,7 @@ estoura no primeiro boleto.
 | R$ 3,12 | R$ 760 | R$ 4,54 | R$ 19.394 | **40,3%** | R$ 234.675 |
 | R$ 6,50 | R$ 1.583 | R$ 4,83 | R$ 18.571 | 37,7% | R$ 206.817 |
 | R$ 10,00 | R$ 2.435 | R$ 5,13 | R$ 17.719 | 35,1% | R$ 177.970 |
-| **R$ 14,00 (premissa)** | **R$ 3.409** | **R$ 5,47** | **R$ 16.745** | **32,0%** | **R$ 145.002** |
+| **R$ 14,00 (premissa)** | **R$ 3.409** | **R$ 5,47** | **R$ 16.745** | **32,4%** | **R$ 148.543** |
 
 **A boa notícia é a forma da tabela:** entre o melhor e o pior caso de água há 8 pontos de
 TIR, e **o projeto fecha em todos eles**. A água não é variável de vida ou morte, ao
@@ -330,7 +371,7 @@ ele também é quem aprende a operação que a rede vai replicar.
 > R$ 3.500 à empresa, mais o INSS de 11% retido do sócio. **Confirmar com o contador junto da
 > questão Anexo III / Anexo V.**
 >
-> A seção 11 mostra que, com o arranjo de capital recomendado, a TIR volta para **36,3%**
+> A seção 11 mostra que, com o arranjo de capital recomendado, a TIR volta para **37,1%**
 > mesmo pagando o pró-labore — o ganho vem de capex enxuto e alavancagem, não de deixar de
 > pagar quem trabalha.
 
@@ -342,17 +383,19 @@ de **10,8%**.
 > **Risco fiscal a resolver com contador, antes de abrir.** Se a atividade for
 > enquadrada no **Anexo V** (o que depende da classificação do CNAE 4520-0/05 e de
 > incidir ou não o Fator R, com folha de apenas 5% da receita), a alíquota vai para
-> **12,4%**. O EBITDA cai de R$ 16.745 para R$ 12.854/mês e a **TIR cai de 24,0% para
-> 14,1%**, abaixo da TMA. Não é detalhe contábil: são R$ 47 mil por ano.
+> **12,4%**. O EBITDA cai de R$ 16.745 para R$ 12.854/mês e a **TIR cai de 32,4% para
+> 18,8%** — ainda acima da TMA, e só porque o capex está no teto: com a lista completa
+> cairia para 12,4%, abaixo dela. Não é detalhe contábil: são R$ 47 mil por ano.
 
 ---
 
 ## 5. Resultado
 
-Capex cheio, 100% capital próprio, **com pró-labore de R$ 3.500/mês**. É o arranjo cru: a
-seção 11 mostra o que a estrutura de capital faz com estes números.
+Capex de R$ 323.925 (o teto), giro de R$ 45.000, 100% capital próprio, **com pró-labore de
+R$ 3.500/mês**. É o arranjo cru: a seção 11 mostra o que a estrutura de capital faz com
+estes números.
 
-| | Conservador | **Base** | Otimista |
+| | Piso | **Base** | Otimista |
 |---|---|---|---|
 | Assinantes | 380 | **500** | 650 |
 | Receita madura/mês | R$ 40.760 | **R$ 54.100** | R$ 72.350 |
@@ -360,79 +403,99 @@ seção 11 mostra o que a estrutura de capital faz com estes números.
 | Custo variável | R$ 12.500 (30,7%) | **R$ 16.472 (30,4%)** | R$ 21.706 (30,0%) |
 | EBITDA maduro/mês | R$ 9.177 | **R$ 16.745** | R$ 26.988 |
 | Margem EBITDA | 22,5% | **31,0%** | 37,3% |
-| Capital a reservar | R$ 497.338 | **R$ 481.006** | R$ 466.208 |
-| **Payback** | **60 meses** | **41 meses** | **27 meses** |
-| **TIR (60 meses)** | **2,4%** | **24,0%** | **52,2%** |
-| **VPL @ 18% a.a.** | **−R$ 183.029** | **+R$ 73.260** | **+R$ 426.667** |
-| VPL @ 22% a.a. | −R$ 213.390 | +R$ 22.690 | +R$ 348.591 |
-| ROI 5 anos | 109% | 196% | 316% |
+| Capital a reservar | R$ 412.203 | **R$ 395.871** | R$ 381.073 |
+| **Payback** | **60 meses** | **35 meses** | **24 meses** |
+| **TIR (60 meses)** | **7,1%** | **32,4%** | **65,9%** |
+| **VPL @ 18% a.a.** | **−R$ 107.747** | **+R$ 148.543** | **+R$ 501.949** |
+| VPL @ 22% a.a. | −R$ 136.595 | +R$ 99.485 | +R$ 425.386 |
+| ROI 5 anos | 128% | 236% | 383% |
 
-**No arranjo de capital recomendado** (capex enxuto, dívida de R$ 120 mil, pré-venda dos
-fundadores — seção 11), o cenário base vira: capital a reservar de **R$ 278 mil**, TIR do
-equity de **36,3%** e VPL de **R$ 136.479**.
+**No arranjo de capital recomendado** (teto de capex, dívida de R$ 120 mil, pré-venda dos
+fundadores — seção 11), o cenário base vira: capital a reservar de **R$ 274 mil**, TIR do
+equity de **37,1%** e VPL de **R$ 140.020**.
+
+### 5.1 A primeira coluna não é um cenário. É o gatilho de não fazer.
+
+A coluna da esquerda estava rotulada "Conservador", e o rótulo estava errado — foi erro de
+nomenclatura deste documento, não de conta. **380 assinantes é menos do que os 399 de que
+o projeto precisa para pagar a TMA de 18%.** Chamar de "conservador" um número que está
+*abaixo do mínimo* sugere que é um plano aceitável. Não é: é o cenário em que o projeto
+não deveria ter sido feito.
+
+A leitura certa da coluna é esta:
+
+> **Abaixo de ~400 assinantes no mês 12, este projeto não remunera o capital.** Não é
+> questão de apertar custo: com o capex já no teto e o pró-labore no mínimo, a conta não
+> fecha. É por isso que a campanha de 80 fundadores acontece **antes** da obra, e é por
+> isso que existe o gate da seção 13.
+
+Nesse cenário a TIR é 7,1% — acima de zero, abaixo da Selic. O projeto não quebra: devolve
+o capital em cinco anos e paga mal. **A decisão certa, se a pré-venda indicar esse
+patamar, é não construir** — e o custo de descobrir isso é a campanha de fundadores, não a
+loja inteira.
+
+Com o capex de R$ 399 mil da versão completa, essa mesma coluna dava **2,4%**. Os R$ 75
+mil a menos de capital valem 4,7 pontos de TIR no pior caso — é a melhor demonstração de
+por que o teto de R$ 325 mil é decisão acertada.
 
 **Ponto de equilíbrio:** R$ 25.608/mês — 47,3% da receita madura, já com o pró-labore. Em
 assinantes a resposta depende do que se conta junto: **134 assinantes** se as avulsas e as
-receitas complementares do cenário base estiverem lá, **302** se o equilíbrio tiver de sair só
-da assinatura. O primeiro número é o realista; o segundo é o piso de segurança.
-
-**O cenário conservador não paga a TMA, e agora nem de longe.** A 380 assinantes a TIR é
-2,4% e o VPL é negativo em R$ 168 mil. O projeto precisa de ~400 assinantes para empatar a 18% ao ano. Entre 400 e 500
-está a diferença entre um negócio bom e um negócio que não valeu o risco. Com o arranjo
-de capital da seção 11, o mesmo projeto empata com os mesmos ~400 assinantes, mas rende
-36,3% no cenário base em vez de 24,0%.
+receitas complementares do cenário base estiverem lá, **302** se o equilíbrio tiver de sair
+só da assinatura. O primeiro número é o realista; o segundo é o piso de segurança. Repare
+na distância entre **134 para pagar as contas** e **399 para pagar o capital**: a loja fica
+de pé muito antes de valer a pena. Essa distância é o risco real do negócio.
 
 ### Sobre a TMA de 18%
 
 Com a **Selic a 14% a.a.** (agosto/2026) e IPCA em torno de 4,7%, uma TMA de 18% embute
 apenas 4 pontos de prêmio de risco sobre o CDI — para um negócio novo, de um produto que
 ninguém na cidade ainda comprou, com máquina importada. **É pouco.** A coluna de 22%
-está na tabela por isso. O cenário base sobrevive aos dois; o conservador não sobrevive
-a nenhum.
+está na tabela por isso. O cenário base sobrevive aos dois; o piso não sobrevive a nenhum.
 
 ---
 
 ## 6. Sensibilidade
 
-Já com o pró-labore de R$ 3.500/mês. Capex cheio e 100% capital próprio, para isolar o efeito
-de cada variável da estrutura de capital (seção 11).
+Já com o pró-labore de R$ 3.500/mês, capex no teto de R$ 323.925 e 100% capital próprio,
+para isolar o efeito de cada variável da estrutura de capital (seção 11).
 
 | Cenário | EBITDA/mês | TIR | VPL @ 18% |
 |---|---|---|---|
-| **BASE** | R$ 16.745 | 24,0% | R$ 73.260 |
-| Receita −15% | R$ 10.443 | 6,1% | −R$ 140.932 |
-| Receita −25% | R$ 5.845 | −8,1% | −R$ 297.548 |
-| Aluguel a R$ 5.000 | R$ 15.341 | 19,0% | R$ 12.370 |
-| Simples no Anexo V | R$ 12.854 | 14,1% | −R$ 46.764 |
-| Capex +20% (câmbio/obra) | R$ 16.745 | 18,3% | R$ 3.914 |
-| **Versão enxuta (capex R$ 328 mil)** | R$ 16.745 | **32,0%** | **R$ 145.002** |
-| Já pagando royalty 6% + fundo 2% + tecnologia | R$ 12.313 | 11,0% | −R$ 83.452 |
+| **BASE** | R$ 16.745 | **32,4%** | R$ 148.543 |
+| Receita −15% | R$ 9.847 | 9,3% | −R$ 85.819 |
+| Aluguel a R$ 5.000 | R$ 14.745 | 24,5% | R$ 67.484 |
+| Simples no Anexo V | R$ 12.854 | 18,8% | R$ 8.349 |
+| Capex +20% (câmbio/obra estourando) | R$ 16.745 | 25,8% | R$ 92.253 |
+| Já pagando royalty 6% + fundo 2% + tecnologia | R$ 11.817 | 15,6% | −R$ 24.285 |
 
-**Tolerância de receita: −6% com capex cheio, −10,6% com capex enxuto.** Pagar o operador
-estreitou muito a margem de erro: antes eu reportava −15%, e aquele número não pagava o
-pró-labore. **Esta é a razão mais forte para fazer a versão enxuta** — ela não é só mais
-barata, é o que devolve margem de erro ao projeto.
+**Tolerância de receita: −10%.** Com o capex da versão completa seria −6%. Pagar o operador
+estreitou a margem de erro e **baixar o capex devolveu parte dela** — é a segunda razão
+para o teto de R$ 325 mil, além do caixa.
+
+Repare na linha do Anexo V: com capex no teto ela ainda dá **18,8%**, acima da TMA. Com o
+capex completo dava 12,4%, abaixo. O mesmo risco tributário deixa de ser fatal só por
+investir R$ 75 mil a menos.
 
 A última linha merece leitura: pagando royalty, fundo e taxa de tecnologia, a mesma unidade
-rende 11,0%. É a prova aritmética de que a franqueadora não pode nascer antes de a praça
+rende 15,6%. É a prova aritmética de que a franqueadora não pode nascer antes de a praça
 estar provada — e a base da correção registrada em [BP-REDE seção 1](BP-REDE.md).
 
 ### O risco número 1 não é a demanda. É o uso do plano Ilimitada.
 
 | Lavagens/mês por assinante Ilimitada | Lavagens/dia | Custo variável/mês | EBITDA/mês | TIR |
 |---|---|---|---|---|
-| 4 | 82 | R$ 14.285 | R$ 18.931 | 29,9% |
-| 5 | 89 | R$ 15.378 | R$ 17.838 | 27,0% |
-| **6 (premissa)** | **95** | **R$ 16.472** | **R$ 16.745** | **24,0%** |
-| 8 | 109 | R$ 18.658 | R$ 14.559 | 18,0% |
-| 10 | 122 | R$ 20.844 | R$ 12.372 | 11,8% |
-| 12 | 135 | R$ 23.031 | R$ 10.186 | **5,4%** |
+| 4 | 82 | R$ 14.285 | R$ 18.931 | 39,3% |
+| 5 | 89 | R$ 15.378 | R$ 17.838 | 35,9% |
+| **6 (premissa)** | **95** | **R$ 16.472** | **R$ 16.745** | **32,4%** |
+| 8 | 109 | R$ 18.658 | R$ 14.559 | 25,4% |
+| 10 | 122 | R$ 20.844 | R$ 12.372 | 18,2% |
+| 12 | 135 | R$ 23.031 | R$ 10.186 | **10,7%** |
 
 A receita não muda em nenhuma dessas linhas — só o custo. **O plano Ilimitada é a única
 variável que pode matar o projeto sem que a demanda caia um real.** O assinante de
 R$ 79 que lava doze vezes por mês consome R$ 66 de água, energia e química: sobram
-R$ 4 antes de imposto e custo fixo. A oito lavagens por mês o projeto já encosta na TMA;
-a dez, está abaixo dela.
+R$ 4 antes de imposto e custo fixo. A oito lavagens por mês o projeto cai para 25,4%;
+a doze, para 10,7% — abaixo da Selic.
 
 **Três travas, a implantar antes da inauguração, não depois:**
 
@@ -501,7 +564,7 @@ Item 2 é o mais importante e o mais barato. Não feche o aluguel sem ele.
 | Risco | Impacto | Mitigação |
 |---|---|---|
 | Uso abusivo do plano Ilimitada | **Alto** | Uso justo em contrato + câmera de placa + teto de 12/mês |
-| Demanda abaixo de ~400 assinantes | Alto | Pré-venda de 80 fundadores **antes** da obra; equilíbrio operacional a 232 |
+| Demanda abaixo de ~400 assinantes | Alto | Pré-venda de 80 fundadores **antes** da obra; equilíbrio operacional a 134 |
 | Simples no Anexo V em vez do III | Alto | Parecer de contador antes de abrir (R$ 47 mil/ano) |
 | Frota de Piumhi diferente do que a fonte diz | Alto | Baixar a planilha do Senatran — 15 minutos |
 | Benfeitoria perdida no fim do aluguel | Alto | Contrato de 10 anos + opção de compra + indenização |
@@ -528,7 +591,7 @@ Item 2 é o mais importante e o mais barato. Não feche o aluguel sem ele.
 5. **O consumo de 1,6 kWh é cálculo próprio**, não medição. O fornecedor declara 0,6–1,2.
 6. **O uso médio do plano Ilimitada é a premissa mais frágil do modelo.** 6 lavagens/mês
    por assinante é estimativa sem base local.
-7. **O capex de R$ 399 mil não tem orçamento local.** Cada linha precisa de três
+7. **O capex de R$ 324 mil não tem orçamento local.** Cada linha precisa de três
    cotações em Piumhi.
 8. **A dívida de R$ 120 mil a 21% é premissa, não proposta.** Nenhuma cooperativa foi
    consultada. PJ nova, sem histórico, pode receber taxa pior ou carência menor — e isso muda
@@ -559,15 +622,15 @@ Todos os números desta seção **já pagam o pró-labore de R$ 3.500/mês**.
 
 | Arranjo | 1ª tranche | **Capital a reservar** | TIR do equity | VPL @ 18% |
 |---|---|---|---|---|
-| 1. Capex cheio, 100% equity | R$ 454.060 | **R$ 481.006** | 24,0% | R$ 73.260 |
-| 2. Capex enxuto, 100% equity | R$ 373.000 | **R$ 399.946** | 32,0% | R$ 145.002 |
-| 3. + pré-venda anual dos fundadores | R$ 303.480 | **R$ 376.428** | 32,4% | R$ 144.082 |
-| **4. + dívida de R$ 120 mil a 21% a.a.** | **R$ 183.480** | **R$ 278.253** | **36,3%** | **R$ 136.479** |
-| 5. + dívida de R$ 150 mil | R$ 153.480 | R$ 254.262 | 37,8% | R$ 134.578 |
-| 6. + dívida de R$ 180 mil | R$ 123.480 | R$ 230.755 | 39,6% | R$ 132.678 |
+| 1. Lista de capex completa (R$ 399 mil), 100% equity | R$ 454.060 | **R$ 481.006** | 24,0% | R$ 73.260 |
+| 2. **Capex no teto de R$ 325 mil**, 100% equity | R$ 368.925 | **R$ 395.871** | 32,4% | R$ 148.543 |
+| 3. + pré-venda anual dos fundadores | R$ 299.405 | **R$ 372.353** | 32,9% | R$ 147.622 |
+| **4. + dívida de R$ 120 mil a 21% a.a.** | **R$ 179.405** | **R$ 274.178** | **37,1%** | **R$ 140.020** |
+| 5. + dívida de R$ 150 mil | R$ 149.405 | R$ 250.187 | 38,6% | R$ 138.119 |
+| 6. + dívida de R$ 180 mil | R$ 119.405 | R$ 226.680 | 40,6% | R$ 136.218 |
 
-**Do arranjo 1 para o 4: o capital cai 42%** — de R$ 481 mil para R$ 278 mil — e a TIR do
-equity sobe de 24,0% para 36,3%.
+**Do arranjo 1 para o 4: o capital cai 42%** — de R$ 481 mil para R$ 274 mil — e a TIR do
+equity sobe de 24,0% para 37,1%.
 
 "Capital a reservar" é o **pico de caixa**, não o desembolso inicial. A 1ª tranche entra na
 assinatura; o resto é chamado durante a rampa, quando os meses 1 a 4 fecham com EBITDA
@@ -582,7 +645,7 @@ caixa, pátio de 150 m² em vez de 300 m², fachada mais simples, contingência 
 
 **2. Dívida de R$ 120 mil: −R$ 99 mil de capital, +4,7 pontos de TIR.** Alavancagem funciona
 aqui porque o projeto rende 34% desalavancado contra 21% de juro. **Mas é uma troca, não
-mágica:** o VPL cai de R$ 165 mil para R$ 136 mil, porque 21% é acima da TMA de 18%. Você
+mágica:** o VPL cai de R$ 165 mil para R$ 140 mil, porque 21% é acima da TMA de 18%. Você
 troca R$ 8 mil de valor por R$ 99 mil de capital liberado. Com capital escasso, vale.
 
 Onde buscar, em ordem de probabilidade real:
@@ -590,7 +653,7 @@ Onde buscar, em ordem de probabilidade real:
 | Fonte | Condição | Observação |
 |---|---|---|
 | **Cooperativa de crédito local** (Sicoob, Sicredi) | ~21% a.a., 60 meses, 6 de carência | A mais provável para PJ nova em cidade do interior, com aval e relacionamento. **Comece por aqui.** |
-| Banco comercial com aval | ~26% a.a. | Caro: derruba o VPL para R$ 144 mil. Último recurso. |
+| Banco comercial com aval | ~26% a.a. | Caro: derruba o VPL para R$ 148 mil. Último recurso. |
 | **BDMG Pronampe investimento** | Selic + 5,50% a.a. (≈19,5%), 72 meses, 12 de carência | Melhor condição do mercado, **mas o teto é 30% da receita bruta do ano anterior, limitado a R$ 250 mil.** PJ nova não tem receita anterior — **só entra no ano 2.** |
 | BNDES Finame | Selic + 0,75% + spread do agente | Exige **máquina credenciada no BNDES**, ou seja nacional. A chinesa não entra. Ver 12.4. |
 
@@ -620,9 +683,9 @@ Se você passar os **12 primeiros meses sem retirada**:
 
 | | Com pró-labore do mês 1 | Sem retirada nos 12 primeiros meses |
 |---|---|---|
-| Capital a reservar | R$ 278.253 | **R$ 229.942** |
-| TIR do equity | 36,3% | **41,8%** |
-| VPL @ 18% | R$ 136.479 | **R$ 136.489** |
+| Capital a reservar | R$ 274.178 | **R$ 225.867** |
+| TIR do equity | 37,1% | **42,6%** |
+| VPL @ 18% | R$ 140.020 | **R$ 140.030** |
 
 **−R$ 31 mil de capital e +7,5 pontos de TIR.** É a alavanca mais barata que existe e a única
 que depende só de você ter outra renda durante um ano. Se não tiver, **não faça** — sócio
@@ -642,7 +705,7 @@ em dívida longa e barata. Testamos.
 | R$ 130.000 | R$ 325.400 | R$ 259.692 | 41,9% | R$ 160.703 |
 | R$ 150.000 | R$ 345.400 | R$ 262.416 | 39,3% | R$ 142.433 |
 | R$ 175.000 | R$ 370.400 | R$ 265.858 | 36,0% | R$ 119.594 |
-| *rota chinesa, sem Finame* | *R$ 328.000* | *R$ 278.253* | *36,3%* | *R$ 136.479* |
+| *rota chinesa, sem Finame* | *R$ 323.925* | *R$ 274.178* | *37,1%* | *R$ 140.020* |
 
 **Ponto de indiferença: máquina nacional a R$ 134.400.** Acima disso, a rota chinesa com
 crédito de cooperativa vale mais — a vantagem do Finame é anulada pelo preço mais alto do
@@ -665,15 +728,15 @@ igualmente defensáveis, e a escolha entre elas não é financeira.
 
 | | **Sem dívida — 100% equity** | **Com dívida de R$ 120 mil** |
 |---|---|---|
-| Capex | R$ 328.000 (enxuto) | R$ 328.000 (enxuto) |
+| Capex | R$ 323.925 (enxuto) | R$ 323.925 (enxuto) |
 | Capital de giro | R$ 45.000 | R$ 45.000 |
 | Dívida — cooperativa local | — | R$ 120.000 a ~21% a.a., 60 meses, 6 de carência |
 | Pré-venda de 80 fundadores | R$ 69.520 | R$ 69.520 |
-| **Capital a reservar (equity)** | **R$ 376.428** | **R$ 278.253** |
-| 1ª tranche, na assinatura | R$ 303.480 | R$ 183.480 |
+| **Capital a reservar (equity)** | **R$ 372.353** | **R$ 274.178** |
+| 1ª tranche, na assinatura | R$ 299.405 | R$ 179.405 |
 | A chamar durante a rampa | R$ 71.473 | R$ 92.531 |
-| **TIR do equity** | **32,4%** | **36,3%** |
-| **VPL @ 18% a.a.** | **R$ 144.082** | R$ 136.479 |
+| **TIR do equity** | **32,9%** | **37,1%** |
+| **VPL @ 18% a.a.** | **R$ 147.622** | R$ 140.020 |
 | Payback | 33 meses | 33 meses |
 | EBITDA maduro | R$ 16.745/mês (31,0%) | R$ 16.745/mês (31,0%) |
 
@@ -710,11 +773,11 @@ tranches:
 
 | | Sem dívida | Com dívida |
 |---|---|---|
-| Investidor A (25%) | R$ 93.738 | R$ 69.003 |
-| Investidor B (25%) | R$ 93.738 | R$ 69.003 |
-| **Antonio (50%)** | **R$ 187.476** | **R$ 138.006** |
-| **Total** | **R$ 376.428** | **R$ 278.253** |
-| TIR de todos | **32,4%** | **36,3%** |
+| Investidor A (25%) | R$ 93.088 | R$ 68.544 |
+| Investidor B (25%) | R$ 93.088 | R$ 68.544 |
+| **Antonio (50%)** | **R$ 186.177** | **R$ 137.089** |
+| **Total** | **R$ 372.353** | **R$ 274.178** |
+| TIR de todos | **32,9%** | **37,1%** |
 
 Todas as outras divisões (50/50, 33,33 × 3 e a de desempate), nos dois arranjos, estão em
 [CENARIOS.md](CENARIOS.md) §2.
@@ -743,20 +806,20 @@ está em 11.5, e as divisões 50/50 e 33,33 × 3 nos dois arranjos estão em
 
 | | Por investidor (25%) | Os dois (50%) | Antonio (50%) |
 |---|---|---|---|
-| Compromisso | R$ 69.003 | R$ 138.006 | R$ 138.006 |
-| 1ª tranche, na assinatura | R$ 45.870 | R$ 91.740 | R$ 91.740 |
-| **TIR** | **36,3%** | **36,3%** | **36,3%** |
+| Compromisso | R$ 68.544 | R$ 137.089 | R$ 137.089 |
+| 1ª tranche, na assinatura | R$ 44.851 | R$ 89.702 | R$ 89.702 |
+| **TIR** | **37,1%** | **37,1%** | **37,1%** |
 | Payback | 33 meses | 33 meses | 33 meses |
 | Distribuição madura | R$ 3.350/mês | R$ 6.701/mês | R$ 6.701/mês |
-| Caixa em 60 meses | R$ 148.862 | R$ 297.723 | R$ 297.723 |
+| Caixa em 60 meses | R$ 148.556 | R$ 297.112 | R$ 297.112 |
 | Sobre o capital | 2,14x | 2,14x | 2,14x |
 | VPL @ 18% | R$ 39.162 | R$ 78.324 | R$ 78.324 |
 
-**Dinheiro igual, quota igual, retorno igual: 36,3% para os dois lados.** É a estrutura mais
+**Dinheiro igual, quota igual, retorno igual: 37,1% para os dois lados.** É a estrutura mais
 simples de explicar e de vender — e é mais generosa com os investidores que a recomendação
 anterior (que dava a eles 48% por R$ 150 mil, ou seja, menos quota por mais dinheiro).
 
-O retorno de 36,3% dos dois lados **depende do capital ser chamado em tranches**, proporcional
+O retorno de 37,1% dos dois lados **depende do capital ser chamado em tranches**, proporcional
 à necessidade real. Se o investidor depositar os R$ 69 mil inteiros no dia da assinatura e o
 dinheiro ficar parado até a obra pedir, a TIR dele cai para **24,8%** — ainda boa, mas 14
 pontos jogados fora por desenho ruim de contrato. A cláusula de chamada de capital não é
@@ -800,7 +863,7 @@ que eles podem contestar, e com razão.
 provas; é justo e custa zero agora. Se quiser ser generoso e alinhar de verdade, 5% a 10% da
 PJ 1 para o grupo que entrou na Fase 1 resolve o assunto para sempre.
 
-**4. Capital chamado em tranches.** R$ 183.480 na assinatura e o restante em chamadas de
+**4. Capital chamado em tranches.** R$ 179.405 na assinatura e o restante em chamadas de
 capital durante a rampa, com prazo de 15 dias e consequência clara para quem não atender.
 Aumenta a TIR deles e evita dinheiro parado em conta.
 
@@ -940,7 +1003,7 @@ modelo.**
 | 15 dias | CEMIG: tensão no ponto e prazo de aumento de carga | Define 220 V ou 380 V no pedido da máquina |
 | 15 dias | SAAE: **tarifa do m³ acima dos 30** e **como o esgoto é cobrado** (o mínimo de 30 m³ por R$ 93,59 já está confirmado e não manda na conta — seção 4.1) | Linha de custo variável, para sempre |
 | 15 dias | Prefeitura: licença ambiental e exigência de caixa separadora | Pode mudar a obra civil inteira |
-| 30 dias | Três orçamentos locais de obra civil, elétrica e separadora | Valida ou derruba os R$ 399 mil |
+| 30 dias | Três orçamentos locais de obra civil, elétrica e separadora, com escopo escrito | Valida ou derruba os R$ 324 mil, e a contingência de 5% é fina |
 | 30 dias | Negociar o aluguel **com opção de compra** e prazo de 10 anos | Protege R$ 142 mil de benfeitoria |
 | 30 dias | Ligar para o distribuidor brasileiro do fabricante | Números reais de operação no Brasil |
 | 30 dias | **Site no ar e campanha dos 80 fundadores** | Transforma premissa de demanda em evidência |
@@ -953,7 +1016,7 @@ modelo.**
 
 **A campanha de fundadores é o teste mais barato deste plano, e agora é também fonte de
 capital.** Custa cerca de R$ 22 mil
-e responde à pergunta de R$ 278 mil. Se as 80 reservas não saírem em Piumhi — cidade
+e responde à pergunta de R$ 274 mil. Se as 80 reservas não saírem em Piumhi — cidade
 onde você nasceu e tem rede — o problema não é a campanha.
 
 A franqueadora não entra em nenhuma linha desta tabela. Ela é a Fase 2, e só começa a

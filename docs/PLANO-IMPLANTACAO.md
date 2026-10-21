@@ -25,7 +25,7 @@ Custo desta fase: cerca de **R$ 30 mil** (campanha de fundadores, honorários, d
 | 15 dias | Prefeitura: licença ambiental e exigência de caixa separadora | Antonio | Pode mudar a obra civil inteira |
 | 15 dias | Grupo MF e Covre: têm modelo sem escova? É credenciado no BNDES? Preço? | Antonio | Abaixo de R$ 134 mil muda a decisão da máquina |
 | 15 dias | Cooperativa de crédito: proposta de R$ 120 mil, 60 meses, 6–12 de carência | Antonio | Só se a opção for o arranjo com dívida ([CENARIOS.md](CENARIOS.md) §1.1) |
-| 30 dias | Três orçamentos locais de obra civil, elétrica e caixa separadora | Antonio | Valida ou derruba os R$ 328 mil de capex |
+| 30 dias | Três orçamentos locais de obra civil, elétrica e caixa separadora | Antonio | Valida ou derruba os R$ 324 mil de capex |
 | 30 dias | Negociar o aluguel do terreno: 10 anos, **opção de compra com preço travado**, indenização de benfeitoria, **autorização expressa de sublocação** | Antonio + advogado | Protege R$ 142 mil de benfeitoria e habilita a estrutura da rede depois |
 | 30 dias | Ligar para o distribuidor brasileiro do fabricante | Antonio | Números reais de operação no Brasil, com a mesma máquina |
 | **30 dias** | **Site no ar + campanha dos 80 fundadores** | Claude (deploy) / Antonio (campanha) | Transforma a premissa de demanda em evidência **e** levanta R$ 69,5 mil |
@@ -50,7 +50,7 @@ grande ainda não saiu, e é exatamente para isso que a Fase 0 existe.
 
 ## Fase 1 — A loja própria de Piumhi
 
-Capital: **R$ 376 mil** (100% equity) ou **R$ 278 mil** (com dívida de R$ 120 mil). Divisão do
+Capital: **R$ 372 mil** (100% equity) ou **R$ 274 mil** (com dívida de R$ 120 mil). Divisão do
 equity em [CENARIOS.md](CENARIOS.md) §2.
 
 | Mês | Marco | Responsável | Depende de |

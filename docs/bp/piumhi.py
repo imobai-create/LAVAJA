@@ -14,7 +14,26 @@ CAMBIO = 5.30          # R$/USD de planejamento (Focus fim-2026: 5,20; fecha em 
 TMA = 0.18             # cenario base
 TMA_ALT = 0.22         # hurdle mais honesto com Selic a 14% a.a.
 
+# Teto de capex definido pelo empreendedor em out/2026: R$ 325.000.
+# A lista abaixo e a que cabe nesse teto. O que saiu da versao completa esta
+# em CAPEX_COMPLETO, logo abaixo, para a comparacao ficar visivel.
 CAPEX = [
+    ("Maquina JM-70 posta em Piumhi (USD 23.000)",        23_000 * CAMBIO),
+    ("Interface Modbus/API + kit de pecas 2 anos (USD 2.000)", 2_000 * CAMBIO),
+    ("Obra civil: portico, baia coberta, piso, patio 150 m2",   62_000),
+    ("Caixa separadora agua/oleo + hidraulica + reservatorio",  26_000),
+    ("Entrada de energia, quadro, cabeamento, projeto e ART",   24_000),
+    ("Laudo NR-12 com ART",                                      6_000),
+    ("Totem de pagamento PIX/cartao + camera de placa + CFTV",  26_000),
+    ("Fachada e comunicacao visual, versao simples",            10_000),
+    ("Software da unidade e implantacao",                        8_000),
+    ("Projeto, licencas, alvaras, bombeiros, taxas",            14_000),
+]
+CONTINGENCIA = 0.05     # 5% e o que cabe no teto. A 8% o capex seria R$ 333.180.
+
+# A versao completa, para referencia: patio de 300 m2, box de alta pressao e
+# dois aspiradores no dia 1, fachada e software completos, contingencia de 8%.
+CAPEX_COMPLETO = [
     ("Maquina JM-70 posta em Piumhi (USD 23.000)",        23_000 * CAMBIO),
     ("Interface Modbus/API + kit de pecas 2 anos (USD 2.000)", 2_000 * CAMBIO),
     ("Obra civil: portico, baia coberta, piso, patio 300 m2",   92_000),
@@ -27,17 +46,17 @@ CAPEX = [
     ("Software da unidade, integracao e implantacao",            12_000),
     ("Projeto, licencas, alvaras, bombeiros, taxas",             14_000),
 ]
-CONTINGENCIA = 0.08
+CONTINGENCIA_COMPLETO = 0.08
 
 GIRO = [
     ("Caucao de 3 alugueis",                      9_000),
-    ("Campanha de pre-venda e inauguracao",      22_000),
-    ("Estoque inicial de quimicos",               6_000),
-    ("Colchao de 3 meses de custo fixo",         18_000),
+    ("Campanha de pre-venda e inauguracao",      18_000),
+    ("Estoque inicial de quimicos",               5_000),
+    ("Colchao de 3 meses de custo fixo",         13_000),
 ]
 
 # Benfeitoria que fica no imovel de terceiro se o contrato nao for renovado
-BENFEITORIA = 92_000 + 26_000 + 24_000
+BENFEITORIA = 62_000 + 26_000 + 24_000
 
 # ---- precos (site)
 P_ESSENCIAL, P_ILIMITADA, P_PREMIUM, P_AVULSA = 59.0, 99.0, 139.0, 35.0
@@ -104,9 +123,11 @@ CENARIOS = {
 FROTA_AUTOMOVEIS_PIUMHI = 13_652   # 2024, Senatran via IBGE (fonte secundaria)
 
 
-def capex_total():
-    base = sum(v for _, v in CAPEX)
-    return base, base * CONTINGENCIA, base * (1 + CONTINGENCIA)
+def capex_total(completo=False):
+    linhas = CAPEX_COMPLETO if completo else CAPEX
+    cont = CONTINGENCIA_COMPLETO if completo else CONTINGENCIA
+    base = sum(v for _, v in linhas)
+    return base, base * cont, base * (1 + cont)
 
 
 def receita_e_lavagens(n_assinantes, avulsas_dia, compl):
@@ -199,7 +220,7 @@ if __name__ == "__main__":
     for nome, v in CAPEX:
         print(f"  {nome:<58} {brl(v):>12}")
     print(f"  {'Subtotal':<58} {brl(base):>12}")
-    print(f"  {'Contingencia 8%':<58} {brl(cont):>12}")
+    print(f"  {f'Contingencia {CONTINGENCIA*100:.0f}%':<58} {brl(cont):>12}")
     print(f"  {'CAPEX TOTAL':<58} {brl(cap):>12}")
     print(f"\n  do qual benfeitoria em imovel de terceiro: {brl(BENFEITORIA)} "
           f"({BENFEITORIA/cap*100:.0f}% do capex)")

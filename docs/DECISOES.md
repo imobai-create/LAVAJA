@@ -434,21 +434,21 @@ de valor:
 
 | Alavanca | Efeito no capital | Efeito na TIR | Efeito no VPL |
 |---|---|---|---|
-| Capex enxuto (R$ 328 mil) | −R$ 81 mil | +8,3 pp | +R$ 72 mil |
+| Capex enxuto (R$ 324 mil) | −R$ 81 mil | +8,3 pp | +R$ 72 mil |
 | Dívida de R$ 120 mil a 21% a.a. | −R$ 99 mil | +4,7 pp | **−R$ 8 mil** |
 | Pré-venda anual de 80 fundadores | −R$ 24 mil | +0,4 pp | −R$ 1 mil |
 | Prazo 30/70 do fornecedor | desloca o pico | — | — |
 
-Resultado: **capital a reservar cai de R$ 481 mil para R$ 376 mil sem dívida, ou R$ 278 mil
-com ela**, e a TIR do equity sobe de 24,0% para 32,4% ou 36,3%, já pagando o pró-labore.
+Resultado: **capital a reservar cai de R$ 481 mil para R$ 372 mil sem dívida, ou R$ 274 mil
+com ela**, e a TIR do equity sobe de 24,0% para 32,9% ou 37,1%, já pagando o pró-labore.
 
 A dívida **destrói um pouco de valor** (21% contra TMA de 18%) e isso está registrado de
 propósito: é uma troca consciente de R$ 8 mil de VPL por R$ 99 mil de capital liberado.
 
 > **Atualização — out/2026: os dois arranjos ficam em aberto.** Por decisão do empreendedor,
 > o 100% equity e o equity + dívida passam a ser tratados como **duas opções vivas**, não como
-> um recomendado e uma variante. A razão é que o VPL é quase empate (R$ 144.082 sem dívida
-> contra R$ 136.479 com ela) — então a escolha não sai da planilha. O que decide é caixa, aval
+> um recomendado e uma variante. A razão é que o VPL é quase empate (R$ 147.622 sem dívida
+> contra R$ 140.020 com ela) — então a escolha não sai da planilha. O que decide é caixa, aval
 > pessoal, velocidade de fechamento e tolerância a ter parcela durante a rampa. Os dois estão
 > lado a lado em [BP-PIUMHI](BP-PIUMHI.md) §11.5, em [CENARIOS.md](CENARIOS.md) §1 e §2, na
 > apresentação e no resumo para investidor.
@@ -458,8 +458,8 @@ propósito: é uma troca consciente de R$ 8 mil de VPL por R$ 99 mil de capital 
 > equity passa a ser a escolha por eliminação.
 
 **Cap table:** divisão 25 / 25 / 50 (ver ADR-012 atualizada e BP-PIUMHI §11.6). Com aporte
-proporcional e capital chamado em tranches, a TIR é a mesma para todos — 32,4% sem dívida,
-36,3% com ela. Cada investidor põe R$ 93.738 ou R$ 69.003, conforme o arranjo; Antonio põe o
+proporcional e capital chamado em tranches, a TIR é a mesma para todos — 32,9% sem dívida,
+37,1% com ela. Cada investidor põe R$ 93.088 ou R$ 68.544, conforme o arranjo; Antonio põe o
 dobro e fica com 50%, mais pró-labore e 100% da franqueadora.
 
 **Antonio fica acima de 50%, sempre.** A alternativa de dois investidores a R$ 90 mil por 27,5%

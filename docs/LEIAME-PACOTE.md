@@ -47,11 +47,15 @@ A loja de Piumhi, capex enxuto, pré-venda dos fundadores, já com pró-labore d
 
 | | 100% equity | Com dívida de R$ 120 mil |
 |---|---|---|
-| Capital a reservar | R$ 376.428 | R$ 278.253 |
-| TIR do equity | 32,4% | 36,3% |
-| VPL a 18% a.a. | R$ 144.082 | R$ 136.479 |
-| Payback | 33 meses | 33 meses |
+| Capital a reservar | R$ 372.353 | R$ 274.178 |
+| TIR do equity | 32,9% | 37,1% |
+| VPL a 18% a.a. | R$ 147.622 | R$ 140.020 |
+| Payback | 36 meses | 35 meses |
 | EBITDA maduro | R$ 16.745/mês (31,0%) | idem |
+
+**Capex de R$ 323.925, dentro do teto de R$ 325 mil** definido em outubro de 2026, mais
+R$ 45.000 de capital de giro. A lista completa de R$ 399 mil foi descartada: custava
+R$ 75 mil a mais e rendia 8 pontos de TIR a menos.
 
 **Os dois arranjos ficam em aberto de propósito.** São R$ 7,6 mil de diferença de VPL —
 4,6%, menos que a margem de erro das próprias premissas. A escolha não é de retorno, é de
@@ -70,7 +74,7 @@ não começa.
    e o projeto fecha nos dois. A tarifa de energia **já está confirmada** em R$ 1,11/kWh
    (CEMIG, baixa tensão) e o plano inteiro foi recalculado com ela.
 3. **O enquadramento no Simples:** Anexo III ou V muda a TIR em 11 pontos.
-4. **O capex de R$ 328 mil** não tem três cotações locais.
+4. **O capex de R$ 324 mil** não tem três cotações locais.
 5. **A demanda nunca foi medida.** 500 assinantes são 3,7% dos automóveis da cidade.
 
 Os quatro primeiros se resolvem em trinta dias, por telefone. O quinto é o que a campanha
