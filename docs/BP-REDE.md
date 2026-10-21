@@ -3,7 +3,7 @@
 Business plan da franqueadora. **Só começa a ser formatada depois de doze meses de
 número auditável em Piumhi** ([BP-PIUMHI.md](BP-PIUMHI.md)).
 
-Modelo em `docs/bp/rede.py` e `docs/bp/imovel.py`. Horizonte de 120 meses, TMA de 18% a.a.
+Horizonte de 120 meses, TMA de 18% a.a. Planilha: `Modelo-Economico-Rede.xlsx`.
 Data da versão: 2026-10-20.
 
 ---
@@ -224,7 +224,7 @@ franqueados de **US$ 15,7 bilhões**, **US$ 10,0 bi são aluguel** e US$ 5,6 bi 
 
 ### O teste no nosso modelo: a estrutura não fecha a R$ 48 mil/mês
 
-Modelamos exatamente isso em `docs/bp/mcdonalds.py` — estrutura **B3**: a franqueadora assina
+Modelamos exatamente isso — estrutura **B3**: a franqueadora assina
 a locação principal (R$ 3.000/mês), constrói a baia (R$ 220 mil) com **70% de dívida a 14%
 a.a.**, e subloca pelo maior entre uma base e um percentual das vendas.
 

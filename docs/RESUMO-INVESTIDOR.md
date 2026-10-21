@@ -97,5 +97,5 @@ aposta em conta.
 
 ---
 
-Base: [BP-PIUMHI.md](BP-PIUMHI.md) seção 11, modelo em [bp/capital.py](bp/capital.py),
+Base: [BP-PIUMHI.md](BP-PIUMHI.md) seção 11, planilha `Modelo-Economico-Piumhi.xlsx`,
 planilha em `bp/Modelo-Economico-Piumhi.xlsx` (aba `Capital`).

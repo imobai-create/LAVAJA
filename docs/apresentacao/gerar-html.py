@@ -15,11 +15,11 @@ deck = json.loads((AQUI / "deck.json").read_text(encoding="utf-8"))
 
 CSS = """
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#2A3540;font-family:'Archivo',Arial,sans-serif}
-#capa-doc{max-width:1100px;margin:0 auto;padding:56px 32px 8px;color:#EFF3F6}
+html,body{margin:0;padding:0;background:#061024;font-family:'Archivo',Arial,sans-serif}
+#capa-doc{max-width:1100px;margin:0 auto;padding:56px 32px 8px;color:#F2F8FF}
 #capa-doc h1{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:0 0 8px}
-#capa-doc p{font-size:16px;line-height:1.5;color:#B6C2CE;margin:0 0 6px}
-#capa-doc ol{font-size:15px;line-height:1.7;color:#B6C2CE;margin:16px 0 0;padding-left:22px}
+#capa-doc p{font-size:16px;line-height:1.5;color:#AFC9F5;margin:0 0 6px}
+#capa-doc ol{font-size:15px;line-height:1.7;color:#AFC9F5;margin:16px 0 0;padding-left:22px}
 #palco{display:flex;flex-direction:column;align-items:center;gap:28px;padding:28px 16px 64px}
 /* .moldura recorta no tamanho reduzido; .folha mantem 1920x1080 e e escalada dentro dela */
 .moldura{position:relative;flex:none;overflow:hidden;border-radius:4px;
@@ -28,7 +28,7 @@ html,body{margin:0;padding:0;background:#2A3540;font-family:'Archivo',Arial,sans
 .folha > section{width:1920px;height:1080px;position:relative;overflow:hidden;margin:0;
   display:flex}
 .folha aside{display:none}
-.numero{position:absolute;right:12px;top:9px;font-size:13px;color:#8FA3B3;z-index:9;
+.numero{position:absolute;right:12px;top:9px;font-size:13px;color:#38E1FF;z-index:9;
   font-family:'Archivo',Arial,sans-serif}
 /* elementos do visualizador de Slides */
 x-shape{display:block}

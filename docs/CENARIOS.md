@@ -1,7 +1,6 @@
 # Tabela mestra de cenários
 
-Tudo que foi simulado neste projeto, num lugar só. Gerado por `bp/cenarios.py`
-(`cd docs/bp && PYTHONPATH=. python3 cenarios.py`). Data: 2026-10-20.
+Tudo que foi simulado neste projeto, num lugar só. Data: 2026-10-21.
 
 Premissas comuns: TMA de 18% a.a., Selic de referência 14% a.a., pró-labore do operador de
 R$ 3.500/mês em todos os números, horizonte de 60 meses na unidade e 120 meses na rede.
@@ -211,15 +210,10 @@ Vender só para **franqueado operador**, nunca para investidor ausente.
 
 ---
 
-## Onde cada número é calculado
+## Onde cada número pode ser refeito
 
-```
-bp/piumhi.py       a unidade: receita, custos, três cenários, capacidade
-bp/capital.py      arranjos de capital, dívida, pré-venda, divisão do equity
-bp/rede.py         a franqueadora e o franqueado nas estruturas A, B1, B2
-bp/mcdonalds.py    o over no aluguel (B3) e o limiar de R$ 64 mil
-bp/imovel.py       janela de aluguel e comprar-ou-alugar o terreno de Piumhi
-bp/sens_piumhi.py  capacidade, equilíbrio e sensibilidades
-bp/cenarios.py     esta tabela toda, de uma vez
-bp/planilha.py     gera as duas planilhas
-```
+Todos os cenários desta tabela saem do mesmo modelo, e a **planilha
+`Modelo-Economico-Piumhi.xlsx`** reproduz qualquer um deles: a aba `Premissas` tem as
+entradas (receita madura, TMA, aluguel, tarifas, pró-labore) e a aba `Capital` tem os
+arranjos de dívida e a divisão do equity. A **`Modelo-Economico-Rede.xlsx`** faz o mesmo
+para a Fase 2, com as estruturas de ponto comercial lado a lado.

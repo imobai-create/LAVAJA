@@ -4,7 +4,7 @@ Business plan da primeira unidade. **Área alugada a R$ 3.000/mês**, capex apen
 implantação do lava jato, sem terreno. Unidade própria: não paga taxa de franquia,
 royalty, fundo de marketing nem taxa de tecnologia.
 
-Modelo em `docs/bp/piumhi.py`. Planilha com fórmulas vivas:
+Planilha com fórmulas vivas:
 `docs/bp/Modelo-Economico-Piumhi.xlsx`. Data da versão: 2026-10-20.
 
 ---
@@ -468,11 +468,14 @@ Item 2 é o mais importante e o mais barato. Não feche o aluguel sem ele.
    consultada. PJ nova, sem histórico, pode receber taxa pior ou carência menor — e isso muda
    a seção 11. O BDMG Pronampe, que teria a melhor condição, exige receita do ano anterior e
    **só está disponível no ano 2**.
-9. **A pré-venda de R$ 69,5 mil supõe 80 fundadores pagando 12 meses à vista.** Pode sair
-   menos, e aí o capital a reservar sobe. É também o teste de demanda, então sair menos é
-   informação, não só problema.
+9. **A pré-venda de R$ 69,5 mil supõe 80 fundadores pagando 12 meses à vista** — e, pela
+   [ADR-014](DECISOES.md), essa cobrança só é oferecida **depois da máquina instalada**,
+   não no mês 0. Na prática o caixa entra no fim da obra, não no começo: a alavanca
+   enfraquece e o capital a reservar sobe. É o preço de não receber por uma loja que ainda
+   não existe. Se saírem menos de 80, o capital sobe mais — mas isso é o teste de demanda
+   falando, e é informação, não só problema.
 10. **O pró-labore de R$ 3.500 é escolha, não cálculo.** Acima de R$ 6.000 a TIR do arranjo
-    recomendado cai para 25,2% e o projeto encosta na TMA.
+    recomendado cai para 22,6% e o projeto encosta na TMA.
 
 Nenhum desses pontos invalida a tese. Os itens 1, 3, 4 e 7 se resolvem em trinta dias e
 custam quase nada — e é isso que a Fase 0 abaixo existe para fazer.
@@ -482,7 +485,7 @@ custam quase nada — e é isso que a Fase 0 abaixo existe para fazer.
 ## 11. Estrutura de capital
 
 Objetivo: **o menor capital possível em risco**, sem estrangular a rampa, com um ou dois
-investidores entrando e o controle e a marca preservados. Modelo em `docs/bp/capital.py`.
+investidores entrando e o controle e a marca preservados.
 
 Todos os números desta seção **já pagam o pró-labore de R$ 3.500/mês**.
 

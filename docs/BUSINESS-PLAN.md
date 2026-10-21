@@ -66,24 +66,17 @@ assinatura.** Os investidores compram a loja de Piumhi, não a rede.
 - **Estrutura de capital da Fase 1:** capex enxuto + dívida + pré-venda, com o Antonio acima
   de 50% e a marca fora da sociedade dos investidores ([ADR-012](DECISOES.md)).
 
-## Modelo e planilhas
+## As planilhas
 
-```
-docs/bp/comum.py       funcoes financeiras (VPL, TIR, payback) e tabelas do Simples
-docs/bp/piumhi.py      Fase 1 - loja modelo, 3 cenarios, 60 meses
-docs/bp/sens_piumhi.py capacidade, ponto de equilibrio e sensibilidades da Fase 1
-docs/bp/rede.py        Fase 2 - franqueadora e franqueado nas 3 estruturas, 120 meses
-docs/bp/imovel.py      janela de aluguel e comprar-ou-alugar o terreno de Piumhi
-docs/bp/mcdonalds.py   estrutura McDonald's: locacao principal + aluguel percentual
-docs/bp/capital.py     estrutura de capital da Fase 1: divida, pre-venda, cap table
-docs/bp/cenarios.py    roda TODOS os cenarios de uma vez (tabela mestra)
-docs/bp/planilha.py    gera as planilhas com formulas vivas
-```
+Toda conta deste plano está em duas planilhas, com **fórmulas vivas**:
 
-Rodar: `cd docs/bp && PYTHONPATH=. python3 piumhi.py` (idem para os outros). Sem
-dependências externas, exceto `planilha.py`, que precisa de `openpyxl`.
+| Planilha | O que tem |
+|---|---|
+| **Modelo-Economico-Piumhi.xlsx** | A loja. Abas `Premissas`, `Resumo`, `Capital` e `Fluxo` |
+| **Modelo-Economico-Rede.xlsx** | A rede. Abas `Premissas`, `Franqueado`, `Franqueadora`, `Cronograma` |
 
-Planilhas: `docs/bp/Modelo-Economico-Piumhi.xlsx` e
-`docs/bp/Modelo-Economico-Rede.xlsx`. As abas mensais têm fórmulas que apontam para a aba
-`Premissas` — `IRR`, `NPV` e `MATCH` de verdade. Mudar a TMA, a receita madura, o aluguel
-ou o número de assinantes recalcula tudo.
+As abas mensais usam `IRR`, `NPV` e `MATCH` de verdade, apontando para a aba `Premissas`.
+**As células em bege são as únicas para editar:** mudar a TMA, a receita madura, o aluguel,
+a tarifa de energia ou o aporte de cada sócio recalcula tudo na hora — inclusive a TIR, o
+VPL e o payback. É a forma de testar qualquer cenário que não esteja nestes documentos,
+sem depender de ninguém.
