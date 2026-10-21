@@ -29,10 +29,27 @@ cena. O que a Fase 1 precisa é:
 | TIR do equity | 24,0% | **32,9%** | **37,1%** |
 | VPL @ 18% | R$ 73.260 | **R$ 147.622** | R$ 140.020 |
 
-**Capital a reservar no arranjo cru: R$ 481 mil** (R$ 496 mil no conservador). Isso é capex
-cheio e 100% capital próprio, sem nenhuma alavanca. A [seção 11](#11-estrutura-de-capital)
-mostra como esse número cai para **R$ 372 mil sem dívida nenhuma** ou **R$ 274 mil com dívida
-de R$ 120 mil** — e os dois arranjos seguem em aberto, porque a escolha entre eles não é
+> **O que é "capital a reservar".** Não é o capex. É **o pior ponto do caixa acumulado**:
+> tudo o que sai do bolso dos sócios desde o mês 0 até o mês em que a loja para de consumir
+> dinheiro. São duas parcelas:
+>
+> | | |
+> |---|---|
+> | Investimento no mês 0 (capex + giro) | R$ 368.925 |
+> | **+** prejuízo acumulado da rampa, até o mês 6 | R$ 26.946 |
+> | **= capital a reservar** | **R$ 395.871** |
+>
+> O segundo número existe porque **os meses 1 a 5 fecham com EBITDA negativo**: a base de
+> assinantes ainda está se formando e o custo fixo já é integral. Quem entra com só o capex
+> descobre isso no mês 3, quando precisa pedir mais dinheiro na pior hora possível. É por
+> isso que o plano pede o compromisso pelo valor cheio — mesmo que a chamada de capital seja
+> em tranches, e mesmo que parte dele nunca precise ser desembolsada se o avulso vier forte
+> (seção 5.2).
+
+**Capital a reservar no arranjo cru: R$ 481 mil.** Isso é a lista de capex completa e 100%
+capital próprio, sem nenhuma alavanca. Com o capex no teto de R$ 325 mil cai para
+**R$ 395.871**, e a [seção 11](#11-estrutura-de-capital) mostra como chega a
+**R$ 372 mil sem dívida nenhuma** ou **R$ 274 mil com dívida de R$ 120 mil** — e os dois arranjos seguem em aberto, porque a escolha entre eles não é
 financeira (o VPL é quase empate) e sim de caixa. A franqueadora só volta à mesa depois
 de doze meses de número real em Piumhi — e com um plano próprio, decidido com dados que
 hoje não existem ([BP-REDE.md](BP-REDE.md)).
@@ -444,6 +461,99 @@ receitas complementares do cenário base estiverem lá, **302** se o equilíbrio
 só da assinatura. O primeiro número é o realista; o segundo é o piso de segurança. Repare
 na distância entre **134 para pagar as contas** e **399 para pagar o capital**: a loja fica
 de pé muito antes de valer a pena. Essa distância é o risco real do negócio.
+
+### 5.2 O ponto de equilíbrio, com o avulso contado
+
+O avulso não estava explícito nos quadros anteriores, e ele muda o problema. A razão é
+aritmética:
+
+| | Preço | Lavagens | Margem de contribuição |
+|---|---|---|---|
+| **Assinante médio** | R$ 87/mês | 5,25/mês | **R$ 47,60 por mês** |
+| **Lavagem avulsa** | R$ 35 | 1 | **R$ 25,23 por lavagem** |
+
+**Uma lavagem avulsa por dia rende R$ 756/mês — o mesmo que 15,9 assinantes.** O assinante
+paga R$ 87 e usa a máquina 5,25 vezes; o avulso paga R$ 35 e usa uma. Por lavagem, o avulso
+vale 3,0 vezes mais.
+
+Isso não derruba a tese da assinatura — recorrência é previsibilidade, e previsibilidade é
+o que faz o negócio valer múltiplo e o que permite planejar a rede. Mas significa que
+**o avulso é quem segura a loja de pé no primeiro ano**, e que o equilíbrio não é um número
+de assinantes: é uma curva.
+
+#### Equilíbrio 1 — pagar as contas (EBITDA = 0)
+
+Custo fixo de R$ 15.050/mês, já com o pró-labore. Sem contar box e aspiradores.
+
+| Avulsas/dia | Assinantes necessários | Receita/mês | Quanto vem do avulso |
+|---|---|---|---|
+| 0 | **316** | R$ 27.506 | 0% |
+| 5 | **237** | R$ 25.839 | 20% |
+| 10 | **157** | R$ 24.173 | 43% |
+| 15 | **78** | R$ 22.507 | 70% |
+| **20** | **nenhum** | R$ 21.000 | 100% |
+
+**Com 20 lavagens avulsas por dia a loja paga todas as contas sem um único assinante.**
+Vinte lavagens por dia em uma cidade de 38 mil habitantes com 13.652 automóveis e nenhum
+lava jato automático não é meta heroica — é 0,15% da frota passando uma vez por mês.
+
+#### Equilíbrio 2 — pagar o capital (VPL = 0 a 18% a.a.)
+
+Este é o que decide se o investimento valeu. Capex de R$ 323.925 + giro de R$ 45.000.
+
+| Avulsas/dia | Assinantes necessários | Receita/mês |
+|---|---|---|
+| 0 | **594** | R$ 51.678 |
+| 5 | **502** | R$ 48.924 |
+| **8 (premissa do plano)** | **447** | R$ 47.289 |
+| 10 | **410** | R$ 46.170 |
+| 15 | **317** | R$ 43.329 |
+| 20 | **224** | R$ 40.488 |
+| 30 | **40** | R$ 34.980 |
+
+**Cada 5 avulsas/dia a mais tiram ~90 assinantes da conta.** É a alavanca mais barata que
+existe no plano: não exige campanha de retenção, não exige preço travado, não cria passivo
+de 24 meses. Exige sinalização, horário, localização e preço de avulsa bem posto.
+
+#### O primeiro ano é do avulso, e o modelo talvez esteja tímido
+
+No mês 1 existem 80 fundadores — e mais nada de assinatura. A conta daquele mês depende do
+movimento de rua:
+
+| Avulsas/dia no mês 1 | Receita de assinatura | Receita avulsa | % avulso | EBITDA do mês |
+|---|---|---|---|---|
+| 4 (*o que o modelo usa hoje*) | R$ 6.960 | R$ 4.200 | 38% | −R$ 7.679 |
+| 8 | R$ 6.960 | R$ 8.400 | **55%** | −R$ 4.450 |
+| 12 | R$ 6.960 | R$ 12.600 | 64% | −R$ 1.220 |
+| **16** | R$ 6.960 | R$ 16.800 | 71% | **+R$ 2.009** |
+| 20 | R$ 6.960 | R$ 21.000 | 75% | +R$ 5.238 |
+
+**A partir de 16 lavagens avulsas por dia a loja nasce com EBITDA positivo.**
+
+O modelo hoje assume que as avulsas começam em 4/dia e sobem até 8/dia no mês 12. **Essa é
+provavelmente a premissa mais conservadora do plano inteiro**, e é conservadora na direção
+errada: a abertura de um equipamento que a cidade nunca viu costuma ter pico de
+curiosidade, não rampa lenta. Não vou mexer na premissa sem dado — mas fica registrado
+que, se a abertura trouxer 16 avulsas/dia em vez de 4, **o prejuízo dos meses 1 a 4
+desaparece e o capital a reservar cai junto.**
+
+**Como medir isso antes de construir:** durante a campanha de fundadores, pergunte a quem
+*não* assinar quanto pagaria por lavagem avulsa e com que frequência passaria. A lista de
+"não assinantes interessados" é o melhor proxy de avulso que existe, e ela sai de graça da
+mesma campanha.
+
+#### Onde isso não funciona: a capacidade
+
+| | Lavagens/dia | % do teto prático (144/dia) |
+|---|---|---|
+| 500 assinantes + 8 avulsas | 96 | 66% |
+| 500 assinantes + 20 avulsas | 108 | 75% |
+| 500 assinantes + 30 avulsas | 118 | 82% |
+| 500 assinantes + 40 avulsas | 128 | 89% |
+
+Acima de ~120 lavagens/dia começa fila no horário de pico, e **fila em lava jato por
+assinatura é cancelamento**. O avulso é alavanca até o ponto em que passa a competir com o
+assinante pela máquina — e aí a resposta é a segunda máquina, não mais avulso.
 
 ### Sobre a TMA de 18%
 
