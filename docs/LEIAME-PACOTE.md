@@ -6,7 +6,7 @@ arquivo de internet para abrir no navegador.
 
 ## Por onde começar
 
-1. **`Apresentacao - FastCarWash.pdf`** — 23 slides, formato 16:9, para a conversa com
+1. **`Apresentacao - FastCarWash.pdf`** — 14 slides, formato 16:9, para a conversa com
    investidor. É o documento que resume tudo.
 2. **`Documentos/01 - Resumo para investidor.pdf`** — uma página, para mandar antes da
    reunião.
