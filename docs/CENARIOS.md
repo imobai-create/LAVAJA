@@ -11,12 +11,12 @@ R$ 3.500/mês em todos os números, horizonte de 60 meses na unidade e 120 meses
 
 | Arranjo | 1ª tranche | **Capital a reservar** | TIR do equity | VPL @ 18% |
 |---|---|---|---|---|
-| A. Capex cheio, 100% equity | R$ 454.060 | R$ 481.006 | 24,0% | R$ 73.260 |
-| B. Capex enxuto, 100% equity | R$ 373.000 | R$ 399.946 | 32,0% | R$ 145.002 |
-| **C. Enxuto + pré-venda, 100% equity** | **R$ 303.480** | **R$ 376.428** | **32,4%** | **R$ 144.082** |
-| D. Enxuto + pré-venda + dívida de R$ 120 mil | R$ 183.480 | R$ 278.253 | 36,3% | R$ 136.479 |
-| E. Idem, dívida de R$ 150 mil | R$ 153.480 | R$ 254.262 | 37,8% | R$ 134.578 |
-| F. Idem, dívida de R$ 180 mil | R$ 123.480 | R$ 230.755 | 39,6% | R$ 132.678 |
+| A. Lista de capex completa (R$ 399 mil), 100% equity | R$ 454.060 | R$ 481.006 | 24,0% | R$ 73.260 |
+| B. **Capex no teto de R$ 325 mil**, 100% equity | R$ 368.925 | R$ 395.871 | 32,4% | R$ 148.543 |
+| **C. Enxuto + pré-venda, 100% equity** | **R$ 299.405** | **R$ 372.353** | **32,9%** | **R$ 147.622** |
+| D. Enxuto + pré-venda + dívida de R$ 120 mil | R$ 179.405 | R$ 274.178 | 37,1% | R$ 140.020 |
+| E. Idem, dívida de R$ 150 mil | R$ 149.405 | R$ 250.187 | 38,6% | R$ 138.119 |
+| F. Idem, dívida de R$ 180 mil | R$ 119.405 | R$ 226.680 | 40,6% | R$ 136.218 |
 
 "Capital a reservar" é o **pico de caixa**, não o desembolso inicial: a diferença é chamada
 durante a rampa, quando os meses 1 a 4 fecham com EBITDA negativo.
@@ -27,9 +27,9 @@ Comparando o arranjo **C** (100% equity) com o **D** (com dívida):
 
 | | C — 100% equity | D — com dívida de R$ 120 mil |
 |---|---|---|
-| Capital a reservar | **R$ 376.428** | R$ 278.253 |
-| TIR do equity | 32,4% | **36,3%** |
-| VPL @ 18% | **R$ 144.082** | R$ 136.479 |
+| Capital a reservar | **R$ 372.353** | R$ 274.178 |
+| TIR do equity | 32,9% | **37,1%** |
+| VPL @ 18% | **R$ 147.622** | R$ 140.020 |
 
 **São R$ 99 mil mais de capital e 4,7 pontos menos de TIR — mas R$ 7,6 mil MAIS de valor.**
 
@@ -54,25 +54,25 @@ Com 100% equity você também fica livre de duas coisas que não aparecem na tab
 
 ---
 
-## 2. Divisão do equity — 100% equity, R$ 376.428
+## 2. Divisão do equity — 100% equity, R$ 372.353
 
 Capital chamado em tranches, proporcional à necessidade real.
 
 | Estrutura | Sócio | Aporte | 1ª tranche | TIR | Caixa em 60 meses |
 |---|---|---|---|---|---|
-| **50 / 50**, um investidor | Antonio | R$ 187.476 | R$ 151.740 | 32,4% | R$ 412.512 |
-| | Investidor | R$ 187.476 | R$ 151.740 | 32,4% | R$ 412.512 |
-| **33,33 × 3**, dois investidores | Antonio | R$ 124.984 | R$ 101.160 | 32,4% | R$ 275.008 |
-| | Investidor A | R$ 124.984 | R$ 101.160 | 32,4% | R$ 275.008 |
-| | Investidor B | R$ 124.984 | R$ 101.160 | 32,4% | R$ 275.008 |
-| **25 / 25 / 50**, dois investidores | Antonio | R$ 187.476 | R$ 151.740 | 32,4% | R$ 412.512 |
-| | Investidor A | R$ 93.738 | R$ 75.870 | 32,4% | R$ 206.256 |
-| | Investidor B | R$ 93.738 | R$ 75.870 | 32,4% | R$ 206.256 |
-| **50,5 / 24,75 / 24,75** | Antonio | R$ 189.351 | R$ 153.257 | 32,4% | R$ 416.637 |
-| | Investidor A | R$ 92.801 | R$ 75.111 | 32,4% | R$ 204.193 |
-| | Investidor B | R$ 92.801 | R$ 75.111 | 32,4% | R$ 204.193 |
+| **50 / 50**, um investidor | Antonio | R$ 186.177 | R$ 149.702 | 32,9% | R$ 396.183 |
+| | Investidor | R$ 186.177 | R$ 149.702 | 32,9% | R$ 396.183 |
+| **33,33 × 3**, dois investidores | Antonio | R$ 124.118 | R$ 99.802 | 32,9% | R$ 264.122 |
+| | Investidor A | R$ 124.118 | R$ 99.802 | 32,9% | R$ 264.122 |
+| | Investidor B | R$ 124.118 | R$ 99.802 | 32,9% | R$ 264.122 |
+| **25 / 25 / 50**, dois investidores | Antonio | R$ 186.177 | R$ 149.702 | 32,9% | R$ 396.183 |
+| | Investidor A | R$ 93.088 | R$ 74.851 | 32,9% | R$ 198.091 |
+| | Investidor B | R$ 93.088 | R$ 74.851 | 32,9% | R$ 198.091 |
+| **50,5 / 24,75 / 24,75** | Antonio | R$ 189.351 | R$ 153.257 | 32,9% | R$ 416.637 |
+| | Investidor A | R$ 92.801 | R$ 75.111 | 32,9% | R$ 204.193 |
+| | Investidor B | R$ 92.801 | R$ 75.111 | 32,9% | R$ 204.193 |
 
-**Com aporte proporcional, a TIR é a mesma para todos em qualquer divisão: 32,4%, que é a TIR
+**Com aporte proporcional, a TIR é a mesma para todos em qualquer divisão: 32,9%, que é a TIR
 do projeto.** A divisão não cria nem destrói retorno — ela decide **quanto cada um põe e quem
 decide**. É por isso que a conversa de divisão é jurídica e de caixa, não financeira.
 
@@ -80,10 +80,10 @@ decide**. É por isso que a conversa de divisão é jurídica e de caixa, não f
 
 | Estrutura | Antonio | Cada investidor | TIR de todos |
 |---|---|---|---|
-| 50 / 50 | R$ 138.006 | R$ 138.006 | 36,3% |
-| 33,33 × 3 | R$ 92.004 | R$ 92.004 | 36,3% |
-| 25 / 25 / 50 | R$ 138.006 | R$ 69.003 | 36,3% |
-| 50,5 / 24,75 / 24,75 | R$ 139.386 | R$ 68.313 | 36,3% |
+| 50 / 50 | R$ 137.089 | R$ 137.089 | 37,1% |
+| 33,33 × 3 | R$ 91.393 | R$ 91.393 | 37,1% |
+| 25 / 25 / 50 | R$ 137.089 | R$ 68.544 | 37,1% |
+| 50,5 / 24,75 / 24,75 | R$ 139.386 | R$ 68.313 | 37,1% |
 
 ### 2.2 A cláusula de chamada de capital vale 8,3 pontos de TIR
 
@@ -92,9 +92,9 @@ a obra pedir:
 
 | Fatia | Aporte | TIR com tranches | TIR com tudo no mês 0 | Perda |
 |---|---|---|---|---|
-| 33,33% | R$ 124.984 | 32,4% | 26,1% | **8,3 pontos** |
-| 25,00% | R$ 93.738 | 32,4% | 26,1% | **8,3 pontos** |
-| 50,00% | R$ 187.476 | 32,4% | 26,1% | **8,3 pontos** |
+| 33,33% | R$ 124.118 | 32,9% | 26,1% | **8,3 pontos** |
+| 25,00% | R$ 93.088 | 32,9% | 26,1% | **8,3 pontos** |
+| 50,00% | R$ 186.177 | 32,9% | 26,1% | **8,3 pontos** |
 
 Não é detalhe de contrato: é o item mais barato de acertar e o que mais devolve retorno.
 
@@ -195,9 +195,9 @@ Vender só para **franqueado operador**, nunca para investidor ausente.
 
 ## 6. A leitura de tudo isso, em cinco linhas
 
-1. **A loja de Piumhi fecha nos dois arranjos.** 32,4% com R$ 376 mil de capital próprio, ou
-   36,3% com R$ 278 mil mais dívida de R$ 120 mil. O VPL é quase empate: R$ 144 mil contra
-   R$ 136 mil. A escolha é de caixa, não de retorno.
+1. **A loja de Piumhi fecha nos dois arranjos.** 32,9% com R$ 372 mil de capital próprio, ou
+   37,1% com R$ 274 mil mais dívida de R$ 120 mil. O VPL é quase empate: R$ 148 mil contra
+   R$ 140 mil. A escolha é de caixa, não de retorno.
 2. **A divisão do equity não muda retorno nenhum.** Com aporte proporcional, todos ganham a TIR
    do projeto. Ela só muda quanto cada um põe e **quem decide** — e aí o 50,5% resolve.
 3. **A rede fecha, mas só asset-light.** 42,6% com capital zero no imóvel, contra 15,6% com

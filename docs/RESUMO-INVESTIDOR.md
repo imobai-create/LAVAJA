@@ -22,13 +22,13 @@ Por investidor com 25% da operação, nos dois arranjos de capital:
 
 | | **Com dívida** | **Sem dívida** |
 |---|---|---|
-| Compromisso de capital | R$ 69.003 | R$ 93.738 |
-| Entra na assinatura | R$ 45.870 | R$ 75.870 |
+| Compromisso de capital | R$ 68.544 | R$ 93.088 |
+| Entra na assinatura | R$ 44.851 | R$ 74.851 |
 | O resto, em chamadas durante a rampa | R$ 23.133 | R$ 17.868 |
-| **TIR** | **36,3% a.a.** | **32,4% a.a.** |
+| **TIR** | **37,1% a.a.** | **32,9% a.a.** |
 | Payback | 33 meses | 33 meses |
 | Distribuição no estado maduro | R$ 3.351/mês | R$ 4.132/mês |
-| Caixa recebido em 60 meses | R$ 148.862 | R$ 198.397 |
+| Caixa recebido em 60 meses | R$ 148.556 | R$ 198.397 |
 | Sobre o capital comprometido | 2,14x | 2,11x |
 | VPL a 18% a.a. | R$ 39.162 | R$ 41.063 |
 
@@ -48,21 +48,21 @@ R$ 43,5 mil. Na MG-050, com Capitólio a 20 km.
 
 | | Assinantes | % dos automóveis |
 |---|---|---|
-| Paga todas as contas | 232 | 1,7% |
-| Paga 18% ao ano ao investidor | ~400 | 2,9% |
-| **Cenário deste resumo** | **500** | **2,4%** |
+| Paga todas as contas | 134 | 1,0% |
+| **Paga 18% ao ano ao investidor** | **399** | **2,9%** |
+| **Cenário deste resumo** | **500** | **3,7%** |
 | Enche a máquina | 650 | 4,8% |
 
 ## A estrutura
 
-O projeto custa R$ 373 mil — R$ 328 mil de máquina, obra e instalação, mais R$ 45 mil de
+O projeto custa R$ 369 mil — R$ 324 mil de máquina, obra e instalação, mais R$ 45 mil de
 capital de giro.
 
 | Fonte | **Com dívida** | **Sem dívida** |
 |---|---|---|
 | Empréstimo em cooperativa (~21% a.a., 6 meses de carência) | R$ 120.000 | — |
 | Pré-venda anual dos 80 fundadores | R$ 69.520 | R$ 69.520 |
-| **Capital dos sócios** | **R$ 278.253** | **R$ 376.428** |
+| **Capital dos sócios** | **R$ 274.178** | **R$ 372.353** |
 
 Em qualquer dos dois: 50% dos dois investidores (25% cada) e 50% do Antonio, com aporte
 proporcional. Marca e software ficam numa segunda empresa, 100% do Antonio, licenciada à
@@ -87,7 +87,7 @@ operação sem royalty nos primeiros 24 meses.
   justo, câmera que liga a lavagem à placa, e prazo na trava de preço do fundador.
 - **Três números a confirmar em 30 dias:** frota no Senatran, tarifas de água e energia,
   enquadramento no Simples (Anexo V em vez do III custa 11 pontos de TIR).
-- O orçamento de R$ 328 mil ainda não tem três cotações locais. A máquina é paga em dólar.
+- O orçamento de R$ 324 mil ainda não tem três cotações locais. A máquina é paga em dólar.
 
 ## O próximo passo
 

@@ -149,7 +149,7 @@ de divergirem (`test/vercel.test.js`), mas o console do navegador é a confirma�
 > **Hobby é para projetos não comerciais**. Um site que vende assinatura é uso comercial. Na
 > prática a Vercel raramente derruba site pequeno por isso, mas **o risco existe e é seu**: se
 > vier aviso, o caminho é migrar para o Pro (US$ 20/mês) na hora. Para um negócio que vai pedir
-> R$ 278 mil de investimento, US$ 20/mês não é o problema — considere já começar no Pro quando
+> R$ 274 mil de investimento, US$ 20/mês não é o problema — considere já começar no Pro quando
 > a campanha de fundadores for ao ar.
 
 ---
