@@ -53,7 +53,14 @@ MIX = {
 AGUA_L = 85.0           # 60-100 L/carro (cotacao Yugong)
 TARIFA_AGUA = 14.00     # R$/m3, agua + esgoto comercial (ESTIMATIVA - confirmar SAAE Piumhi)
 ENERGIA_KWH = 1.6       # calculo proprio pelos componentes, nao os 0,6-1,2 do fornecedor
-TARIFA_KWH = 0.98       # R$/kWh comercial com tributos (ESTIMATIVA - confirmar CEMIG)
+TARIFA_KWH = 1.11       # R$/kWh baixa tensao com tributos (CEMIG, informado out/2026)
+
+# Media tensao (Grupo A): R$ 0,70/kWh + demanda contratada de ~R$ 1.900/mes.
+# Empata com a baixa tensao em 4.634 kWh/mes; abaixo disso a baixa tensao e mais barata.
+# Ver secao 4.1 do BP-PIUMHI: nao compensa. A demanda e fixa e seria paga inteira
+# durante toda a rampa, quando o volume ainda nao existe.
+TARIFA_KWH_MEDIA = 0.70
+DEMANDA_MEDIA_MES = 1_900.0
 QUIMICOS = 2.50         # R$/lavagem (detergente touchless, espuma, cera)
 TAXA_MEIO_PAGTO = 0.015 # PIX + cartao, media sobre a receita
 

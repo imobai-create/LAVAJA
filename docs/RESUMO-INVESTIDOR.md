@@ -12,7 +12,7 @@ Versão de 2026-10-20. Documento vivo para conversa com investidor:
 Uma máquina importada lava o carro sem escova, em 5 minutos, 24 horas por dia, sem operador. O
 cliente paga mensalidade: R$ 59 por 4 lavagens, R$ 99 ilimitado, R$ 139 com cera.
 
-Cada lavagem custa R$ 5,26 de água, energia e química. É essa diferença — entre R$ 5,26 de
+Cada lavagem custa R$ 5,47 de água, energia e química. É essa diferença — entre R$ 5,47 de
 custo e R$ 87 de mensalidade média — que faz o negócio. Não existe lava jato automático em
 Piumhi hoje.
 
@@ -25,11 +25,11 @@ Por investidor com 25% da operação, nos dois arranjos de capital:
 | Compromisso de capital | R$ 69.003 | R$ 93.738 |
 | Entra na assinatura | R$ 45.870 | R$ 75.870 |
 | O resto, em chamadas durante a rampa | R$ 23.133 | R$ 17.868 |
-| **TIR** | **39,0% a.a.** | **34,3% a.a.** |
+| **TIR** | **36,3% a.a.** | **32,4% a.a.** |
 | Payback | 33 meses | 33 meses |
 | Distribuição no estado maduro | R$ 3.351/mês | R$ 4.132/mês |
-| Caixa recebido em 60 meses | R$ 156.720 | R$ 206.256 |
-| Sobre o capital comprometido | 2,27x | 2,20x |
+| Caixa recebido em 60 meses | R$ 148.862 | R$ 198.397 |
+| Sobre o capital comprometido | 2,14x | 2,11x |
 | VPL a 18% a.a. | R$ 39.162 | R$ 41.063 |
 
 **A diferença entre as colunas é só quem financia a espera.** Com dívida, a cooperativa entra
@@ -50,7 +50,7 @@ R$ 43,5 mil. Na MG-050, com Capitólio a 20 km.
 |---|---|---|
 | Paga todas as contas | 232 | 1,7% |
 | Paga 18% ao ano ao investidor | ~400 | 2,9% |
-| **Cenário deste resumo** | **500** | **3,7%** |
+| **Cenário deste resumo** | **500** | **2,4%** |
 | Enche a máquina | 650 | 4,8% |
 
 ## A estrutura
@@ -62,7 +62,7 @@ capital de giro.
 |---|---|---|
 | Empréstimo em cooperativa (~21% a.a., 6 meses de carência) | R$ 120.000 | — |
 | Pré-venda anual dos 80 fundadores | R$ 69.520 | R$ 69.520 |
-| **Capital dos sócios** | **R$ 276.011** | **R$ 374.953** |
+| **Capital dos sócios** | **R$ 278.253** | **R$ 376.428** |
 
 Em qualquer dos dois: 50% dos dois investidores (25% cada) e 50% do Antonio, com aporte
 proporcional. Marca e software ficam numa segunda empresa, 100% do Antonio, licenciada à
@@ -71,7 +71,7 @@ operação sem royalty nos primeiros 24 meses.
 ## O que protege o dinheiro do investidor
 
 1. A demanda é testada antes da máquina ser comprada (campanha de fundadores, ~R$ 22 mil).
-2. O ponto de equilíbrio é 232 assinantes; o cenário é 500.
+2. O ponto de equilíbrio é 134 assinantes; o cenário é 500.
 3. O capital entra em tranches.
 4. O terreno é alugado, com opção de compra travada no preço de hoje.
 5. Governança escrita antes de assinar, incluindo cláusula de desempate.
@@ -97,5 +97,5 @@ aposta em conta.
 
 ---
 
-Base: [BP-PIUMHI.md](BP-PIUMHI.md) seção 11, modelo em [bp/capital.py](bp/capital.py),
+Base: [BP-PIUMHI.md](BP-PIUMHI.md) seção 11, planilha `Modelo-Economico-Piumhi.xlsx`,
 planilha em `bp/Modelo-Economico-Piumhi.xlsx` (aba `Capital`).

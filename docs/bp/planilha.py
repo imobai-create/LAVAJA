@@ -132,11 +132,11 @@ def planilha_piumhi(caminho):
     ws.cell(ln, 1, "CUSTO VARIAVEL").font = bold; ln += 1
     L["agua_l"] = ln; ln = entrada(ws, ln, "Agua por lavagem (litros)", 85, NUM)
     L["tar_agua"] = ln; ln = entrada(ws, ln, "Tarifa de agua + esgoto (R$/m3)", 14.00, MOEDA2,
-                                     "ESTIMATIVA - confirmar com SAAE Piumhi")
+                                     "ESTIMATIVA - minimo de 30 m3 por R$ 93,59 confirmado; falta o excedente e o esgoto")
     L["kwh"] = ln; ln = entrada(ws, ln, "Energia por lavagem (kWh)", 1.6, '0.00',
                                 "calculo proprio; fornecedor declara 0,6-1,2")
-    L["tar_kwh"] = ln; ln = entrada(ws, ln, "Tarifa de energia (R$/kWh)", 0.98, MOEDA2,
-                                    "ESTIMATIVA - confirmar com CEMIG")
+    L["tar_kwh"] = ln; ln = entrada(ws, ln, "Tarifa de energia (R$/kWh)", 1.11, MOEDA2,
+                                    "CONFIRMADO out/2026 - CEMIG baixa tensao")
     L["quim"] = ln; ln = entrada(ws, ln, "Quimicos por lavagem", 2.50, MOEDA2)
     L["meios"] = ln; ln = entrada(ws, ln, "Meios de pagamento (% da receita)", 0.015, PCT2)
     L["cv"] = ln

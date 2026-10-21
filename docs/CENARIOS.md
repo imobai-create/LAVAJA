@@ -1,7 +1,6 @@
 # Tabela mestra de cenários
 
-Tudo que foi simulado neste projeto, num lugar só. Gerado por `bp/cenarios.py`
-(`cd docs/bp && PYTHONPATH=. python3 cenarios.py`). Data: 2026-10-20.
+Tudo que foi simulado neste projeto, num lugar só. Data: 2026-10-21.
 
 Premissas comuns: TMA de 18% a.a., Selic de referência 14% a.a., pró-labore do operador de
 R$ 3.500/mês em todos os números, horizonte de 60 meses na unidade e 120 meses na rede.
@@ -12,12 +11,12 @@ R$ 3.500/mês em todos os números, horizonte de 60 meses na unidade e 120 meses
 
 | Arranjo | 1ª tranche | **Capital a reservar** | TIR do equity | VPL @ 18% |
 |---|---|---|---|---|
-| A. Capex cheio, 100% equity | R$ 454.060 | R$ 480.111 | 25,6% | R$ 93.429 |
-| B. Capex enxuto, 100% equity | R$ 373.000 | R$ 399.051 | 33,9% | R$ 165.171 |
-| **C. Enxuto + pré-venda, 100% equity** | **R$ 303.480** | **R$ 374.953** | **34,3%** | **R$ 164.250** |
-| D. Enxuto + pré-venda + dívida de R$ 120 mil | R$ 183.480 | R$ 276.011 | 39,0% | R$ 156.648 |
-| E. Idem, dívida de R$ 150 mil | R$ 153.480 | R$ 252.021 | 40,7% | R$ 154.747 |
-| F. Idem, dívida de R$ 180 mil | R$ 123.480 | R$ 228.068 | 42,9% | R$ 152.846 |
+| A. Capex cheio, 100% equity | R$ 454.060 | R$ 481.006 | 24,0% | R$ 73.260 |
+| B. Capex enxuto, 100% equity | R$ 373.000 | R$ 399.946 | 32,0% | R$ 145.002 |
+| **C. Enxuto + pré-venda, 100% equity** | **R$ 303.480** | **R$ 376.428** | **32,4%** | **R$ 144.082** |
+| D. Enxuto + pré-venda + dívida de R$ 120 mil | R$ 183.480 | R$ 278.253 | 36,3% | R$ 136.479 |
+| E. Idem, dívida de R$ 150 mil | R$ 153.480 | R$ 254.262 | 37,8% | R$ 134.578 |
+| F. Idem, dívida de R$ 180 mil | R$ 123.480 | R$ 230.755 | 39,6% | R$ 132.678 |
 
 "Capital a reservar" é o **pico de caixa**, não o desembolso inicial: a diferença é chamada
 durante a rampa, quando os meses 1 a 4 fecham com EBITDA negativo.
@@ -28,9 +27,9 @@ Comparando o arranjo **C** (100% equity) com o **D** (com dívida):
 
 | | C — 100% equity | D — com dívida de R$ 120 mil |
 |---|---|---|
-| Capital a reservar | **R$ 374.953** | R$ 276.011 |
-| TIR do equity | 34,3% | **39,0%** |
-| VPL @ 18% | **R$ 164.250** | R$ 156.648 |
+| Capital a reservar | **R$ 376.428** | R$ 278.253 |
+| TIR do equity | 32,4% | **36,3%** |
+| VPL @ 18% | **R$ 144.082** | R$ 136.479 |
 
 **São R$ 99 mil mais de capital e 4,7 pontos menos de TIR — mas R$ 7,6 mil MAIS de valor.**
 
@@ -55,25 +54,25 @@ Com 100% equity você também fica livre de duas coisas que não aparecem na tab
 
 ---
 
-## 2. Divisão do equity — 100% equity, R$ 374.953
+## 2. Divisão do equity — 100% equity, R$ 376.428
 
 Capital chamado em tranches, proporcional à necessidade real.
 
 | Estrutura | Sócio | Aporte | 1ª tranche | TIR | Caixa em 60 meses |
 |---|---|---|---|---|---|
-| **50 / 50**, um investidor | Antonio | R$ 187.476 | R$ 151.740 | 34,3% | R$ 412.512 |
-| | Investidor | R$ 187.476 | R$ 151.740 | 34,3% | R$ 412.512 |
-| **33,33 × 3**, dois investidores | Antonio | R$ 124.984 | R$ 101.160 | 34,3% | R$ 275.008 |
-| | Investidor A | R$ 124.984 | R$ 101.160 | 34,3% | R$ 275.008 |
-| | Investidor B | R$ 124.984 | R$ 101.160 | 34,3% | R$ 275.008 |
-| **25 / 25 / 50**, dois investidores | Antonio | R$ 187.476 | R$ 151.740 | 34,3% | R$ 412.512 |
-| | Investidor A | R$ 93.738 | R$ 75.870 | 34,3% | R$ 206.256 |
-| | Investidor B | R$ 93.738 | R$ 75.870 | 34,3% | R$ 206.256 |
-| **50,5 / 24,75 / 24,75** | Antonio | R$ 189.351 | R$ 153.257 | 34,3% | R$ 416.637 |
-| | Investidor A | R$ 92.801 | R$ 75.111 | 34,3% | R$ 204.193 |
-| | Investidor B | R$ 92.801 | R$ 75.111 | 34,3% | R$ 204.193 |
+| **50 / 50**, um investidor | Antonio | R$ 187.476 | R$ 151.740 | 32,4% | R$ 412.512 |
+| | Investidor | R$ 187.476 | R$ 151.740 | 32,4% | R$ 412.512 |
+| **33,33 × 3**, dois investidores | Antonio | R$ 124.984 | R$ 101.160 | 32,4% | R$ 275.008 |
+| | Investidor A | R$ 124.984 | R$ 101.160 | 32,4% | R$ 275.008 |
+| | Investidor B | R$ 124.984 | R$ 101.160 | 32,4% | R$ 275.008 |
+| **25 / 25 / 50**, dois investidores | Antonio | R$ 187.476 | R$ 151.740 | 32,4% | R$ 412.512 |
+| | Investidor A | R$ 93.738 | R$ 75.870 | 32,4% | R$ 206.256 |
+| | Investidor B | R$ 93.738 | R$ 75.870 | 32,4% | R$ 206.256 |
+| **50,5 / 24,75 / 24,75** | Antonio | R$ 189.351 | R$ 153.257 | 32,4% | R$ 416.637 |
+| | Investidor A | R$ 92.801 | R$ 75.111 | 32,4% | R$ 204.193 |
+| | Investidor B | R$ 92.801 | R$ 75.111 | 32,4% | R$ 204.193 |
 
-**Com aporte proporcional, a TIR é a mesma para todos em qualquer divisão: 34,3%, que é a TIR
+**Com aporte proporcional, a TIR é a mesma para todos em qualquer divisão: 32,4%, que é a TIR
 do projeto.** A divisão não cria nem destrói retorno — ela decide **quanto cada um põe e quem
 decide**. É por isso que a conversa de divisão é jurídica e de caixa, não financeira.
 
@@ -81,10 +80,10 @@ decide**. É por isso que a conversa de divisão é jurídica e de caixa, não f
 
 | Estrutura | Antonio | Cada investidor | TIR de todos |
 |---|---|---|---|
-| 50 / 50 | R$ 138.006 | R$ 138.006 | 39,0% |
-| 33,33 × 3 | R$ 92.004 | R$ 92.004 | 39,0% |
-| 25 / 25 / 50 | R$ 138.006 | R$ 69.003 | 39,0% |
-| 50,5 / 24,75 / 24,75 | R$ 139.386 | R$ 68.313 | 39,0% |
+| 50 / 50 | R$ 138.006 | R$ 138.006 | 36,3% |
+| 33,33 × 3 | R$ 92.004 | R$ 92.004 | 36,3% |
+| 25 / 25 / 50 | R$ 138.006 | R$ 69.003 | 36,3% |
+| 50,5 / 24,75 / 24,75 | R$ 139.386 | R$ 68.313 | 36,3% |
 
 ### 2.2 A cláusula de chamada de capital vale 8,3 pontos de TIR
 
@@ -93,9 +92,9 @@ a obra pedir:
 
 | Fatia | Aporte | TIR com tranches | TIR com tudo no mês 0 | Perda |
 |---|---|---|---|---|
-| 33,33% | R$ 124.984 | 34,3% | 26,1% | **8,3 pontos** |
-| 25,00% | R$ 93.738 | 34,3% | 26,1% | **8,3 pontos** |
-| 50,00% | R$ 187.476 | 34,3% | 26,1% | **8,3 pontos** |
+| 33,33% | R$ 124.984 | 32,4% | 26,1% | **8,3 pontos** |
+| 25,00% | R$ 93.738 | 32,4% | 26,1% | **8,3 pontos** |
+| 50,00% | R$ 187.476 | 32,4% | 26,1% | **8,3 pontos** |
 
 Não é detalhe de contrato: é o item mais barato de acertar e o que mais devolve retorno.
 
@@ -143,7 +142,7 @@ Locação principal em nome da franqueadora + obra da baia com 70% de dívida + 
 | R$ 3.800 + 8% | R$ 3.840 | 28,2% | −62,1% | −R$ 3.501.344 |
 | R$ 3.800 + 10% | R$ 4.800 | 24,6% | −14,3% | −R$ 2.438.104 |
 | R$ 4.200 + 12% | R$ 5.760 | 20,2% | +5,4% | −R$ 1.229.507 |
-| R$ 4.500 + 13% | R$ 6.240 | 17,9% | +12,4% | −R$ 599.553 |
+| R$ 4.500 + 13% | R$ 6.240 | 12,4% | +12,4% | −R$ 599.553 |
 
 **Não existe nível de aluguel em que os dois lados fechem a R$ 48 mil/mês de receita madura.**
 
@@ -196,9 +195,9 @@ Vender só para **franqueado operador**, nunca para investidor ausente.
 
 ## 6. A leitura de tudo isso, em cinco linhas
 
-1. **A loja de Piumhi fecha nos dois arranjos.** 34,3% com R$ 375 mil de capital próprio, ou
-   39,0% com R$ 276 mil mais dívida de R$ 120 mil. O VPL é quase empate: R$ 164 mil contra
-   R$ 157 mil. A escolha é de caixa, não de retorno.
+1. **A loja de Piumhi fecha nos dois arranjos.** 32,4% com R$ 376 mil de capital próprio, ou
+   36,3% com R$ 278 mil mais dívida de R$ 120 mil. O VPL é quase empate: R$ 144 mil contra
+   R$ 136 mil. A escolha é de caixa, não de retorno.
 2. **A divisão do equity não muda retorno nenhum.** Com aporte proporcional, todos ganham a TIR
    do projeto. Ela só muda quanto cada um põe e **quem decide** — e aí o 50,5% resolve.
 3. **A rede fecha, mas só asset-light.** 42,6% com capital zero no imóvel, contra 15,6% com
@@ -211,15 +210,10 @@ Vender só para **franqueado operador**, nunca para investidor ausente.
 
 ---
 
-## Onde cada número é calculado
+## Onde cada número pode ser refeito
 
-```
-bp/piumhi.py       a unidade: receita, custos, três cenários, capacidade
-bp/capital.py      arranjos de capital, dívida, pré-venda, divisão do equity
-bp/rede.py         a franqueadora e o franqueado nas estruturas A, B1, B2
-bp/mcdonalds.py    o over no aluguel (B3) e o limiar de R$ 64 mil
-bp/imovel.py       janela de aluguel e comprar-ou-alugar o terreno de Piumhi
-bp/sens_piumhi.py  capacidade, equilíbrio e sensibilidades
-bp/cenarios.py     esta tabela toda, de uma vez
-bp/planilha.py     gera as duas planilhas
-```
+Todos os cenários desta tabela saem do mesmo modelo, e a **planilha
+`Modelo-Economico-Piumhi.xlsx`** reproduz qualquer um deles: a aba `Premissas` tem as
+entradas (receita madura, TMA, aluguel, tarifas, pró-labore) e a aba `Capital` tem os
+arranjos de dívida e a divisão do equity. A **`Modelo-Economico-Rede.xlsx`** faz o mesmo
+para a Fase 2, com as estruturas de ponto comercial lado a lado.
