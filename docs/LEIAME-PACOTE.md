@@ -60,7 +60,7 @@ R$ 75 mil a mais e rendia 8 pontos de TIR a menos.
 **Os dois arranjos ficam em aberto de propósito.** São R$ 7,6 mil de diferença de VPL —
 4,6%, menos que a margem de erro das próprias premissas. A escolha não é de retorno, é de
 caixa: a dívida libera R$ 98.942 do bolso dos sócios e cobra R$ 2.922/mês fixos por 60
-meses, que o cenário conservador de 350 assinantes não paga.
+meses — uma parcela que uma base abaixo de ~350 assinantes não sustenta.
 
 **O gate que manda em tudo:** ~400 assinantes no mês 12 em Piumhi. Abaixo disso, a Fase 2
 não começa.
